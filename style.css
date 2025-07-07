@@ -12,30 +12,25 @@ body {
   line-height: 1.6;
 }
 
-/* Header / Nav */
+/* Header layout: logo/title left, hamburger right */
 header {
-  max-width: 1440px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 60px;      /* reduce padding to avoid too big space on sides */
-  position: sticky;
-  top: 0;
-  background: transparent;
-  z-index: 10;
+  padding: 10px 16px;
+  position: relative;
 }
-/* Hamburger button */
+
+/* Hide hamburger by default */
 .menu-toggle {
-  display: none; /* hide by default */
+  display: none;
   font-size: 28px;
   background: none;
   border: none;
-  color: #333;
   cursor: pointer;
 }
 
-/* Show hamburger and hide nav on small screens */
+/* Show hamburger on small screens, hide nav by default */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -46,13 +41,11 @@ header {
     flex-direction: column;
     background: #fff;
     position: absolute;
-    top: 70px; /* adjust based on header height */
-    right: 20px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    padding: 10px 0;
+    top: 100%; /* right below header */
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     z-index: 999;
   }
 
@@ -61,13 +54,15 @@ header {
   }
 
   nav ul li {
-    margin: 10px 0;
+    text-align: center;
+    padding: 12px 0;
   }
 
   nav ul li a {
+    display: block;
     width: 100%;
-    text-align: left;
-    border: none; /* optional: remove borders for dropdown */
+    color: #333;
+    text-decoration: none;
   }
 }
 .logo-title {
