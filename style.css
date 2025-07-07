@@ -32,9 +32,22 @@ header {
 
 /* Show hamburger on small screens, hide nav by default */
 @media (max-width: 768px) {
+  .mobile-menu ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .mobile-menu ul.show {
+    display: flex;
+  }
+
   .menu-toggle {
     display: block;
+    cursor: pointer;
   }
+}
 
   nav ul {
     display: none;
