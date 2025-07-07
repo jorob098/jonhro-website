@@ -12,14 +12,16 @@ body {
   line-height: 1.6;
 }
 
-/* Header / Nav */
+/* -----------------------------------
+   Header & Navigation
+----------------------------------- */
 header {
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 60px;      /* reduce padding to avoid too big space on sides */
+  padding: 16px 60px;
   position: sticky;
   top: 0;
   background: transparent;
@@ -29,24 +31,19 @@ header {
 .logo-title {
   display: flex;
   align-items: center;
-  gap: 12px;    /* small clean space between logo and site name */
+  gap: 12px;
 }
 
 .logo-title img {
   width: 120px;
-  height: auto;    /* keeps aspect ratio */
-  /* removed margin-right */
+  height: auto;
 }
 
 .site-name {
   font-size: 18px;
   font-weight: bold;
-}
-.site-name {
-  font-size: 18px;
-  font-weight: bold;
-  color: #000;                    /* or your preferred color */
-  text-decoration: none;          /* remove default underline */
+  color: #000;
+  text-decoration: none;
   position: relative;
   cursor: pointer;
   transition: color 0.3s;
@@ -56,68 +53,69 @@ header {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px;                   /* adjust distance from text */
+  bottom: -2px;
   width: 100%;
   height: 2px;
-  background: currentColor;       /* underline uses text color */
+  background: currentColor;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-.site-name:hover::after,
-.site-name:focus::after {
+.site-name:hover::after {
   opacity: 1;
 }
 
 .site-name:hover {
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);  /* subtle bottom shadow on hover */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul li {
-  margin-left: 20px;    /* reduced space between buttons */
+  margin-left: 20px;
 }
 
 nav ul li a {
-  position: relative;             /* enable absolute positioning of ::after */
   display: inline-block;
-  text-decoration: none;
+  position: relative;
+  background: #fff;
   color: #333;
   font-weight: 500;
+  text-decoration: none;
   padding: 8px 16px;
   border-radius: 8px;
   border: 1px solid #594E4E;
-  overflow: hidden;               /* clip child elements */
+  overflow: hidden;
+  transition: background 0.3s;
 }
+
 nav ul li a::after {
   content: "";
   position: absolute;
-  top: 4px;     /* move in from top */
-  left: 4px;    /* move in from left */
-  right: 4px;   /* move in from right */
-  bottom: 4px;  /* move in from bottom */
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
   border-radius: 6px;
-  background: rgba(0,0,0,0.05);  /* subtle inner color */
-  opacity: 0;                   /* start invisible */
+  background: rgba(0,0,0,0.05);
+  opacity: 0;
   transition: opacity 0.3s;
 }
-nav ul li a {
-  background: #fff;   /* white background to match nav */
-}
+
 nav ul li a:hover {
-  background: rgba(0,0,0,0.05);   /* subtle hover */
+  background: rgba(0,0,0,0.05);
 }
+
 nav ul li a:hover::after {
   opacity: 1;
 }
 
-/* Hero Section */
+/* -----------------------------------
+   Hero Section
+----------------------------------- */
 #hero {
   text-align: center;
   padding: 100px 20px;
@@ -134,7 +132,7 @@ nav ul li a:hover::after {
 #hero p {
   font-size: 18px;
   margin-bottom: 20px;
-  color: #594E4E;   /* updated color */
+  color: #594E4E;
 }
 
 #hero button {
@@ -154,19 +152,15 @@ nav ul li a:hover::after {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Affiliations Section */
+/* -----------------------------------
+   Affiliations Section
+----------------------------------- */
 #affiliations {
   max-width: 1440px;
-  margin: 60px auto;   /* top & bottom 60px, center horizontally */
-  padding: 20px;
-  font-size: 14px;
-  background: #f8f8f8;
-}
-#affiliations {
-  text-align: center;
+  margin: 60px auto;
   padding: 40px 20px;
+  text-align: center;
   background: #f8f8f8;
-  margin-top: 60px;
 }
 
 #affiliations p {
@@ -178,7 +172,7 @@ nav ul li a:hover::after {
 .affiliation-logos {
   display: flex;
   justify-content: center;
-  gap: 40px;  /* space between the two logos */
+  gap: 40px;
 }
 
 .affiliation-item {
@@ -188,7 +182,7 @@ nav ul li a:hover::after {
 }
 
 .affiliation-item img {
-  width: 80px;       /* adjust to smaller size */
+  width: 80px;
   height: auto;
   margin-bottom: 8px;
 }
@@ -198,42 +192,41 @@ nav ul li a:hover::after {
   color: #333;
 }
 
-/* About section */
+/* -----------------------------------
+   About Section
+----------------------------------- */
 #about {
-  max-width: 1200px;    /* or 1000px if you want it narrower */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
 #about h2 {
   font-size: 36px;
-  margin-bottom: 10px;
   color: #000;
-  text-align: center;   /* add this */
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .subheading {
   font-size: 18px;
   color: #594E4E;
   margin-bottom: 40px;
-  text-align: center;   /* add this */
+  text-align: center;
 }
 
 .about-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;             /* was 60px */
+  gap: 40px;
   justify-content: center;
   align-items: stretch;
 }
 
 .about-card {
-  max-height: 400px;    /* matches image */
-  overflow: auto;       /* add scrollbar if content exceeds */
-}
-
-.about-card {
   flex: 1 1 400px;
+  max-height: 400px;
+  overflow: auto;
   background: linear-gradient(135deg, #FF6B00, #f5c801);
   color: #fff;
   padding: 30px;
@@ -242,6 +235,7 @@ nav ul li a:hover::after {
   display: flex;
   flex-direction: column;
 }
+
 .about-card h3 {
   font-size: 20px;
   margin-bottom: 16px;
@@ -251,24 +245,25 @@ nav ul li a:hover::after {
 .about-card p {
   font-size: 16px;
   line-height: 1.6;
-  color: #fff;
   text-shadow: 0 2px 3px rgba(0,0,0,0.6);
 }
 
 .about-image {
   flex: 1 1 320px;
-  display: flex;               /* new: makes image stretch */
+  display: flex;
 }
 
 .about-image img {
   width: 100%;
-  max-height: 400px;    /* control height */
+  max-height: 400px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Services Section */
+/* -----------------------------------
+   Services Section
+----------------------------------- */
 #services {
   max-width: 1440px;
   margin: 0 auto;
@@ -279,25 +274,23 @@ nav ul li a:hover::after {
 #services h2 {
   font-size: 36px;
   margin-bottom: 40px;
-  color: #000; /* Same as About Me */
+  color: #000;
 }
 
-/* Services grid */
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
-/* Individual cards */
 .service-card {
   position: relative;
-  background: linear-gradient(135deg, #FF6B00, #FF914D, #f5c801); 
+  background: linear-gradient(135deg, #FF6B00, #FF914D, #f5c801);
+  color: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 30px 20px 80px;
   overflow: hidden;
-  padding: 30px 20px 80px; /* bottom padding for bg image */
-  color: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -306,19 +299,17 @@ nav ul li a:hover::after {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Icon at top center */
 .service-icon {
-  width: 50px; /* smaller icons */
+  width: 50px;
   height: 50px;
   margin-bottom: 20px;
 }
 
-/* Text inside card */
 .service-text h3 {
   font-size: 20px;
   margin-bottom: 10px;
   text-decoration: underline;
-  text-underline-offset: 4px;  
+  text-underline-offset: 4px;
 }
 
 .service-text p {
@@ -327,7 +318,6 @@ nav ul li a:hover::after {
   text-shadow: 0 2px 3px rgba(0,0,0,0.6);
 }
 
-/* Background image at bottom with opacity */
 .service-bg {
   position: absolute;
   bottom: 0;
@@ -348,10 +338,13 @@ nav ul li a:hover::after {
   }
 }
 
+/* -----------------------------------
+   Contact Section
+----------------------------------- */
 #contact {
   text-align: center;
   padding: 80px 20px;
-  background: #f9f9f9; /* subtle background; can be transparent too */
+  background: #f9f9f9;
 }
 
 #contact h1 {
@@ -366,7 +359,6 @@ nav ul li a:hover::after {
   margin-bottom: 10px;
 }
 
-/* CTA button matching hero section */
 .cta-button {
   margin-top: 20px;
   width: 120px;
@@ -385,7 +377,6 @@ nav ul li a:hover::after {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Contact details */
 .contact-details {
   margin-top: 30px;
   font-size: 16px;
@@ -406,28 +397,19 @@ nav ul li a:hover::after {
   margin-top: 20px;
 }
 
-.social-media img {
-  width: 24px;
-  height: 24px;
-  margin: 0 8px;
-  filter: grayscale(100%);
-  transition: filter 0.3s;
-}
-
-.social-media img:hover {
-  filter: none;
-}
 .social-link img {
-  width: 32px;                /* adjust size */
+  width: 32px;
   height: 32px;
-  border-radius: 50%;         /* makes it circular */
-  transition: background 0.3s, transform 0.3s;
-  padding: 4px;               /* optional: space inside the circle */
+  border-radius: 50%;
+  padding: 4px;
+  filter: grayscale(100%);
+  transition: filter 0.3s, background 0.3s, transform 0.3s;
 }
 
 .social-link img:hover {
-  background: rgba(0, 0, 0, 0.1);  /* light gray circle on hover */
-  transform: scale(1.1);          /* subtle zoom on hover */
+  filter: none;
+  background: rgba(0,0,0,0.1);
+  transform: scale(1.1);
 }
 
 /* Copyright */
