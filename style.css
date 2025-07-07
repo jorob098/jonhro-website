@@ -25,7 +25,51 @@ header {
   background: transparent;
   z-index: 10;
 }
+/* Hamburger button */
+.menu-toggle {
+  display: none; /* hide by default */
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
 
+/* Show hamburger and hide nav on small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px; /* adjust based on header height */
+    right: 20px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    text-align: left;
+    border: none; /* optional: remove borders for dropdown */
+  }
+}
 .logo-title {
   display: flex;
   align-items: center;
