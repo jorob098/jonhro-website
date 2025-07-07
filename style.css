@@ -13,39 +13,74 @@ body {
 }
 
 /* Header layout: logo/title left, hamburger right */
+/* Basic header style */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
-  position: relative;
+  padding: 10px 20px;
+  background: #333;
 }
 
-/* Hide hamburger by default */
+.logo-title img {
+  height: 40px;
+}
+
+.site-name {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.site-name span {
+  color: #aaa;
+}
+
+/* Hamburger */
 .menu-toggle {
-  display: none;
-  font-size: 28px;
+  font-size: 24px;
+  color: white;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-/* Show hamburger on small screens, hide nav by default */
-@media (max-width: 768px) {
-  .mobile-menu ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #333;
-  }
+/* Mobile menu hidden by default */
+.mobile-menu {
+  display: none;
+  background: #444;
+}
 
-  .mobile-menu ul.show {
-    display: flex;
-  }
+.mobile-menu.show {
+  display: block;
+}
 
+.mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid #555;
+}
+
+.mobile-menu ul li a:hover {
+  background: #555;
+}
+
+/* Desktop: hide hamburger and mobile menu */
+@media (min-width: 769px) {
   .menu-toggle {
-    display: block;
-    cursor: pointer;
+    display: none;
+  }
+  .mobile-menu {
+    display: none; /* or design your desktop menu separately */
   }
 }
 
@@ -487,41 +522,4 @@ nav ul li a:hover::after {
   margin-top: 40px;
   font-size: 14px;
   color: #594E4E;
-}
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 60px; /* adjust based on header height */
-  right: 10px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-.mobile-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.mobile-menu li {
-  border-top: 1px solid #eee;
-  text-align: center;
-}
-
-.mobile-menu li:first-child {
-  border-top: none;
-}
-
-.mobile-menu li a {
-  display: block;
-  padding: 12px 20px;
-  text-decoration: none;
-  color: #333;
-}
-
-.mobile-menu.show {
-  display: block;
 }
