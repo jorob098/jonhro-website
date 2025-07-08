@@ -854,3 +854,139 @@ nav {
     display: block;   /* show on toggle */
   }
 }
+/* Reset & base styles - keep your existing ones */
+
+/* Header: flex between logo and nav/hamburger */
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+/* Logo part */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-title img {
+  width: 120px;
+  height: auto;
+}
+
+.site-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Desktop menu: right aligned, with buttons */
+.desktop-menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-menu ul li {
+  margin-left: 20px;
+}
+
+.desktop-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 1px solid #594E4E;
+  border-radius: 8px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.desktop-menu ul li a:hover {
+  background: rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Hamburger: hidden by default (desktop) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile menu: hidden by default */
+#nav-menu {
+  display: none;
+}
+
+/* Mobile menu style when shown */
+#nav-menu.show {
+  display: block;
+  position: absolute;
+  top: 70px; /* adjust based on header height */
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 999;
+  padding: 10px 0;
+}
+
+#nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-menu ul li {
+  text-align: left;
+}
+
+#nav-menu ul li a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: text-decoration 0.3s, text-shadow 0.3s;
+}
+
+/* Underline & shadow on hover */
+#nav-menu ul li a:hover {
+  text-decoration: underline;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Close button inside mobile menu */
+.close-btn {
+  text-align: right;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px 5px 0;
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide desktop nav on mobile */
+  .desktop-menu {
+    display: none;
+  }
+}
