@@ -449,21 +449,36 @@ nav ul li a:hover {
     color: #333;
   }
 
-  .mobile-menu {
-    display: none; /* hidden by default */
-    position: absolute;
-    top: 60px; /* below header */
-    right: 0;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 9;
-    padding: 20px 0;
-  }
+  /* Initially hide mobile menu */
+.mobile-menu {
+  display: none;            /* hidden by default */
+  position: fixed;         /* fixed so it overlays everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;            /* full viewport height */
+  background-color: rgba(0, 0, 0, 0.9); /* dark semi-transparent background */
+  z-index: 9999;          /* high enough to be clickable over everything */
+  padding: 2rem;          /* spacing */
+  box-sizing: border-box;
+}
 
-  .mobile-menu.active {
-    display: block;
-  }
+/* When active, show the menu */
+.mobile-menu.active {
+  display: block;
+}
+
+/* Style for the close button */
+.close-menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
 
   .mobile-menu .close-menu {
     background: none;
