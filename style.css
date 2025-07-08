@@ -438,50 +438,25 @@ nav ul li a:hover::after {
 }
 /* Add these at the bottom of your style.css */
 
+/* By default: hide hamburger on desktop */
 .hamburger {
   display: none;
   font-size: 28px;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* hide nav by default */
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 60px; /* adjust based on header height */
-    right: 20px;
-    width: 150px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-  }
-  nav ul.show {
-    display: flex;
-  }
-  .hamburger {
-    display: block;
-  }
-  header {
-    justify-content: space-between;
-  }
-}
-/* basic style: hide hamburger on desktop */
-.hamburger {
+/* Nav menu style: hidden by default */
+#nav-menu {
   display: none;
-  font-size: 28px;
-  cursor: pointer;
 }
 
-/* style for nav menu */
+/* Style for menu items */
 #nav-menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* style for nav links */
 #nav-menu ul li a {
   text-decoration: none;
   color: #333;
@@ -495,7 +470,7 @@ nav ul li a:hover::after {
   text-decoration: underline;
 }
 
-/* mobile styles */
+/* mobile only */
 @media (max-width: 768px) {
   header {
     display: flex;
@@ -512,27 +487,19 @@ nav ul li a:hover::after {
     display: block;
   }
 
-  nav#nav-menu {
+  #nav-menu {
     position: absolute;
-    top: 60px; /* adjust if your header is taller */
+    top: 60px; /* adjust based on your header height */
     right: 20px;
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
     width: 150px;
-    display: none; /* hidden by default */
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 999;
   }
 
-  nav#nav-menu.show {
+  #nav-menu.show {
     display: block;
-  }
-
-  nav#nav-menu ul {
-    flex-direction: column;
-  }
-
-  nav#nav-menu ul li {
-    border: none; /* remove any box look */
   }
 }
