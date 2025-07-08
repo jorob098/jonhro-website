@@ -9,18 +9,27 @@
 <body>
 
   <header>
-    <div class="logo-title">
-      <img src="logo.png" alt="Logo">
-      <a href="#" class="site-name">Jonhro Robles, LCB</a>
-    </div>
-
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <div class="logo-title">
+    <img src="logo.png" alt="Jonhro Robles Logo">
+    <a href="#hero" class="site-name">Jonhro<span> Robles, LCB</span></a>
+  </div>
+  
+  <!-- Hamburger button -->
+  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <!-- Navigation -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
     <!-- Hamburger button (mobile) -->
     <button class="hamburger" aria-label="Menu">
@@ -157,27 +166,22 @@
   <!-- ✅ JS script -->
       <!-- your content above -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger');
-      const mobileMenu = document.querySelector('.mobile-menu');
-      const closeMenu = document.querySelector('.close-menu');
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-      hamburger.addEventListener('click', () => {
-        mobileMenu.classList.add('active');
-      });
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
 
-      closeMenu.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-      });
-
-      // Optional: close mobile menu when clicking any link inside
-      const menuLinks = document.querySelectorAll('.mobile-menu a');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.remove('active');
-        });
+    // Optional: close nav when clicking a link (useful for single page sites)
+    const menuLinks = document.querySelectorAll('.nav-links a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
       });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
