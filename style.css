@@ -990,3 +990,85 @@ header {
     display: none;
   }
 }
+/* Base: hide hamburger and mobile menu by default on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1100; /* make sure it's clickable above other elements */
+  background: none;
+  border: none;
+}
+
+/* Mobile menu container hidden by default */
+#nav-menu {
+  display: none;
+}
+
+/* Style for mobile menu items */
+#nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-menu ul li a {
+  text-decoration: none;
+  color: #333;              /* same as desktop */
+  font-family: inherit;
+  font-size: 16px;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 0;         /* no box style */
+  transition: text-decoration 0.3s;
+}
+
+#nav-menu ul li a:hover,
+#nav-menu ul li a:focus {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* subtle shadow on text only */
+}
+
+/* Desktop nav stays to the right of logo */
+nav {
+  margin-left: auto;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* hide desktop nav on mobile */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger */
+    position: relative;
+    z-index: 1100;  /* keep clickable on scroll */
+  }
+
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* adjust based on header height */
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* rounded corners */
+    width: 150px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  #nav-menu.show {
+    display: block;
+  }
+
+  /* Add close button inside mobile menu */
+  #nav-menu .close-btn {
+    text-align: right;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
