@@ -228,6 +228,9 @@ nav ul li a:hover {
 /* ------------------------
    SERVICES SECTION
 ------------------------- */
+/* ------------------------
+   SERVICES SECTION
+------------------------- */
 #services {
   max-width: 1440px;
   margin: 0 auto;
@@ -240,13 +243,11 @@ nav ul li a:hover {
   margin-bottom: 40px;
 }
 
-/* Services container: responsive grid */
+/* Responsive grid for service cards */
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 1440px;
-  margin: 0 auto;
   padding: 40px 20px;
 }
 
@@ -261,6 +262,7 @@ nav ul li a:hover {
   overflow: hidden;
   padding: 30px 20px;
   transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 1;
 }
 
 .service-card:hover {
@@ -268,15 +270,21 @@ nav ul li a:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Top icon inside card */
+/* Top icon inside the card */
 .service-icon {
-  width: 60px;           /* adjust to your icon size */
-  height: auto;          /* keeps aspect ratio */
+  width: 60px;
+  height: auto;
+  object-fit: contain;
   margin-bottom: 20px;
-  object-fit: contain;   /* just in case */
+  z-index: 2; /* above bg */
 }
 
-/* Text styling */
+/* Text content */
+.service-text {
+  position: relative; /* so z-index works */
+  z-index: 2;
+}
+
 .service-text h3 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -295,12 +303,13 @@ nav ul li a:hover {
 .service-bg {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 100%;
-  height: auto;
-  opacity: 0.15;          /* softer effect, adjust if needed */
-  pointer-events: none;   /* so it doesn't interfere with hover */
+  height: 50%;          /* adjust: how much of the card bottom it covers */
+  object-fit: cover;    /* keeps aspect ratio, crops if needed */
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;           /* behind everything else */
 }
 
 /* ------------------------
