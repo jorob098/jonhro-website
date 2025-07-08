@@ -579,3 +579,92 @@ nav ul li a:hover::after {
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 }
+/* By default, hide hamburger on desktop, show menu aligned to right */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#nav-menu {
+  display: block;
+}
+
+#nav-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-menu ul li {
+  margin-left: 20px;
+}
+
+#nav-menu ul li a {
+  text-decoration: none;
+  color: #333; /* same color as desktop menu */
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #594E4E;
+  transition: all 0.3s;
+}
+
+#nav-menu ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Hide desktop menu by default */
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* adjust to your header height */
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* When toggled */
+  #nav-menu.show {
+    display: block;
+  }
+
+  /* Mobile menu vertical, no box border on each item */
+  #nav-menu ul {
+    display: block;
+  }
+
+  #nav-menu ul li {
+    margin: 0; /* remove left margin */
+  }
+
+  #nav-menu ul li a {
+    display: block;
+    padding: 8px 12px;
+    border: none;           /* remove box borders */
+    border-radius: 0;
+    text-align: left;
+    color: #333;
+  }
+
+  #nav-menu ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+}
