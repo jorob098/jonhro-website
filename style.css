@@ -26,7 +26,7 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
-  background: #fff;
+  background: transparent;
   z-index: 10;
 }
 
@@ -390,5 +390,81 @@ nav ul li a:hover {
 
   #services {
     padding: 60px 20px;
+  }
+}
+/* Desktop: show nav, hide hamburger & mobile menu */
+.desktop-nav {
+  display: flex;
+}
+.hamburger, .mobile-menu {
+  display: none;
+}
+
+/* Mobile: show hamburger, hide desktop nav */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .mobile-menu {
+    display: none; /* hidden by default */
+    position: absolute;
+    top: 60px; /* below header */
+    right: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 9;
+    padding: 20px 0;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .mobile-menu .close-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .mobile-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.3s, text-shadow 0.3s;
+  }
+
+  .mobile-menu ul li a:hover {
+    background: rgba(0,0,0,0.05);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 }
