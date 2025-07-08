@@ -4,13 +4,127 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jonhro Robles, LCB</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background: #f9f9f9;
+      position: relative;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .site-name {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: text-decoration 0.3s;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      z-index: 1100;
+    }
+
+    /* Mobile menu container */
+    #nav-menu {
+      display: none;
+      position: absolute;
+      top: 60px; /* adjust if header taller */
+      right: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 160px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    #nav-menu.show {
+      display: block;
+    }
+
+    #nav-menu .close-btn {
+      text-align: right;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    #nav-menu ul {
+      list-style: none;
+    }
+
+    #nav-menu ul li a {
+      display: block;
+      padding: 8px 12px;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: text-decoration 0.3s;
+    }
+
+    #nav-menu ul li a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive: mobile view */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <div class="logo-title">
-    <img src="logo.png" alt="Jonhro Robles Logo">
+    <img src="logo.png" alt="Jonhro Robles Logo" width="40" height="40">
     <a href="#hero" class="site-name">Jonhro<span> Robles, LCB</span></a>
   </div>
   <nav>
@@ -23,11 +137,7 @@
   <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 </header>
 
-  <!-- Hamburger for mobile -->
-  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-</header>
-
-<!-- Mobile menu -->
+<!-- Mobile dropdown menu -->
 <div id="nav-menu">
   <div class="close-btn" onclick="toggleMenu()">✕</div>
   <ul>
