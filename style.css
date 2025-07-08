@@ -668,3 +668,147 @@ nav ul li a:hover::after {
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 }
+/* Header: layout */
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  position: sticky;
+  top: 0;
+  background: #fff; /* or transparent if you prefer */
+  z-index: 10;
+}
+
+/* Nav menu default: show as horizontal on desktop */
+#nav-menu {
+  display: flex;
+}
+
+#nav-menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-menu ul li {
+  margin-left: 20px;
+}
+
+#nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #594E4E;
+  position: relative;
+  transition: background 0.3s;
+  font-family: inherit;
+}
+
+#nav-menu ul li a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+#nav-menu ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#nav-menu ul li a:hover::after {
+  opacity: 1;
+}
+
+#nav-menu ul li a:hover {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Hide hamburger by default (desktop) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Close button hidden by default (desktop) */
+.close-btn {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* header layout: still flex */
+  header {
+    padding: 10px 20px;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* nav-menu: hide by default on mobile */
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* below header */
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    flex-direction: column;
+    z-index: 999;
+  }
+
+  #nav-menu.show {
+    display: flex;
+  }
+
+  /* show close button on mobile */
+  .close-btn {
+    display: block;
+    text-align: right;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  /* vertical menu */
+  #nav-menu ul {
+    flex-direction: column;
+  }
+
+  #nav-menu ul li {
+    margin: 0;
+  }
+
+  #nav-menu ul li a {
+    border: none;
+    padding: 10px 12px;
+    color: #333;
+    font-weight: 500;
+    font-family: inherit;
+  }
+
+  #nav-menu ul li a:hover {
+    text-decoration: underline;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  #nav-menu ul li a::after {
+    bottom: 0;
+  }
+}
