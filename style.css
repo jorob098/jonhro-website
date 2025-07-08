@@ -302,14 +302,16 @@ nav ul li a:hover {
 /* Decorative background image inside card */
 .service-bg {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  height: 50%;          /* adjust: how much of the card bottom it covers */
-  object-fit: cover;    /* keeps aspect ratio, crops if needed */
-  opacity: 0.15;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;           /* subtle effect */
   pointer-events: none;
-  z-index: 0;           /* behind everything else */
+  z-index: 0;              /* behind text & icon */
 }
 
 /* ------------------------
