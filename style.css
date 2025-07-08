@@ -1,4 +1,6 @@
-/* === RESET & BASE STYLES === */
+/* ------------------------
+   RESET & BASE STYLES
+------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -12,14 +14,16 @@ body {
   line-height: 1.6;
 }
 
-/* === HEADER & NAVIGATION === */
+/* ------------------------
+   HEADER & NAVIGATION
+------------------------- */
 header {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 16px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 60px;
   position: sticky;
   top: 0;
   background: #fff;
@@ -80,35 +84,25 @@ nav ul li a {
   border: 1px solid #594E4E;
   border-radius: 8px;
   transition: background 0.3s;
-  position: relative;
 }
 
 nav ul li a:hover {
   background: rgba(0,0,0,0.05);
 }
 
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background: currentColor;
-  opacity: 0;
-  transition: opacity 0.3s;
+/* Hamburger (mobile) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
-nav ul li a:hover::after {
-  opacity: 1;
-}
-
-/* === HERO SECTION === */
+/* ------------------------
+   HERO SECTION
+------------------------- */
 #hero {
   text-align: center;
   padding: 100px 20px;
-  background: #fff;
-  color: #000;
 }
 
 #hero h1 {
@@ -118,14 +112,14 @@ nav ul li a:hover::after {
 
 #hero p {
   font-size: 18px;
-  margin-bottom: 20px;
   color: #594E4E;
+  margin-bottom: 20px;
 }
 
 #hero button {
   width: 120px;
   height: 40px;
-  background-color: #FF6B00;
+  background: #FF6B00;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -139,13 +133,15 @@ nav ul li a:hover::after {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* === AFFILIATIONS SECTION === */
+/* ------------------------
+   AFFILIATIONS
+------------------------- */
 #affiliations {
   max-width: 1440px;
   margin: 60px auto;
   padding: 40px 20px;
-  background: #f8f8f8;
   text-align: center;
+  background: #f8f8f8;
 }
 
 #affiliations p {
@@ -171,7 +167,9 @@ nav ul li a:hover::after {
   color: #333;
 }
 
-/* === ABOUT SECTION === */
+/* ------------------------
+   ABOUT SECTION
+------------------------- */
 #about {
   max-width: 1200px;
   margin: 0 auto;
@@ -180,15 +178,15 @@ nav ul li a:hover::after {
 
 #about h2 {
   font-size: 36px;
-  margin-bottom: 10px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .subheading {
   font-size: 18px;
   color: #594E4E;
-  margin-bottom: 40px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .about-content {
@@ -196,7 +194,6 @@ nav ul li a:hover::after {
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
-  align-items: stretch;
 }
 
 .about-card {
@@ -216,6 +213,7 @@ nav ul li a:hover::after {
 
 .about-card p {
   font-size: 16px;
+  line-height: 1.6;
   text-shadow: 0 2px 3px rgba(0,0,0,0.6);
 }
 
@@ -227,7 +225,9 @@ nav ul li a:hover::after {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* === SERVICES SECTION === */
+/* ------------------------
+   SERVICES SECTION
+------------------------- */
 #services {
   max-width: 1440px;
   margin: 0 auto;
@@ -249,9 +249,9 @@ nav ul li a:hover::after {
 .service-card {
   background: linear-gradient(135deg, #FF6B00, #FF914D, #f5c801);
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  padding: 30px 20px;
+  padding: 30px;
   color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -266,19 +266,22 @@ nav ul li a:hover::after {
   margin-bottom: 20px;
 }
 
-.service-text h3 {
+.service-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-.service-text p {
+.service-card p {
   font-size: 14px;
+  line-height: 1.5;
   text-shadow: 0 2px 3px rgba(0,0,0,0.6);
 }
 
-/* === CONTACT SECTION === */
+/* ------------------------
+   CONTACT SECTION
+------------------------- */
 #contact {
   text-align: center;
   padding: 80px 20px;
@@ -293,13 +296,14 @@ nav ul li a:hover::after {
 #contact .subheading {
   font-size: 18px;
   color: #594E4E;
+  margin-bottom: 10px;
 }
 
 .cta-button {
   margin-top: 20px;
   width: 120px;
   height: 40px;
-  background-color: #FF6B00;
+  background: #FF6B00;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -327,21 +331,17 @@ nav ul li a:hover::after {
   text-decoration: underline;
 }
 
-.social-media {
-  margin-top: 20px;
-}
-
 .social-media img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  transition: background 0.3s, transform 0.3s;
-  padding: 4px;
+  margin: 0 8px;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .social-media img:hover {
-  background: rgba(0,0,0,0.1);
   transform: scale(1.1);
+  background: rgba(0,0,0,0.1);
 }
 
 #contact .copyright {
@@ -350,43 +350,45 @@ nav ul li a:hover::after {
   color: #594E4E;
 }
 
-/* === RESPONSIVE NAV & HAMBURGER === */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
+/* ------------------------
+   MEDIA QUERIES
+------------------------- */
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 150px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  header {
+    padding: 10px 20px;
   }
 
-  nav ul.show {
-    display: flex;
+  nav ul {
+    display: none;
   }
 
   .hamburger {
     display: block;
   }
 
-  nav ul li {
+  #nav-menu.show ul {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  #nav-menu.show ul li {
     margin: 0;
   }
 
-  nav ul li a {
+  #nav-menu.show ul li a {
+    display: block;
     padding: 8px 12px;
     border: none;
-    border-radius: 0;
-    text-align: left;
+  }
+
+  #services {
+    padding: 60px 20px;
   }
 }
