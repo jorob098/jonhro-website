@@ -16,15 +16,14 @@
     <img src="logo.png" alt="Jonhro Robles Logo">
     <a href="#hero" class="site-name">Jonhro<span> Robles, LCB</span></a>
   </div>
-
   <nav id="nav-menu">
+    <div class="close-btn" onclick="toggleMenu()">&times;</div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
   <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 </header>
   
@@ -155,8 +154,8 @@
   <!-- ✅ JS script -->
   <script>
 function toggleMenu() {
-  var menu = document.getElementById("nav-menu");
-  menu.classList.toggle("show");
+  var menu = document.getElementById('nav-menu');
+  menu.classList.toggle('show');
 }
 </script>
 </body>
