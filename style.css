@@ -503,3 +503,79 @@ nav ul li a:hover::after {
     display: block;
   }
 }
+/* DESKTOP: show nav as flex to the right of logo */
+@media (min-width: 769px) {
+  #nav-menu {
+    display: block;
+  }
+
+  #nav-menu ul {
+    display: flex;
+    margin-left: auto;
+  }
+
+  #nav-menu ul li {
+    margin-left: 20px;
+  }
+
+  #nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border: 1px solid #594E4E;
+    border-radius: 8px;
+    transition: text-decoration 0.3s, text-shadow 0.3s;
+  }
+
+  #nav-menu ul li a:hover {
+    text-decoration: underline;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* MOBILE: hide nav by default, show only when toggled */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* adjust if header height changes */
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  #nav-menu.show {
+    display: block;
+  }
+
+  #nav-menu ul {
+    display: block;
+  }
+
+  #nav-menu ul li a {
+    display: block;
+    color: #333;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 0;
+  }
+
+  #nav-menu ul li a:hover {
+    text-decoration: underline;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+}
