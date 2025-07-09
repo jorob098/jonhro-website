@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <header class="header">
+<header class="header">
   <div class="logo-title">
     <img src="logo.png" alt="Jonhro Robles Logo">
     <a href="#hero" class="site-name">Jonhro<span> Robles, LCB</span></a>
@@ -166,24 +166,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.close-menu');
 
   hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('show');     // toggles slide in/out
-    hamburger.classList.toggle('active');    // toggles hamburger animation
+    mobileMenu.classList.toggle('active');
   });
 
   closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('show');
-    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
   });
 
-  // Close when any menu link clicked
-  const menuLinks = document.querySelectorAll('.mobile-menu a');
-  menuLinks.forEach(link => {
+  // Optional: close menu when a mobile link is clicked
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.remove('show');
-      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
     });
   });
 });
 </script>
+
 </body>
 </html>
