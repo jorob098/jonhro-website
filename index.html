@@ -166,9 +166,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const closeBtn = document.querySelector('.close-menu');
 
   hamburger.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    hamburger.classList.remove('active');
   });
 
   // Optional: close when link clicked
@@ -176,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
   menuLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
+      hamburger.classList.remove('active');
     });
   });
 });
