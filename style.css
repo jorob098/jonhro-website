@@ -40,7 +40,7 @@ header {
 .site-name {
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   position: relative;
   cursor: pointer;
@@ -96,7 +96,7 @@ header {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #fff;
+  background: #000;
   transition: all 0.3s;
 }
 
@@ -140,7 +140,8 @@ header {
   color: #fff;
   text-decoration: none;
   padding: 1rem 2rem;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid #555;
+  display: block; /* make entire area clickable */
 }
 
 /* Responsive */
