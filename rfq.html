@@ -46,35 +46,33 @@
 </div>
 
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzlK30qCkpX07AkivAKahfntcW7BaAVU_ibNlHzBQRz83h1yqPKx3W8tLM4GYRnVMWbeg/exec'; // replace with your URL
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzlK30qCkpX07AkivAKahfntcW7BaAVU_ibNlHzBQRz83h1yqPKx3W8tLM4GYRnVMWbeg/exec';
 
 document.getElementById('rfq-form').addEventListener('submit', e => {
   e.preventDefault();
   
   const form = e.target;
-  const data = {
-    name: form.name.value,
-    email: form.email.value,
-    company: form.company.value,
-    details: form.details.value
-  };
-
   const formData = new FormData(form);
-fetch(scriptURL, { method: 'POST', body: formData })
 
-  .then(response => response.json())
-  .then(response => {
-    form.reset();
-    document.getElementById('success-message').style.display = 'block';
-    setTimeout(() => {
-      document.getElementById('success-message').style.display = 'none';
-    }, 5000); // hides after 5 seconds
-  })
-  .catch(error => {
-    console.error('Error!', error.message);
-    alert('Error submitting form. Please try again later.');
-  });
+  fetch(scriptURL, { method: 'POST', body: formData })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        document.getElementById('success-message').style.display = 'block';
+        setTimeout(() => {
+          document.getElementById('success-message').style.display = 'none';
+        }, 5000);
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      alert('Error submitting form. Please try again later.');
+    });
+});
 </script>
+
     <!-- Optional: reuse footer here -->
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
