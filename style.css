@@ -174,6 +174,12 @@ header {
   display: block; /* make entire area clickable */
 }
 
+.mobile-menu a[href="rfq.html"] {
+  color: #FF6B00;
+  font-weight: bold;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
@@ -445,21 +451,19 @@ header {
 }
 
 .cta-button {
-  margin-top: 20px;
-  width: 120px;
-  height: 40px;
-  background: #FF6B00;
-  color: #fff;
-  font-size: 16px;
+  display: inline-block;
+  padding: 12px 24px;          /* makes it bigger horizontally & vertically */
+  background-color: #FF6B00;   /* your orange */
+  color: #fff;                 /* white text */
+  font-size: 16px;             /* readable size */
   font-weight: bold;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: box-shadow 0.3s;
+  text-decoration: none;       /* remove underline */
+  border-radius: 8px;          /* rounded corners */
+  transition: background 0.3s; /* smooth hover effect */
 }
 
 .cta-button:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  background-color: #e55d00;   /* darker on hover */
 }
 
 .contact-details {
@@ -493,4 +497,60 @@ header {
   margin-top: 40px;
   font-size: 14px;
   color: #594E4E;
+}
+.rfq-page {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  background: #fff;
+  border: 2px solid #594E4E;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.rfq-page h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.rfq-form label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.rfq-form input,
+.rfq-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 4px;
+}
+
+.rfq-form button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #FF6B00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.rfq-form button:hover {
+  background: #e55d00;
+}
+
+.mobile-menu a {
+  text-decoration: none; /* remove underline by default */
+  transition: text-decoration 0.3s, color 0.3s; /* smooth effect */
+}
+
+.mobile-menu a:hover {
+  text-decoration: underline; /* show underline on hover */
+  color: #FF6B00;
 }
