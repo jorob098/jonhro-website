@@ -1,4 +1,3 @@
-/* Reset & base */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header & nav container */
 header {
   display: flex;
   justify-content: space-between;
@@ -20,7 +18,7 @@ header {
   max-width: 1440px;
   margin: 0 auto;
   padding: 16px 60px;
-  background: #333;
+  background: transparent; /* fully transparent */
   color: #fff;
   position: sticky;
   top: 0;
@@ -65,7 +63,7 @@ header {
   opacity: 1;
 }
 
-/* Nav links (desktop) */
+/* Desktop nav links inside pill/box */
 .nav-links {
   display: flex;
   list-style: none;
@@ -75,11 +73,14 @@ header {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  transition: color 0.3s;
+  margin-left: 8px;
+  background: rgba(255, 255, 255, 0.1); /* subtle background */
+  border-radius: 20px;
+  transition: background 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #f0c040;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Hamburger */
@@ -88,6 +89,8 @@ header {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .hamburger span {
@@ -104,16 +107,27 @@ header {
   right: -100%;
   width: 70%;
   height: 100%;
-  background: #444;
+  background: rgba(0,0,0,0.9);
   display: flex;
   flex-direction: column;
   padding-top: 4rem;
   transition: right 0.3s ease;
-  z-index: 9;
+  z-index: 999;
 }
 
-.mobile-menu.show {
+.mobile-menu.active {
   right: 0;
+}
+
+.mobile-menu .close-menu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .mobile-menu ul {
@@ -126,7 +140,7 @@ header {
   color: #fff;
   text-decoration: none;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 /* Responsive */
