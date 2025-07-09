@@ -8,13 +8,13 @@
 </head>
 <body>
 
-  <header>
+  <header class="header">
   <div class="logo-title">
     <img src="logo.png" alt="Jonhro Robles Logo">
     <a href="#hero" class="site-name">Jonhro<span> Robles, LCB</span></a>
   </div>
 
-  <!-- Desktop navigation -->
+  <!-- Desktop nav -->
   <nav class="desktop-nav">
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
@@ -23,7 +23,7 @@
     </ul>
   </nav>
 
-  <!-- Hamburger for mobile -->
+  <!-- Hamburger (mobile only) -->
   <button class="hamburger" aria-label="Menu">
     <span></span>
     <span></span>
@@ -31,15 +31,15 @@
   </button>
 </header>
 
-<!-- Mobile menu container -->
-<div class="mobile-menu">
-  <button class="close-menu" aria-label="Close Menu">✕</button>
+<!-- Mobile slide-in menu -->
+<nav class="mobile-menu">
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-</div>
+</nav>
+
 
   <!-- ✅ Hero section -->
   <section id="hero">
@@ -163,17 +163,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
-  const closeMenu = document.querySelector('.close-menu');
 
   hamburger.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
+    mobileMenu.classList.toggle('active');
   });
 
-  closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-  });
-
-  // Optional: close menu when a link is clicked
+  // Optional: close when link clicked
   const menuLinks = document.querySelectorAll('.mobile-menu a');
   menuLinks.forEach(link => {
     link.addEventListener('click', () => {
