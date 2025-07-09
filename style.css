@@ -564,3 +564,61 @@ header {
   font-size: 16px;
   text-align: center;
 }
+.rfq-page {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  background: #fff;
+  border: 2px solid #594E4E;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.rfq-page h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.rfq-form label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.rfq-form input,
+.rfq-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.rfq-form button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #FF6B00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.rfq-form button:hover {
+  background: #e55d00;
+}
+
+#success-message {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+}
