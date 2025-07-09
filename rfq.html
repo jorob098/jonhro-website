@@ -23,28 +23,51 @@
 
   <main class="rfq-page">
     <h1>Request for Quotation</h1>
-    <form class="rfq-form">
-      <label>
-        Name:
-        <input type="text" name="name" required>
-      </label>
-      <label>
-        Email:
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Company:
-        <input type="text" name="company">
-      </label>
-      <label>
-        Details / What do you need?:
-        <textarea name="details" rows="5" required></textarea>
-      </label>
-      <button type="submit">Submit RFQ</button>
-    </form>
-  </main>
+    <form id="rfq-form">
+  <label>Name:
+    <input type="text" name="name" required>
+  </label>
+  <label>Email:
+    <input type="email" name="email" required>
+  </label>
+  <label>Company:
+    <input type="text" name="company">
+  </label>
+  <label>Details / What do you need?:
+    <textarea name="details" rows="5" required></textarea>
+  </label>
+  <button type="submit">Submit RFQ</button>
+</form>
 
-  <footer>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzlK30qCkpX07AkivAKahfntcW7BaAVU_ibNlHzBQRz83h1yqPKx3W8tLM4GYRnVMWbeg/exec'; // replace with your URL
+
+document.getElementById('rfq-form').addEventListener('submit', e => {
+  e.preventDefault();
+  
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    company: form.company.value,
+    details: form.details.value
+  };
+
+  fetch(scriptURL, {
+    method: 'POST',
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(response => {
+    alert('Thank you! RFQ submitted.');
+    form.reset();
+  })
+  .catch(error => {
+    console.error('Error!', error.message);
+    alert('Error submitting form. Please try again later.');
+  });
+});
+</script>
     <!-- Optional: reuse footer here -->
   </footer>
   <!--Start of Tawk.to Script-->
