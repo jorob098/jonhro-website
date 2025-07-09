@@ -76,36 +76,41 @@ header {
 }
 
 .nav-links li a {
-  position: relative;          /* enable ::after underline */
+  position: relative;         
   display: inline-block;
+  padding: 8px 16px;
+  margin-left: 8px;
+  border: 2px solid #594E4E;       /* bigger border */
+  border-radius: 8px;
   color: #000;
   text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;          /* rounded corners */
-  background: #fff;            /* box background */
-  transition: background 0.3s;
+  background: #fff;
+  transition: box-shadow 0.3s, background 0.3s;
 }
 
-/* underline that appears on hover */
+/* Underline: hidden at first, width 0, animate to full width */
 .nav-links li a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 4px;                 /* distance from text */
-  width: 100%;
+  bottom: 4px;                   
   height: 2px;
-  background: currentColor;
-  opacity: 0;
-  transition: opacity 0.3s;
+  background: #FF6B00;
+  width: 0%;
+  transition: width 0.3s ease;
 }
 
-.nav-links li a:hover {
-  background: rgba(0,0,0,0.05); /* subtle background on hover */
+/* On hover or click: slide underline in */
+.nav-links li a:hover::after,
+.nav-links li a:active::after {
+  width: 100%;
 }
 
-.nav-links li a:hover::after {
-  opacity: 1;
+/* Softer, larger shadow on hover/click */
+.nav-links li a:hover,
+.nav-links li a:active {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);   /* softer & larger */
+  background: rgba(0,0,0,0.02);                 /* subtle background tint */
 }
 
 /* Hamburger */
