@@ -166,20 +166,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.close-menu');
 
   hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('show');     // toggles slide in/out
+    hamburger.classList.toggle('active');    // toggles hamburger animation
   });
 
   closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
+    mobileMenu.classList.remove('show');
     hamburger.classList.remove('active');
   });
 
-  // Optional: close when link clicked
+  // Close when any menu link clicked
   const menuLinks = document.querySelectorAll('.mobile-menu a');
   menuLinks.forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
+      mobileMenu.classList.remove('show');
       hamburger.classList.remove('active');
     });
   });
