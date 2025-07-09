@@ -13,39 +13,33 @@
     <img src="logo.png" alt="Jonhro Robles Logo">
     <a href="#hero" class="site-name">Jonhro<span> Robles, LCB</span></a>
   </div>
-  
-  <!-- Hamburger button -->
-  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  
-  <!-- Navigation -->
-  <nav>
+
+  <!-- Desktop navigation -->
+  <nav class="desktop-nav">
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+
+  <!-- Hamburger for mobile -->
+  <button class="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
-    <!-- Hamburger button (mobile) -->
-    <button class="hamburger" aria-label="Menu">
-      &#9776;
-    </button>
-  </header>
-
-  <!-- Mobile menu -->
-  <div class="mobile-menu">
-    <button class="close-menu" aria-label="Close Menu">✕</button>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
+<!-- Mobile menu container -->
+<div class="mobile-menu">
+  <button class="close-menu" aria-label="Close Menu">✕</button>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
 
   <!-- ✅ Hero section -->
   <section id="hero">
@@ -166,22 +160,27 @@
   <!-- ✅ JS script -->
       <!-- your content above -->
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const closeMenu = document.querySelector('.close-menu');
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+  });
 
-    // Optional: close nav when clicking a link (useful for single page sites)
-    const menuLinks = document.querySelectorAll('.nav-links a');
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+  });
+
+  // Optional: close menu when a link is clicked
+  const menuLinks = document.querySelectorAll('.mobile-menu a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
     });
   });
+});
 </script>
 </body>
 </html>
