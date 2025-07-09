@@ -62,16 +62,14 @@ document.getElementById('rfq-form').addEventListener('submit', e => {
   .then(response => {
     form.reset();
     document.getElementById('success-message').style.display = 'block';
-  })
     setTimeout(() => {
-  document.getElementById('success-message').style.display = 'none';
-}, 5000); // hides after 5 seconds
-
+      document.getElementById('success-message').style.display = 'none';
+    }, 5000); // hides after 5 seconds
+  })
   .catch(error => {
     console.error('Error!', error.message);
     alert('Error submitting form. Please try again later.');
   });
-});
 </script>
     <!-- Optional: reuse footer here -->
   </footer>
