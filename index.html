@@ -159,7 +159,7 @@
 
   <!-- ✅ JS script -->
       <!-- your content above -->
-  <script>
+<script>
   document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
@@ -167,18 +167,18 @@
   const menuLinks = document.querySelectorAll('.mobile-menu a');
 
   hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('show');
+    mobileMenu.classList.toggle('active');   // <-- use 'active' instead of 'show'
     hamburger.classList.toggle('active');
   });
 
   closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('show');
+    mobileMenu.classList.remove('active');
     hamburger.classList.remove('active');
   });
 
   menuLinks.forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.remove('show');
+      mobileMenu.classList.remove('active');
       hamburger.classList.remove('active');
     });
   });
