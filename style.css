@@ -285,7 +285,7 @@ header {
 }
 
 .about-card {
-  flex: 1 1 400px;
+  /* Remove or comment out this line; we'll control width via media query */
   background: linear-gradient(135deg, #FF6B00, #f5c801);
   color: #fff;
   padding: 30px;
@@ -311,6 +311,28 @@ header {
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* Make card and image same width on desktop */
+@media (min-width: 992px) {
+  .about-card, .about-image {
+    flex: 0 0 500px;    /* fixed width */
+    max-width: 500px;
+  }
+}
+
+/* Keep them full width on small screens */
+@media (max-width: 991px) {
+  .about-card, .about-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Ensure image fills the container fully */
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ------------------------
