@@ -59,10 +59,9 @@ document.getElementById('rfq-form').addEventListener('submit', e => {
     details: form.details.value
   };
 
-  fetch(scriptURL, {
-    method: 'POST',
-    body: JSON.stringify(data)
-  })
+  const formData = new FormData(form);
+fetch(scriptURL, { method: 'POST', body: formData })
+
   .then(response => response.json())
   .then(response => {
     form.reset();
