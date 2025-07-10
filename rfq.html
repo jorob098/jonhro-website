@@ -46,14 +46,12 @@
 </div>
 
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbym-LUacrpqfV7SeuJqMyg-HiQFvO-Uwh1te4k515D5G_ORt1iSjcbLt2rILp0Aq6JiMQ/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyGBOS9ZSH7mMFo4cHPKfgcKPGfUOuHPzKyjepDvbpc2Fp8mj96EmboFMbzk65n26hz7A/exec';
 
 document.getElementById('rfq-form').addEventListener('submit', e => {
   e.preventDefault();
-  
-  const form = e.target;
 
-  // Build JSON object from form fields
+  const form = e.target;
   const jsonData = {
     name: form.name.value,
     email: form.email.value,
@@ -63,12 +61,10 @@ document.getElementById('rfq-form').addEventListener('submit', e => {
 
   fetch(scriptURL, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(jsonData)
   })
-  .then(response => response.text()) // get raw text
+  .then(response => response.text())
   .then(text => {
     console.log('Server response:', text);
     try {
@@ -82,7 +78,7 @@ document.getElementById('rfq-form').addEventListener('submit', e => {
       } else {
         alert('Submission failed: ' + text);
       }
-    } catch(e) {
+    } catch (e) {
       alert('Unexpected response: ' + text);
     }
   })
