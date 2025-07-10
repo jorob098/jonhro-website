@@ -7,100 +7,101 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="logo-title">
-      <img src="logo.png" alt="Jonhro Robles Logo">
-      <a href="index.html" class="site-name">Jonhro<span> Robles, LCB</span></a>
-    </div>
-    <nav class="desktop-nav">
-      <ul class="nav-links">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="rfq-page">
-    <h1>Request for Quotation</h1>
-    <form class="rfq-form" id="rfq-form" action="#">
-      <label>
-        Name:
-        <input type="text" name="name" required>
-      </label>
-      <label>
-        Email:
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Company:
-        <input type="text" name="company">
-      </label>
-      <label>
-        Details / What do you need?:
-        <textarea name="details" rows="5" required></textarea>
-      </label>
-      <div class="g-recaptcha" data-sitekey="6LdtQX4rAAAAACZoAbCDipQ33sQQxpEVCCz6U580"></div>
-      <button type="submit">Submit RFQ</button>
-    </form>
-    <div id="success-message" style="display:none;">Thank you! We received your request.</div>
+<header class="header">
+  <div class="logo-title">
+    <img src="logo.png" alt="Jonhro Robles Logo">
+    <a href="index.html" class="site-name">Jonhro<span> Robles, LCB</span></a>
   </div>
+  <nav class="desktop-nav">
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxUR0pnUOhFtDNP09-SyEBtFc8KhgptEz3oVo_O9Kwl4YXHad7v_HRspSh6MUvEyJK5VQ/exec';
+<div class="rfq-page">
+  <h1>Request for Quotation</h1>
+  <form class="rfq-form" id="rfq-form">
+    <label>Name:
+      <input type="text" name="name" required>
+    </label>
+    <label>Email:
+      <input type="email" name="email" required>
+    </label>
+    <label>Company:
+      <input type="text" name="company">
+    </label>
+    <label>Details / What do you need?:
+      <textarea name="details" rows="5" required></textarea>
+    </label>
 
-    document.getElementById('rfq-form').addEventListener('submit', e => {
-      e.preventDefault();
+    <!-- reCAPTCHA widget -->
+    <div class="g-recaptcha" data-sitekey="6LdtQX4rAAAAACZoAbCDipQ33sQQxpEVCCz6U580"></div>
 
-      const form = e.target;
-      const recaptchaResponse = grecaptcha.getResponse();
-      if (!recaptchaResponse) {
-        alert('Please complete the reCAPTCHA.');
-        return;
-      }
+    <button type="submit">Submit RFQ</button>
+  </form>
+  <div id="success-message" style="display:none;">Thank you! We received your request.</div>
+</div>
 
-      const jsonData = {
-        name: form.name.value,
-        email: form.email.value,
-        company: form.company.value,
-        details: form.details.value,
-        recaptcha: recaptchaResponse
-      };
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxUR0pnUOhFtDNP09-SyEBtFc8KhgptEz3oVo_O9Kwl4YXHad7v_HRspSh6MUvEyJK5VQ/exec'; // <-- replace with your actual URL
 
-      fetch(scriptURL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(jsonData)
-      })
-      .then(() => {
-        form.reset();
-        grecaptcha.reset(); // reset reCAPTCHA checkbox
-        document.getElementById('success-message').style.display = 'block';
-        setTimeout(() => {
-          document.getElementById('success-message').style.display = 'none';
-        }, 5000);
-      })
-      .catch(error => {
-        console.error('Fetch error:', error);
-        alert('Fetch error: ' + error);
-      });
-    });
-  </script>
+document.getElementById('rfq-form').addEventListener('submit', e => {
+  e.preventDefault();
 
-  <!-- Load Google reCAPTCHA library -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  const form = e.target;
+  const recaptchaResponse = grecaptcha.getResponse();
+  if (!recaptchaResponse) {
+    alert('Please complete the CAPTCHA.');
+    return;
+  }
 
-  <!-- Optional: Tawk.to live chat -->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/686e628db9e89e190d9937e1/1ivnj1u86';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
+  const jsonData = {
+    name: form.name.value,
+    email: form.email.value,
+    company: form.company.value,
+    details: form.details.value,
+    recaptcha: recaptchaResponse
+  };
+
+  fetch(scriptURL, {
+    method: 'POST',
+    mode: 'no-cors',   // no-cors so browser won’t block it
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(jsonData)
+  })
+  .then(() => {
+    form.reset();
+    grecaptcha.reset(); // reset captcha
+    document.getElementById('success-message').style.display = 'block';
+    setTimeout(() => {
+      document.getElementById('success-message').style.display = 'none';
+    }, 5000);
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+    alert('Fetch error: ' + error);
+  });
+});
+</script>
+
+<!-- Load reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- Optional: Tawk.to Chat -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/686e628db9e89e190d9937e1/1ivnj1u86';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
 </body>
 </html>
