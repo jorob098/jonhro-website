@@ -55,29 +55,29 @@ document.getElementById('rfq-form').addEventListener('submit', e => {
   const formData = new FormData(form);
 
   fetch(scriptURL, { method: 'POST', body: formData })
-  .then(response => response.text()) // get raw text
-  .then(text => {
-    console.log('Server response:', text);
-    try {
-      const json = JSON.parse(text);
-      if (json.result === 'success') {
-        form.reset();
-        document.getElementById('success-message').style.display = 'block';
-        setTimeout(() => {
-          document.getElementById('success-message').style.display = 'none';
-        }, 5000);
-      } else {
-        alert('Submission failed: ' + text);
+    .then(response => response.text()) // get raw text
+    .then(text => {
+      console.log('Server response:', text);
+      try {
+        const json = JSON.parse(text);
+        if (json.result === 'success') {
+          form.reset();
+          document.getElementById('success-message').style.display = 'block';
+          setTimeout(() => {
+            document.getElementById('success-message').style.display = 'none';
+          }, 5000);
+        } else {
+          alert('Submission failed: ' + text);
+        }
+      } catch(e) {
+        alert('Unexpected response: ' + text);
       }
-    } catch(e) {
-      alert('Unexpected response: ' + text);
-    }
-  })
-  .catch(error => {
-    console.error('Fetch error:', error);
-    alert('Fetch error: ' + error);
-  });
-
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+      alert('Fetch error: ' + error);
+    });
+}); // <-- this was missing
 </script>
 
     <!-- Optional: reuse footer here -->
