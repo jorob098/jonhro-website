@@ -46,38 +46,44 @@
 </div>
 
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbym-LUacrpqfV7SeuJqMyg-HiQFvO-Uwh1te4k515D5G_ORt1iSjcbLt2rILp0Aq6JiMQ/exec'; // replace with your new Web App URL
+const scriptURL = 'https://script.google.com/macros/s/AKfycbym-LUacrpqfV7SeuJqMyg-HiQFvO-Uwh1te4k515D5G_ORt1iSjcbLt2rILp0Aq6JiMQ/exec';
 
 document.getElementById('rfq-form').addEventListener('submit', e => {
   e.preventDefault();
-
+  
   const form = e.target;
 
-  // Collect form data into an object
-  const data = {
+  // Build JSON object from form fields
+  const jsonData = {
     name: form.name.value,
     email: form.email.value,
     company: form.company.value,
     details: form.details.value
   };
 
-  // Send as JSON
   fetch(scriptURL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(jsonData)
   })
-  .then(response => response.json())
-  .then(json => {
-    console.log('Server response:', json);
-    if (json.result === 'success') {
-      form.reset();
-      document.getElementById('success-message').style.display = 'block';
-      setTimeout(() => {
-        document.getElementById('success-message').style.display = 'none';
-      }, 5000);
-    } else {
-      alert('Submission failed: ' + (json.message || 'Unknown error'));
+  .then(response => response.text()) // get raw text
+  .then(text => {
+    console.log('Server response:', text);
+    try {
+      const json = JSON.parse(text);
+      if (json.result === 'success') {
+        form.reset();
+        document.getElementById('success-message').style.display = 'block';
+        setTimeout(() => {
+          document.getElementById('success-message').style.display = 'none';
+        }, 5000);
+      } else {
+        alert('Submission failed: ' + text);
+      }
+    } catch(e) {
+      alert('Unexpected response: ' + text);
     }
   })
   .catch(error => {
