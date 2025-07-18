@@ -3,174 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jonhro Robles | Customs Broker Cebu</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: sans-serif;
-      scroll-behavior: smooth;
-      background: #f9f9f9;
-    }
-
-    /* Header styles */
-    header.header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .logo-title {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo-title img {
-      height: 40px;
-      margin-right: 0.5rem;
-    }
-
-    .site-name {
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .site-name span {
-      color: #0077b6;
-    }
-
-    .desktop-nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1rem;
-    }
-
-    .desktop-nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    .container {
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      height: 100vh;
-      padding-top: 80px; /* to avoid overlapping with fixed header */
-    }
-
-    .section {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      scroll-snap-align: start;
-      flex-direction: column;
-      background: #fff;
-      color: #333;
-      transition: background 0.5s ease-in-out;
-      border-bottom: 1px solid #ddd;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      max-width: 600px;
-      line-height: 1.6;
-      text-align: center;
-      font-size: 1.1rem;
-    }
-
-    /* Optional: hide hamburger/menu for now */
-    .hamburger, .mobile-menu {
-      display: none;
-    }
-  </style>
+  <title>Customs Broker in Cebu – Jonhro Robles, LCB</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
-  <div class="logo-title">
-    <img src="jrlogo.svg" alt="Jonhro Robles Logo">
-    <a href="#hero" class="site-name">Jonhro<span> Robles, LCB</span></a>
-  </div>
+    <div class="logo-title">
+      <a href="index.html">
+        <img src="jrlogo.svg" alt="Jonhro Robles Logo" />
+      </a>
+      <a href="index.html" class="site-name">Jonhro<span> Robles, LCB</span></a>
+    </div>
 
-  <!-- Desktop nav -->
-  <nav class="desktop-nav">
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="customs-broker-in-cebu.html">Blog</a></li>
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger Icon -->
+    <button class="hamburger" id="hamburger" aria-label="Open Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu" aria-label="Close Menu">&times;</button>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="rfq.html">Request for Quotation</a></li>
     </ul>
   </nav>
 
-  <!-- Hamburger (mobile only) -->
-  <button class="hamburger" aria-label="Menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</header>
+  <!-- Blog Content -->
+  <main class="blog-content" style="max-width: 800px; margin: 100px auto; padding: 40px 20px;">
+    <h1>Customs Broker in Cebu – How We Can Help</h1>
+    <p>Importing or exporting in Cebu? Whether you're a small business or a growing enterprise, customs processes can feel overwhelming — but they don’t have to be.</p>
 
-<!-- Mobile slide-in menu -->
-<nav class="mobile-menu">
-  <button class="close-menu" aria-label="Close menu">×</button>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="customs-broker-in-cebu.html">Blog</a></li>
-    <li><a href="rfq.html">Request for Quotation</a></li>
-  </ul>
-</nav>
-  </header>
+    <h2>🚢 Seamless Customs Clearance</h2>
+    <p>At Jonhro Robles, LCB, we handle the paperwork, compliance, and coordination with the Bureau of Customs so you can focus on your business.</p>
 
-  <div class="container">
-    <section class="section">
-      <h1>Why Customs in Cebu Matters</h1>
-      <p>Importing or exporting in Cebu can be overwhelming. Without the right guidance, delays, penalties, and confusion are common. But with expert help, it doesn't have to be that way.</p>
-    </section>
+    <h2>✅ Trade Compliance Made Simple</h2>
+    <p>We help your shipments avoid delays and penalties by ensuring your documents and declarations meet all Philippine customs requirements.</p>
 
-    <section class="section">
-      <h1>What Happens Without a Broker</h1>
-      <p>Many importers face delays due to incomplete paperwork or misunderstanding customs regulations. A licensed broker ensures accuracy and compliance.</p>
-    </section>
+    <h2>📍 Why Choose Us in Cebu</h2>
+    <ul>
+      <li>Licensed and experienced customs broker</li>
+      <li>Local expertise in Cebu port operations</li>
+      <li>Personalized service for small and medium businesses</li>
+    </ul>
 
-    <section class="section">
-      <h1>What We Do at Jonhro Robles, LCB</h1>
-      <p>We handle customs clearance, compliance, and coordination with the Bureau of Customs so you can focus on your business.</p>
-    </section>
+    <h2>✨ Ready to Ship Smoothly?</h2>
+    <p>Contact us today for a free consultation or request a quotation online.</p>
+    <p>Let’s make your import/export journey in Cebu hassle-free!</p>
+  </main>
 
-    <section class="section">
-      <h1>Our Services</h1>
-      <p>From documentation to tariff classification, we offer full-service customs solutions tailored to your needs.</p>
-    </section>
+  <!-- Mobile Nav Script -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = document.getElementById("closeMenu");
 
-    <section class="section">
-      <h1>Why Choose Us in Cebu</h1>
-      <p>Local expertise. Licensed broker. Transparent process. Personalized support for small and medium businesses.</p>
-    </section>
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.add("active");
+    });
 
-    <section class="section">
-      <h1>Let’s Get You Started</h1>
-      <p>Schedule a free consultation or request a quote today. Let’s move your cargo forward — the right way.</p>
-    </section>
-  </div>
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  </script>
 </body>
 </html>
