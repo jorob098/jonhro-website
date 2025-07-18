@@ -10,11 +10,67 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     html, body {
       height: 100%;
       font-family: sans-serif;
       scroll-behavior: smooth;
+      background: #f9f9f9;
     }
+
+    /* Header styles */
+    header.header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-title img {
+      height: 40px;
+      margin-right: 0.5rem;
+    }
+
+    .site-name {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .site-name span {
+      color: #0077b6;
+    }
+
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+
+    .desktop-nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .container {
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100vh;
+      padding-top: 80px; /* to avoid overlapping with fixed header */
+    }
+
     .section {
       height: 100vh;
       display: flex;
@@ -26,61 +82,44 @@
       background: #fff;
       color: #333;
       transition: background 0.5s ease-in-out;
+      border-bottom: 1px solid #ddd;
     }
-    .container {
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      height: 100vh;
-    }
+
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     p {
       max-width: 600px;
       line-height: 1.6;
       text-align: center;
       font-size: 1.1rem;
     }
+
+    /* Optional: hide hamburger/menu for now */
+    .hamburger, .mobile-menu {
+      display: none;
+    }
   </style>
 </head>
 <body>
   <header class="header">
-  <div class="logo-title">
-    <img src="jrlogo.svg" alt="Jonhro Robles Logo">
-    <a href="#hero" class="site-name">Jonhro<span> Robles, LCB</span></a>
-  </div>
+    <div class="logo-title">
+      <img src="jrlogo.svg" alt="Jonhro Robles Logo">
+      <a href="index.html" class="site-name">Jonhro<span> Robles, LCB</span></a>
+    </div>
 
-  <!-- Desktop nav -->
-  <nav class="desktop-nav">
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="customs-broker-in-cebu.html">Blog</a></li>
-    </ul>
-  </>nav
+    <nav class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="customs-broker-in-cebu.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Hamburger (mobile only) -->
-  <button class="hamburger" aria-label="Menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</header>
-
-<!-- Mobile slide-in menu -->
-<nav class="mobile-menu">
-  <button class="close-menu" aria-label="Close menu">×</button>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="customs-broker-in-cebu.html">Blog</a></li>
-    <li><a href="rfq.html">Request for Quotation</a></li>
-  </ul>
- </>nav
-  
   <div class="container">
     <section class="section">
       <h1>Why Customs in Cebu Matters</h1>
