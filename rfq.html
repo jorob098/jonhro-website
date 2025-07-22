@@ -106,7 +106,7 @@ document.getElementById('rfq-form').addEventListener('submit', e => {
       document.getElementById('success-message').style.display = 'none';
     }, 5000);
   })
-  .catch(error => {
+  .catch(error => { 
     console.error('Fetch error:', error);
     alert('Fetch error: ' + error);
     submitBtn.disabled = false;
