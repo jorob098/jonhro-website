@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "Clear Customs, Clear Mind": "Aduanas Despejadas, Mente Clara",
+    "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.": "Su agente de aduanas autorizado de confianza en Cebú para importaciones y exportaciones sin complicaciones.",
+    "Get Started": "Comenzar"
+  },
+  "nav-links": {
+    "Home": "Inicio",
+    "About": "Acerca de",
+    "Services": "Servicios",
+    "Contact": "Contacto",
+    "Blog": "Blog",
+    "RFQ": "Cotización"
+  },
+  "contactIntro": {
+    "Send an Inquiry": "Enviar una Consulta",
+    "First Name": "Nombre",
+    "Last Name": "Apellido",
+    "Contact No.": "Número de Contacto",
+    "Email": "Correo Electrónico",
+    "Message": "Mensaje",
+    "Send Inquiry": "Enviar Consulta",
+    "Contact Me": "Contáctame",
+    "Let’s Bring Your Vision to Life": "Hagamos Realidad Tu Visión",
+    "Support Message Full": "Ya sea que estés comenzando desde cero o mejorando lo que ya tienes, estoy aquí para ayudarte a tener éxito. Hablemos sobre cómo puedo apoyar tu próximo proyecto."
+  },
+  "contact-page": {
+    "Let’s Talk": "Hablemos",
+    "Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.": "Envíame tu consulta. Ya sea una pregunta sencilla o un desafío logístico complejo, estoy aquí para ayudarte.",
+    "First Name": "Nombre",
+    "Last Name": "Apellido",
+    "Contact No.": "Número de Contacto",
+    "Email": "Correo Electrónico",
+    "Message": "Mensaje",
+    "Send Inquiry": "Enviar Consulta"
+  },
+
+  "servicesPage": {
+    "Services Built for the Future": "Servicios Pensados para el Futuro",
+    "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.": "Soluciones aduaneras modernas diseñadas para automatizar procesos, reducir costos y garantizar el cumplimiento, para que puedas enfocarte en hacer crecer tu negocio.",
+    "Automated Customs Declarations": "Declaraciones Aduaneras Automatizadas",
+    "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.": "Genera y presenta declaraciones aduaneras cumplidoras mediante formularios inteligentes y datos prellenados.",
+    "Tariff & Duty Optimization": "Optimización de Aranceles e Impuestos",
+    "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.": "Minimiza costos con clasificación de códigos arancelarios asistida por IA y estrategias de recuperación de derechos adaptadas a tus productos.",
+    "Real-Time Shipment Monitoring": "Monitoreo de Envíos en Tiempo Real",
+    "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.": "Mantén el control con rastreo en vivo de envíos y alertas predictivas integradas con los hitos aduaneros.",
+    "Compliance Risk Audits": "Auditorías de Riesgo de Cumplimiento",
+    "Run fast, automated audits of your shipping records to identify red flags before customs does.": "Realiza auditorías rápidas y automatizadas para detectar problemas antes que lo hagan las aduanas.",
+    "Importer Self-Assessment Support": "Soporte para Autoevaluación de Importadores",
+    "Streamline your ISA process with templates, dashboards, and expert guidance built-in.": "Optimiza tu proceso de autoevaluación con plantillas, paneles de control y asesoramiento experto.",
+    "Brokerage-as-a-Service (BaaS)": "Corretaje como Servicio (BaaS)",
+    "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.": "Corretaje aduanero listo para usar para startups y pymes que necesitan escalar rápidamente con cumplimiento."
+  },
+  "why-choose": {
+    "Why Choose Me": "¿Por Qué Elegirme?",
+    "10+ Years as Licensed Customs Broker": "Más de 10 Años como Agente de Aduanas Autorizado",
+    "Proven Expertise": "Experiencia Comprobada",
+    "Licensed and seasoned in BOC processes, I guide your imports with confidence.": "Autorizado y con experiencia en procesos de la BOC, guío tus importaciones con confianza.",
+    "Responsive & Reliable": "Ágil y Confiable",
+    "Quick turnarounds, clear updates — always available when you need answers.": "Respuestas rápidas, actualizaciones claras — siempre disponible cuando necesites ayuda.",
+    "Tailored Approach": "Enfoque Personalizado",
+    "Solutions matched to your business goals, not a one-size-fits-all service.": "Soluciones adaptadas a tus objetivos, no un servicio genérico.",
+    "Client-First Focus": "Enfoque Centrado en el Cliente",
+    "I value your time, compliance, and business success as if it were my own.": "Valoro tu tiempo, cumplimiento y éxito empresarial como si fueran míos."
+  },
+  "get-to-know": {
+    "Get to Know Me": "Conóceme",
+    "Your Trusted Licensed Customs Broker": "Tu Agente de Aduanas de Confianza",
+    "About Me": "Sobre Mí",
+    "When you choose me as your freelance customs broker, you get more than clearance —": "Cuando me eliges como tu agente de aduanas freelance, obtienes más que un trámite —",
+    "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "obtienes rapidez, confiabilidad y tranquilidad. Me especializo en documentación sin complicaciones,",
+    "proactive coordination, and full compliance to help you avoid costly delays.": "coordinación proactiva y cumplimiento total para ayudarte a evitar retrasos costosos."
+  },
+  "rfq": {
+    "Request for Quotation": "Solicitud de Cotización",
+    "Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.": "¿Necesitas una cotización para tus necesidades de importación/exportación? Envía el formulario y te responderé con una solución personalizada.",
+    "From customs clearance to logistics — let’s make your cargo move.": "Desde la gestión aduanera hasta la logística — hagamos que tu carga se mueva.",
+    "Full Name": "Nombre Completo",
+    "Email Address": "Correo Electrónico",
+    "Company Name": "Nombre de la Empresa",
+    "Cargo & Shipment Details": "Detalles de la Carga y Envío",
+    "Request Quote": "Solicitar Cotización",
+    "Please verify you're human 🤖": "Por favor verifica que eres humano 🤖",
+    "📨 RFQ submitted successfully!": "📨 ¡Cotización enviada con éxito!",
+    "❌ Something went wrong.": "❌ Algo salió mal.",
+    "⚠️ Network error. Please try again.": "⚠️ Error de red. Por favor, intenta de nuevo."
+  },
+  
+  "blog": {
+    "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever": "El panorama comercial de Cebú está cambiando — Por qué la experiencia en aduanas importa más que nunca",
+    "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.": "El año 2025 ha traído cambios significativos en el entorno de importación y exportación en Cebú. Con sistemas aduaneros digitales más avanzados, mandatos de cumplimiento más estrictos por parte de la Oficina de Aduanas (BOC) y un mayor escrutinio global sobre las prácticas comerciales, los importadores y exportadores en la Reina del Sur se enfrentan a un momento decisivo.",
+    "Cebu remains a strategic gateway for international trade, but it’s no longer enough to simply move goods. Importers must now navigate tighter timelines, more complex classifications, and evolving tariff policies — all while maintaining profitability and legal compliance. Many small and mid-sized businesses in Mandaue, Talisay, and even Lapu-Lapu are feeling the pinch, especially with rising freight costs and inconsistent documentation requirements.": "Cebú sigue siendo una puerta estratégica para el comercio internacional, pero ya no basta con mover mercancías. Los importadores ahora deben manejar plazos más ajustados, clasificaciones más complejas y políticas arancelarias cambiantes, todo mientras mantienen la rentabilidad y el cumplimiento legal. Muchas pequeñas y medianas empresas en Mandaue, Talisay e incluso Lapu-Lapu sienten la presión, especialmente con el aumento de los costos de flete y los requisitos documentales inconsistentes.",
+    "These challenges aren’t just bureaucratic hurdles — they directly impact your ability to fulfill orders, retain customers, and avoid penalties. A single misclassified item or missing import entry can now delay an entire shipment by days — even weeks — leading to demurrage charges, seized goods, or worse, audit flags from the BOC.": "Estos desafíos no son solo obstáculos burocráticos, afectan directamente tu capacidad para cumplir con los pedidos, retener clientes y evitar sanciones. Un solo artículo mal clasificado o una entrada de importación faltante puede retrasar un envío completo durante días, incluso semanas, lo que lleva a cargos por demora, mercancías incautadas o, peor aún, auditorías de la BOC.",
+    "Where a Licensed Customs Broker Comes In": "Dónde entra un Agente de Aduanas Autorizado",
+    "As a Licensed Customs Broker based in Cebu, I’ve seen firsthand how companies suffer from oversight or misinformation. An LCB’s role is not just transactional — it’s strategic. From accurate tariff classification and documentation to coordinating with port authorities and monitoring your goods' journey from origin to destination, we operate as your compliance firewall and logistics advocate.": "Como agente de aduanas autorizado en Cebú, he visto de primera mano cómo las empresas sufren por descuidos o información incorrecta. El papel de un agente de aduanas no es solo transaccional, es estratégico. Desde la clasificación arancelaria precisa y la documentación, hasta la coordinación con las autoridades portuarias y el seguimiento de tus mercancías desde el origen hasta el destino, operamos como tu escudo de cumplimiento y defensor logístico.",
+    "In 2025, customs is more than paperwork. It’s a moving target — with e-customs transitions, post-entry audits, and the BOC’s digital modernization project all changing how trade operates in real time. Businesses that work with brokers who understand both the letter and the spirit of the law gain a real advantage.": "En 2025, las aduanas son más que papeleo. Son un objetivo en constante movimiento: con transiciones electrónicas, auditorías posteriores a la entrada y el proyecto de modernización digital de la BOC, todo está cambiando la forma en que opera el comercio en tiempo real. Las empresas que trabajan con agentes que entienden tanto la letra como el espíritu de la ley obtienen una ventaja real.",
+    "Observations From the Ground": "Observaciones desde el Terreno",
+    "So far this year, I’ve observed a surge in the use of consolidated shipments, especially for SMEs. While it cuts costs, it also complicates documentation and classification. The rise in direct-to-port shipments from smaller logistics startups has also raised red flags for many customs examiners, leading to an uptick in physical inspections.": "Hasta ahora este año, he observado un aumento en el uso de envíos consolidados, especialmente por parte de las pymes. Aunque reduce costos, también complica la documentación y clasificación. El aumento de envíos directos al puerto por parte de startups logísticas más pequeñas también ha levantado banderas rojas para muchos inspectores aduaneros, lo que ha provocado un aumento de inspecciones físicas.",
+    "I’ve also seen exporters — especially those in furniture and dried goods — struggle with HS code mismatches, costing them thousands in unexpected duties. These aren’t flukes. They’re patterns. And they speak to a need for tailored, consistent customs strategy.": "También he visto exportadores — especialmente de muebles y productos secos — tener problemas con códigos HS incorrectos, lo que les cuesta miles en aranceles inesperados. No son accidentes; son patrones. Y hablan de la necesidad de una estrategia aduanera coherente y personalizada.",
+    "A Partnership That Moves With You": "Una Asociación que se Mueve Contigo",
+    "I’m Jonhro Robles, a Licensed Customs Broker committed to helping Cebuanos succeed in international trade. My role is to take the pressure off your operations and ensure you’re not only compliant — but competitive. Whether you’re new to importing or scaling your exports, I provide clear advice, up-to-date insights, and seamless execution across ports and borders.": "Soy Jonhro Robles, un agente de aduanas autorizado comprometido con ayudar a los cebuano a tener éxito en el comercio internacional. Mi función es aliviar la carga de tus operaciones y asegurar que no solo cumplas con las regulaciones, sino que seas competitivo. Ya sea que estés comenzando a importar o expandiendo tus exportaciones, te ofrezco asesoramiento claro, información actualizada y una ejecución fluida en puertos y fronteras.",
+    "Customs shouldn’t be a bottleneck. It should be your edge.": "Las aduanas no deben ser un obstáculo. Deben ser tu ventaja.",
+    "Let’s Talk": "Hablemos",
+    "When I'm not clearing shipments...": "Cuando no estoy gestionando envíos...",
+    "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.": "Dedico tiempo a construir sitios web rápidos y limpios como este. Me ayuda a mantenerme creativo, ágil y actualizado en tecnología.",
+    "Let’s Build Something": "Construyamos Algo Juntos"
+
+  },
+  "servicesIntro": {
+    "Services": "Servicios",
+    "Freight, Clearance & Compliance": "Carga, Despacho y Cumplimiento",
+    "Seamlessly Delivered": "Entregado sin Problemas",
+    "View Services": "Ver Servicios",
+    "Get reliable and timely customs brokerage and logistics support...": "Obtén corretaje aduanero confiable y oportuno con soporte logístico...",
+    "Whether it's one-time shipment or long-term assistance...": "Ya sea un envío único o asistencia a largo plazo...",
+    "Import Documentation": "Documentación de Importación",
+    "Ensure every shipment meets all regulatory requirements...": "Asegura que cada envío cumpla con todos los requisitos normativos...",
+    "Customs Compliance": "Cumplimiento Aduanero",
+    "Stay audit-ready and penalty-free...": "Mantente listo para auditorías y sin sanciones...",
+    "Freight Coordination": "Coordinación de Fletes",
+    "Simplify your logistics...": "Simplifica tu logística...",
+    "Brokerage Consultancy": "Consultoría de Corretaje",
+    "Get expert advice...": "Obtén asesoramiento experto..."
+  },
+  "aboutPage": {
+    "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "Agente de Aduanas Autorizado en Cebú — Tu Socio de Confianza",
+    "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Desde que aprobé el examen de licencias de la PRC en 2011, he dedicado más de una década a ayudar a empresas en Cebú y más allá a navegar por las complejidades de la importación y exportación. Como agente de aduanas freelance, no solo ofrezco cumplimiento, sino también claridad, rapidez y valor estratégico en cada transacción.",
+    "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "Ya sea que seas una pequeña empresa explorando mercados internacionales o una empresa en crecimiento gestionando envíos complejos, adapto soluciones que priorizan la eficiencia, la transparencia y los resultados. Mis servicios van más allá del procesamiento de documentos: me convierto en tu socio para lograr un despacho aduanero fluido y rentable.",
+    "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.": "Si estás buscando un agente de aduanas confiable y autorizado que entienda el pulso del comercio filipino y las demandas de la logística global, trabajemos juntos para mover tus productos de manera más inteligente y rápida.",
+    "Work With Me": "Trabaja Conmigo"
+  },
+  "Affil": {
+    "I am affiliated with": "Estoy afiliado a"
+  }
+}

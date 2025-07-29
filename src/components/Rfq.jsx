@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Toast from "../components/Toast"; // Ensure Toast.jsx exists
 import ReCAPTCHA from "react-google-recaptcha";
+import { useTranslation } from 'react-i18next';
 
 export default function Rfq() {
   const [fullName, setFullName] = useState('');
@@ -9,6 +10,7 @@ export default function Rfq() {
   const [details, setDetails] = useState('');
   const [recaptchaToken, setRecaptchaToken] = useState('');
   const [toast, setToast] = useState(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +26,7 @@ export default function Rfq() {
     formData.append('company', company);
     formData.append('details', details);
     formData.append('recaptchaToken', recaptchaToken);
-    formData.append('formType', 'rfqPage');
+    formData.append('formType', 'rfq');
 
     try {
       const response = await fetch(import.meta.env.VITE_REACT_APP_GAS_URL, {
@@ -57,18 +59,18 @@ export default function Rfq() {
   <main className="rfq-page">
     <section className="rfq-container">
       <div className="rfq-header">
-        <h2>Request for Quotation</h2>
+        <h2>{t("rfq.Request for Quotation")}</h2>
         <p>
-          Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.
+          {t("rfq.Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.")}
         </p>
         <p style={{ marginTop: "1rem", fontWeight: "bold" }}>
-          From customs clearance to logistics — let’s make your cargo move.
+          {t("rfq.From customs clearance to logistics — let’s make your cargo move.")}
         </p>
       </div>
 
       <form className="rfq-form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="fullName">Full Name <span className="error">*</span></label>
+          <label htmlFor="fullName">{t("rfq.Full Name")} <span className="error">*</span></label>
           <input
             id="fullName"
             name="fullName"
@@ -80,7 +82,7 @@ export default function Rfq() {
         </div>
 
         <div>
-          <label htmlFor="email">Email Address <span className="error">*</span></label>
+          <label htmlFor="email">{t("rfq.Email Address")} <span className="error">*</span></label>
           <input
             type="email"
             id="email"
@@ -93,7 +95,7 @@ export default function Rfq() {
         </div>
 
         <div>
-          <label htmlFor="company">Company Name</label>
+          <label htmlFor="company">{t("rfq.Company Name")}</label>
           <input
             id="company"
             name="company"
@@ -104,7 +106,7 @@ export default function Rfq() {
         </div>
 
         <div>
-          <label htmlFor="details">Cargo & Shipment Details <span className="error">*</span></label>
+          <label htmlFor="details">{t("rfq.Cargo & Shipment Details")} <span className="error">*</span></label>
           <textarea
             id="details"
             name="details"
@@ -123,7 +125,7 @@ export default function Rfq() {
         />
 
         <button type="submit" className="send-inquiry-btn">
-          📩 Request Quote
+          📩 {t("rfq.Request Quote")}
         </button>
       </form>
     </section>

@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "Clear Customs, Clear Mind": "クリアカスタム、クリアマインド",
+    "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.": "セブで信頼されるライセンス通関業者による、手間のない輸入・輸出サービス。",
+    "Get Started": "始めましょう"
+  },
+  "nav-links": {
+    "Home": "ホーム",
+    "About": "概要",
+    "Services": "サービス",
+    "Contact": "お問い合わせ",
+    "Blog": "ブログ",
+    "RFQ": "見積依頼"
+  },
+  "contactIntro": {
+    "Send an Inquiry": "お問い合わせを送信",
+    "First Name": "名",
+    "Last Name": "姓",
+    "Contact No.": "電話番号",
+    "Email": "メールアドレス",
+    "Message": "メッセージ",
+    "Send Inquiry": "お問い合わせを送信",
+    "Contact Me": "ご連絡ください",
+    "Let’s Bring Your Vision to Life": "あなたのビジョンを実現しましょう",
+    "Support Message Full": "最初から構築する場合でも、既存のものを改善する場合でも、私はあなたの成功を支援するためにここにいます。次のプロジェクトをどのように支援できるか話してみましょう。"
+  },
+  "contact-page": {
+    "Let’s Talk": "お話ししましょう",
+    "Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.": "ご質問や複雑な物流上の課題がある場合でも、お気軽にお問い合わせください。サポートいたします。",
+    "First Name": "名",
+    "Last Name": "姓",
+    "Contact No.": "電話番号",
+    "Email": "メールアドレス",
+    "Message": "メッセージ",
+    "Send Inquiry": "お問い合わせを送信"
+  },
+  "servicesPage": {
+    "Services Built for the Future": "未来を見据えたサービス",
+    "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.": "ワークフローの自動化、コスト削減、コンプライアンスの確保を目的とした最新の通関ソリューションです。ビジネスの成長に集中できます。",
+    "Automated Customs Declarations": "自動通関申告",
+    "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.": "スマートフォームと事前入力されたデータパイプラインにより、通関申告をスムーズかつ適法に生成・提出します。",
+    "Tariff & Duty Optimization": "関税＆税最適化",
+    "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.": "AI支援のHSコード分類と税金回収戦略により、商品に最適化されたコスト削減を実現します。",
+    "Real-Time Shipment Monitoring": "リアルタイム配送監視",
+    "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.": "通関進捗と連携したライブトラッキングと予測アラートにより、常に状況を把握できます。",
+    "Compliance Risk Audits": "コンプライアンスリスク監査",
+    "Run fast, automated audits of your shipping records to identify red flags before customs does.": "通関前に問題を特定するために、配送記録の迅速な自動監査を実施します。",
+    "Importer Self-Assessment Support": "輸入者セルフ評価サポート",
+    "Streamline your ISA process with templates, dashboards, and expert guidance built-in.": "テンプレート、ダッシュボード、専門家のガイダンスによりISAプロセスを効率化します。",
+    "Brokerage-as-a-Service (BaaS)": "ブローカーサービス(BaaS)",
+    "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.": "迅速かつ規制遵守のスケールを必要とするスタートアップや中小企業向けの即導入可能な通関ブローカーサービスです。"
+  },
+  "why-choose": {
+    "Why Choose Me": "なぜ私を選ぶのか",
+    "10+ Years as Licensed Customs Broker": "ライセンス通関業者として10年以上の経験",
+    "Proven Expertise": "実績のある専門知識",
+    "Licensed and seasoned in BOC processes, I guide your imports with confidence.": "BOC(フィリピン税関）のプロセスに精通した公認通関業者として、自信を持って輸入をサポートします。",
+    "Responsive & Reliable": "迅速かつ信頼性の高い対応",
+    "Quick turnarounds, clear updates — always available when you need answers.": "迅速な対応と明確なアップデート — ご質問の際はいつでも対応します。",
+    "Tailored Approach": "カスタマイズされたアプローチ",
+    "Solutions matched to your business goals, not a one-size-fits-all service.": "画一的なサービスではなく、あなたのビジネス目標に合わせたソリューションを提供します。",
+    "Client-First Focus": "お客様第一主義",
+    "I value your time, compliance, and business success as if it were my own.": "お客様の時間、遵守、ビジネスの成功を自分のことのように大切にします。"
+  },
+  "get-to-know": {
+    "Get to Know Me": "私について知る",
+    "Your Trusted Licensed Customs Broker": "信頼できるライセンス通関業者",
+    "About Me": "私について",
+    "When you choose me as your freelance customs broker, you get more than clearance —": "私をフリーランスの通関業者として選んでいただくと、単なる通関以上のものが得られます —",
+    "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "迅速性、信頼性、安心感を提供します。煩雑な書類業務をスムーズに処理します。",
+    "proactive coordination, and full compliance to help you avoid costly delays.": "積極的な調整と完全な法令遵守により、無駄な遅延を防ぎます。"
+  },
+  "rfq": {
+    "Request for Quotation": "見積依頼",
+    "Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.": "輸入/輸出の見積が必要ですか？フォームを送信していただければ、貨物に合わせたカスタム通関ソリューションをご提供します。",
+    "From customs clearance to logistics — let’s make your cargo move.": "通関から物流まで — 貨物をスムーズに動かしましょう。",
+    "Full Name": "氏名（フルネーム）",
+    "Email Address": "メールアドレス",
+    "Company Name": "会社名",
+    "Cargo & Shipment Details": "貨物・配送の詳細",
+    "Request Quote": "見積を依頼",
+    "Please verify you're human 🤖": "人間であることを確認してください 🤖",
+    "📨 RFQ submitted successfully!": "📨 見積依頼が正常に送信されました！",
+    "❌ Something went wrong.": "❌ エラーが発生しました。",
+    "⚠️ Network error. Please try again.": "⚠️ ネットワークエラーが発生しました。もう一度お試しください。"
+  },
+
+"blog": {
+
+  "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever": "セブの進化する貿易情勢：今こそ通関の専門知識が求められる理由",
+  "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.": "2025年、セブの輸出入環境は大きく変化しました。デジタル通関システムの高度化、税関局（BOC）による厳格なコンプライアンス要件、そして国際的な貿易慣行への監視強化により、セブで活動する輸入業者・輸出業者は重要な岐路に立たされています。",
+  "Cebu remains a strategic gateway for international trade, but it’s no longer enough to simply move goods. Importers must now navigate tighter timelines, more complex classifications, and evolving tariff policies — all while maintaining profitability and legal compliance. Many small and mid-sized businesses in Mandaue, Talisay, and even Lapu-Lapu are feeling the pinch, especially with rising freight costs and inconsistent documentation requirements.": "セブは依然として国際貿易の戦略的な玄関口ですが、単に貨物を移動させるだけではもはや不十分です。輸入業者は、より厳しい納期、より複雑な分類、進化する関税政策に対応しながら、収益性と法令遵守を維持する必要があります。特に、マンダウエ、タリサイ、さらにはラプラプの多くの中小企業は、運賃の上昇や書類要件の不一致により大きな負担を感じています。",
+  "These challenges aren’t just bureaucratic hurdles — they directly impact your ability to fulfill orders, retain customers, and avoid penalties. A single misclassified item or missing import entry can now delay an entire shipment by days — even weeks — leading to demurrage charges, seized goods, or worse, audit flags from the BOC.": "これらの課題は単なる官僚的な障壁ではなく、受注の遂行、顧客維持、ペナルティの回避に直接影響を及ぼします。たった一つの誤分類や申告漏れが、数日から数週間もの出荷遅延を引き起こし、滞船料、貨物押収、さらにはBOCによる監査対象となる恐れもあります。",
+  "Where a Licensed Customs Broker Comes In": "公認通関士の出番です",
+  "As a Licensed Customs Broker based in Cebu, I’ve seen firsthand how companies suffer from oversight or misinformation. An LCB’s role is not just transactional — it’s strategic. From accurate tariff classification and documentation to coordinating with port authorities and monitoring your goods' journey from origin to destination, we operate as your compliance firewall and logistics advocate.": "セブを拠点とする公認通関士として、情報不足や見落としによって企業が損失を被る場面を幾度となく目にしてきました。通関士の役割は単なる書類処理ではなく、戦略的な支援です。正確な関税分類や書類の整備、港湾当局との調整、貨物の流れの全体的な監視まで、私たちはコンプライアンスの盾となり、物流の味方として活動します。",
+  "In 2025, customs is more than paperwork. It’s a moving target — with e-customs transitions, post-entry audits, and the BOC’s digital modernization project all changing how trade operates in real time. Businesses that work with brokers who understand both the letter and the spirit of the law gain a real advantage.": "2025年の現在、通関業務は単なる書類手続きではありません。電子通関への移行、申告後の監査、そしてBOC（関税局）のデジタル近代化プロジェクトにより、貿易の運用はリアルタイムで常に変化しています。法律の条文とその精神の両方を理解する通関業者と連携する企業は、実際の優位性を手に入れることができます。",
+  "Observations From the Ground": "現場からの所感",
+  "So far this year, I’ve observed a surge in the use of consolidated shipments, especially for SMEs. While it cuts costs, it also complicates documentation and classification. The rise in direct-to-port shipments from smaller logistics startups has also raised red flags for many customs examiners, leading to an uptick in physical inspections.": "今年に入ってから、特に中小企業において、混載輸送（コンソリデーテッド・シップメント）の利用が急増しているのを目にしています。コスト削減にはつながるものの、書類作成や貨物分類がより複雑になります。また、小規模な物流スタートアップによる港への直接配送が増加しており、多くの税関審査官に警戒感を与え、実地検査の件数が増加しています。",
+  "I’ve also seen exporters — especially those in furniture and dried goods — struggle with HS code mismatches, costing them thousands in unexpected duties. These aren’t flukes. They’re patterns. And they speak to a need for tailored, consistent customs strategy.": "家具や乾物などを扱う輸出業者が、HSコードの不一致によって多額の予期せぬ関税を支払う事例も数多く見られます。これは偶発的な問題ではなく、繰り返される傾向であり、企業ごとに最適化された一貫性ある通関戦略が必要であることを示しています。",
+  "A Partnership That Moves With You": "あなたと共に進むパートナーシップ",
+  "I’m Jonhro Robles, a Licensed Customs Broker committed to helping Cebuanos succeed in international trade. My role is to take the pressure off your operations and ensure you’re not only compliant — but competitive. Whether you’re new to importing or scaling your exports, I provide clear advice, up-to-date insights, and seamless execution across ports and borders.": "私はジョンロ・ロブレス、公認通関士として、セブの皆様が国際貿易で成功できるよう尽力しています。私の役割は、業務の負担を軽減し、法令を遵守するだけでなく競争力を高めることです。輸入を始めたばかりの方でも、輸出を拡大中の企業でも、私は明確なアドバイス、最新の知見、そして港や国境をまたいだスムーズな実行を提供します。",
+  "Customs shouldn’t be a bottleneck. It should be your edge.": "通関は障害ではなく、あなたの強みになるべきです。",
+  "Let’s Talk": "まずはご相談ください",
+  "When I'm not clearing shipments...": "通関処理をしていない時は…",
+  "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.": "このようなクリーンで高速なウェブサイトの制作にも時間を費やしています。それが私の創造力と技術力を常に磨く手助けになっています。",
+  "Let’s Build Something": "何か一緒に作りましょう"
+
+},
+"servicesIntro": {
+  "Services": "サービス",
+  "Freight, Clearance & Compliance": "輸送、通関、コンプライアンス",
+  "Seamlessly Delivered": "スムーズに対応",
+  "View Services": "サービスを見る",
+  "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.": "ビジネスのニーズに合わせた、信頼性の高い通関・物流サポートをタイムリーにご提供します。",
+  "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "単発の貨物でも長期的な支援でも、専門的なサービスで対応します。",
+  "Import Documentation": "輸入書類作成",
+  "Ensure every shipment meets all regulatory requirements, right from the start.": "すべての貨物が最初から法的要件を満たすよう確実に対応します。",
+  "Customs Compliance": "通関コンプライアンス",
+  "Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.": "BOC規則に関する深い知識を活かし、監査対応・ペナルティ回避を実現します。",
+  "Freight Coordination": "貨物調整",
+  "Simplify your logistics by letting me manage freight timelines and port communication.": "貨物のスケジュール管理や港との連携を任せて、物流を簡素化しましょう。",
+  "Brokerage Consultancy": "通関コンサルティング",
+  "Get expert advice on tariff classifications, duties, and optimizing your import process.": "関税分類や関税の最適化、輸入プロセスに関する専門的なアドバイスをご提供します。"
+},
+"aboutPage": {
+  "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "セブの公認通関士 ― 信頼できる貿易パートナー",
+   "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "2011年にPRC通関士免許試験に合格して以来、10年以上にわたりセブおよびその周辺の企業が輸出入の複雑さを乗り越える支援をしてきました。フリーランスの通関士として、単なる法令遵守だけでなく、明確さ、スピード、戦略的な価値をすべての取引に提供しています。",
+  "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "国際市場に挑戦する中小企業でも、複雑な貨物を管理する成長中の企業でも、効率性、透明性、成果を重視したカスタムソリューションを提供します。単なる書類処理にとどまらず、スムーズでコスト効率の高い通関を実現するパートナーとなります。",
+  "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.": "フィリピンの貿易の実情と国際物流の要件を理解する信頼できる公認通関士をお探しなら、一緒に賢く、そしてスピーディーに貨物を動かしましょう。",
+  "Work With Me": "私と一緒に働きましょう"
+},
+"Affil": {
+  "I am affiliated with": "所属団体"
+}
+}
+

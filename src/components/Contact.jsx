@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Toast from "../components/Toast"; // Adjust the path if needed
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
   const [firstName, setFirstName] = useState('');
@@ -8,6 +9,7 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [toast, setToast] = useState(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,9 +55,9 @@ export default function Contact() {
         {/* LEFT SIDE */}
         <div className="contact-left">
           <div className="contact-header">
-            <h2>Let’s Talk</h2>
+            <h2>{t("contact-page.Let’s Talk")}</h2>
             <p>
-              Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.
+            {t("contact-page.Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.")}
             </p>
           </div>
 
@@ -77,7 +79,7 @@ export default function Contact() {
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div>
-              <label htmlFor="firstName">First Name <span className="error">*</span></label>
+              <label htmlFor="firstName">{t("contact-page.First Name")} <span className="error">*</span></label>
               <input
                 id="firstName"
                 name="firstName"
@@ -88,7 +90,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="lastName">Last Name <span className="error">*</span></label>
+              <label htmlFor="lastName">{t("contact-page.Last Name")} <span className="error">*</span></label>
               <input
                 id="lastName"
                 name="lastName"
@@ -102,7 +104,7 @@ export default function Contact() {
 
           <div className="form-row">
             <div>
-              <label htmlFor="contact">Contact No. <span className="error">*</span></label>
+              <label htmlFor="contact">{t("contact-page.Contact No.")} <span className="error">*</span></label>
               <input
                 id="contact"
                 name="contact"
@@ -113,7 +115,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="email">Email <span className="error">*</span></label>
+              <label htmlFor="email">{t("contact-page.Email")} <span className="error">*</span></label>
               <input
                 type="email"
                 id="email"
@@ -127,7 +129,7 @@ export default function Contact() {
           </div>
 
           <div className="message-row">
-            <label htmlFor="message">Message <span className="error">*</span></label>
+            <label htmlFor="message">{t("contact-page.Message")} <span className="error">*</span></label>
             <textarea
               id="message"
               name="message"
@@ -139,7 +141,7 @@ export default function Contact() {
             ></textarea>
           </div>
 
-          <button type="submit" className="send-inquiry-btn">Send Inquiry</button>
+          <button type="submit" className="send-inquiry-btn">{t("contact-page.Send Inquiry")}</button>
         </form>
       </section>
 

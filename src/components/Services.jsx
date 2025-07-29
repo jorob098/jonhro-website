@@ -1,3 +1,6 @@
+
+import { useTranslation } from 'react-i18next';
+
 const cardGradients = [
   "linear-gradient(135deg, #ff6b00, #ff944d)",
   "linear-gradient(135deg, #292929, #1f1f1f)",
@@ -7,53 +10,56 @@ const cardGradients = [
   "linear-gradient(135deg, #111111, #333333)",
 ];
 
+const Services = () => {
+const { t } = useTranslation();
+
+
 const services = [
   {
-    title: "Automated Customs Declarations",
+    title: t("servicesPage.Automated Customs Declarations"),
     description:
-      "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.",
+      t("servicesPage.Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines."),
     icon: "📄",
   },
   {
-    title: "Tariff & Duty Optimization",
+    title: t("servicesPage.Tariff & Duty Optimization"),
     description:
-      "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.",
+      t("servicesPage.Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods."),
     icon: "📊",
   },
   {
-    title: "Real-Time Shipment Monitoring",
+    title: t("servicesPage.Real-Time Shipment Monitoring"),
     description:
-      "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.",
+      t("servicesPage.Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones."),
     icon: "📦",
   },
   {
-    title: "Compliance Risk Audits",
+    title: t("servicesPage.Compliance Risk Audits"),
     description:
-      "Run fast, automated audits of your shipping records to identify red flags before customs does.",
+      t("servicesPage.Run fast, automated audits of your shipping records to identify red flags before customs does."),
     icon: "🛡️",
   },
   {
-    title: "Importer Self-Assessment Support",
+    title: t("servicesPage.Importer Self-Assessment Support"),
     description:
-      "Streamline your ISA process with templates, dashboards, and expert guidance built-in.",
+      t("servicesPage.Streamline your ISA process with templates, dashboards, and expert guidance built-in."),
     icon: "📝",
   },
   {
-    title: "Brokerage-as-a-Service (BaaS)",
+    title: t("servicesPage.Brokerage-as-a-Service (BaaS)"),
     description:
-      "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.",
+      t("servicesPage.Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale."),
     icon: "⚙️",
   },
 ];
 
-const Services = () => {
   return (
     <section className="services-page">
       <div className="services-container">
         <header className="services-header">
-          <h2>Services Built for the Future</h2>
+          <h2>{t("servicesPage.Services Built for the Future")}</h2>
           <p>
-            Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.
+            {t("servicesPage.Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.")}
           </p>
         </header>
 

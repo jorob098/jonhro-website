@@ -1,0 +1,169 @@
+{
+  "hero": {
+    "Clear Customs, Clear Mind": "通关顺畅，心安理得",
+    "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.": "您在宿务值得信赖的持牌报关行，提供无忧的进出口服务。",
+    "Get Started": "开始使用"
+  },
+  "nav-links": {
+    "Home": "首页",
+    "About": "关于",
+    "Services": "服务",
+    "Contact": "联系",
+    "Blog": "博客",
+    "RFQ": "报价请求"
+  },
+
+  "contactIntro": {
+    "Send an Inquiry": "发送咨询",
+    "First Name": "名字",
+    "Last Name": "姓氏",
+    "Contact No.": "联系电话",
+    "Email": "电子邮箱",
+    "Message": "留言内容",
+    "Send Inquiry": "提交咨询",
+    "Contact Me": "联系我",
+    "Let’s Bring Your Vision to Life": "让您的愿景变为现实",
+     "Support Message Full": "无论您是从零开始还是优化现有项目，我都致力于帮助您取得成功。让我们聊聊我如何支持您的下一个项目。"
+  },
+  
+  "contact-page": {
+    "Let’s Talk": "欢迎洽谈",
+    "Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.": "欢迎联系我们，无论是简单问题还是复杂物流挑战，我都乐意为您提供帮助。",
+    "First Name": "名字",
+    "Last Name": "姓氏",
+    "Contact No.": "联系电话",
+    "Email": "电子邮箱",
+    "Message": "留言",
+    "Send Inquiry": "提交咨询"
+  },
+
+  "servicesPage": {
+    "Services Built for the Future": "面向未来的服务",
+    "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.": "现代海关解决方案，自动化流程、降低成本并确保合规，让您专注于业务发展。",
+    "Automated Customs Declarations": "自动化报关",
+    "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.": "通过智能表单输入和预填数据流，轻松生成并提交合规报关单。",
+
+    "Tariff & Duty Optimization": "关税与税费优化",
+    "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.": "利用 AI 辅助的 HS 编码分类和税务回收策略，为您的商品定制节税方案。",
+
+    "Real-Time Shipment Monitoring": "实时货物监控",
+    "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.": "实时跟踪货物状态，结合海关节点提供预测性提醒，掌握全局。",
+
+    "Compliance Risk Audits": "合规风险审计",
+    "Run fast, automated audits of your shipping records to identify red flags before customs does.": "自动快速审查您的运输记录，提前识别风险，避免被海关抽查。",
+
+    "Importer Self-Assessment Support": "进口商自我评估支持",
+    "Streamline your ISA process with templates, dashboards, and expert guidance built-in.": "通过模板、仪表板和专家指导，简化自我评估（ISA）流程。",
+
+    "Brokerage-as-a-Service (BaaS)": "经纪即服务 (BaaS)",
+    "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.": "为初创企业和中小企业提供即插即用的合规海关代理服务。"
+  },
+
+  "why-choose": {
+    "Why Choose Me": "为什么选择我",
+    "10+ Years as Licensed Customs Broker": "10年以上执照报关经验",
+
+    "Proven Expertise": "专业经验",
+    "Licensed and seasoned in BOC processes, I guide your imports with confidence.": "熟悉海关流程，持牌专业人员为您的进口提供可靠保障。",
+
+    "Responsive & Reliable": "响应迅速 值得信赖",
+    "Quick turnarounds, clear updates — always available when you need answers.": "快速处理、及时更新 — 需要时随时响应。",
+
+    "Tailored Approach": "量身定制",
+    "Solutions matched to your business goals, not a one-size-fits-all service.": "根据您的业务目标定制服务，而非千篇一律的解决方案。",
+
+    "Client-First Focus": "客户至上",
+    "I value your time, compliance, and business success as if it were my own.": "我将您的时间、合规性和业务成功视为己任。"
+  },
+  "get-to-know": {
+    "Get to Know Me": "了解我",
+    "Your Trusted Licensed Customs Broker": "您值得信赖的持牌报关员",
+    "About Me": "关于我",
+    "When you choose me as your freelance customs broker, you get more than clearance —": "选择我作为您的自由职业报关代理，您获得的不只是通关服务 —",
+    "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "您将获得高效、可靠和安心的服务。我专注于无忧文件处理、",
+    "proactive coordination, and full compliance to help you avoid costly delays.": "主动协调与全面合规，助您避免高昂的延误成本。"
+  },
+  "rfq": {
+    "Request for Quotation": "请求报价",
+    "Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.": "需要关于进出口的报价？请提交表单，我将为您的货物量身定制报关解决方案。",
+
+    "From customs clearance to logistics — let’s make your cargo move.": "从清关到物流 — 我们助您货畅其流。",
+
+    "Full Name": "姓名",
+    "Email Address": "电子邮箱",
+    "Company Name": "公司名称",
+    "Cargo & Shipment Details": "货物及运输详情",
+    "Request Quote": "获取报价",
+
+    "Please verify you're human 🤖": "请验证您是人类 🤖",
+    "📨 RFQ submitted successfully!": "📨 报价请求提交成功！",
+    "❌ Something went wrong.": "❌ 出现错误。",
+    "⚠️ Network error. Please try again.": "⚠️ 网络错误，请重试。"
+  },
+  "blog": {
+    "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever": "[宿务贸易格局正在演变 为何海关专业知识比以往更重要]",
+
+    "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.": "2025年，宿务的进出口环境发生了重大变化。随着数字海关系统的升级、菲律宾海关局（BOC）更严格的合规要求以及全球对贸易行为的日益关注，位于“南方女王城”的进出口商正面临重大抉择。",
+
+    "Cebu remains a strategic gateway for international trade, but it’s no longer enough to simply move goods. Importers must now navigate tighter timelines, more complex classifications, and evolving tariff policies — all while maintaining profitability and legal compliance. Many small and mid-sized businesses in Mandaue, Talisay, and even Lapu-Lapu are feeling the pinch, especially with rising freight costs and inconsistent documentation requirements.": "宿务仍是国际贸易的重要门户，但仅仅运输货物已不再足够。进口商需面对更紧迫的时间表、更复杂的分类规则和不断变化的关税政策，同时确保利润与合规。位于曼达维、塔利赛，甚至拉普拉普的中小企业尤感压力，特别是在运费上涨和文书不一致的情况下。",
+
+    "These challenges aren’t just bureaucratic hurdles — they directly impact your ability to fulfill orders, retain customers, and avoid penalties. A single misclassified item or missing import entry can now delay an entire shipment by days — even weeks — leading to demurrage charges, seized goods, or worse, audit flags from the BOC.": "这些问题不仅是官僚障碍，更直接影响履单、客户维系与罚金风险。一项错误归类或缺失申报可能延误整个货物数日甚至数周，造成滞期费、货物扣押，甚至触发BOC的审计警告。",
+
+    "Where a Licensed Customs Broker Comes In": "持牌报关员的重要性",
+
+    "As a Licensed Customs Broker based in Cebu, I’ve seen firsthand how companies suffer from oversight or misinformation. An LCB’s role is not just transactional — it’s strategic. From accurate tariff classification and documentation to coordinating with port authorities and monitoring your goods' journey from origin to destination, we operate as your compliance firewall and logistics advocate.": "作为一位在宿务执业的持牌报关员，我亲眼见证了许多公司因疏忽或误导而受损。报关员不仅仅处理流程，更提供战略支持。准确的税则归类、文书处理、港口协调以及货物全程监控，我们是您的合规保障和物流顾问。",
+
+    "In 2025, customs is more than paperwork. It’s a moving target — with e-customs transitions, post-entry audits, and the BOC’s digital modernization project all changing how trade operates in real time. Businesses that work with brokers who understand both the letter and the spirit of the law gain a real advantage.": "2025年的报关不仅是纸面工作，更是一个不断变化的目标 — 数字化转型、后续审计、BOC现代化计划正实时改变贸易方式。合作懂法律条文与精神的代理，将带来真正优势。",
+
+    "Observations From the Ground": "实地观察",
+
+    "So far this year, I’ve observed a surge in the use of consolidated shipments, especially for SMEs. While it cuts costs, it also complicates documentation and classification. The rise in direct-to-port shipments from smaller logistics startups has also raised red flags for many customs examiners, leading to an uptick in physical inspections.": "今年以来，我注意到中小企业更频繁地使用合并货运，尽管降低了成本，却增加了文书与分类难度。同时，小型物流企业的直港发货也引起海关审查员警觉，导致实物检查频率上升。",
+
+    "I’ve also seen exporters — especially those in furniture and dried goods — struggle with HS code mismatches, costing them thousands in unexpected duties. These aren’t flukes. They’re patterns. And they speak to a need for tailored, consistent customs strategy.": "我还看到出口家具与干货的企业因HS编码错误而承担数千元额外关税。这不是偶然，而是趋势。说明迫切需要有针对性、持续性的报关策略。",
+
+    "A Partnership That Moves With You": "与您同行的合作关系",
+
+    "I’m Jonhro Robles, a Licensed Customs Broker committed to helping Cebuanos succeed in international trade. My role is to take the pressure off your operations and ensure you’re not only compliant — but competitive. Whether you’re new to importing or scaling your exports, I provide clear advice, up-to-date insights, and seamless execution across ports and borders.": "我是 Jonhro Robles，一名持牌报关员，致力于帮助宿务企业在国际贸易中取得成功。我的职责是减轻您的运营压力，确保合规且具竞争力。无论您是初次进口还是扩大出口，我都提供清晰建议、最新资讯和跨港口无缝执行。",
+
+    "Customs shouldn’t be a bottleneck. It should be your edge.": "海关不应是瓶颈，而应成为您的优势。",
+
+    "Let’s Talk": "欢迎洽谈",
+
+    "When I'm not clearing shipments...": "当我不在处理清关工作时...",
+
+    "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.": "我喜欢打造像这样简洁、快速的网站。这让我保持创造力、敏锐度，并持续接触技术。",
+
+    "Let’s Build Something": "让我们一起打造点什么吧"
+  },
+  "servicesIntro": {
+    "Services": "服务项目",
+    "Freight, Clearance & Compliance": "货运、清关与合规",
+    "Seamlessly Delivered": "无缝交付",
+    "View Services": "查看服务",
+    "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.": "为您的业务需求提供可靠且及时的报关与物流支持。",
+    "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "无论是一次性运输还是长期协助，我都能为您提供专业服务。",
+    "Import Documentation": "进口文件处理",
+    "Ensure every shipment meets all regulatory requirements, right from the start.": "确保每一批货物从起点就符合所有法规要求。",
+    "Customs Compliance": "海关合规",
+    "Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.": "凭借我对海关法规的深入了解，助您随时应对审计并避免罚款。",
+    "Freight Coordination": "货运协调",
+    "Simplify your logistics by letting me manage freight timelines and port communication.": "由我管理货运时间表与港口沟通，让物流更简单。",
+    "Brokerage Consultancy": "报关顾问服务",
+    "Get expert advice on tariff classifications, duties, and optimizing your import process.": "提供关税分类、关税和优化进口流程的专业建议。"
+  },
+
+  "aboutPage": {
+  "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "宿务的持证报关员 —— 您值得信赖的贸易伙伴",
+  "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "自2011年通过菲律宾PRC报关员执照考试以来，我已经致力于帮助宿务及其他地区的企业应对进出口的复杂流程超过十年。作为一名自由职业的报关员，我不仅提供合规服务，更带来清晰、高效和战略价值。",
+  "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "无论您是探索国际市场的小型企业，还是管理复杂货运的成长型企业，我都能量身定制解决方案，以效率、透明和成果为优先。我的服务不仅仅是处理文件，更是成为您顺利且具成本效益清关的合作伙伴。",
+  "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.": "如果您正在寻找一位可靠、持证并深谙菲律宾贸易脉动及全球物流需求的报关员，让我们合作，让您的货物更聪明、更快速地通关。",
+  "Work With Me": "与我合作"
+},
+
+"Affil":{
+  "I am affiliated with": "我隶属于以下机构"
+}
+}
+
+
+

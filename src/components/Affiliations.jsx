@@ -1,9 +1,12 @@
 import prcLogo from '../assets/prc-logo.png';
 import ccbiLogo from '../assets/ccbi-logo.png';
+import { useTranslation } from 'react-i18next';
+
 export default function Affiliations() {
+const { t } = useTranslation();
   return (
     <section id="affiliations">
-      <p>I am affiliated with</p>
+      <p>{t('Affil.I am affiliated with')}</p>
       <div className="affiliation-logos">
         <div className="affiliation-item">
           <img src={prcLogo} alt="PRC Logo" />

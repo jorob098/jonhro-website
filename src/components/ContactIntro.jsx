@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import { useState } from "react";
 
 export default function ContactIntro() {
@@ -7,6 +8,8 @@ export default function ContactIntro() {
   const [contact, setContact] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const { t } = useTranslation();
+  
 
   // State for feedback messages
   const [success, setSuccess] = useState(false);
@@ -57,12 +60,12 @@ export default function ContactIntro() {
     <section className="contact-intro-section">
       <div className="contact-grid">
         <div className="contact-form">
-          <h2>Send an Inquiry</h2>
+          <h2>{t("contactIntro.Send an Inquiry")}</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-row">
               <div>
                 <label htmlFor="firstName">
-                  First Name <span className="error">*</span>
+                  {t("contactIntro.First Name")} <span className="error">*</span>
                 </label>
                 <input
                   id="firstName"
@@ -75,7 +78,7 @@ export default function ContactIntro() {
               </div>
               <div>
                 <label htmlFor="lastName">
-                  Last Name <span className="error">*</span>
+                  {t("contactIntro.Last Name")} <span className="error">*</span>
                 </label>
                 <input
                   id="lastName"
@@ -91,7 +94,7 @@ export default function ContactIntro() {
             <div className="form-row">
               <div>
                 <label htmlFor="contact">
-                  Contact No. <span className="error">*</span>
+                  {t("contactIntro.Contact No.")} <span className="error">*</span>
                 </label>
                 <input
                   id="contact"
@@ -104,7 +107,7 @@ export default function ContactIntro() {
               </div>
               <div>
                 <label htmlFor="email">
-                  Email <span className="error">*</span>
+                  {t("contactIntro.Email")} <span className="error">*</span>
                 </label>
                 <input
                   type="email"
@@ -120,7 +123,7 @@ export default function ContactIntro() {
 
             <div className="message-row">
               <label htmlFor="message">
-                Message <span className="error">*</span>
+                {t("contactIntro.Message")} <span className="error">*</span>
               </label>
               <textarea
                 id="message"
@@ -133,7 +136,7 @@ export default function ContactIntro() {
               ></textarea>
             </div>
 
-            <button type="submit" className="send-inquiry-btn">Send Inquiry</button>
+            <button type="submit" className="send-inquiry-btn">{t("contactIntro.Send Inquiry")}</button>
 
             {success && <p className="success-message">✅ Message sent successfully!</p>}
             {error && <p className="error">{error}</p>}
@@ -141,11 +144,10 @@ export default function ContactIntro() {
         </div>
 
         <div className="contact-copy">
-          <div className="contact-sub">Contact Me</div>
-          <h2 className="contact-heading">Let’s Bring Your Vision to Life</h2>
+          <div className="contact-sub">{t("contactIntro.Contact Me")}</div>
+          <h2 className="contact-heading">{t("contactIntro.Let’s Bring Your Vision to Life")}</h2>
           <p className="contact-subheading">
-            Whether you're building from scratch or improving what you already have, I'm here to help you succeed.
-            Let's talk about how I can support your next project.
+            {t("contactIntro.Support Message Full")}
           </p>
         </div>
       </div>
