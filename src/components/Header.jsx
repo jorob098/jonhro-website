@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import jrLogo from '../assets/jrlogo.svg';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -10,14 +10,31 @@ export default function Header() {
   const closeMenu = () => setIsOpen(false);
   const { t } = useTranslation();
 
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY > lastScrollY && currentY > 50) {
+        setHidden(true); // scrolling down
+      } else {
+        setHidden(false); // scrolling up
+      }
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
     <>
-      {/* Utility bar with LanguageSwitcher */}
       <div className="utility-bar">
         <LanguageSwitcher />
       </div>
 
-      <header className="header">
+      <header className={`header ${hidden ? 'hidden-header' : ''}`}>
         <div className="logo-title" style={{ display: 'flex', alignItems: 'center' }}>
           <img src={jrLogo} alt="Jonhro Logo" />
           <Link to="/" className="site-name">
@@ -36,14 +53,12 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Hamburger */}
         <button className="hamburger" aria-label="Menu" onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        {/* Mobile Slide-In Nav */}
         <div className={`mobile-nav ${isOpen ? 'show' : ''}`}>
           <button className="close-menu" onClick={closeMenu} aria-label="Close Menu">
             &times;

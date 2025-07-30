@@ -25,6 +25,10 @@ header {
   z-index: 10;
 }
 
+.hidden-header {
+  transform: translateY(-100%);
+}
+
 /* Logo & site name */
 .logo-title {
   display: flex;
