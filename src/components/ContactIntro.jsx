@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function ContactIntro() {
   // State for form inputs
@@ -143,14 +144,51 @@ export default function ContactIntro() {
           </form>
         </div>
 
-        <div className="contact-copy">
-          <div className="contact-sub">{t("contactIntro.Contact Me")}</div>
-          <h2 className="contact-heading">{t("contactIntro.Let’s Bring Your Vision to Life")}</h2>
-          <p className="contact-subheading">
-            {t("contactIntro.Support Message Full")}
-          </p>
+       <motion.div
+  className="contact-copy"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.4 }}
+  variants={{
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      }
+    }
+  }}
+>
+  <motion.div
+    className="contact-sub"
+    variants={{
+      hidden: { opacity: 0, y: 30 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    }}
+  >
+    {t("contactIntro.Contact Me")}
+  </motion.div>
+
+  <motion.h2
+    className="contact-heading"
+    variants={{
+      hidden: { opacity: 0, y: 30 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    }}
+  >
+    {t("contactIntro.Let’s Bring Your Vision to Life")}
+  </motion.h2>
+
+  <motion.p
+    className="contact-subheading"
+    variants={{
+      hidden: { opacity: 0, y: 30 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    }}
+  >
+    {t("contactIntro.Support Message Full")}
+  </motion.p>
+</motion.div>
         </div>
-      </div>
     </section>
   );
 }

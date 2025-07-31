@@ -1,10 +1,41 @@
-import whyImg from '../assets/services-photo.jpg'; // or use external image
+import whyImg from '../assets/services-photo.jpg';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 export default function WhyChooseMe() {
-const { t } = useTranslation();
+  const { t } = useTranslation();
+
+  // === Variants for Cards ===
+  const cardContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardItem = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 70,
+        damping: 16,
+      },
+    },
+  };
+
   return (
-    <section className="why-choose-section section-container">
+    <motion.section
+      className="why-choose-section section-container"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className="why-grid">
         {/* LEFT: IMAGE + TEXT OVERLAY */}
         <div className="why-image-container">
@@ -15,26 +46,32 @@ const { t } = useTranslation();
           </div>
         </div>
 
-        {/* RIGHT: 4 CARDS */}
-        <div className="why-cards-grid">
-          <div className="why-card card-orange">
+        {/* RIGHT: ANIMATED CARDS */}
+        <motion.div
+          className="why-cards-grid"
+          variants={cardContainer}
+        >
+          <motion.div className="why-card card-orange" variants={cardItem}>
             <h3>{t("why-choose.Proven Expertise")}</h3>
             <p>{t("why-choose.Licensed and seasoned in BOC processes, I guide your imports with confidence.")}</p>
-          </div>
-          <div className="why-card card-dark">
+          </motion.div>
+
+          <motion.div className="why-card card-dark" variants={cardItem}>
             <h3>{t("why-choose.Responsive & Reliable")}</h3>
             <p>{t("why-choose.Quick turnarounds, clear updates — always available when you need answers.")}</p>
-          </div>
-          <div className="why-card card-light">
+          </motion.div>
+
+          <motion.div className="why-card card-light" variants={cardItem}>
             <h3>{t("why-choose.Tailored Approach")}</h3>
             <p>{t("why-choose.Solutions matched to your business goals, not a one-size-fits-all service.")}</p>
-          </div>
-          <div className="why-card card-accent">
+          </motion.div>
+
+          <motion.div className="why-card card-accent" variants={cardItem}>
             <h3>{t("why-choose.Client-First Focus")}</h3>
             <p>{t("why-choose.I value your time, compliance, and business success as if it were my own.")}</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
