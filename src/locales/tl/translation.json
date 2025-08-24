@@ -22,7 +22,7 @@
     "Send Inquiry": "Ipadala ang Pagtatanong",
     "Contact Me": "Makipag-ugnayan sa Akin",
     "Let’s Bring Your Vision to Life": "Ihatid Natin sa Buhay ang Iyong Pananaw",
-    "Support Message Full": "Kung ikaw man ay nagsisimula o nagpapabuti ng kasalukuyang sistema, narito ako upang tumulong. Pag-usapan natin kung paano kita matutulungan sa iyong susunod na proyekto."
+    "Support Message Full": "Kung ikaw man ay nagsisimula o nagpapabuti ng kasalukuyang sistema, narito ako upang tumulong. Pag-usapan natin kung paano kita matutulungan sa iyong susunod na kargamento."
   },
   "contact-page": {
     "Let’s Talk": "Mag-usap Tayo",
@@ -35,21 +35,28 @@
     "Send Inquiry": "Ipadala ang Pagtatanong"
   },
   "servicesPage": {
-    "Services Built for the Future": "Mga Serbisyong Inihanda para sa Kinabukasan",
-    "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.": "Makabagong solusyon sa customs na dinisenyo upang gawing awtomatiko ang proseso, bawasan ang gastos, at tiyakin ang pagsunod—upang makatutok ka sa pagpapalago ng negosyo.",
-    "Automated Customs Declarations": "Awtomatikong Customs Declarations",
-    "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.": "Madaling gumawa at magsumite ng mga deklarasyon gamit ang matalinong form at pre-filled na datos.",
-    "Tariff & Duty Optimization": "Pag-optimize ng Taripa at Buwis",
-    "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.": "Bawasan ang gastos gamit ang AI na tumutulong sa pag-uuri ng HS code at pagbawi ng buwis na naaangkop sa iyong produkto.",
-    "Real-Time Shipment Monitoring": "Real-Time na Pagsubaybay sa Padala",
-    "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.": "Manatiling may kontrol gamit ang live tracking at alerto na naka-integrate sa customs milestones.",
-    "Compliance Risk Audits": "Audit sa Panganib ng Pagsunod",
-    "Run fast, automated audits of your shipping records to identify red flags before customs does.": "Mabilis na mag-audit ng iyong records upang matukoy agad ang posibleng problema bago pa man sa customs.",
-    "Importer Self-Assessment Support": "Tulong sa Self-Assessment ng Importer",
-    "Streamline your ISA process with templates, dashboards, and expert guidance built-in.": "Pabilis at padaliin ang iyong ISA gamit ang mga template, dashboard, at gabay mula sa eksperto.",
-    "Brokerage-as-a-Service (BaaS)": "Brokerage bilang Serbisyo (BaaS)",
-    "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.": "Handang gamiting serbisyo ng customs brokerage para sa mga startup at SME na kailangang mabilis at sumusunod sa regulasyon."
+    "End to End Customs Services from Cebu to Key Ports Nationwide": "End-to-End Customs Services mula Cebu hanggang sa mga Pangunahing Pantalan sa Buong Bansa",
+    "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "Ako ay nagbibigay ng end-to-end customs services na nakabase sa Cebu, at maaari ring magserbisyo sa mga pangunahing pantalan tulad ng Maynila, Cagayan, Davao, Iloilo, at Subic—upang matiyak ang maayos na customs clearance at maaasahang kalakalan sa buong bansa.",
+
+    "Customs Clearance - Import & Export": "Customs Clearance - Import at Export",
+    "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "Mabilis at maayos na pagproseso ng parehong air at sea shipments upang masigurong maagap at maayos ang paglabas ng kargamento.",
+
+    "Customs Brokerage & Tariff Consultation": "Customs Brokerage at Tariff Consultation",
+    "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "Propesyonal na customs brokerage services na may kasamang gabay sa tariff classification at duty calculations.",
+
+    "Freight Consultation": "Freight Consultation",
+    "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "Sa tulong ng mga mapagkakatiwalaang freight forwarder partners, makakatulong ako na ayusin ang iyong freight requirements nang madali.",
+
+    "Real-Time Shipment Monitoring": "Real-Time Shipment Monitoring",
+    "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "Laging updated sa progreso ng iyong kargamento gamit ang real-time monitoring at maagap na updates.",
+
+    "Customs Entry Filing & Records": "Customs Entry Filing at Records",
+    "Accurate filing of customs entries for future reference and audits to ensure compliance.": "Tamang pagsumite ng customs entries para sa hinaharap na reference at audit upang masigurong sumusunod sa regulasyon.",
+
+    "Cross Docking Arrangements": "Cross Docking Arrangements",
+    "Seamless coordination for cross docking services to support efficient cargo distribution.": "Maayos na koordinasyon para sa cross docking services upang masuportahan ang episyenteng distribusyon ng kargamento."
   },
+  
   "why-choose": {
     "Why Choose Me": "Bakit Ako ang Piliin",
     "10+ Years as Licensed Customs Broker": "10+ Taon bilang Licensed Customs Broker",
@@ -125,7 +132,7 @@
   "Freight, Clearance & Compliance": "Padala, Clearance at Pagsunod",
   "Seamlessly Delivered": "Walang Abalang Pagkakaloob",
   "View Services": "Tingnan ang mga Serbisyo",
-  "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.": "Kumuha ng maaasahan at napapanahong customs brokerage at suporta sa lohistika na naaayon sa pangangailangan ng iyong negosyo.",
+  "GetReliableMessage": "Maaasahan at napapanahong customs brokerage at logistics support na akma sa pangangailangan ng iyong negosyo.",
   "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "Kung ito man ay isang beses na padala o pangmatagalang tulong, siguradong may eksperto kang katuwang.",
   "Import Documentation": "Dokumentasyon ng Import",
   "Ensure every shipment meets all regulatory requirements, right from the start.": "Tiyakin na ang bawat padala ay sumusunod sa lahat ng kinakailangang regulasyon simula pa lamang.",

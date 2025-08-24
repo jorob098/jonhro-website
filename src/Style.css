@@ -375,6 +375,8 @@ header {
   font-size: 1rem;
   color: #bbbbbb;
   line-height: 1.7;
+  margin: 0 auto;   /* centers the paragraph block */
+  text-align: center; /* centers the text inside the block */
 }
 
 /* -------- SERVICE GRID -------- */

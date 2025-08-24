@@ -22,7 +22,7 @@
         "Send Inquiry": "문의 보내기",
         "Contact Me": "문의하기",
         "Let’s Bring Your Vision to Life": "당신의 아이디어를 실현해봅시다",
-        "Support Message Full": "처음부터 시작하든 기존을 개선하든, 성공을 위해 도와드리겠습니다. 다음 프로젝트를 어떻게 지원할 수 있을지 이야기해봐요."
+        "Support Message Full": "처음부터 시작하든 기존을 개선하든, 성공을 위해 도와드리겠습니다. 다음 선적을 어떻게 지원해 드릴 수 있을지 이야기해 보겠습니다."
     },
     "contact-page": {
         "Let’s Talk": "이야기해요",
@@ -35,21 +35,28 @@
         "Send Inquiry": "문의 보내기"
     },
     "servicesPage": {
-        "Services Built for the Future": "미래를 위한 서비스",
-        "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.": "업무를 자동화하고 비용을 절감하며 규정을 준수하도록 설계된 현대적인 통관 솔루션입니다. 비즈니스 성장에 집중하세요.",
-        "Automated Customs Declarations": "자동 통관 신고",
-        "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.": "스마트 입력 폼과 자동 데이터 파이프라인을 통해 간편하고 정확하게 통관 신고를 처리합니다.",
-        "Tariff & Duty Optimization": "관세 최적화",
-        "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.": "AI 기반 HS 코드 분류와 환급 전략을 통해 비용을 최소화하세요.",
-        "Real-Time Shipment Monitoring": "실시간 배송 모니터링",
-        "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.": "실시간 추적 및 통관 단계와 연동된 예측 알림으로 완벽한 통제를 유지하세요.",
-        "Compliance Risk Audits": "규정 위반 리스크 감사",
-        "Run fast, automated audits of your shipping records to identify red flags before customs does.": "통관 전에 문제를 사전에 파악할 수 있도록 자동화된 감사를 수행합니다.",
-        "Importer Self-Assessment Support": "수입자 자가진단 지원",
-        "Streamline your ISA process with templates, dashboards, and expert guidance built-in.": "템플릿과 대시보드, 전문가 가이드를 통해 ISA 프로세스를 간소화하세요.",
-        "Brokerage-as-a-Service (BaaS)": "브로커리지 서비스 (BaaS)",
-        "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.": "스타트업과 중소기업을 위한 즉시 사용 가능한 통관 대행 서비스입니다."
-    },
+    "End to End Customs Services from Cebu to Key Ports Nationwide": "세부에서 전국 주요 항구까지 원스톱 통관 서비스",
+    "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "저는 세부를 기반으로, 마닐라, 카가얀, 다바오, 일로일로, 수빅 등 주요 항구에서도 서비스를 확장하여 원스톱 통관 서비스를 제공합니다. 이를 통해 원활한 통관과 전국적인 안정적인 무역 지원을 보장합니다.",
+
+    "Customs Clearance - Import & Export": "수입 및 수출 통관",
+    "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "항공 및 해상 화물의 통관 절차를 효율적으로 처리하여 원활하고 신속한 화물 반출을 보장합니다.",
+
+    "Customs Brokerage & Tariff Consultation": "통관 대행 및 관세 자문",
+    "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "전문적인 통관 대행 서비스와 함께 관세 분류 및 세액 계산에 대한 자문을 제공합니다.",
+
+    "Freight Consultation": "화물 운송 상담",
+    "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "신뢰할 수 있는 포워더와 협력하여 귀하의 화물 운송 요구를 원활하게 지원합니다.",
+
+    "Real-Time Shipment Monitoring": "실시간 화물 모니터링",
+    "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "실시간 모니터링과 적극적인 업데이트를 통해 화물 진행 상황을 항상 확인할 수 있습니다.",
+
+    "Customs Entry Filing & Records": "통관 신고 및 기록 관리",
+    "Accurate filing of customs entries for future reference and audits to ensure compliance.": "향후 참조와 감사에 대비해 정확하게 통관 신고를 작성하고 규정 준수를 보장합니다.",
+
+    "Cross Docking Arrangements": "크로스 도킹 조율",
+    "Seamless coordination for cross docking services to support efficient cargo distribution.": "효율적인 화물 분배를 지원하기 위해 크로스 도킹 서비스를 원활하게 조율합니다."
+  },
+  
     "why-choose": {
         "Why Choose Me": "왜 저를 선택해야 하나요",
         "10+ Years as Licensed Customs Broker": "10년 이상의 공인 통관사 경력",
@@ -108,7 +115,7 @@
     "Freight, Clearance & Compliance": "운송, 통관 및 규정 준수",
     "Seamlessly Delivered": "원활한 제공",
     "View Services": "서비스 보기",
-    "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.": "귀하의 비즈니스에 맞춘 신뢰할 수 있고 신속한 통관 및 물류 지원을 제공합니다.",
+    "GetReliableMessage": "귀하의 비즈니스 요구에 맞춘 신뢰할 수 있고 시기적절한 통관 및 물류 지원을 제공합니다.",
     "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "일회성 배송이든 장기적인 지원이든 전문 서비스로 도와드립니다.",
     "Import Documentation": "수입 서류",
     "Ensure every shipment meets all regulatory requirements, right from the start.": "모든 화물이 처음부터 모든 규제 요건을 충족하도록 보장합니다.",

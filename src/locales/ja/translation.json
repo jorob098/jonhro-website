@@ -22,7 +22,7 @@
     "Send Inquiry": "お問い合わせを送信",
     "Contact Me": "ご連絡ください",
     "Let’s Bring Your Vision to Life": "あなたのビジョンを実現しましょう",
-    "Support Message Full": "最初から構築する場合でも、既存のものを改善する場合でも、私はあなたの成功を支援するためにここにいます。次のプロジェクトをどのように支援できるか話してみましょう。"
+    "Support Message Full": "最初から構築する場合でも、既存のものを改善する場合でも、私はあなたの成功を支援するためにここにいます。次の出荷をどのようにサポートできるか、ご相談しましょう。"
   },
   "contact-page": {
     "Let’s Talk": "お話ししましょう",
@@ -35,20 +35,26 @@
     "Send Inquiry": "お問い合わせを送信"
   },
   "servicesPage": {
-    "Services Built for the Future": "未来を見据えたサービス",
-    "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.": "ワークフローの自動化、コスト削減、コンプライアンスの確保を目的とした最新の通関ソリューションです。ビジネスの成長に集中できます。",
-    "Automated Customs Declarations": "自動通関申告",
-    "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.": "スマートフォームと事前入力されたデータパイプラインにより、通関申告をスムーズかつ適法に生成・提出します。",
-    "Tariff & Duty Optimization": "関税＆税最適化",
-    "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.": "AI支援のHSコード分類と税金回収戦略により、商品に最適化されたコスト削減を実現します。",
-    "Real-Time Shipment Monitoring": "リアルタイム配送監視",
-    "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.": "通関進捗と連携したライブトラッキングと予測アラートにより、常に状況を把握できます。",
-    "Compliance Risk Audits": "コンプライアンスリスク監査",
-    "Run fast, automated audits of your shipping records to identify red flags before customs does.": "通関前に問題を特定するために、配送記録の迅速な自動監査を実施します。",
-    "Importer Self-Assessment Support": "輸入者セルフ評価サポート",
-    "Streamline your ISA process with templates, dashboards, and expert guidance built-in.": "テンプレート、ダッシュボード、専門家のガイダンスによりISAプロセスを効率化します。",
-    "Brokerage-as-a-Service (BaaS)": "ブローカーサービス(BaaS)",
-    "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.": "迅速かつ規制遵守のスケールを必要とするスタートアップや中小企業向けの即導入可能な通関ブローカーサービスです。"
+    "End to End Customs Services from Cebu to Key Ports Nationwide": "セブから全国主要港までのエンドツーエンド通関サービス",
+    "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "私はセブを拠点に、マニラ、カガヤン、ダバオ、イロイロ、スービックなどの主要港にも対応したエンドツーエンドの通関サービスを提供し、円滑な通関と信頼できる貿易円滑化を全国で実現します。",
+
+    "Customs Clearance - Import & Export": "通関手続き - 輸入 & 輸出",
+    "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "航空貨物および海上貨物の効率的な手続きを行い、迅速かつ円滑な貨物引き渡しを実現します。",
+
+    "Customs Brokerage & Tariff Consultation": "通関業務 & 関税コンサルティング",
+    "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "専門的な通関業務サービスを提供し、関税分類や関税計算に関するアドバイスを行います。",
+
+    "Freight Consultation": "貨物輸送コンサルティング",
+    "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "信頼できるフォワーダーと連携し、貨物輸送の手配をスムーズにサポートします。",
+
+    "Real-Time Shipment Monitoring": "リアルタイム貨物モニタリング",
+    "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "貨物の進捗をリアルタイムで監視し、積極的に最新情報を提供します。",
+
+    "Customs Entry Filing & Records": "通関申告書の作成と記録管理",
+    "Accurate filing of customs entries for future reference and audits to ensure compliance.": "将来の参照や監査に備えて正確に通関申告を行い、コンプライアンスを確保します。",
+
+    "Cross Docking Arrangements": "クロスドッキング調整",
+    "Seamless coordination for cross docking services to support efficient cargo distribution.": "効率的な貨物配送を支援するため、クロスドッキングサービスを円滑に調整します。"
   },
   "why-choose": {
     "Why Choose Me": "なぜ私を選ぶのか",
@@ -111,7 +117,7 @@
   "Freight, Clearance & Compliance": "輸送、通関、コンプライアンス",
   "Seamlessly Delivered": "スムーズに対応",
   "View Services": "サービスを見る",
-  "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.": "ビジネスのニーズに合わせた、信頼性の高い通関・物流サポートをタイムリーにご提供します。",
+  "GetReliableMessage": "信頼できるタイムリーな通関および物流サポートで、御社のビジネスニーズに対応します。",
   "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "単発の貨物でも長期的な支援でも、専門的なサービスで対応します。",
   "Import Documentation": "輸入書類作成",
   "Ensure every shipment meets all regulatory requirements, right from the start.": "すべての貨物が最初から法的要件を満たすよう確実に対応します。",

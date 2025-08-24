@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const cardGradients = [
   "linear-gradient(135deg, #ff6b00, #ff944d)",
@@ -27,7 +27,6 @@ const cardVariants = {
 const Services = () => {
   const { t, ready } = useTranslation();
 
-  // Scroll to top once when component mounts
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -36,52 +35,49 @@ const Services = () => {
 
   const services = [
     {
-      title: t("servicesPage.Automated Customs Declarations"),
-      description: t("servicesPage.Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines."),
+      title: t("servicesPage.Customs Clearance - Import & Export"),
+      description: t("servicesPage.Efficient processing of both air and sea shipments to ensure smooth and timely cargo release."),
       icon: "📄",
     },
     {
-      title: t("servicesPage.Tariff & Duty Optimization"),
-      description: t("servicesPage.Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods."),
+      title: t("servicesPage.Customs Brokerage & Tariff Consultation"),
+      description: t("servicesPage.Professional customs brokerage services with guidance on tariff classification and duty calculations."),
       icon: "📊",
     },
     {
+      title: t("servicesPage.Freight Consultation"),
+      description: t("servicesPage.With trusted freight forwarder partners, I can help arrange your freight requirements with ease."),
+      icon: "🚢",
+    },
+    {
       title: t("servicesPage.Real-Time Shipment Monitoring"),
-      description: t("servicesPage.Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones."),
+      description: t("servicesPage.Stay updated on your shipment’s progress with real-time monitoring and proactive updates."),
       icon: "📦",
     },
     {
-      title: t("servicesPage.Compliance Risk Audits"),
-      description: t("servicesPage.Run fast, automated audits of your shipping records to identify red flags before customs does."),
-      icon: "🛡️",
-    },
-    {
-      title: t("servicesPage.Importer Self-Assessment Support"),
-      description: t("servicesPage.Streamline your ISA process with templates, dashboards, and expert guidance built-in."),
+      title: t("servicesPage.Customs Entry Filing & Records"),
+      description: t("servicesPage.Accurate filing of customs entries for future reference and audits to ensure compliance."),
       icon: "📝",
     },
     {
-      title: t("servicesPage.Brokerage-as-a-Service (BaaS)"),
-      description: t("servicesPage.Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale."),
-      icon: "⚙️",
+      title: t("servicesPage.Cross Docking Arrangements"),
+      description: t("servicesPage.Seamless coordination for cross docking services to support efficient cargo distribution."),
+      icon: "🏭",
     },
   ];
 
   return (
     <section className="services-page">
       <div className="services-container">
-        <motion.header
+        <motion.div
           className="services-header"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2>{t("servicesPage.Services Built for the Future")}</h2>
-          
-          <p>
-            {t("servicesPage.Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.")}
-          </p>
-        </motion.header>
+          <h2>{t("servicesPage.End to End Customs Services from Cebu to Key Ports Nationwide")}</h2>
+          <p>{t("servicesPage.I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.")}</p>
+        </motion.div>
 
         <div className="services-grid">
           {services.map((service, idx) => (

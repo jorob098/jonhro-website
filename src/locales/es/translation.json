@@ -22,7 +22,7 @@
     "Send Inquiry": "Enviar Consulta",
     "Contact Me": "Contáctame",
     "Let’s Bring Your Vision to Life": "Hagamos Realidad Tu Visión",
-    "Support Message Full": "Ya sea que estés comenzando desde cero o mejorando lo que ya tienes, estoy aquí para ayudarte a tener éxito. Hablemos sobre cómo puedo apoyar tu próximo proyecto."
+    "Support Message Full": "Ya sea que estés comenzando desde cero o mejorando lo que ya tienes, estoy aquí para ayudarte a tener éxito. Hablemos sobre cómo puedo apoyar tu próximo carga."
   },
   "contact-page": {
     "Let’s Talk": "Hablemos",
@@ -36,21 +36,28 @@
   },
 
   "servicesPage": {
-    "Services Built for the Future": "Servicios Pensados para el Futuro",
-    "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.": "Soluciones aduaneras modernas diseñadas para automatizar procesos, reducir costos y garantizar el cumplimiento, para que puedas enfocarte en hacer crecer tu negocio.",
-    "Automated Customs Declarations": "Declaraciones Aduaneras Automatizadas",
-    "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.": "Genera y presenta declaraciones aduaneras cumplidoras mediante formularios inteligentes y datos prellenados.",
-    "Tariff & Duty Optimization": "Optimización de Aranceles e Impuestos",
-    "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.": "Minimiza costos con clasificación de códigos arancelarios asistida por IA y estrategias de recuperación de derechos adaptadas a tus productos.",
+    "End to End Customs Services from Cebu to Key Ports Nationwide": "Servicios de Aduanas de Principio a Fin desde Cebú hacia Puertos Clave a Nivel Nacional",
+    "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "Brindo servicios de aduanas de principio a fin desde Cebú, con apoyo extendido en puertos clave como Manila, Cagayán, Dávao, Iloílo y Subic, garantizando un despacho aduanero ágil y una facilitación comercial confiable en todo el país.",
+
+    "Customs Clearance - Import & Export": "Despacho de Aduanas - Importación y Exportación",
+    "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "Procesamiento eficiente de envíos aéreos y marítimos para asegurar la liberación de carga de manera rápida y puntual.",
+
+    "Customs Brokerage & Tariff Consultation": "Agenciamiento de Aduanas y Consultoría Arancelaria",
+    "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "Servicios profesionales de agenciamiento aduanero con asesoría en clasificación arancelaria y cálculo de impuestos.",
+
+    "Freight Consultation": "Consultoría de Fletes",
+    "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "Con socios confiables de transporte de carga, puedo ayudar a coordinar sus necesidades de envío con facilidad.",
+
     "Real-Time Shipment Monitoring": "Monitoreo de Envíos en Tiempo Real",
-    "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.": "Mantén el control con rastreo en vivo de envíos y alertas predictivas integradas con los hitos aduaneros.",
-    "Compliance Risk Audits": "Auditorías de Riesgo de Cumplimiento",
-    "Run fast, automated audits of your shipping records to identify red flags before customs does.": "Realiza auditorías rápidas y automatizadas para detectar problemas antes que lo hagan las aduanas.",
-    "Importer Self-Assessment Support": "Soporte para Autoevaluación de Importadores",
-    "Streamline your ISA process with templates, dashboards, and expert guidance built-in.": "Optimiza tu proceso de autoevaluación con plantillas, paneles de control y asesoramiento experto.",
-    "Brokerage-as-a-Service (BaaS)": "Corretaje como Servicio (BaaS)",
-    "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.": "Corretaje aduanero listo para usar para startups y pymes que necesitan escalar rápidamente con cumplimiento."
+    "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "Manténgase informado sobre el progreso de su envío con monitoreo en tiempo real y actualizaciones proactivas.",
+
+    "Customs Entry Filing & Records": "Registro y Presentación de Declaraciones Aduaneras",
+    "Accurate filing of customs entries for future reference and audits to ensure compliance.": "Presentación precisa de declaraciones aduaneras para referencia futura y auditorías, asegurando el cumplimiento normativo.",
+
+    "Cross Docking Arrangements": "Coordinación de Cross Docking",
+    "Seamless coordination for cross docking services to support efficient cargo distribution.": "Coordinación fluida de servicios de cross docking para apoyar una distribución de carga eficiente."
   },
+  
   "why-choose": {
     "Why Choose Me": "¿Por Qué Elegirme?",
     "10+ Years as Licensed Customs Broker": "Más de 10 Años como Agente de Aduanas Autorizado",
@@ -111,16 +118,16 @@
     "Freight, Clearance & Compliance": "Carga, Despacho y Cumplimiento",
     "Seamlessly Delivered": "Entregado sin Problemas",
     "View Services": "Ver Servicios",
-    "Get reliable and timely customs brokerage and logistics support...": "Obtén corretaje aduanero confiable y oportuno con soporte logístico...",
-    "Whether it's one-time shipment or long-term assistance...": "Ya sea un envío único o asistencia a largo plazo...",
+    "GetReliableMessage": "Servicios confiables y oportunos de corretaje aduanero y apoyo logístico adaptados a las necesidades de su negocio.",
+    "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "Ya sea un envío único o asistencia a largo plazo, cuenta con un servicio experto.",
     "Import Documentation": "Documentación de Importación",
-    "Ensure every shipment meets all regulatory requirements...": "Asegura que cada envío cumpla con todos los requisitos normativos...",
+    "Ensure every shipment meets all regulatory requirements, right from the start.": "Asegure que cada envío cumpla con todos los requisitos regulatorios desde el inicio.",
     "Customs Compliance": "Cumplimiento Aduanero",
-    "Stay audit-ready and penalty-free...": "Mantente listo para auditorías y sin sanciones...",
+    "Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.": "Manténgase preparado para auditorías y libre de sanciones gracias a mi profundo conocimiento de las regulaciones de la BOC.",
     "Freight Coordination": "Coordinación de Fletes",
-    "Simplify your logistics...": "Simplifica tu logística...",
+    "Simplify your logistics by letting me manage freight timelines and port communication.": "Simplifique su logística permitiéndome gestionar los tiempos de flete y la comunicación portuaria.",
     "Brokerage Consultancy": "Consultoría de Corretaje",
-    "Get expert advice...": "Obtén asesoramiento experto..."
+    "Get expert advice on tariff classifications, duties, and optimizing your import process.": "Obtenga asesoría experta sobre clasificaciones arancelarias, impuestos y cómo optimizar su proceso de importación."
   },
   "aboutPage": {
     "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "Agente de Aduanas Autorizado en Cebú — Tu Socio de Confianza",

@@ -76,7 +76,7 @@ export default function ServicesIntro() {
         className="services-intro-summary"
         variants={riseVariant}
       >
-        {t("servicesIntro.Get reliable and timely customs brokerage and logistics support that adapts to your business needs.")}
+        {t("servicesIntro.GetReliableMessage")}
         {t("servicesIntro.Whether it's one-time shipment or long-term assistance, you're covered with expert service.")}
       </motion.p>
 

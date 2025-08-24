@@ -23,7 +23,7 @@
     "Send Inquiry": "提交咨询",
     "Contact Me": "联系我",
     "Let’s Bring Your Vision to Life": "让您的愿景变为现实",
-     "Support Message Full": "无论您是从零开始还是优化现有项目，我都致力于帮助您取得成功。让我们聊聊我如何支持您的下一个项目。"
+     "Support Message Full": "无论您是从零开始还是优化现有项目，我都致力于帮助您取得成功。让我们谈谈我如何能支持您的下一批货物。"
   },
   
   "contact-page": {
@@ -38,26 +38,28 @@
   },
 
   "servicesPage": {
-    "Services Built for the Future": "面向未来的服务",
-    "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.": "现代海关解决方案，自动化流程、降低成本并确保合规，让您专注于业务发展。",
-    "Automated Customs Declarations": "自动化报关",
-    "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.": "通过智能表单输入和预填数据流，轻松生成并提交合规报关单。",
+  "End to End Customs Services from Cebu to Key Ports Nationwide": "从宿务到全国主要港口的一站式报关服务",
+  "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "我在宿务提供一站式报关服务，并在马尼拉、卡加延、达沃、伊洛伊洛和苏比克等主要港口提供延伸支持，确保全国范围内的顺畅清关和可靠的贸易便利。",
 
-    "Tariff & Duty Optimization": "关税与税费优化",
-    "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.": "利用 AI 辅助的 HS 编码分类和税务回收策略，为您的商品定制节税方案。",
+  "Customs Clearance - Import & Export": "报关服务 - 进出口",
+  "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "高效处理空运和海运货物，确保货物顺利、及时放行。",
 
-    "Real-Time Shipment Monitoring": "实时货物监控",
-    "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.": "实时跟踪货物状态，结合海关节点提供预测性提醒，掌握全局。",
+  "Customs Brokerage & Tariff Consultation": "报关代理与关税咨询",
+  "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "提供专业的报关代理服务，并为关税分类和税费计算提供指导。",
 
-    "Compliance Risk Audits": "合规风险审计",
-    "Run fast, automated audits of your shipping records to identify red flags before customs does.": "自动快速审查您的运输记录，提前识别风险，避免被海关抽查。",
+  "Freight Consultation": "货运咨询",
+  "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "与值得信赖的货运代理合作，协助您轻松安排货运需求。",
 
-    "Importer Self-Assessment Support": "进口商自我评估支持",
-    "Streamline your ISA process with templates, dashboards, and expert guidance built-in.": "通过模板、仪表板和专家指导，简化自我评估（ISA）流程。",
+  "Real-Time Shipment Monitoring": "实时货物监控",
+  "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "通过实时监控和主动更新，随时掌握货物运输进度。",
 
-    "Brokerage-as-a-Service (BaaS)": "经纪即服务 (BaaS)",
-    "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.": "为初创企业和中小企业提供即插即用的合规海关代理服务。"
-  },
+  "Customs Entry Filing & Records": "报关单申报与记录",
+  "Accurate filing of customs entries for future reference and audits to ensure compliance.": "准确提交报关单，方便未来查阅和审计，确保合规。",
+
+  "Cross Docking Arrangements": "交叉中转安排",
+  "Seamless coordination for cross docking services to support efficient cargo distribution.": "无缝协调交叉中转服务，支持高效的货物分配。"
+},
+
 
   "why-choose": {
     "Why Choose Me": "为什么选择我",
@@ -140,7 +142,7 @@
     "Freight, Clearance & Compliance": "货运、清关与合规",
     "Seamlessly Delivered": "无缝交付",
     "View Services": "查看服务",
-    "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.": "为您的业务需求提供可靠且及时的报关与物流支持。",
+    "GetReliableMessage": "可靠及时的报关和物流支持，贴合您的业务需求。",
     "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "无论是一次性运输还是长期协助，我都能为您提供专业服务。",
     "Import Documentation": "进口文件处理",
     "Ensure every shipment meets all regulatory requirements, right from the start.": "确保每一批货物从起点就符合所有法规要求。",

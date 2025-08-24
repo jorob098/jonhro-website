@@ -22,7 +22,7 @@
   "Send Inquiry": "Send Inquiry",
   "Contact Me": "Contact Me",
   "Let’s Bring Your Vision to Life": "Let’s Bring Your Vision to Life",
-  "Support Message Full": "Whether you're building from scratch or improving what you already have, I'm here to help you succeed. Let's talk about how I can support your next project.Let's talk about how I can support your next project."
+  "Support Message Full": "Whether you're building from scratch or improving what you already have, I'm here to help you succeed. Let's talk about how I can support your next shipment."
 },
   "contact-page": {
       "Let’s Talk": "Let’s Talk",
@@ -35,28 +35,30 @@
       "Send Inquiry": "Send Inquiry"
     },
 
-  "servicesPage": {
-    "Services Built for the Future": "Services Built for the Future",
-    "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.": "Modern customs solutions designed to automate workflows, reduce costs, and ensure compliance—so you can focus on growing your business.",
-    "Automated Customs Declarations": "Automated Customs Declarations",
-    "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.": "Seamlessly generate and submit compliant customs declarations using smart form inputs and pre-filled data pipelines.",
-    
-    "Tariff & Duty Optimization": "Tariff & Duty Optimization",
-    "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.": "Minimize costs with AI-assisted HS code classification and duty recovery strategies tailored for your goods.",
-    
-    "Real-Time Shipment Monitoring": "Real-Time Shipment Monitoring",
-    "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.": "Stay in control with live shipment tracking and predictive alerts integrated directly with customs milestones.",
-    
-    "Compliance Risk Audits": "Compliance Risk Audits",
-    "Run fast, automated audits of your shipping records to identify red flags before customs does.": "Run fast, automated audits of your shipping records to identify red flags before customs does.",
-    
-    "Importer Self-Assessment Support": "Importer Self-Assessment Support",
-    "Streamline your ISA process with templates, dashboards, and expert guidance built-in.": "Streamline your ISA process with templates, dashboards, and expert guidance built-in.",
-    
-    "Brokerage-as-a-Service (BaaS)": "Brokerage-as-a-Service (BaaS)",
-    "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale.": "Plug-and-play customs brokerage for startups and SMEs needing rapid, compliant scale."
   
+  "servicesPage": {
+    "End to End Customs Services from Cebu to Key Ports Nationwide": "End to End Customs Services from Cebu to Key Ports Nationwide",
+    "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.",
+
+    "Customs Clearance - Import & Export": "Customs Clearance - Import & Export",
+    "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.",
+
+    "Customs Brokerage & Tariff Consultation": "Customs Brokerage & Tariff Consultation",
+    "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "Professional customs brokerage services with guidance on tariff classification and duty calculations.",
+
+    "Freight Consultation": "Freight Consultation",
+    "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.",
+
+    "Real-Time Shipment Monitoring": "Real-Time Shipment Monitoring",
+    "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.",
+
+    "Customs Entry Filing & Records": "Customs Entry Filing & Records",
+    "Accurate filing of customs entries for future reference and audits to ensure compliance.": "Accurate filing of customs entries for future reference and audits to ensure compliance.",
+
+    "Cross Docking Arrangements": "Cross Docking Arrangements",
+    "Seamless coordination for cross docking services to support efficient cargo distribution.": "Seamless coordination for cross docking services to support efficient cargo distribution."
   },
+
 
   "why-choose": {
     "Why Choose Me": "Why Choose Me",
@@ -141,7 +143,7 @@
   "Freight, Clearance & Compliance": "Freight, Clearance & Compliance",
   "Seamlessly Delivered": "Seamlessly Delivered",
   "View Services": "View Services",
-  "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.": "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.",
+  "GetReliableMessage": "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.",
   "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "Whether it's one-time shipment or long-term assistance, you're covered with expert service.",
   "Import Documentation": "Import Documentation",
   "Ensure every shipment meets all regulatory requirements, right from the start.": "Ensure every shipment meets all regulatory requirements, right from the start.",
