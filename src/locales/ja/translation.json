@@ -1,7 +1,7 @@
 {
   "hero": {
     "Clear Customs, Clear Mind": "クリアカスタム、クリアマインド",
-    "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.": "セブで信頼されるライセンス通関業者による、手間のない輸入・輸出サービス。",
+    "YoureTrustedHero": "手間のかからない輸出入のための、セブにおける信頼できる通関ソリューションパートナー",
     "Get Started": "始めましょう"
   },
   "nav-links": {
@@ -58,9 +58,9 @@
   },
   "why-choose": {
     "Why Choose Me": "なぜ私を選ぶのか",
-    "10+ Years as Licensed Customs Broker": "ライセンス通関業者として10年以上の経験",
+    "10+Years": "通関業務と輸入ソリューションで10年以上の経験",
     "Proven Expertise": "実績のある専門知識",
-    "Licensed and seasoned in BOC processes, I guide your imports with confidence.": "BOC(フィリピン税関）のプロセスに精通した公認通関業者として、自信を持って輸入をサポートします。",
+    "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "長年の通関手続きの経験により、輸入品を円滑かつ期限通りに通関いたします。",
     "Responsive & Reliable": "迅速かつ信頼性の高い対応",
     "Quick turnarounds, clear updates — always available when you need answers.": "迅速な対応と明確なアップデート — ご質問の際はいつでも対応します。",
     "Tailored Approach": "カスタマイズされたアプローチ",
@@ -70,7 +70,7 @@
   },
   "get-to-know": {
     "Get to Know Me": "私について知る",
-    "Your Trusted Licensed Customs Broker": "信頼できるライセンス通関業者",
+    "Your Trusted Customs Solutions Specialist": "信頼できる通関ソリューションスペシャリスト",
     "About Me": "私について",
     "When you choose me as your freelance customs broker, you get more than clearance —": "私をフリーランスの通関業者として選んでいただくと、単なる通関以上のものが得られます —",
     "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "迅速性、信頼性、安心感を提供します。煩雑な書類業務をスムーズに処理します。",
@@ -129,10 +129,10 @@
   "Get expert advice on tariff classifications, duties, and optimizing your import process.": "関税分類や関税の最適化、輸入プロセスに関する専門的なアドバイスをご提供します。"
 },
 "aboutPage": {
-  "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "セブの公認通関士 ― 信頼できる貿易パートナー",
+  "aboutPageHeader": "セブの通関ソリューションパートナー — 信頼できる貿易の味方",
    "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "2011年にPRC通関士免許試験に合格して以来、10年以上にわたりセブおよびその周辺の企業が輸出入の複雑さを乗り越える支援をしてきました。フリーランスの通関士として、単なる法令遵守だけでなく、明確さ、スピード、戦略的な価値をすべての取引に提供しています。",
   "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "国際市場に挑戦する中小企業でも、複雑な貨物を管理する成長中の企業でも、効率性、透明性、成果を重視したカスタムソリューションを提供します。単なる書類処理にとどまらず、スムーズでコスト効率の高い通関を実現するパートナーとなります。",
-  "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.": "フィリピンの貿易の実情と国際物流の要件を理解する信頼できる公認通関士をお探しなら、一緒に賢く、そしてスピーディーに貨物を動かしましょう。",
+  "ifYoureLooking": "フィリピン貿易の動向と国際物流のニーズを理解した信頼できる通関ソリューションパートナーをお探しなら、一緒に賢く迅速に貨物を動かしましょう。",
   "Work With Me": "私と一緒に働きましょう"
 },
 "Affil": {

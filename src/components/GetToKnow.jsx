@@ -45,8 +45,8 @@ export default function GetToKnow() {
           </motion.h2>
 
           {/* 🟨 Paragraph (middle in layout and animation) */}
-          <motion.p className="tagline" variants={item}>
-            {t("get-to-know.Your Trusted Licensed Customs Broker")}
+          <motion.p className="taglinegtkm" variants={item}>
+            {t("get-to-know.Your Trusted Customs Solutions Specialist")}
           </motion.p>
 
           {/* 🟥 CTA Button (first to animate, bottom of layout) */}

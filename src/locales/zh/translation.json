@@ -1,7 +1,7 @@
 {
   "hero": {
     "Clear Customs, Clear Mind": "通关顺畅，心安理得",
-    "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.": "您在宿务值得信赖的持牌报关行，提供无忧的进出口服务。",
+    "YoureTrustedHero": "您在宿务值得信赖的报关合作伙伴，助您轻松进出口。",
     "Get Started": "开始使用"
   },
   "nav-links": {
@@ -63,10 +63,10 @@
 
   "why-choose": {
     "Why Choose Me": "为什么选择我",
-    "10+ Years as Licensed Customs Broker": "10年以上执照报关经验",
+    "10+Years": "10年以上报关及进口解决方案经验",
 
     "Proven Expertise": "专业经验",
-    "Licensed and seasoned in BOC processes, I guide your imports with confidence.": "熟悉海关流程，持牌专业人员为您的进口提供可靠保障。",
+    "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "凭借多年的报关经验，我确保您的进口货物顺利并按时清关。",
 
     "Responsive & Reliable": "响应迅速 值得信赖",
     "Quick turnarounds, clear updates — always available when you need answers.": "快速处理、及时更新 — 需要时随时响应。",
@@ -79,7 +79,7 @@
   },
   "get-to-know": {
     "Get to Know Me": "了解我",
-    "Your Trusted Licensed Customs Broker": "您值得信赖的持牌报关员",
+    "Your Trusted Customs Solutions Specialist": "您值得信赖的报关解决方案专家",
     "About Me": "关于我",
     "When you choose me as your freelance customs broker, you get more than clearance —": "选择我作为您的自由职业报关代理，您获得的不只是通关服务 —",
     "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "您将获得高效、可靠和安心的服务。我专注于无忧文件处理、",
@@ -155,10 +155,10 @@
   },
 
   "aboutPage": {
-  "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "宿务的持证报关员 —— 您值得信赖的贸易伙伴",
+  "aboutPageHeader": "宿务的报关解决方案合作伙伴 — 您值得信赖的贸易盟友",
   "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "自2011年通过菲律宾PRC报关员执照考试以来，我已经致力于帮助宿务及其他地区的企业应对进出口的复杂流程超过十年。作为一名自由职业的报关员，我不仅提供合规服务，更带来清晰、高效和战略价值。",
   "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "无论您是探索国际市场的小型企业，还是管理复杂货运的成长型企业，我都能量身定制解决方案，以效率、透明和成果为优先。我的服务不仅仅是处理文件，更是成为您顺利且具成本效益清关的合作伙伴。",
-  "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.": "如果您正在寻找一位可靠、持证并深谙菲律宾贸易脉动及全球物流需求的报关员，让我们合作，让您的货物更聪明、更快速地通关。",
+  "ifYoureLooking": "如果您正在寻找一位可靠的报关解决方案合作伙伴，既了解菲律宾贸易的脉动，又能满足全球物流的需求，让我们携手让您的货物更聪明、更快捷地通行。",
   "Work With Me": "与我合作"
 },
 

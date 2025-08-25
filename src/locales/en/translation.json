@@ -1,7 +1,7 @@
 {
   "hero": {
     "Clear Customs, Clear Mind": "Clear Customs, Clear Mind",
-    "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.": "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.",
+    "YoureTrustedHero": "Your trusted Customs Solution Partner in Cebu for hassle-free importing & exporting.",
     "Get Started": "Get Started"
   },
   "nav-links": {
@@ -62,10 +62,10 @@
 
   "why-choose": {
     "Why Choose Me": "Why Choose Me",
-    "10+ Years as Licensed Customs Broker": "10+ Years as Licensed Customs Broker",
+    "10+Years": "10+ Years of Experience in Customs Brokerage & Import Solutions",
 
     "Proven Expertise": "Proven Expertise",
-    "Licensed and seasoned in BOC processes, I guide your imports with confidence.": "Licensed and seasoned in BOC processes, I guide your imports with confidence.",
+    "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.",
 
     "Responsive & Reliable": "Responsive & Reliable",
     "Quick turnarounds, clear updates — always available when you need answers.": "Quick turnarounds, clear updates — always available when you need answers.",
@@ -78,7 +78,7 @@
   },
   "get-to-know": {
     "Get to Know Me": "Get to Know Me",
-    "Your Trusted Licensed Customs Broker": "Your Trusted Licensed Customs Broker",
+    "Your Trusted Customs Solutions Specialist": "Your Trusted Customs Solutions Specialist",
     "About Me": "About Me",
     "When you choose me as your freelance customs broker, you get more than clearance —": "When you choose me as your freelance customs broker, you get more than clearance —",
     "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,",
@@ -156,10 +156,10 @@
 },
 
 "aboutPage": {
-  "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "Licensed Customs Broker in Cebu — Your Trusted Trade Partner",
+  "aboutPageHeader": "Customs Solutions Partner in Cebu — Your Trusted Trade Ally",
   "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.",
   "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.",
-  "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.": "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.",
+  "ifYoureLooking": "If youre looking for a reliable customs solutions partner who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.",
   "Work With Me": "Work With Me"
 },
 

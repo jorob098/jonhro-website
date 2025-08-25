@@ -1,7 +1,7 @@
  {
     "hero": {
         "Clear Customs, Clear Mind": "통관은 깔끔하게, 마음은 편안하게",
-        "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.": "수입과 수출을 간편하게 돕는 세부의 신뢰받는 통관 전문가입니다.",
+        "YoureTrustedHero": "번거롭지 않은 수입·수출을 위한 세부의 신뢰할 수 있는 통관 솔루션 파트너",
         "Get Started": "시작하기"
     },
     "nav-links": {
@@ -59,9 +59,9 @@
   
     "why-choose": {
         "Why Choose Me": "왜 저를 선택해야 하나요",
-        "10+ Years as Licensed Customs Broker": "10년 이상의 공인 통관사 경력",
+        "10+Years" : "통관 중개 및 수입 솔루션 분야에서 10년 이상의 경험",
         "Proven Expertise": "검증된 전문성",
-        "Licensed and seasoned in BOC processes, I guide your imports with confidence.": "BOC 프로세스에 능통한 공인 전문가로서 귀사의 수입을 자신 있게 도와드립니다.",
+        "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "다년간의 통관 절차 경험을 통해 귀하의 수입품이 원활하고 제때 통관되도록 보장합니다.",
         "Responsive & Reliable": "신속하고 신뢰할 수 있는 응답",
         "Quick turnarounds, clear updates — always available when you need answers.": "신속한 처리와 명확한 업데이트 — 필요할 때 언제든지 대응합니다.",
         "Tailored Approach": "맞춤형 접근",
@@ -71,7 +71,7 @@
     },
     "get-to-know": {
         "Get to Know Me": "저를 소개합니다",
-        "Your Trusted Licensed Customs Broker": "신뢰할 수 있는 공인 통관사",
+        "Your Trusted Customs Solutions Specialist": "신뢰할 수 있는 통관 솔루션 전문가",
         "About Me": "저에 대해",
         "When you choose me as your freelance customs broker, you get more than clearance —": "저를 프리랜서 통관사로 선택하시면 단순한 통관을 넘어서 —",
         "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "빠르고 신뢰할 수 있으며 안심할 수 있는 서비스를 제공합니다. 복잡한 문서를 간편하게 처리해 드립니다.",
@@ -128,10 +128,10 @@
   },
 
   "aboutPage": {
-    "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "세부의 공인 통관사 — 신뢰할 수 있는 무역 파트너",
+    "aboutPageHeader": "세부의 통관 솔루션 파트너 — 신뢰할 수 있는 무역 동반자",
     "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "2011년 필리핀 공인 통관사 시험에 합격한 이후 10년 넘게 세부 및 그 외 지역의 기업들이 수출입 절차를 원활하게 수행할 수 있도록 돕고 있습니다. 프리랜서 통관사로서 저는 단순한 규정 준수를 넘어서 명확성, 속도 및 전략적 가치를 제공합니다.",
     "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "국제 시장에 진출하려는 소기업이든 복잡한 화물을 처리하는 성장 기업이든 관계없이, 효율성과 투명성, 결과 중심의 맞춤형 솔루션을 제공합니다. 단순히 서류를 처리하는 것을 넘어 원활하고 비용 효율적인 통관을 위한 파트너가 되어드립니다.",
-    "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.": "필리핀 무역의 흐름과 글로벌 물류의 요구를 이해하는 신뢰할 수 있는 공인 통관사를 찾고 계신다면, 함께 일하여 더 똑똑하고 빠르게 화물을 운송해 봅시다.",
+    "ifYoureLooking": "필리핀 무역의 흐름과 글로벌 물류 수요를 이해하는 신뢰할 수 있는 통관 솔루션 파트너를 찾고 계시다면, 함께 더 스마트하고 빠르게 화물을 이동시켜 봅시다.",
     "Work With Me": "함께 일하기"
   },
 

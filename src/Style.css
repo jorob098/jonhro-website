@@ -758,7 +758,7 @@ header {
   margin-bottom: 0.75rem;
 }
 
-.tagline {
+.taglinegtkm {
   color: #ff6b00;
   font-size: 1.25rem; /* was 1rem */
   margin-bottom: 1.75rem;
@@ -1455,6 +1455,99 @@ header {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
+/* === Tagline under site name === */
+.tagline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0.6rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Horizontal CMD line */
+.tagline {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+/* Default state (before animate class) */
+.tagline .word,
+.tagline-container .subtext {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* When in view, play animations */
+.tagline-container.animate .word:nth-child(1) {
+  animation: slideIn 0.6s ease forwards 0.2s;
+}
+.tagline-container.animate .word:nth-child(2) {
+  animation: slideIn 0.6s ease forwards 0.8s;
+}
+.tagline-container.animate .word:nth-child(3) {
+  animation: slideIn 0.6s ease forwards 1.4s;
+}
+
+/* First-letter glow on each word */
+.tagline-container.animate .word:nth-child(1) .first-letter {
+  animation: glowOnce 1.2s ease forwards 0.2s;
+}
+.tagline-container.animate .word:nth-child(2) .first-letter {
+  animation: glowOnce 1.2s ease forwards 0.8s;
+}
+.tagline-container.animate .word:nth-child(3) .first-letter {
+  animation: glowOnce 1.2s ease forwards 1.4s;
+}
+
+/* Styling */
+.tagline .word {
+  font-size: 1rem;           /* smaller */
+  font-weight: 600;
+  color: #fff;
+}
+
+.tagline .first-letter {
+  color: #ff6b00;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(255, 107, 0, 0.7);
+}
+
+/* “With Confidence.” under CMD */
+.tagline-container .subtext {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;        /* smaller */
+  font-weight: 400;
+  color: #fff;
+}
+
+.tagline-container.animate .subtext {
+  animation: fadeInGlow 1.2s ease forwards 2.2s;
+}
+
+/* === Keyframes === */
+@keyframes slideIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowOnce {
+  0%   { text-shadow: 0 0 0 rgba(255,107,0,0); }
+  50%  { text-shadow: 0 0 12px rgba(255,107,0,0.9); }
+  100% { text-shadow: 0 0 0 rgba(255,107,0,0); }
+}
+
+@keyframes fadeInGlow {
+  0% { opacity: 0; text-shadow: 0 0 0 rgba(255,255,255,0); }
+  50% { opacity: 1; text-shadow: 0 0 12px rgba(255,255,255,0.8); }
+  100% { opacity: 1; text-shadow: 0 0 0 rgba(255,255,255,0); }
+}
+
+/* Optional: make CMD smaller on mobile */
+@media (max-width: 480px) {
+  .tagline .word { font-size: 0.95rem; }
+  .tagline-container .subtext { font-size: 0.8rem; }
+}
+
 /* === Root Theme Variables === */
 :root {
   --bg-color: #ffffff;

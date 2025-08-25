@@ -42,7 +42,7 @@ export default function WhyChooseMe() {
           <img src={whyImg} alt="Why Choose Me" className="why-bg-img" />
           <div className="why-text-overlay">
             <h2>{t("why-choose.Why Choose Me")}</h2>
-            <p>{t("why-choose.10+ Years as Licensed Customs Broker")}</p>
+            <p>{t("why-choose.10+Years")}</p>
           </div>
         </div>
 
@@ -53,7 +53,7 @@ export default function WhyChooseMe() {
         >
           <motion.div className="why-card card-orange" variants={cardItem}>
             <h3>{t("why-choose.Proven Expertise")}</h3>
-            <p>{t("why-choose.Licensed and seasoned in BOC processes, I guide your imports with confidence.")}</p>
+            <p>{t("why-choose.With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.")}</p>
           </motion.div>
 
           <motion.div className="why-card card-dark" variants={cardItem}>

@@ -3,13 +3,34 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import jrLogo from '../assets/jrlogo.svg';
 import ScrollToHeroLink from "./ScrollToHeroLink"; // adjust path if needed
-
-<li>
-  <ScrollToHeroLink>Home</ScrollToHeroLink>
-</li>
-
+import { useEffect } from "react";
 
 export default function Footer() {
+
+  useEffect(() => {
+    const el = document.querySelector(".tagline-container");
+    if (!el) return;
+
+    const play = () => {
+      el.classList.remove("animate");
+      // force reflow so CSS animations can restart
+      // eslint-disable-next-line no-unused-expressions
+      el.offsetWidth;
+      el.classList.add("animate");
+    };
+
+    const obs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && play()),
+      { threshold: 0.5 }
+    );
+
+    obs.observe(el);
+    // also play once on initial mount
+    play();
+
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <footer className="footer">
       <div className="footer-top">
@@ -17,9 +38,19 @@ export default function Footer() {
         <div className="footer-column logo-section">
           <ScrollLink to="hero" smooth duration={500} className="site-logo">
             <div className="logo-name-container">
-            <img src={jrLogo} alt="Jonhro Logo" className="footer-logo" />
-            <span className="site-name">Jonhro Robles, LCB</span>
-        </div>
+              <img src={jrLogo} alt="Jonhro Logo" className="footer-logo" />
+              <span className="site-name">Jonhro Robles</span>
+            </div>
+
+            {/* ✅ Animated Tagline */}
+            <div className="tagline-container">
+              <div className="tagline">
+                <span className="word"><span className="first-letter">C</span>lear</span>
+                <span className="word"><span className="first-letter">M</span>ove</span>
+                <span className="word"><span className="first-letter">D</span>eliver</span>
+              </div>
+              <div className="subtext">With Confidence.</div>
+            </div>
           </ScrollLink>
         </div>
 
@@ -28,12 +59,11 @@ export default function Footer() {
           <div className="quick-links">
             <h4>Quick Links</h4>
             <ul>
-            <li><ScrollToHeroLink className="footer-link">Home</ScrollToHeroLink></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+              <li><ScrollToHeroLink className="footer-link">Home</ScrollToHeroLink></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
-
           </div>
           <div className="location-info">
             <h4>Location</h4>
@@ -58,7 +88,7 @@ export default function Footer() {
 
       {/* Bottom: Copyright */}
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Jonhro Robles, LCB. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Jonhro Robles. All rights reserved.</p>
       </div>
     </footer>
   );

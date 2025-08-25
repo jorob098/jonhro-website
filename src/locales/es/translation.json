@@ -1,7 +1,7 @@
 {
   "hero": {
     "Clear Customs, Clear Mind": "Aduanas Despejadas, Mente Clara",
-    "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.": "Su agente de aduanas autorizado de confianza en Cebú para importaciones y exportaciones sin complicaciones.",
+    "YoureTrustedHero": "Su socio de confianza en soluciones aduaneras en Cebú para importación y exportación sin complicaciones.",
     "Get Started": "Comenzar"
   },
   "nav-links": {
@@ -60,9 +60,9 @@
   
   "why-choose": {
     "Why Choose Me": "¿Por Qué Elegirme?",
-    "10+ Years as Licensed Customs Broker": "Más de 10 Años como Agente de Aduanas Autorizado",
+    "10+Years": "Más de 10 años de experiencia en corretaje aduanero y soluciones de importación",
     "Proven Expertise": "Experiencia Comprobada",
-    "Licensed and seasoned in BOC processes, I guide your imports with confidence.": "Autorizado y con experiencia en procesos de la BOC, guío tus importaciones con confianza.",
+    "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "Con años de experiencia en procedimientos aduaneros, me aseguro de que sus importaciones se liberen sin problemas y a tiempo.",
     "Responsive & Reliable": "Ágil y Confiable",
     "Quick turnarounds, clear updates — always available when you need answers.": "Respuestas rápidas, actualizaciones claras — siempre disponible cuando necesites ayuda.",
     "Tailored Approach": "Enfoque Personalizado",
@@ -72,7 +72,7 @@
   },
   "get-to-know": {
     "Get to Know Me": "Conóceme",
-    "Your Trusted Licensed Customs Broker": "Tu Agente de Aduanas de Confianza",
+    "Your Trusted Customs Solutions Specialist": "Su Especialista de Soluciones Aduaneras de Confianza",
     "About Me": "Sobre Mí",
     "When you choose me as your freelance customs broker, you get more than clearance —": "Cuando me eliges como tu agente de aduanas freelance, obtienes más que un trámite —",
     "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "obtienes rapidez, confiabilidad y tranquilidad. Me especializo en documentación sin complicaciones,",
@@ -130,10 +130,10 @@
     "Get expert advice on tariff classifications, duties, and optimizing your import process.": "Obtenga asesoría experta sobre clasificaciones arancelarias, impuestos y cómo optimizar su proceso de importación."
   },
   "aboutPage": {
-    "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "Agente de Aduanas Autorizado en Cebú — Tu Socio de Confianza",
+    "aboutPageHeader": "Socio de Soluciones Aduaneras en Cebú — Su Aliado Comercial de Confianza",
     "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Desde que aprobé el examen de licencias de la PRC en 2011, he dedicado más de una década a ayudar a empresas en Cebú y más allá a navegar por las complejidades de la importación y exportación. Como agente de aduanas freelance, no solo ofrezco cumplimiento, sino también claridad, rapidez y valor estratégico en cada transacción.",
     "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "Ya sea que seas una pequeña empresa explorando mercados internacionales o una empresa en crecimiento gestionando envíos complejos, adapto soluciones que priorizan la eficiencia, la transparencia y los resultados. Mis servicios van más allá del procesamiento de documentos: me convierto en tu socio para lograr un despacho aduanero fluido y rentable.",
-    "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.": "Si estás buscando un agente de aduanas confiable y autorizado que entienda el pulso del comercio filipino y las demandas de la logística global, trabajemos juntos para mover tus productos de manera más inteligente y rápida.",
+    "ifYoureLooking": "Si buscas un socio confiable en soluciones aduaneras que entienda el pulso del comercio filipino y las demandas de la logística global, trabajemos juntos para mover tus mercancías de manera más inteligente y rápida.",
     "Work With Me": "Trabaja Conmigo"
   },
   "Affil": {

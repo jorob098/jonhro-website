@@ -52,7 +52,7 @@ export default function Hero() {
         className="mt-4 text-lg"
         variants={wordVariant}
       >
-        {t("hero.Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.")}
+        {t("hero.YoureTrustedHero")}
       </motion.p>
 
       <motion.div

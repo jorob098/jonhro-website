@@ -1,7 +1,7 @@
 {
   "hero": {
     "Clear Customs, Clear Mind": "Malinis na Customs, Malinis na Isipan",
-    "Your trusted Licensed Customs Broker in Cebu for hassle-free importing & exporting.": "Ang iyong pinagkakatiwalaang Licensed Customs Broker sa Cebu para sa walang abalang pag-aangkat at pag-e-export.",
+    "YoureTrustedHero" : "Ang iyong maaasahang Customs Solutions Partner sa Cebu para sa walang abalang pag-import at pag-export.",
     "Get Started": "Magsimula"
   },
   "nav-links": {
@@ -59,9 +59,9 @@
   
   "why-choose": {
     "Why Choose Me": "Bakit Ako ang Piliin",
-    "10+ Years as Licensed Customs Broker": "10+ Taon bilang Licensed Customs Broker",
+    "10+Years": "10+ Taon ng Karanasan sa Customs Brokerage at Import Solutions",
     "Proven Expertise": "Subok na Kasanayan",
-    "Licensed and seasoned in BOC processes, I guide your imports with confidence.": "Lisensyado at may karanasan sa proseso ng BOC, ginagabayan ko ang iyong import nang may kumpiyansa.",
+    "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.":  "Sa maraming taong karanasan sa customs procedures, tinitiyak kong maayos at nasa oras ang pag-release ng iyong imports.",
     "Responsive & Reliable": "Mabilis Tumugon at Maaasahan",
     "Quick turnarounds, clear updates — always available when you need answers.": "Mabilis na serbisyo, malinaw na update — palaging handang sumagot.",
     "Tailored Approach": "Angkop na Paraan",
@@ -71,7 +71,7 @@
   },
   "get-to-know": {
     "Get to Know Me": "Kilalanin Ako",
-    "Your Trusted Licensed Customs Broker": "Ang Iyong Pinagkakatiwalaang Customs Broker",
+    "Your Trusted Customs Solutions Specialist": "Ang Iyong Maaasahang Customs Solutions Specialist",
     "About Me": "Tungkol sa Akin",
     "When you choose me as your freelance customs broker, you get more than clearance —": "Kapag ako ang pinili mong freelance customs broker, higit pa sa clearance ang makukuha mo —",
     "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "makakamit mo ang bilis, pagiging maaasahan, at kapanatagan ng loob. Espesyalista ako sa dokumentasyong walang abala,",
@@ -145,10 +145,10 @@
 },
 
   "aboutPage": {
-  "Licensed Customs Broker in Cebu — Your Trusted Trade Partner": "Licensed Customs Broker sa Cebu — Ang Iyong Maaasahang Kaagapay sa Kalakalan",
+  "aboutPageHeader": "Customs Solutions Partner sa Cebu — Ang Iyong Maaasahang Trade Ally",
   "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Mula nang pumasa ako sa PRC Customs Broker Licensure Examination noong 2011, higit isang dekada na akong tumutulong sa mga negosyo sa Cebu at sa iba pang lugar na maayos na mapangasiwaan ang komplikasyon ng import at export. Bilang isang freelance customs broker, hindi lang pagsunod ang aking iniaalok—kundi linaw, bilis, at estratehikong halaga sa bawat transaksyon.",
   "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "Kung isa kang maliit na negosyo na sumusubok sa pandaigdigang merkado o isang lumalaking kumpanya na humahawak ng masalimuot na padala, inaangkop ko ang mga solusyon ayon sa iyong pangangailangan—na inuuna ang pagiging episyente, malinaw, at may resulta. Higit pa sa simpleng pagproseso ng dokumento ang aking serbisyo—ako ang magiging katuwang mo sa maayos at matipid na customs clearance.",
-  "If youre looking for a reliable, licensed customs broker who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.": "Kung naghahanap ka ng maaasahan at lisensyadong customs broker na may malalim na kaalaman sa takbo ng kalakalan sa Pilipinas at sa pandaigdigang lohistika, magtulungan tayo upang mapabilis at mapabuti ang paggalaw ng iyong mga kalakal.",
+  "ifYoureLooking": "Kung naghahanap ka ng maaasahang customs solutions partner na nakakaunawa sa takbo ng kalakalan sa Pilipinas at sa pangangailangan ng pandaigdigang lohistika, magtulungan tayo upang mas mabilis at mas matalinong makagalaw ang iyong mga kargamento.",
   "Work With Me": "Makipagtulungan sa Akin"
 },
   "Affil": {

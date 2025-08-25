@@ -38,7 +38,7 @@ export default function Header() {
         <div className="logo-title" style={{ display: 'flex', alignItems: 'center' }}>
           <img src={jrLogo} alt="Jonhro Logo" />
           <Link to="/" className="site-name">
-            Jonhro<span> Robles, LCB</span>
+            Jonhro<span> Robles</span>
           </Link>
         </div>
 
