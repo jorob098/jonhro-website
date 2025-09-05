@@ -8,6 +8,7 @@ import Rfq from './components/Rfq';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ChatBox from './components/ChatBox/ChatBox';
 
 
 
@@ -26,6 +27,9 @@ export default function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/rfq" element={<Rfq />} />
       </Routes>
+
+        {/* Floating ChatBox */}
+      <ChatBox />
       {/* 👇 Footer excluded only on /blog */}
       {location.pathname !== '/blog' && <Footer />}
     </div>

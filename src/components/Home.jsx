@@ -18,6 +18,7 @@ export default function Home() {
       <ServicesIntro />
       <WhyChooseMe />
       <ContactIntro />
+    
       
     </>
   );

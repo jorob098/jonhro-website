@@ -1942,4 +1942,582 @@ footer {
     padding: 4px 0.75rem;
   }
 }
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+}
+/* Floating widget container */
+.chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Rounded square box */
+.chat-widget-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff6b00, #ff944d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+/* owl shape inside a rounded box */
+.owl {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50% 50% 40% 40%; /* rounded top, flatter bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}.owl .ear {
+  position: absolute;
+  top: -3px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #fff; /* same as head */
+}
+
+.owl .ear.left {
+  left: 2px;
+  transform: rotate(-45deg); /* WNW angle */
+}
+
+.owl .ear.right {
+  right: 2px;
+  transform: rotate(45deg); /* ENE angle */
+}
+/* Eyes */
+.owl .eye {
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+}
+
+.owl .eye.left {
+  left:6px;
+}
+.owl .eye.right {
+  right: 6px;
+}
+
+/* Pupils */
+.owl .pupil {
+  width: 6px;
+  height: 6px;
+  background: #333;
+  border-radius: 50%;
+  margin: 3px auto;
+}
+
+/* Beak */
+.owl .beak {
+  position: absolute;
+  bottom: 4px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid orange;
+}
+
+/* Label ABOVE widget */
+.chat-widget-label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  background: linear-gradient(90deg, #ff6b00, #ffffff, #ff944d, #ff6b00);
+  background-size: 300% auto;
+  
+  /* ✅ Gradient text trick */
+  -webkit-background-clip: text; /* Chrome, Safari, iOS */
+  background-clip: text;         /* Standard property */
+  
+  -webkit-text-fill-color: transparent; /* Chrome, Safari */
+  color: transparent;                   /* Standard fallback */
+
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+/* Chatbox window */
+.chatbox {
+  position: fixed;  /* already fixed */
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  height: 400px;
+  background: #f4f4f4;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatbox-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+
+/* Close button (X) */
+.chatbox-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.chatbox-close:hover {
+  color: #ff6b00;
+}
+
+/* User header */
+.chatbox-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+}
+
+.chatbox-header .chatbox-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.chatbox-messages-wrapper {
+  flex: 1; /* takes available space */
+  min-height: 0; /* important so child can shrink */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatbox-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  gap: 16px;         /* ✅ nice spacing */
+  overflow-y: auto;  /* ✅ enables scroll */
+}
+
+.chatbox-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbox-messages::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 3px;
+}
+
+.chatbox-messages::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.chatbox-message.host {
+  justify-content: flex-start;
+}
+
+.chatbox-message.website {
+  justify-content: flex-end; /* pushes entire message to the right */
+  
+}
+
+.message-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.chatbox-message.host .message-wrapper {
+  flex-direction: row;
+  
+}
+
+.chatbox-message.website .message-wrapper {
+  flex-direction: row-reverse;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-content span {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 220px; /* fixed max width for wrapping */
+  word-wrap: break-word;
+}
+
+/* Bubble colors */
+.chatbox-message.host .message-content span {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.chatbox-message.website .message-content span {
+  background: linear-gradient(135deg, #4f9aff);
+  color: #fff;
+  text-shadow: 0 0 5px #4f9aff, 0 0 10px #00f0ff, 0 0 15px #8c2eff;
+}
+
+/* Avatars */
+.chatbox-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0; /* prevent avatar from shrinking */
+}
+/* Input area */
+.chatbox-input {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 10px;
+}
+
+.chatbox-input input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: 14px;
+  border-radius: 8px 0 0 8px;
+}
+
+.chatbox-input button {
+  background: #ff6b00;
+  color: #f4f4f4;
+  border: none;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-radius: 0 8px 8px 0;
+}
+
+.chatbox-input button:hover {
+  background: #e65c00;
+}
+/* Chat Introduction */
+.chat-username-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff6b00, #ff8f3c);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  z-index: 10;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.chat-username-overlay h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f4f4f4;
+}
+
+.chat-username-overlay p {
+  margin-bottom: 16px;
+  color: #f4f4f4;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.chat-username-overlay form {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  gap: 12px; /* nice space between input and button */
+}
+
+.chat-username-overlay input {
+  color: #ff6b00;
+  background: #f4f4f4;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+.chat-username-overlay button {
+  background: white;
+  color: #FF6B00;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-username-overlay button:hover {
+  background: #ffe0cc;
+}
+.chat-username-overlay input::placeholder {
+  color: #ff944d;
+  opacity: 1;
+}
+.error-message {
+  color: #ff4444;
+  font-size: 13px;
+  margin-top: 6px;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 68, 68, 0.6);
+  animation: pulseError 1.2s infinite;
+}
+
+@keyframes pulseError {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+.chat-username-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.chat-username-close:hover {
+  color: #ffe0cc;
+}
+.chat-greeting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+}
+/*owl introduction */
+
+.owl-greeting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.greeting-text {
+  color: #f4f4f4;
+  font-size: 1.5rem; /* optional, adjust as needed */
+  font-weight: bold; /* optional */
+}
+
+.owl-animate {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50% 50% 40% 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bob 1.2s infinite alternate;
+}
+
+/* Ears */
+.owl-animate .ear {
+  position: absolute;
+  top: -3px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+
+.owl-animate .ear.left {
+  left: 2px;
+  transform-origin: bottom center; /* pivot from the base */
+  transform: rotate(-45deg);       /* tilt left */
+}
+
+.owl-animate .ear.right {
+  right: 2px;
+  transform-origin: bottom center; /* pivot from the base */
+  transform: rotate(45deg);        /* tilt right */
+}
+
+/* Eyes */
+.owl-animate .eye {
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+}
+
+.owl-animate .eye.left { left: 6px; }
+.owl-animate .eye.right { right: 6px; }
+
+/* Pupils */
+.owl-animate .pupil {
+  width: 6px;
+  height: 6px;
+  background: #333;
+  border-radius: 50%;
+  margin: 3px auto;
+  animation: blink 4s infinite;
+}
+
+/* Beak */
+.owl-animate .beak {
+  position: absolute;
+  bottom: 4px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid orange;
+}
+
+/* Animations */
+@keyframes bob {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  92%, 98% { transform: scaleY(0.1); }
+}
+
+/* Avatar selection layout */
+.avatar-instruction {
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px; /* more space below instruction */
+  text-align: center;
+}
+
+.avatar-selection {
+  display: flex;
+  justify-content: center; /* center the avatars horizontally */
+  gap: 15px;               /* more spacing between avatars */
+  margin-bottom: 20px;     /* space between avatars and the save button */
+}
+
+.avatar-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-option.selected {
+  border-color: #f4f4f4; /* optional base border */
+  box-shadow: 0 0 8px 3px #f4f4f4; /* glow effect */
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transform: scale(1.05); /* optional slight enlargement for effect */
+}
+
+.avatar-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.chatbox-typing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.typing-bubble {
+  background: #ff6b00;
+  border-radius: 20px;
+  padding: 6px 12px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.typing-bubble span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+
+.typing-bubble span:nth-child(1) { animation-delay: 0s; }
+.typing-bubble span:nth-child(2) { animation-delay: 0.2s; }
+.typing-bubble span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+
+
 
