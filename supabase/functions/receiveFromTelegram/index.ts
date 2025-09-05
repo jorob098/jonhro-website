@@ -6,17 +6,27 @@ const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 serve(async (req) => {
-  const data = await req.json();
-  const message = data.message?.text;
-  const user = data.message?.from?.username || "TelegramUser";
+  const data = await req.json()
+  const message = data.message?.text
+  const user = data.message?.from?.username || "TelegramUser"
 
-  if (!message) return new Response("No message", { status: 400 });
+  if (!message) {
+    return new Response("No message", { status: 400 })
+  }
 
   const { error } = await supabase.from("messages").insert([
-    { username: user, content: message, source: "telegram" },
-  ]);
+    {
+      sender: user,                // ✅ maps to your "sender" column
+      message,                     // ✅ maps to your "message" column
+      source: "telegram",          // ✅ source identifier
+      avatar: "/avatars/Hoot.png", // optional, or map Telegram photo if you want
+      created_at: new Date().toISOString(),
+    },
+  ])
 
-  if (error) return new Response(`DB Error: ${error.message}`, { status: 500 });
+  if (error) {
+    return new Response(`DB Error: ${error.message}`, { status: 500 })
+  }
 
-  return new Response("Message saved", { status: 200 });
-});
+  return new Response("Message saved", { status: 200 })
+})

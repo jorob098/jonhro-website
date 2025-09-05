@@ -1,12 +1,12 @@
 // src/services/api.js
 import { supabase } from "./supabaseClient";
 
-export async function sendMessageToSupabaseAndTelegram(sender, message, avatar) {
+export async function sendMessageToSupabaseAndTelegram(sender, message, avatar, userId) {
   try {
-    // 1. Insert into Supabase (including avatar)
+    // 1. Save in Supabase with userId
     const { data, error } = await supabase
       .from("messages")
-      .insert([{ sender, message, avatar, source: "website" }])
+      .insert([{ sender, message, avatar, source: "website", user_id: userId }])
       .select();
 
     if (error) {
@@ -14,11 +14,11 @@ export async function sendMessageToSupabaseAndTelegram(sender, message, avatar) 
       throw error;
     }
 
-    // 2. Forward to Telegram via Edge Function
+    // 2. Forward to Telegram (optional)
     const res = await fetch(import.meta.env.VITE_SUPABASE_FUNCTION_SEND_TELEGRAM, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message }),
+      body: JSON.stringify({ message, userId }), // include userId if needed
     });
 
     if (!res.ok) {
@@ -26,7 +26,7 @@ export async function sendMessageToSupabaseAndTelegram(sender, message, avatar) 
       console.error("Failed to send message to Telegram:", errorText);
     }
 
-    return data?.[0]; // inserted message
+    return data?.[0]; // the inserted message
   } catch (err) {
     console.error("sendMessageToSupabaseAndTelegram failed:", err);
     throw err;
