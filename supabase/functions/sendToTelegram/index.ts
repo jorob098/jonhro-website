@@ -29,6 +29,7 @@ serve(async (req) => {
       return new Response(`Telegram error: ${errText}`, { status: 500 })
     }
 
+    
     return new Response("Message sent to Telegram ✅", { status: 200 })
   } catch (err) {
     console.error("Function crashed:", err)
