@@ -14,11 +14,13 @@ export async function sendMessageToSupabaseAndTelegram(sender, message, avatar, 
       throw error;
     }
 
-    // 2. Forward to Telegram (optional)
+    // 2. Forward to Telegram ✅ FIXED
     const res = await fetch(import.meta.env.VITE_SUPABASE_FUNCTION_SEND_TELEGRAM, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message, userId }), // include userId if needed
+      body: JSON.stringify({
+        message: `${sender} (${userId}): ${message}`, // formatted text
+      }),
     });
 
     if (!res.ok) {
@@ -26,7 +28,7 @@ export async function sendMessageToSupabaseAndTelegram(sender, message, avatar, 
       console.error("Failed to send message to Telegram:", errorText);
     }
 
-    return data?.[0]; // the inserted message
+    return data?.[0]; // return inserted message
   } catch (err) {
     console.error("sendMessageToSupabaseAndTelegram failed:", err);
     throw err;
