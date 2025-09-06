@@ -75,30 +75,33 @@ export default function Chatbox() {
   }
 }, [messages, addMessage, userId]);
 
-  // Real-time subscription for host replies
   useEffect(() => {
-    const channel = supabase
-      .channel("public:messages")
-      .on(
-        "postgres_changes",
-        { event: "INSERT", schema: "public", table: "messages" },
-        (payload) => {
-          const newMessage = payload.new;
-          // only add if belongs to this user
-          if (newMessage.sender === hostName && newMessage.user_id === userId) {
-            addMessage({
-              ...newMessage,
-              id: newMessage.id || Date.now(),
-            });
-          }
+  const channel = supabase
+    .channel("public:messages")
+    .on(
+      "postgres_changes",
+      { event: "INSERT", schema: "public", table: "messages" },
+      (payload) => {
+        const newMessage = payload.new;
+
+        // add host or telegram messages for this user
+        if (
+          (newMessage.sender === hostName || newMessage.source === "telegram") &&
+          newMessage.user_id === userId
+        ) {
+          addMessage({
+            ...newMessage,
+            id: newMessage.id || Date.now(),
+          });
         }
-      )
-      .subscribe();
+      }
+    )
+    .subscribe();
 
     return () => {
-      supabase.removeChannel(channel);
+    supabase.removeChannel(channel);
     };
-  }, [userId, addMessage]);
+    }, [userId, addMessage]);
 
   // Handle user sending message
   async function handleSend(e) {
