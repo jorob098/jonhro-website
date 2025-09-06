@@ -1,10 +1,10 @@
 // src/components/Chatbox.jsx
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import useChat from "../../hooks/useChat";
-import { sendMessage } from "../../services/api";
+import { sendMessageToTelegramAnon } from "../../services/api";
 import { supabase } from "../../services/supabaseClient";
 
-// helper: create or reuse a unique user id for this browser
+// Helper: create a unique user ID for this browser
 function getOrCreateUserId() {
   let id = localStorage.getItem("chatUserId");
   if (!id) {
@@ -15,25 +15,20 @@ function getOrCreateUserId() {
 }
 
 export default function Chatbox() {
-  const userId = getOrCreateUserId(); // 🔑 unique per browser
-  const { messages, addMessage } = useChat(userId); // pass userId into hook
+  const userId = getOrCreateUserId();
+  const { messages, addMessage } = useChat(userId);
 
   const [input, setInput] = useState("");
   const [open, setOpen] = useState(false);
+  const [username, setUsername] = useState(localStorage.getItem("chatUsername") || "");
+  const [selectedAvatar, setSelectedAvatar] = useState(localStorage.getItem("chatAvatar") || "");
   const [tempName, setTempName] = useState("");
+  const [tempAvatar, setTempAvatar] = useState("");
   const [error, setError] = useState("");
 
-  const [username, setUsername] = useState(
-    localStorage.getItem("chatUsername") || ""
-  );
-  const [selectedAvatar, setSelectedAvatar] = useState(
-    () => localStorage.getItem("chatAvatar") || null
-  );
-
+  const messagesEndRef = useRef(null);
   const hostName = "Hoot";
   const hostAvatar = "/avatars/Hoot.png";
-  const messagesEndRef = useRef(null);
-  const [isTyping, setIsTyping] = useState(false);
 
   const avatarOptions = [
     "/avatars/boy.png",
@@ -43,19 +38,12 @@ export default function Chatbox() {
 
   // Scroll to bottom when messages update
   useLayoutEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "auto" });
-    }
+    messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   }, [messages, open]);
-
-  // Save username to localStorage
-  useEffect(() => {
-    if (username) localStorage.setItem("chatUsername", username);
-  }, [username]);
 
   // Initial welcome message
   useEffect(() => {
-    if (messages.length === 0) {
+    if (messages.length === 0 && open) {
       const welcomeMessage = {
         sender: hostName,
         message: "Hello! Welcome to the chat.",
@@ -66,15 +54,9 @@ export default function Chatbox() {
         id: Date.now(),
       };
       addMessage(welcomeMessage);
-
-      (async () => {
-        const { error } = await supabase.from("messages").insert([welcomeMessage]);
-        if (error) {
-          console.error("Supabase insert error:", error.message);
-        }
-      })();
+      supabase.from("messages").insert([welcomeMessage]).catch(console.error);
     }
-  }, [messages, addMessage, userId]);
+  }, [messages, addMessage, open, userId]);
 
   // Real-time Supabase listener
   useEffect(() => {
@@ -85,34 +67,32 @@ export default function Chatbox() {
         { event: "INSERT", schema: "public", table: "messages" },
         (payload) => {
           const newMessage = payload.new;
-
-          // Add host or Telegram messages for this user
           if (
-            (newMessage.sender === hostName || newMessage.source === "telegram") &&
-            (newMessage.user_id === userId || newMessage.user_id === "unknown")
+            newMessage.user_id === userId ||
+            newMessage.source === "telegram" ||
+            newMessage.sender === hostName
           ) {
-            addMessage({
-              ...newMessage,
-              id: newMessage.id || Date.now(),
-            });
+            addMessage({ ...newMessage, id: newMessage.id || Date.now() });
           }
         }
       )
       .subscribe();
 
-    return () => {
-      supabase.removeChannel(channel);
-    };
+    return () => supabase.removeChannel(channel);
   }, [userId, addMessage]);
 
-  // Handle user sending message
-  async function handleSend(e) {
+  // Handle sending messages
+  const handleSend = async (e) => {
     e.preventDefault();
+    if (!username || !selectedAvatar) {
+      setError("Please enter your name and select an avatar before sending messages.");
+      return;
+    }
     const trimmed = input.trim();
     if (!trimmed) return;
 
     const userMessage = {
-      sender: username || "visitor",
+      sender: username,
       message: trimmed,
       source: "website",
       avatar: selectedAvatar,
@@ -120,20 +100,20 @@ export default function Chatbox() {
       created_at: new Date().toISOString(),
       id: Date.now(),
     };
+
     addMessage(userMessage);
     setInput("");
 
     try {
-      // Forward message to Telegram via serverless function
-      await sendMessage(username || "visitor", trimmed, selectedAvatar, userId);
+      await sendMessageToTelegramAnon(username, trimmed, selectedAvatar, userId);
     } catch (err) {
       console.error("Failed to send message:", err);
     }
-  }
+  };
 
+  // Render
   return (
     <div className="chat-container">
-      {/* Floating Widget */}
       {!open && (
         <>
           <div className="chat-widget-label">Need Help?</div>
@@ -141,70 +121,34 @@ export default function Chatbox() {
             <div className="owl">
               <div className="ear left"></div>
               <div className="ear right"></div>
-              <div className="eye left">
-                <div className="pupil"></div>
-              </div>
-              <div className="eye right">
-                <div className="pupil"></div>
-              </div>
+              <div className="eye left"><div className="pupil"></div></div>
+              <div className="eye right"><div className="pupil"></div></div>
               <div className="beak"></div>
             </div>
           </div>
         </>
       )}
 
-      {/* Chatbox */}
       {open && (
         <div className="chatbox">
-          <div className="chatbox-close" onClick={() => setOpen(false)}>
-            ×
-          </div>
+          <div className="chatbox-close" onClick={() => setOpen(false)}>×</div>
 
-          {!username ? (
+          {!username || !selectedAvatar ? (
             <div className="chat-username-overlay">
-              <div
-                className="chat-username-close"
-                onClick={() => setOpen(false)}
-              >
-                ×
-              </div>
-
-              <div className="owl-greeting">
-                <div className="owl-animate">
-                  <div className="ear left"></div>
-                  <div className="ear right"></div>
-                  <div className="eye left">
-                    <div className="pupil"></div>
-                  </div>
-                  <div className="eye right">
-                    <div className="pupil"></div>
-                  </div>
-                  <div className="beak"></div>
-                </div>
-                <span className="greeting-text">Hi there!</span>
-              </div>
-
-              <p>What’s your name?</p>
-
+              <h3>Hi there! Please enter your name and select an avatar:</h3>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
-                  if (!tempName.trim()) {
-                    setError("⚠️ Please enter your name.");
+                  if (!tempName.trim() || !tempAvatar) {
+                    setError("⚠️ Both name and avatar are required.");
                     return;
                   }
-                  if (!selectedAvatar) {
-                    setError("⚠️ Please select an avatar.");
-                    return;
-                  }
-
                   setUsername(tempName.trim());
+                  setSelectedAvatar(tempAvatar);
                   localStorage.setItem("chatUsername", tempName.trim());
-
-                  setSelectedAvatar(selectedAvatar);
-                  localStorage.setItem("chatAvatar", selectedAvatar);
-
+                  localStorage.setItem("chatAvatar", tempAvatar);
                   setTempName("");
+                  setTempAvatar("");
                   setError("");
                 }}
               >
@@ -212,42 +156,28 @@ export default function Chatbox() {
                   type="text"
                   placeholder="Enter your name..."
                   value={tempName}
-                  onChange={(e) => {
-                    setTempName(e.target.value);
-                    if (error) setError("");
-                  }}
+                  onChange={(e) => setTempName(e.target.value)}
                 />
-                <p className="avatar-instruction">Choose your Avatar</p>
+                <p>Select your avatar:</p>
                 <div className="avatar-selection">
-                  {avatarOptions.map((avatar, index) => (
+                  {avatarOptions.map((avatar) => (
                     <div
-                      key={index}
-                      className={`avatar-option ${
-                        selectedAvatar === avatar ? "selected" : ""
-                      }`}
-                      onClick={() => {
-                        setSelectedAvatar(avatar);
-                        localStorage.setItem("chatAvatar", avatar);
-                      }}
+                      key={avatar}
+                      className={`avatar-option ${tempAvatar === avatar ? "selected" : ""}`}
+                      onClick={() => setTempAvatar(avatar)}
                     >
-                      <img src={avatar} alt={`avatar ${index}`} />
+                      <img src={avatar} alt="avatar" />
                     </div>
                   ))}
                 </div>
-
                 {error && <p className="error-message">{error}</p>}
                 <button type="submit">Save</button>
               </form>
             </div>
           ) : (
             <>
-              {/* User header */}
               <div className="chatbox-header">
-                <img
-                  src={hostAvatar}
-                  alt={hostName}
-                  className="chatbox-avatar"
-                />
+                <img src={hostAvatar} alt={hostName} className="chatbox-avatar" />
                 <strong>{hostName}</strong>
               </div>
 
@@ -256,31 +186,13 @@ export default function Chatbox() {
                   {messages.map((msg) => (
                     <div key={msg.id} className={`chatbox-message ${msg.source}`}>
                       <div className="message-wrapper">
-                        {msg.avatar && (
-                          <img
-                            src={msg.avatar}
-                            alt={`${msg.sender} avatar`}
-                            className="chatbox-avatar"
-                          />
-                        )}
-                        <div className="message-content">
-                          <span>{msg.message}</span>
-                        </div>
+                        {msg.avatar && <img src={msg.avatar} alt={msg.sender} className="chatbox-avatar" />}
+                        <div className="message-content">{msg.message}</div>
                       </div>
                     </div>
                   ))}
                   <div ref={messagesEndRef} />
                 </div>
-
-                {isTyping && (
-                  <div className="chatbox-typing">
-                    <div className="typing-bubble">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </div>
-                )}
               </div>
 
               <form onSubmit={handleSend} className="chatbox-input">
@@ -290,7 +202,9 @@ export default function Chatbox() {
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Type a message..."
                 />
-                <button type="submit">Send</button>
+                <button type="submit" disabled={!username || !selectedAvatar}>
+                  Send
+                </button>
               </form>
             </>
           )}
