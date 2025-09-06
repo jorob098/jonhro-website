@@ -1,7 +1,8 @@
 // src/components/Chatbox.jsx
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import useChat from "../../hooks/useChat";
-import { sendMessage } from "../../services/api";
+import { sendMessage } from "../../services/api"; // ✅ use helper
+import { supabase } from "../../services/supabaseClient";
 
 // Helper: create or retrieve unique user ID for this browser session
 function getOrCreateUserId() {
@@ -41,12 +42,9 @@ export default function Chatbox() {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   }, [messages, open]);
 
-  // Initial welcome message from host (only once per session)
+  // Initial welcome message from host
   useEffect(() => {
-    const welcomeKey = `welcomeMessageSent-${userId}`;
-    const alreadySent = localStorage.getItem(welcomeKey);
-
-    if (!alreadySent && open) {
+    if (messages.length === 0 && open) {
       const welcomeMessage = {
         sender: hostName,
         message: "Hello! Welcome to the chat.",
@@ -66,7 +64,6 @@ export default function Chatbox() {
             welcomeMessage.avatar,
             welcomeMessage.user_id
           );
-          localStorage.setItem(welcomeKey, "true"); // mark as sent
         } catch (err) {
           console.error("Failed to insert welcome message:", err.message);
         }
@@ -74,7 +71,7 @@ export default function Chatbox() {
 
       insertWelcomeMessage();
     }
-  }, [addMessage, open, userId]);
+  }, [messages, addMessage, open, userId]);
 
   // Real-time Supabase listener for all messages
   useEffect(() => {
@@ -117,7 +114,7 @@ export default function Chatbox() {
     setInput("");
 
     try {
-      await sendMessage(userMessage.sender, userMessage.message, userMessage.avatar, userMessage.user_id);
+      await sendMessage(username, trimmed, selectedAvatar, userId);
     } catch (err) {
       console.error("Failed to send message:", err.message);
     }
