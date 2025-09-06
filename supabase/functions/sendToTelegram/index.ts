@@ -1,4 +1,5 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+// supabase/functions/sendToTelegram/index.ts
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
 serve(async (req) => {
   // Handle preflight (CORS) requests
@@ -14,10 +15,17 @@ serve(async (req) => {
   }
 
   try {
-    const { message } = await req.json();
+    const { message, userId } = await req.json();
 
     if (!message) {
       return new Response("Missing message", {
+        status: 400,
+        headers: { "Access-Control-Allow-Origin": "*" },
+      });
+    }
+
+    if (!userId) {
+      return new Response("Missing userId", {
         status: 400,
         headers: { "Access-Control-Allow-Origin": "*" },
       });
@@ -33,13 +41,14 @@ serve(async (req) => {
       });
     }
 
+    // include userId in message for receiveFromTelegram to parse
     const messageWithId = `[${userId}] ${message}`;
 
     const telegramUrl = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
     const res = await fetch(telegramUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ chat_id: chatId, text: messageWithId }),
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: chatId, text: messageWithId }),
     });
 
     if (!res.ok) {
