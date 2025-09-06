@@ -1,7 +1,7 @@
 // src/components/Chatbox.jsx
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import useChat from "../../hooks/useChat";
-import { supabase } from "../../services/supabaseClient";
+import { sendMessage } from "../../services/api";
 
 // Helper: create or retrieve unique user ID for this browser session
 function getOrCreateUserId() {
@@ -41,9 +41,12 @@ export default function Chatbox() {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   }, [messages, open]);
 
-  // Initial welcome message from host
+  // Initial welcome message from host (only once per session)
   useEffect(() => {
-    if (messages.length === 0 && open) {
+    const welcomeKey = `welcomeMessageSent-${userId}`;
+    const alreadySent = localStorage.getItem(welcomeKey);
+
+    if (!alreadySent && open) {
       const welcomeMessage = {
         sender: hostName,
         message: "Hello! Welcome to the chat.",
@@ -57,18 +60,21 @@ export default function Chatbox() {
 
       const insertWelcomeMessage = async () => {
         try {
-          const { data, error } = await supabase
-            .from("messages")
-            .insert([welcomeMessage]);
-          if (error) console.error("Insert error:", error.message);
+          await sendMessage(
+            welcomeMessage.sender,
+            welcomeMessage.message,
+            welcomeMessage.avatar,
+            welcomeMessage.user_id
+          );
+          localStorage.setItem(welcomeKey, "true"); // mark as sent
         } catch (err) {
-          console.error("Unexpected error:", err.message);
+          console.error("Failed to insert welcome message:", err.message);
         }
       };
 
       insertWelcomeMessage();
     }
-  }, [messages, addMessage, open, userId]);
+  }, [addMessage, open, userId]);
 
   // Real-time Supabase listener for all messages
   useEffect(() => {
@@ -111,10 +117,7 @@ export default function Chatbox() {
     setInput("");
 
     try {
-      const { data, error } = await supabase
-        .from("messages")
-        .insert([userMessage]);
-      if (error) throw error;
+      await sendMessage(userMessage.sender, userMessage.message, userMessage.avatar, userMessage.user_id);
     } catch (err) {
       console.error("Failed to send message:", err.message);
     }
