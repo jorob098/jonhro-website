@@ -16,11 +16,14 @@ export async function sendMessageToSupabaseAndTelegram(sender, message, avatar, 
 
     // 2. Forward to Telegram ✅ FIXED
     const res = await fetch(import.meta.env.VITE_SUPABASE_FUNCTION_SEND_TELEGRAM, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        message: `${sender} (${userId}): ${message}`, // formatted text
-      }),
+    method: "POST",
+    headers: {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+    },
+    body: JSON.stringify({
+    message: `${sender} (${userId}): ${message}`,
+    }),
     });
 
     if (!res.ok) {
