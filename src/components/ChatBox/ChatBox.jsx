@@ -1,7 +1,10 @@
+// src/components/Chatbox.jsx
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
-import { supabase } from "../../services/supabaseClient";
+import useChat from "../../hooks/useChat";
+
 import { sendMessage } from "../../services/api";
 
+// Helper: create or retrieve unique user ID for this browser session
 function getOrCreateUserId() {
   let id = localStorage.getItem("chatUserId");
   if (!id) {
@@ -13,7 +16,8 @@ function getOrCreateUserId() {
 
 export default function Chatbox() {
   const userId = getOrCreateUserId();
-  const [messages, setMessages] = useState([]);
+  const { messages, addMessage } = useChat(userId);
+
   const [input, setInput] = useState("");
   const [open, setOpen] = useState(false);
   const [username, setUsername] = useState(localStorage.getItem("chatUsername") || "");
@@ -26,16 +30,24 @@ export default function Chatbox() {
 
   const hostName = "Hoot";
   const hostAvatar = "/avatars/Hoot.png";
-  const avatarOptions = ["/avatars/boy.png", "/avatars/girl.png", "/avatars/owl.png"];
 
+  const avatarOptions = [
+    "/avatars/boy.png",
+    "/avatars/girl.png",
+    "/avatars/owl.png",
+  ];
+
+  // Scroll to bottom when messages update
   useLayoutEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   }, [messages, open]);
 
-  // Initial welcome message
+  // Initial welcome message from host (only once per session)
   useEffect(() => {
     const welcomeKey = `welcomeMessageSent-${userId}`;
-    if (!localStorage.getItem(welcomeKey) && open) {
+    const alreadySent = localStorage.getItem(welcomeKey);
+
+    if (!alreadySent && open) {
       const welcomeMessage = {
         sender: hostName,
         message: "Hello! Welcome to the chat.",
@@ -45,31 +57,48 @@ export default function Chatbox() {
         created_at: new Date().toISOString(),
         id: Date.now(),
       };
-      setMessages([welcomeMessage]);
-      sendMessage(hostName, welcomeMessage.message, hostAvatar, userId)
-        .then(() => localStorage.setItem(welcomeKey, "true"))
-        .catch(console.error);
-    }
-  }, [userId, open]);
+      addMessage(welcomeMessage);
 
-  // Real-time listener
+      const insertWelcomeMessage = async () => {
+        try {
+          await sendMessage(
+            welcomeMessage.sender,
+            welcomeMessage.message,
+            welcomeMessage.avatar,
+            welcomeMessage.user_id
+          );
+          localStorage.setItem(welcomeKey, "true"); // mark as sent
+        } catch (err) {
+          console.error("Failed to insert welcome message:", err.message);
+        }
+      };
+
+      insertWelcomeMessage();
+    }
+  }, [addMessage, open, userId]);
+
+  // Real-time Supabase listener for all messages
   useEffect(() => {
     const channel = supabase
-      .channel(`messages-user-${userId}`)
+      .channel("public:messages")
       .on(
         "postgres_changes",
-        { event: "INSERT", schema: "public", table: "messages", filter: `user_id=eq.${userId}` },
-        (payload) => setMessages((prev) => [...prev, payload.new])
+        { event: "INSERT", schema: "public", table: "messages" },
+        (payload) => {
+          const newMessage = payload.new;
+          addMessage({ ...newMessage, id: newMessage.id || Date.now() });
+        }
       )
       .subscribe();
 
     return () => supabase.removeChannel(channel);
-  }, [userId]);
+  }, [addMessage]);
 
+  // Handle sending a user message
   const handleSend = async (e) => {
     e.preventDefault();
     if (!username || !selectedAvatar) {
-      setError("Please enter your name and select an avatar.");
+      setError("Please enter your name and select an avatar before sending messages.");
       return;
     }
     const trimmed = input.trim();
@@ -85,11 +114,11 @@ export default function Chatbox() {
       id: Date.now(),
     };
 
-    setMessages((prev) => [...prev, userMessage]);
+    addMessage(userMessage);
     setInput("");
 
     try {
-      await sendMessage(userMessage.sender, userMessage.message, userMessage.avatar, userId);
+      await sendMessage(userMessage.sender, userMessage.message, userMessage.avatar, userMessage.user_id);
     } catch (err) {
       console.error("Failed to send message:", err.message);
     }
@@ -97,13 +126,28 @@ export default function Chatbox() {
 
   return (
     <div className="chat-container">
-      {!open ? (
-        <div className="chat-widget" onClick={() => setOpen(true)}>Need Help?</div>
-      ) : (
+      {!open && (
+        <>
+          <div className="chat-widget-label">Need Help?</div>
+          <div className="chat-widget-button" onClick={() => setOpen(true)}>
+            <div className="owl">
+              <div className="ear left"></div>
+              <div className="ear right"></div>
+              <div className="eye left"><div className="pupil"></div></div>
+              <div className="eye right"><div className="pupil"></div></div>
+              <div className="beak"></div>
+            </div>
+          </div>
+        </>
+      )}
+
+      {open && (
         <div className="chatbox">
+          <div className="chatbox-close" onClick={() => setOpen(false)}>×</div>
+
           {!username || !selectedAvatar ? (
             <div className="chat-username-overlay">
-              <h3>Enter name and select avatar:</h3>
+              <h3>Hi there! Please enter your name and select an avatar:</h3>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -120,33 +164,59 @@ export default function Chatbox() {
                   setError("");
                 }}
               >
-                <input value={tempName} onChange={(e) => setTempName(e.target.value)} placeholder="Name" />
+                <input
+                  type="text"
+                  placeholder="Enter your name..."
+                  value={tempName}
+                  onChange={(e) => setTempName(e.target.value)}
+                />
+                <p>Select your avatar:</p>
                 <div className="avatar-selection">
                   {avatarOptions.map((avatar) => (
-                    <div key={avatar} className={`avatar-option ${tempAvatar === avatar ? "selected" : ""}`}
-                         onClick={() => setTempAvatar(avatar)}>
+                    <div
+                      key={avatar}
+                      className={`avatar-option ${tempAvatar === avatar ? "selected" : ""}`}
+                      onClick={() => setTempAvatar(avatar)}
+                    >
                       <img src={avatar} alt="avatar" />
                     </div>
                   ))}
                 </div>
-                {error && <p>{error}</p>}
+                {error && <p className="error-message">{error}</p>}
                 <button type="submit">Save</button>
               </form>
             </div>
           ) : (
             <>
-              <div className="chatbox-messages-wrapper">
-                {messages.map((msg) => (
-                  <div key={msg.id} className={`chatbox-message ${msg.source}`}>
-                    {msg.avatar && <img src={msg.avatar} alt={msg.sender} />}
-                    <span>{msg.message}</span>
-                  </div>
-                ))}
-                <div ref={messagesEndRef} />
+              <div className="chatbox-header">
+                <img src={hostAvatar} alt={hostName} className="chatbox-avatar" />
+                <strong>{hostName}</strong>
               </div>
-              <form onSubmit={handleSend}>
-                <input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type a message..." />
-                <button type="submit">Send</button>
+
+              <div className="chatbox-messages-wrapper">
+                <div className="chatbox-messages">
+                  {messages.map((msg) => (
+                    <div key={msg.id} className={`chatbox-message ${msg.source}`}>
+                      <div className="message-wrapper">
+                        {msg.avatar && <img src={msg.avatar} alt={msg.sender} className="chatbox-avatar" />}
+                        <div className="message-content">{msg.message}</div>
+                      </div>
+                    </div>
+                  ))}
+                  <div ref={messagesEndRef} />
+                </div>
+              </div>
+
+              <form onSubmit={handleSend} className="chatbox-input">
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Type a message..."
+                />
+                <button type="submit" disabled={!username || !selectedAvatar}>
+                  Send
+                </button>
               </form>
             </>
           )}
