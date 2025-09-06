@@ -1,7 +1,6 @@
 // src/components/Chatbox.jsx
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import useChat from "../../hooks/useChat";
-
 import { sendMessage } from "../../services/api";
 
 // Helper: create or retrieve unique user ID for this browser session
