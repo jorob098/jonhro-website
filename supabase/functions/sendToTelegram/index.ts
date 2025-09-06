@@ -33,11 +33,13 @@ serve(async (req) => {
       });
     }
 
+    const messageWithId = `[${userId}] ${message}`;
+
     const telegramUrl = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
     const res = await fetch(telegramUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ chat_id: chatId, text: message }),
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ chat_id: chatId, text: messageWithId }),
     });
 
     if (!res.ok) {

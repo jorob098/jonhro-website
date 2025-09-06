@@ -86,12 +86,12 @@ export default function Chatbox() {
 
         // add host or telegram messages for this user
         if (
-          (newMessage.sender === hostName || newMessage.source === "telegram") &&
-          newMessage.user_id === userId
+        (newMessage.sender === hostName || newMessage.source === "telegram") &&
+        (newMessage.user_id === userId || newMessage.user_id === "unknown")
         ) {
-          addMessage({
-            ...newMessage,
-            id: newMessage.id || Date.now(),
+        addMessage({
+        ...newMessage,
+        id: newMessage.id || Date.now(),
           });
         }
       }
