@@ -1,7 +1,7 @@
 // src/components/Chatbox.jsx
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import useChat from "../../hooks/useChat";
-import { sendMessageToTelegramAnon } from "../../services/api";
+import { sendMessage } from "../../services/api";
 import { supabase } from "../../services/supabaseClient";
 
 // Helper: create a unique user ID for this browser
@@ -105,7 +105,7 @@ export default function Chatbox() {
     setInput("");
 
     try {
-      await sendMessageToTelegramAnon(username, trimmed, selectedAvatar, userId);
+      await sendMessage(username, trimmed, selectedAvatar, userId);
     } catch (err) {
       console.error("Failed to send message:", err);
     }
