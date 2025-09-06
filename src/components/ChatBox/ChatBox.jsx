@@ -1,7 +1,6 @@
 // src/components/Chatbox.jsx
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import useChat from "../../hooks/useChat";
-import { sendMessage } from "../../services/api";
 import { supabase } from "../../services/supabaseClient";
 
 // Helper: create or retrieve unique user ID for this browser session
@@ -55,20 +54,21 @@ export default function Chatbox() {
         id: Date.now(),
       };
       addMessage(welcomeMessage);
-      const insertWelcomeMessage = async () => {
-      try {
-        const { data, error } = await supabase
-          .from("messages")
-          .insert([welcomeMessage]);
-        if (error) console.error("Insert error:", error.message);
-      } catch (err) {
-        console.error("Unexpected error:", err);
-      }
-    };
 
-    insertWelcomeMessage();
-  }
-}, [messages, addMessage, open, userId]);
+      const insertWelcomeMessage = async () => {
+        try {
+          const { data, error } = await supabase
+            .from("messages")
+            .insert([welcomeMessage]);
+          if (error) console.error("Insert error:", error.message);
+        } catch (err) {
+          console.error("Unexpected error:", err.message);
+        }
+      };
+
+      insertWelcomeMessage();
+    }
+  }, [messages, addMessage, open, userId]);
 
   // Real-time Supabase listener for all messages
   useEffect(() => {
@@ -79,7 +79,6 @@ export default function Chatbox() {
         { event: "INSERT", schema: "public", table: "messages" },
         (payload) => {
           const newMessage = payload.new;
-          // Only add if it's your message or host or other users
           addMessage({ ...newMessage, id: newMessage.id || Date.now() });
         }
       )
@@ -111,11 +110,13 @@ export default function Chatbox() {
     addMessage(userMessage);
     setInput("");
 
-
     try {
-      await sendMessage(username, trimmed, selectedAvatar, userId);
+      const { data, error } = await supabase
+        .from("messages")
+        .insert([userMessage]);
+      if (error) throw error;
     } catch (err) {
-      console.error("Failed to send message:", err);
+      console.error("Failed to send message:", err.message);
     }
   };
 
