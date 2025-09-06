@@ -4,7 +4,7 @@ import useChat from "../../hooks/useChat";
 import { sendMessage } from "../../services/api";
 import { supabase } from "../../services/supabaseClient";
 
-// Helper: create a unique user ID for this browser
+// Helper: create or retrieve unique user ID for this browser session
 function getOrCreateUserId() {
   let id = localStorage.getItem("chatUserId");
   if (!id) {
@@ -27,6 +27,7 @@ export default function Chatbox() {
   const [error, setError] = useState("");
 
   const messagesEndRef = useRef(null);
+
   const hostName = "Hoot";
   const hostAvatar = "/avatars/Hoot.png";
 
@@ -41,7 +42,7 @@ export default function Chatbox() {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   }, [messages, open]);
 
-  // Initial welcome message
+  // Initial welcome message from host
   useEffect(() => {
     if (messages.length === 0 && open) {
       const welcomeMessage = {
@@ -54,11 +55,22 @@ export default function Chatbox() {
         id: Date.now(),
       };
       addMessage(welcomeMessage);
-      supabase.from("messages").insert([welcomeMessage]).catch(console.error);
-    }
-  }, [messages, addMessage, open, userId]);
+      const insertWelcomeMessage = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("messages")
+          .insert([welcomeMessage]);
+        if (error) console.error("Insert error:", error.message);
+      } catch (err) {
+        console.error("Unexpected error:", err);
+      }
+    };
 
-  // Real-time Supabase listener
+    insertWelcomeMessage();
+  }
+}, [messages, addMessage, open, userId]);
+
+  // Real-time Supabase listener for all messages
   useEffect(() => {
     const channel = supabase
       .channel("public:messages")
@@ -67,21 +79,16 @@ export default function Chatbox() {
         { event: "INSERT", schema: "public", table: "messages" },
         (payload) => {
           const newMessage = payload.new;
-          if (
-            newMessage.user_id === userId ||
-            newMessage.source === "telegram" ||
-            newMessage.sender === hostName
-          ) {
-            addMessage({ ...newMessage, id: newMessage.id || Date.now() });
-          }
+          // Only add if it's your message or host or other users
+          addMessage({ ...newMessage, id: newMessage.id || Date.now() });
         }
       )
       .subscribe();
 
     return () => supabase.removeChannel(channel);
-  }, [userId, addMessage]);
+  }, [addMessage]);
 
-  // Handle sending messages
+  // Handle sending a user message
   const handleSend = async (e) => {
     e.preventDefault();
     if (!username || !selectedAvatar) {
@@ -104,6 +111,7 @@ export default function Chatbox() {
     addMessage(userMessage);
     setInput("");
 
+
     try {
       await sendMessage(username, trimmed, selectedAvatar, userId);
     } catch (err) {
@@ -111,7 +119,6 @@ export default function Chatbox() {
     }
   };
 
-  // Render
   return (
     <div className="chat-container">
       {!open && (
