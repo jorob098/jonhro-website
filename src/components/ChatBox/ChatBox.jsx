@@ -176,20 +176,23 @@ export default function Chatbox() {
                 <strong>{hostName}</strong>
               </div>
 
-              <div className="chatbox-messages-wrapper">
-                <div className="chatbox-messages">
-                  {messages.map((msg) => (
-                    <div key={msg.id} className={`chatbox-message ${msg.source}`}>
-                      <div className="message-wrapper">
-                        {msg.avatar && <img src={msg.avatar} alt={msg.sender} className="chatbox-avatar" />}
-                        <div className="message-content">{msg.message}</div>
-                      </div>
-                    </div>
-                  ))}
-                  <div ref={messagesEndRef} />
-                </div>
-              </div>
+             <div className="chatbox-messages-wrapper">
+      <div className="chatbox-messages">
+      {messages.map((msg) => {
+      const avatar = (msg.source === "admin" || msg.sender === "admin") ? hostAvatar : msg.avatar;
 
+      return (
+        <div key={msg.id} className={`chatbox-message ${msg.source}`}>
+          <div className="message-wrapper">
+            {avatar && <img src={avatar} alt={msg.sender} className="chatbox-avatar" />}
+            <div className="message-content">{msg.message}</div>
+          </div>
+        </div>
+      );
+      })}
+      <div ref={messagesEndRef} />
+      </div>
+      </div>
               <form onSubmit={handleSend} className="chatbox-input">
                 <input
                   type="text"
