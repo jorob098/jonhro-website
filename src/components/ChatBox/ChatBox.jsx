@@ -91,32 +91,33 @@ export default function Chatbox() {
   }, [addMessage]);
 
   // Handle sending a user message
-  const handleSend = async (e) => {
-    e.preventDefault();
-    if (!username || !selectedAvatar) {
-      setError("Please enter your name and select an avatar before sending messages.");
-      return;
-    }
-    const trimmed = input.trim();
-    if (!trimmed) return;
+const handleSend = async (e) => {
+  e.preventDefault();
+  if (!username || !selectedAvatar) {
+    setError("Please enter your name and select an avatar before sending messages.");
+    return;
+  }
+  const trimmed = input.trim();
+  if (!trimmed) return;
 
-    const userMessage = {
-      sender: username,
-      message: trimmed,
-      source: "website",
-      avatar: selectedAvatar,
-      user_id: userId,
-      created_at: new Date().toISOString(),
-      id: Date.now(),
-    };
-
-    try {
-      await sendMessage(username, trimmed, selectedAvatar, userId);
-    } catch (err) {
-      console.error("Failed to send message:", err.message);
-    }
+  const userMessage = {
+    sender: username,
+    message: trimmed,
+    source: "website",
+    avatar: selectedAvatar,
+    user_id: userId,
+    created_at: new Date().toISOString(),
+    id: Date.now(),
   };
-  setInput("");
+
+  setInput(""); // ← clear the input immediately
+
+  try {
+    await sendMessage(username, trimmed, selectedAvatar, userId);
+  } catch (err) {
+    console.error("Failed to send message:", err.message);
+  }
+};
 
   return (
     <div className="chat-container">
