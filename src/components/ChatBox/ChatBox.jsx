@@ -116,6 +116,7 @@ export default function Chatbox() {
       console.error("Failed to send message:", err.message);
     }
   };
+  setInput("");
 
   return (
     <div className="chat-container">
