@@ -90,8 +90,7 @@ export default function Chatbox() {
     return () => supabase.removeChannel(channel);
   }, [addMessage]);
 
-  // Handle sending a user message
-const handleSend = async (e) => {
+  const handleSend = async (e) => {
   e.preventDefault();
   if (!username || !selectedAvatar) {
     setError("Please enter your name and select an avatar before sending messages.");
@@ -110,7 +109,7 @@ const handleSend = async (e) => {
     id: Date.now(),
   };
 
-  setInput(""); // ← clear the input immediately
+  setInput(""); // ✅ now inside the function
 
   try {
     await sendMessage(username, trimmed, selectedAvatar, userId);
@@ -118,6 +117,7 @@ const handleSend = async (e) => {
     console.error("Failed to send message:", err.message);
   }
 };
+
 
   return (
     <div className="chat-container">
