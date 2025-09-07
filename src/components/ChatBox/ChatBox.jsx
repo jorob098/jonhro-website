@@ -110,9 +110,6 @@ export default function Chatbox() {
       id: Date.now(),
     };
 
-    addMessage(userMessage);
-    setInput("");
-
     try {
       await sendMessage(username, trimmed, selectedAvatar, userId);
     } catch (err) {
