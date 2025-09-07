@@ -1,7 +1,6 @@
 // src/components/Chatbox.jsx
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
-import useChat from "../../hooks/useChat";
-import { sendMessage } from "../../services/api"; // ✅ use helper
+import { sendMessage } from "../../services/api";
 import { supabase } from "../../services/supabaseClient";
 
 // Helper: create or retrieve unique user ID for this browser session
@@ -16,8 +15,8 @@ function getOrCreateUserId() {
 
 export default function Chatbox() {
   const userId = getOrCreateUserId();
-  const { messages, addMessage } = useChat(userId);
 
+  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [open, setOpen] = useState(false);
   const [username, setUsername] = useState(localStorage.getItem("chatUsername") || "");
@@ -54,7 +53,6 @@ export default function Chatbox() {
         created_at: new Date().toISOString(),
         id: Date.now(),
       };
-      addMessage(welcomeMessage);
 
       const insertWelcomeMessage = async () => {
         try {
@@ -71,7 +69,7 @@ export default function Chatbox() {
 
       insertWelcomeMessage();
     }
-  }, [messages, addMessage, open, userId]);
+  }, [messages, open, userId]);
 
   // Real-time Supabase listener for all messages
   useEffect(() => {
@@ -82,42 +80,32 @@ export default function Chatbox() {
         { event: "INSERT", schema: "public", table: "messages" },
         (payload) => {
           const newMessage = payload.new;
-          addMessage({ ...newMessage, id: newMessage.id || Date.now() });
+          setMessages((prev) => [...prev, { ...newMessage, id: newMessage.id || Date.now() }]);
         }
       )
       .subscribe();
 
     return () => supabase.removeChannel(channel);
-  }, [addMessage]);
+  }, []);
 
+  // Handle sending a user message
   const handleSend = async (e) => {
-  e.preventDefault();
-  if (!username || !selectedAvatar) {
-    setError("Please enter your name and select an avatar before sending messages.");
-    return;
-  }
-  const trimmed = input.trim();
-  if (!trimmed) return;
+    e.preventDefault();
+    if (!username || !selectedAvatar) {
+      setError("Please enter your name and select an avatar before sending messages.");
+      return;
+    }
+    const trimmed = input.trim();
+    if (!trimmed) return;
 
-  const userMessage = {
-    sender: username,
-    message: trimmed,
-    source: "website",
-    avatar: selectedAvatar,
-    user_id: userId,
-    created_at: new Date().toISOString(),
-    id: Date.now(),
+    setInput(""); // Clear the input immediately
+
+    try {
+      await sendMessage(username, trimmed, selectedAvatar, userId);
+    } catch (err) {
+      console.error("Failed to send message:", err.message);
+    }
   };
-
-  setInput(""); // ✅ now inside the function
-
-  try {
-    await sendMessage(username, trimmed, selectedAvatar, userId);
-  } catch (err) {
-    console.error("Failed to send message:", err.message);
-  }
-};
-
 
   return (
     <div className="chat-container">
