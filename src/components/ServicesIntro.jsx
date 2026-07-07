@@ -88,24 +88,28 @@ export default function ServicesIntro() {
         <motion.div className="service-intro-card" variants={cardItem}>
           <h3>{t("servicesIntro.Import Documentation")}</h3>
           <p>{t("servicesIntro.Ensure every shipment meets all regulatory requirements, right from the start.")}</p>
+          <div className="service-intro-icon-wrap">
           <FaRegFileAlt className="service-intro-icon" />
         </motion.div>
 
         <motion.div className="service-intro-card" variants={cardItem}>
           <h3>{t("servicesIntro.Customs Compliance")}</h3>
           <p>{t("servicesIntro.Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.")}</p>
+          <div className="service-intro-icon-wrap">
           <FaBalanceScale className="service-intro-icon" />
         </motion.div>
 
         <motion.div className="service-intro-card" variants={cardItem}>
           <h3>{t("servicesIntro.Freight Coordination")}</h3>
           <p>{t("servicesIntro.Simplify your logistics by letting me manage freight timelines and port communication.")}</p>
+          <div className="service-intro-icon-wrap">
           <FaShippingFast className="service-intro-icon" />
         </motion.div>
 
         <motion.div className="service-intro-card" variants={cardItem}>
           <h3>{t("servicesIntro.Brokerage Consultancy")}</h3>
           <p>{t("servicesIntro.Get expert advice on tariff classifications, duties, and optimizing your import process.")}</p>
+          <div className="service-intro-icon-wrap">
           <FaUserTie className="service-intro-icon" />
         </motion.div>
       </motion.div>
