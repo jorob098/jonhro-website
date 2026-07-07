@@ -1,7 +1,7 @@
 import { FaFacebookF, FaLinkedinIn, FaTiktok } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
-import jrLogo from '../assets/jrlogo.svg';
+import jrLogo from '../assets/myNewLogo.svg';
 import ScrollToHeroLink from "./ScrollToHeroLink"; // adjust path if needed
 import { useEffect } from "react";
 
