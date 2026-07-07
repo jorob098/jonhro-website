@@ -447,25 +447,64 @@ header {
   padding-right: 2.5rem;
 }
 
-/* -------- ICON STYLING -------- */
-.service-icon {
+/* -------- ICON STYLING (glossy 3D badge, static) -------- */
+.service-icon-wrap {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  font-size: 2rem;
-  opacity: 0.9;
-  color: #fff;
-  animation: slow-rotate 10s linear infinite;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.06) 45%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.45);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes slow-rotate {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
+.service-icon-wrap::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 55%;
+  height: 35%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+}
+
+.service-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35));
+}
+
+.service-card:hover .service-icon-wrap {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.45);
 }
 
 /* -------- RESPONSIVE -------- */
@@ -479,18 +518,19 @@ header {
   .services-grid {
     grid-template-columns: 1fr;
   }
-
   .service-card {
     padding: 1.5rem;
   }
-
-  .service-icon {
-    font-size: 1.6rem;
+  .service-icon-wrap {
+    width: 40px;
+    height: 40px;
     bottom: 0.75rem;
     right: 0.75rem;
   }
+  .service-icon {
+    font-size: 1.2rem;
+  }
 }
-
 
 /* ------------------------
    CONTACT SECTION
