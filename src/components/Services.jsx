@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import {
+  FaFileAlt,
+  FaChartBar,
+  FaShip,
+  FaBoxOpen,
+  FaClipboardList,
+  FaWarehouse,
+} from "react-icons/fa";
 
 const cardGradients = [
   "linear-gradient(135deg, #ff6b00, #ff944d)",
@@ -37,32 +45,32 @@ const Services = () => {
     {
       title: t("servicesPage.Customs Clearance - Import & Export"),
       description: t("servicesPage.Efficient processing of both air and sea shipments to ensure smooth and timely cargo release."),
-      icon: "📄",
+      icon: <FaFileAlt />,
     },
     {
       title: t("servicesPage.Customs Brokerage & Tariff Consultation"),
       description: t("servicesPage.Professional customs brokerage services with guidance on tariff classification and duty calculations."),
-      icon: "📊",
+      icon: <FaChartBar />,
     },
     {
       title: t("servicesPage.Freight Consultation"),
       description: t("servicesPage.With trusted freight forwarder partners, I can help arrange your freight requirements with ease."),
-      icon: "🚢",
+      icon: <FaShip />,
     },
     {
       title: t("servicesPage.Real-Time Shipment Monitoring"),
-      description: t("servicesPage.Stay updated on your shipment’s progress with real-time monitoring and proactive updates."),
-      icon: "📦",
+      description: t("servicesPage.Stay updated on your shipment's progress with real-time monitoring and proactive updates."),
+      icon: <FaBoxOpen />,
     },
     {
       title: t("servicesPage.Customs Entry Filing & Records"),
       description: t("servicesPage.Accurate filing of customs entries for future reference and audits to ensure compliance."),
-      icon: "📝",
+      icon: <FaClipboardList />,
     },
     {
       title: t("servicesPage.Cross Docking Arrangements"),
       description: t("servicesPage.Seamless coordination for cross docking services to support efficient cargo distribution."),
-      icon: "🏭",
+      icon: <FaWarehouse />,
     },
   ];
 
@@ -92,7 +100,9 @@ const Services = () => {
             >
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <div className="service-icon">{service.icon}</div>
+              <div className="service-icon-wrap">
+                <span className="service-icon">{service.icon}</span>
+              </div>
             </motion.div>
           ))}
         </div>
