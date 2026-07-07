@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import jrLogo from '../assets/jrlogo.svg';
+import jrLogo from '../assets/myNewLogo.svg';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from "./LanguageSwitcher";
 
