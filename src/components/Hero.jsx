@@ -73,13 +73,35 @@ export default function Hero() {
             </motion.div>
 
             <motion.div
-                className="hero-trust"
-                variants={wordVariant}
-            >
-                <span>✓ Licensed Customs Broker</span>
-                <span>✓ Air • Sea • Land Freight</span>
-                <span>✓ Door-to-Door Logistics</span>
-            </motion.div>
+    className="hero-features"
+    variants={wordVariant}
+>
+
+    <div className="feature-card">
+        <div className="feature-icon">📦</div>
+
+        <h3>Air • Sea • Land</h3>
+
+        <p>Freight Solutions</p>
+    </div>
+
+    <div className="feature-card">
+        <div className="feature-icon">🌍</div>
+
+        <h3>Global</h3>
+
+        <p>Logistics Network</p>
+    </div>
+
+    <div className="feature-card">
+        <div className="feature-icon">🛃</div>
+
+        <h3>Licensed</h3>
+
+        <p>Customs Broker</p>
+    </div>
+
+    </motion.div>
 
         </div>
 
