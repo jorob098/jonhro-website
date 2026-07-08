@@ -31,38 +31,70 @@ export default function Hero() {
 
   return (
     <motion.section
-      id="hero"
-      initial="hidden"
-      animate="visible"
-      variants={container}
-    >
-      <motion.h1 className="text-4xl font-bold" variants={container}>
-        {waveWords.map((word, i) => (
-          <motion.span
-            key={i}
-            variants={wordVariant}
-            style={{ display: "inline-block", marginRight: "0.5ch" }}
-          >
-            {word}
-          </motion.span>
-        ))}
-      </motion.h1>
+    id="hero"
+    initial="hidden"
+    animate="visible"
+    variants={container}
+>
 
-      <motion.p
-        className="mt-4 text-lg"
-        variants={wordVariant}
-      >
-        {t("hero.YoureTrustedHero")}
-      </motion.p>
+    <div className="hero-content">
 
-      <motion.div
-        className="mt-6"
-        variants={wordVariant}
-      >
-        <Link to="/rfq" className="cta-button">
-          {t("hero.Get Started")}
-        </Link>
-      </motion.div>
-    </motion.section>
+        <div className="hero-left">
+
+            <motion.h1 variants={container}>
+                {waveWords.map((word, i) => (
+                    <motion.span
+                        key={i}
+                        variants={wordVariant}
+                        style={{
+                            display: "inline-block",
+                            marginRight: "0.5ch",
+                        }}
+                    >
+                        {word}
+                    </motion.span>
+                ))}
+            </motion.h1>
+
+            <motion.p variants={wordVariant}>
+                {t("hero.YoureTrustedHero")}
+            </motion.p>
+
+            <motion.div
+                className="hero-buttons"
+                variants={wordVariant}
+            >
+                <Link
+                    to="/rfq"
+                    className="cta-button"
+                >
+                    {t("hero.Get Started")}
+                </Link>
+            </motion.div>
+
+            <motion.div
+                className="hero-trust"
+                variants={wordVariant}
+            >
+                <span>✓ Licensed Customs Broker</span>
+                <span>✓ Air • Sea • Land Freight</span>
+                <span>✓ Door-to-Door Logistics</span>
+            </motion.div>
+
+        </div>
+
+        <div className="hero-right">
+
+            <div className="hero-glass">
+
+                {/* Globe illustration goes here later */}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</motion.section>
   );
 }
