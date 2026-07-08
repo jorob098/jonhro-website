@@ -221,44 +221,137 @@ header {
 }
 
 #hero {
-  text-align: center;
-  padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 85% 20%, rgba(255,107,0,.12), transparent 28%),
+        radial-gradient(circle at 15% 80%, rgba(0,0,0,.04), transparent 30%),
+        linear-gradient(180deg, #f5f4f2, #ece8e4);
 }
 
-#hero h1 {
-  font-size: 60px;
-  margin-bottom: 8px;
+.hero-content{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:100px;
+
 }
 
-#hero p {
-  font-size: 18px;
-  color: #594E4E;
-  margin-bottom: 20px;
+.hero-left{
+
+    max-width:620px;
+
+}
+
+#hero h1{
+
+    font-size:clamp(3.5rem,6vw,5.5rem);
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+    color:#1d1d1d;
+
+}
+
+#hero p{
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:16px;
+
+    margin-bottom:35px;
+
+}
+
+.hero-trust{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    color:#555;
+
+    font-size:.95rem;
+
+}
+
+.hero-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:0;
+
+}
+
+.hero-glass {
+
+    width: min(680px, 100%);
+    aspect-ratio: 680 / 620;
+
+    border-radius: 40px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(20px);
+
+    background:
+
+   linear-gradient(
+
+   180deg,
+
+   rgba(255,255,255,.38),
+
+   rgba(255,255,255,.18)
+
+    );
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+
+   0 40px 100px rgba(0,0,0,.15),
+
+   0 8px 30px rgba(255,255,255,.18) inset;
+
 }
 
 
-#hero .cta-button {
-  background: transparent;
-  border: 2px solid #ff6b00;
-  color: #ff6b00;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  font-size: 1rem;
-  text-decoration: none;
-  display: inline-block;
-}
-
-#hero .cta-button:hover {
-  background: #ff6b00;
-  color: #fff;
-  box-shadow: 
-    0 0 10px rgba(255, 107, 0, 0.7),
-    0 0 20px rgba(255, 107, 0, 0.6),
-    0 0 30px rgba(255, 107, 0, 0.5);
-}
 /* ------------------------
    AFFILIATIONS
 ------------------------- */
