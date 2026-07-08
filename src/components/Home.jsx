@@ -1,6 +1,6 @@
 // pages/Home.jsx (or wherever your Home file is)
 
-import Hero from './Hero';
+import Hero from "./Hero/Hero";
 import Affiliations from './Affiliations';
 import GetToKnow from './GetToKnow';
 import ServicesIntro from '../components/ServicesIntro'; // Adjust if not correct
