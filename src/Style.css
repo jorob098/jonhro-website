@@ -2092,29 +2092,6 @@ footer {
   border-top: 8px solid orange;
 }
 
-/* Label ABOVE widget */
-.chat-widget-label {
-  margin-bottom: 8px;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  background: linear-gradient(90deg, #ff6b00, #ffffff, #ff944d, #ff6b00);
-  background-size: 300% auto;
-  
-  /* ✅ Gradient text trick */
-  -webkit-background-clip: text; /* Chrome, Safari, iOS */
-  background-clip: text;         /* Standard property */
-  
-  -webkit-text-fill-color: transparent; /* Chrome, Safari */
-  color: transparent;                   /* Standard fallback */
-
-  animation: shimmer 3s linear infinite;
-}
-
-@keyframes shimmer {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
-}
 /* Chatbox window */
 .chatbox {
   position: fixed;  /* already fixed */

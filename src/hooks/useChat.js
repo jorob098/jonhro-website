@@ -1,46 +1,89 @@
-// src/hooks/useChat.js
-import { useState, useEffect } from "react";
-import { supabase } from "../services/supabaseClient";
+import { useState, useEffect, useCallback } from "react";
+import { supabase } from "../lib/supabaseClient";
 
-export default function useChat(userId) {
+export default function useChat({ userId, isAdmin }) {
   const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchHistory = useCallback(async () => {
+    if (!userId) return;
+    setLoading(true);
+
+    const { data, error } = await supabase
+      .from("messages")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: true });
+
+    if (error) {
+      console.error("Fetch messages error:", error.message);
+    } else {
+      setMessages(data || []);
+    }
+    setLoading(false);
+  }, [userId]);
 
   useEffect(() => {
-    if (!userId) return;
+    if (!userId) {
+      setMessages([]);
+      return;
+    }
 
-    fetchMessages(userId);
+    fetchHistory();
 
     const channel = supabase
-      .channel("public:messages")
+      .channel(`messages-${userId}`)
       .on(
         "postgres_changes",
-        {
-          event: "INSERT",
-          schema: "public",
-          table: "messages",
-          filter: `user_id=eq.${userId}`, // 🔑 only listen to my userId
-        },
-        (payload) => setMessages((prev) => [...prev, payload.new])
+        { event: "INSERT", schema: "public", table: "messages", filter: `user_id=eq.${userId}` },
+        (payload) => {
+          setMessages((prev) => {
+            if (prev.some((m) => m.id === payload.new.id)) return prev;
+            return [...prev, payload.new];
+          });
+        }
+      )
+      .on(
+        "postgres_changes",
+        { event: "UPDATE", schema: "public", table: "messages", filter: `user_id=eq.${userId}` },
+        (payload) => {
+          setMessages((prev) =>
+            prev.map((m) => (m.id === payload.new.id ? payload.new : m))
+          );
+        }
       )
       .subscribe();
 
     return () => supabase.removeChannel(channel);
-  }, [userId]);
+  }, [userId, fetchHistory]);
 
-  async function fetchMessages(userId) {
-    const { data, error } = await supabase
+  const send = async (text) => {
+    if (!text.trim() || !userId) return;
+
+    const { error } = await supabase.from("messages").insert({
+      user_id: userId,
+      sender: isAdmin ? "admin" : "visitor",
+      message: text.trim(),
+      source: isAdmin ? "admin" : "website",
+      read: false,
+    });
+
+    if (error) console.error("Send message error:", error.message);
+  };
+
+  const markAsRead = async () => {
+    if (!userId) return;
+    const otherSender = isAdmin ? "visitor" : "admin";
+
+    const { error } = await supabase
       .from("messages")
-      .select("*")
-      .eq("user_id", userId) // 🔑 fetch only my messages
-      .order("created_at", { ascending: true });
+      .update({ read: true })
+      .eq("user_id", userId)
+      .eq("sender", otherSender)
+      .eq("read", false);
 
-    if (error) console.error("Fetch error:", error.message);
-    setMessages(data || []);
-  }
+    if (error) console.error("Mark as read error:", error.message);
+  };
 
-  function addMessage(msg) {
-    setMessages((prev) => [...prev, msg]);
-  }
-
-  return { messages, addMessage };
+  return { messages, loading, send, markAsRead };
 }
