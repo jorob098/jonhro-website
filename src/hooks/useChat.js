@@ -57,19 +57,20 @@ export default function useChat({ userId, isAdmin }) {
     return () => supabase.removeChannel(channel);
   }, [userId, fetchHistory]);
 
-  const send = async (text) => {
-    if (!text.trim() || !userId) return;
+  const send = async (text, displayName = null) => {
+  if (!text.trim() || !userId) return;
 
-    const { error } = await supabase.from("messages").insert({
-      user_id: userId,
-      sender: isAdmin ? "admin" : "visitor",
-      message: text.trim(),
-      source: isAdmin ? "admin" : "website",
-      read: false,
-    });
+  const { error } = await supabase.from("messages").insert({
+    user_id: userId,
+    sender: isAdmin ? "admin" : "visitor",
+    message: text.trim(),
+    source: isAdmin ? "admin" : "website",
+    read: false,
+    display_name: displayName,
+  });
 
-    if (error) console.error("Send message error:", error.message);
-  };
+  if (error) console.error("Send message error:", error.message);
+};
 
   const markAsRead = async () => {
     if (!userId) return;

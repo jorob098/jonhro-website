@@ -13,19 +13,32 @@ export default function Chatbox() {
   const { messages, send, markAsRead } = useChat({ userId, isAdmin: false });
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
+  const [displayName, setDisplayName] = useState(() => localStorage.getItem("chat_display_name") || "");
+  const [nameInput, setNameInput] = useState("");
 
   const unreadCount = messages.filter((m) => m.sender === "admin" && !m.read).length;
 
   useEffect(() => {
-    if (open) markAsRead();
-  }, [open, messages.length]);
+  if (open) {
+    console.log("Marking as read, messages:", messages.length);
+    markAsRead();
+  }
+}, [open, messages.length]);
+
+  const handleSaveName = (e) => {
+    e.preventDefault();
+    const trimmed = nameInput.trim();
+    if (!trimmed) return;
+    localStorage.setItem("chat_display_name", trimmed);
+    setDisplayName(trimmed);
+  };
 
   const handleSend = async (e) => {
     e.preventDefault();
     const trimmed = input.trim();
     if (!trimmed) return;
     setInput("");
-    await send(trimmed);
+    await send(trimmed, displayName);
   };
 
   if (authLoading) return null;
@@ -52,20 +65,36 @@ export default function Chatbox() {
           <div className="chatbox-close" onClick={() => setOpen(false)}>×</div>
         </div>
 
-        <div className="chatbox-messages">
-          {messages.length === 0 && <p className="chatbox-empty">Send us a message, we usually reply fast.</p>}
-          {messages.map((msg) => (
-            <div key={msg.id} className={`chatbox-message-row ${msg.sender}`}>
-              <div className={`chatbox-message ${msg.sender}`}>{msg.message}</div>
-              <span className="chatbox-time">{formatTime(msg.created_at)}</span>
+        {!displayName ? (
+          <form onSubmit={handleSaveName} className="chatbox-name-form">
+            <p>What's your name?</p>
+            <input
+              type="text"
+              value={nameInput}
+              onChange={(e) => setNameInput(e.target.value)}
+              placeholder="Your name"
+              autoFocus
+            />
+            <button type="submit">Continue</button>
+          </form>
+        ) : (
+          <>
+            <div className="chatbox-messages">
+              {messages.length === 0 && <p className="chatbox-empty">Send us a message, we usually reply fast.</p>}
+              {messages.map((msg) => (
+                <div key={msg.id} className={`chatbox-message-row ${msg.sender}`}>
+                  <div className={`chatbox-message ${msg.sender}`}>{msg.message}</div>
+                  <span className="chatbox-time">{formatTime(msg.created_at)}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <form onSubmit={handleSend} className="chatbox-input">
-          <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type a message..." />
-          <button type="submit">Send</button>
-        </form>
+            <form onSubmit={handleSend} className="chatbox-input">
+              <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type a message..." />
+              <button type="submit">Send</button>
+            </form>
+          </>
+        )}
       </div>
     </div>
   );
