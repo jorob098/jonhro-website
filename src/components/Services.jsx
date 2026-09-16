@@ -9,6 +9,7 @@ import {
   FaClipboardList,
   FaWarehouse,
 } from "react-icons/fa";
+import Seo from './Seo';
 
 const cardGradients = [
   "linear-gradient(135deg, #ff6b00, #ff944d)",
@@ -75,6 +76,11 @@ const Services = () => {
   ];
 
   return (
+    <>
+      <Seo
+        title="Customs Brokerage Services | Jonhro Robles Cebu"
+        description="Import clearance, export documentation, tariff classification, and freight forwarding services in Cebu, Philippines."
+      />
     <section className="services-page">
       <div className="services-container">
         <motion.div
@@ -108,6 +114,7 @@ const Services = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

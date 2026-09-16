@@ -1,10 +1,16 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import Seo from './Seo';
 
 export default function About() {
   const { t } = useTranslation();
 
   return (
+    <>
+      <Seo
+        title="About Jonhro Robles | Licensed Customs Broker in Cebu"
+        description="Learn about Jonhro Robles, a licensed customs broker in Cebu, Philippines, with expertise in import/export compliance and clearance."
+      />
     <section id="about">
       <div className="container">
         <motion.h2
@@ -41,5 +47,6 @@ export default function About() {
         </motion.a>
       </div>
     </section>
+    </>
   );
 }

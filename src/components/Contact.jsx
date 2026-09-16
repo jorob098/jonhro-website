@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Toast from "../components/Toast";
 import { useTranslation } from "react-i18next";
+import Seo from './Seo';
+
 
 export default function Contact() {
   const [firstName, setFirstName] = useState('');
@@ -45,6 +47,11 @@ export default function Contact() {
   };
 
   return (
+    <>
+      <Seo
+        title="Contact Jonhro Robles | Customs Broker Cebu"
+        description="Get in touch with Jonhro Robles for customs brokerage inquiries in Cebu, Philippines."
+      />
     <main className="contact-page">
       <motion.section
         className="contact-container"
@@ -149,5 +156,6 @@ export default function Contact() {
         />
       )}
     </main>
+    </>
   );
 }

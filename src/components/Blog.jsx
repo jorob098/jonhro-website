@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { useTranslation } from 'react-i18next';
+import Seo from './Seo';
 
 export default function Blog() {
   const { t } = useTranslation();
@@ -27,6 +28,11 @@ export default function Blog() {
   };
 
   return (
+    <>
+      <Seo
+        title="Customs & Trade Insights | Jonhro Robles Blog"
+        description="Articles and updates on Philippine customs regulations, import/export procedures, and trade compliance."
+      />
     <>
       <Helmet>
         <title>Cebu’s Evolving Trade Landscape | Jonhro Robles, Licensed Customs Broker</title>
@@ -113,6 +119,7 @@ export default function Blog() {
         </div>
       </section>
     </main>
+    </>
     </>
   );
 }

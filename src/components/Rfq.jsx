@@ -2,6 +2,7 @@ import { useState } from "react";
 import Toast from "../components/Toast"; // Ensure Toast.jsx exists
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from 'react-i18next';
+import Seo from './Seo';
 
 export default function Rfq() {
   const [fullName, setFullName] = useState('');
@@ -56,6 +57,11 @@ export default function Rfq() {
   };
 
   return (
+    <>
+      <Seo
+        title="Request a Quote | Jonhro Robles Customs Broker"
+        description="Request a customs brokerage quote from Jonhro Robles, licensed customs broker in Cebu, Philippines."
+      />
   <main className="rfq-page">
     <section className="rfq-container">
       <div className="rfq-header">
@@ -138,5 +144,6 @@ export default function Rfq() {
       />
     )}
   </main>
+  </>
 );
 }
