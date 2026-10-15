@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Track Your Shipment | Jonhro Robles</title>
+<meta name="description" content="Track the status of your customs clearance and shipment with Jonhro Robles, licensed customs broker in Cebu." />
+<meta name="robots" content="index, follow" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --accent:#ff6b00;
+    --accent-dark:#e65f00;
+    --ink:#1d1d1d;
+    --muted:#5c5c5c;
+    --soft:#777;
+    --line:#d9d5d0;
+    --card:#ffffff;
+    --success:#2ecc71;
+    --error:#e74c3c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:Inter,system-ui,sans-serif;color:#333;line-height:1.6;
+    min-height:100vh;display:flex;flex-direction:column;
+    background:
+      radial-gradient(circle at 85% 10%,rgba(255,107,0,.14),transparent 30%),
+      radial-gradient(circle at 10% 90%,rgba(0,0,0,.05),transparent 30%),
+      linear-gradient(180deg,#f5f4f2,#ece8e4);
+    background-attachment:fixed;
+  }
+
+  /* Header */
+  header{
+    display:flex;justify-content:space-between;align-items:center;
+    max-width:1200px;width:100%;margin:0 auto;padding:16px 24px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand img{height:48px;width:auto}
+  .brand span{font-size:18px;font-weight:700;color:#000;transition:color .3s}
+  .brand:hover span{color:orange}
+  .back-link{
+    color:#000;text-decoration:none;font-weight:500;font-size:.95rem;position:relative;padding:6px 2px;transition:color .3s;
+  }
+  .back-link:after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent);transition:width .3s}
+  .back-link:hover{color:var(--accent)}
+  .back-link:hover:after{width:100%}
+
+  /* Main */
+  main{flex:1;display:flex;justify-content:center;padding:32px 20px 64px}
+  .wrap{width:100%;max-width:860px}
+  .intro{text-align:center;margin-bottom:28px}
+  .intro .eyebrow{
+    display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;
+  }
+  .intro h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;font-weight:800;color:var(--ink);margin-bottom:12px}
+  .intro p{max-width:520px;margin:0 auto;color:var(--muted);font-size:1.05rem}
+
+  .panel{
+    background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.65));
+    -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.6);border-radius:28px;
+    box-shadow:0 30px 60px rgba(0,0,0,.10);padding:28px;
+  }
+
+  /* Form */
+  form{display:flex;gap:12px;flex-wrap:wrap}
+  .field{flex:1;min-width:220px}
+  .field label{display:block;font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:6px}
+  .field input{
+    width:100%;padding:.85rem 1rem;font-size:1rem;font-family:inherit;
+    border:1px solid #ccc;border-radius:10px;background:#fff;color:#000;
+    letter-spacing:.5px;transition:border-color .2s,box-shadow .2s;
+  }
+  .field input::placeholder{color:#999;letter-spacing:0}
+  .field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,107,0,.18)}
+  .btn{
+    align-self:flex-end;background:transparent;border:2px solid var(--accent);color:var(--accent);
+    padding:.8rem 1.8rem;font-weight:700;font-size:1rem;font-family:inherit;border-radius:8px;cursor:pointer;
+    transition:all .3s ease;min-height:49px;
+  }
+  .btn:hover:not(:disabled){
+    background:var(--accent);color:#fff;
+    box-shadow:0 0 10px rgba(255,107,0,.7),0 0 20px rgba(255,107,0,.5),0 0 35px rgba(255,107,0,.35);
+  }
+  .btn:disabled{opacity:.6;cursor:wait}
+
+  .demo-note{
+    margin-top:14px;font-size:.82rem;color:#8a5a2b;background:#fff4e8;border:1px dashed var(--accent);
+    border-radius:10px;padding:8px 12px;display:none;
+  }
+  .demo-note strong{color:var(--accent-dark)}
+
+  /* Messages */
+  .msg{margin-top:22px;padding:14px 16px;border-radius:12px;font-size:.95rem;display:none}
+  .msg.show{display:block}
+  .msg.error{background:#fdecea;border-left:5px solid var(--error);color:#7a1f17}
+  .msg.info{background:#fff;border-left:5px solid var(--accent);color:#444}
+  .msg a{color:var(--accent-dark);font-weight:600}
+
+  /* Result */
+  #result{display:none;margin-top:26px}
+  #result.show{display:block;animation:rise .4s ease}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+  .result-head{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:28px;
+  }
+  .tn-label{font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--soft);font-weight:600}
+  .tn-value{font-size:1.5rem;font-weight:800;color:var(--ink);letter-spacing:.5px;word-break:break-all}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;
+    font-weight:700;font-size:.9rem;background:rgba(255,107,0,.12);color:var(--accent-dark);border:1px solid rgba(255,107,0,.35);
+  }
+  .badge:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .badge.delivered{background:rgba(46,204,113,.14);color:#1b8a4b;border-color:rgba(46,204,113,.45)}
+  .badge.delivered:before{background:var(--success)}
+
+  /* Timeline (horizontal on desktop) */
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);margin-bottom:32px}
+  .step{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px}
+  .step:not(:first-child):before{
+    content:"";position:absolute;top:18px;left:calc(-50% + 22px);width:calc(100% - 44px);height:3px;background:var(--line);border-radius:2px;
+  }
+  .step.done:before,.step.current:before{background:var(--accent)}
+  .dot{
+    position:relative;z-index:1;width:40px;height:40px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:#fff;border:2px solid var(--line);color:#b5b0aa;transition:all .3s;flex-shrink:0;
+  }
+  .dot svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .step.done .dot{background:var(--accent);border-color:var(--accent);color:#fff}
+  .step.current .dot{
+    background:var(--accent);border-color:var(--accent);color:#fff;animation:pulse 1.8s infinite;
+  }
+  .step.current.final .dot{animation:none;background:var(--success);border-color:var(--success)}
+  .step.current.final:before{background:var(--success)}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(255,107,0,.55)}
+    70%{box-shadow:0 0 0 14px rgba(255,107,0,0)}
+    100%{box-shadow:0 0 0 0 rgba(255,107,0,0)}
+  }
+  .step-label{margin-top:10px;font-size:.82rem;font-weight:600;color:#9a958f;line-height:1.3}
+  .step.done .step-label,.step.current .step-label{color:var(--ink)}
+
+  /* Details */
+  .details{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .detail{background:#fff;border-radius:14px;padding:14px 16px;border:1px solid rgba(0,0,0,.06);box-shadow:0 4px 14px rgba(0,0,0,.04)}
+  .detail.full{grid-column:1/-1}
+  .detail dt{font-size:.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--soft);font-weight:700;margin-bottom:2px}
+  .detail dd{font-size:1rem;color:var(--ink);font-weight:500;word-break:break-word}
+  .detail.note{border-left:5px solid var(--accent)}
+
+  /* Footer */
+  footer{background:#000;color:var(--accent);text-align:center;padding:22px 16px;font-size:.9rem}
+
+  /* Mobile: vertical timeline */
+  @media (max-width:640px){
+    header{padding:12px 16px}
+    .brand img{height:40px}
+    .panel{padding:20px;border-radius:22px}
+    .btn{width:100%}
+    .steps{grid-template-columns:1fr}
+    .step{flex-direction:row;align-items:flex-start;text-align:left;gap:14px;padding:0 0 24px}
+    .step:last-child{padding-bottom:0}
+    .step:not(:first-child):before{top:-24px;left:18px;width:3px;height:24px}
+    .step-label{margin-top:0;align-self:center;font-size:.95rem}
+    .details{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .step.current .dot{animation:none}
+    #result.show{animation:none}
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="/" id="brandLink">
+    <img id="logoImg" src="/myNewLogo.svg" alt="Jonhro Robles logo" onerror="this.style.display='none'" />
+    <span>Jonhro Robles</span>
+  </a>
+  <a class="back-link" href="/">&larr; Back to website</a>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="intro">
+      <span class="eyebrow">Shipment Tracking</span>
+      <h1>Track Your Shipment</h1>
+      <p>Enter your tracking number to see the latest status of your customs clearance and delivery.</p>
+    </div>
+
+    <section class="panel">
+      <form id="trackForm" autocomplete="off" novalidate>
+        <div class="field">
+          <label for="tn">Tracking number</label>
+          <input id="tn" name="tn" type="text" placeholder="e.g. JR-1001" inputmode="text" autocapitalize="characters" spellcheck="false" required />
+        </div>
+        <button class="btn" id="goBtn" type="submit">Track</button>
+      </form>
+
+      <div class="demo-note" id="demoNote">
+        <strong>Demo mode:</strong> no Google Sheet connected yet. Try <strong>JR-1001</strong>, <strong>JR-1002</strong>, <strong>JR-1003</strong>, or <strong>JR-1004</strong>.
+      </div>
+
+      <div class="msg" id="msg" role="alert" aria-live="polite"></div>
+
+      <div id="result" aria-live="polite">
+        <div class="result-head">
+          <div>
+            <div class="tn-label">Tracking number</div>
+            <div class="tn-value" id="rTn"></div>
+          </div>
+          <span class="badge" id="rBadge"></span>
+        </div>
+
+        <ol class="steps" id="steps"></ol>
+
+        <dl class="details" id="details"></dl>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>&copy; <span id="yr"></span> Jonhro Robles. All rights reserved.</footer>
+
+<script>
+/* ============ CONFIG: edit these ============ */
+const CONFIG = {
+  // Paste your Google Sheet "Publish to web" CSV link here (see setup steps).
+  // Leave empty to run in demo mode with sample data.
+  SHEET_CSV_URL: "",
+
+  LOGO_URL: "/myNewLogo.svg",     // path to your logo file (must be in public/)
+  CONTACT_URL: "/rfq",            // where "contact me" links go
+  STAGES: ["Booked", "Customs Processing", "Released", "In Transit", "Delivered"]
+};
+/* ============================================ */
+
+const DEMO_CSV = `tracking_number,status,current_location,last_update,eta,origin,destination,description,notes
+JR-1001,Customs Processing,"Port of Cebu, Philippines","Oct 14, 2026 - 3:20 PM","Oct 20, 2026","Shanghai, China","Cebu City, Philippines","General cargo - 2 x 20ft container","Documents are under review at the Bureau of Customs."
+JR-1002,In Transit,"Port of Cebu to Mandaue City","Oct 15, 2026 - 9:05 AM","Oct 16, 2026","Port of Cebu","Mandaue City, Philippines","Machinery parts","Released cargo is on its way to the consignee warehouse."
+JR-1003,Delivered,"Consignee warehouse","Oct 10, 2026 - 2:40 PM","Oct 10, 2026","Hong Kong","Lapu-Lapu City, Philippines","Electronics","Delivered and received."
+JR-1004,Booked,"Origin port","Oct 15, 2026 - 11:00 AM","Oct 28, 2026","Singapore","Cebu City, Philippines","Office supplies","Booking confirmed. Waiting for vessel departure."`;
+
+const ICONS = {
+  "Booked": '<path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/>',
+  "Customs Processing": '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  "Released": '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/>',
+  "In Transit": '<path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/>',
+  "Delivered": '<path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/>'
+};
+
+const $ = (id) => document.getElementById(id);
+let cache = null;
+
+/* ---------- helpers ---------- */
+function parseCSV(text) {
+  const rows = [];
+  let row = [], cur = "", inQ = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inQ) {
+      if (c === '"') {
+        if (text[i + 1] === '"') { cur += '"'; i++; } else { inQ = false; }
+      } else { cur += c; }
+    } else if (c === '"') { inQ = true; }
+    else if (c === ",") { row.push(cur); cur = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      row.push(cur); cur = ""; rows.push(row); row = [];
+    } else { cur += c; }
+  }
+  if (cur !== "" || row.length) { row.push(cur); rows.push(row); }
+  return rows.filter(r => r.some(x => x.trim() !== ""));
+}
+
+const normKey = (s) => s.trim().toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
+const normTn = (s) => s.trim().toUpperCase().replace(/\s+/g, "");
+
+function toRecords(csv) {
+  const rows = parseCSV(csv);
+  if (!rows.length) return [];
+  const head = rows[0].map(normKey);
+  return rows.slice(1).map(r => {
+    const o = {};
+    head.forEach((h, i) => { o[h] = (r[i] || "").trim(); });
+    return o;
+  });
+}
+
+const pick = (rec, ...keys) => {
+  for (const k of keys) if (rec[k]) return rec[k];
+  return "";
+};
+
+async function loadData() {
+  if (cache) return cache;
+  let csv;
+  if (!CONFIG.SHEET_CSV_URL) {
+    csv = DEMO_CSV;
+  } else {
+    const sep = CONFIG.SHEET_CSV_URL.includes("?") ? "&" : "?";
+    const res = await fetch(CONFIG.SHEET_CSV_URL + sep + "t=" + Date.now(), { cache: "no-store" });
+    if (!res.ok) throw new Error("Failed to load data");
+    csv = await res.text();
+  }
+  cache = toRecords(csv);
+  return cache;
+}
+
+function el(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text !== undefined) n.textContent = text;
+  return n;
+}
+
+function showMsg(type, content) {
+  const m = $("msg");
+  m.className = "msg show " + type;
+  m.textContent = "";
+  if (typeof content === "string") m.textContent = content;
+  else m.appendChild(content);
+}
+function clearMsg() { $("msg").className = "msg"; $("msg").textContent = ""; }
+function hideResult() { $("result").classList.remove("show"); }
+
+/* ---------- render ---------- */
+function render(rec) {
+  const stages = CONFIG.STAGES;
+  const status = pick(rec, "status");
+  const idx = stages.findIndex(s => s.toLowerCase() === status.toLowerCase());
+  const isFinal = idx === stages.length - 1;
+
+  $("rTn").textContent = pick(rec, "tracking_number", "tracking_no", "tracking");
+  const badge = $("rBadge");
+  badge.textContent = status || "Status unavailable";
+  badge.className = "badge" + (isFinal ? " delivered" : "");
+
+  const ol = $("steps");
+  ol.textContent = "";
+  if (idx === -1) {
+    ol.style.display = "none";
+  } else {
+    ol.style.display = "";
+    stages.forEach((name, i) => {
+      const li = el("li", "step");
+      if (i < idx) li.classList.add("done");
+      if (i === idx) { li.classList.add("current"); if (isFinal) li.classList.add("final"); }
+      const dot = el("div", "dot");
+      dot.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[name] || "") + "</svg>";
+      li.appendChild(dot);
+      li.appendChild(el("div", "step-label", name));
+      if (i === idx) li.setAttribute("aria-current", "step");
+      ol.appendChild(li);
+    });
+  }
+
+  const dl = $("details");
+  dl.textContent = "";
+  const fields = [
+    ["Current location", pick(rec, "current_location", "location")],
+    ["Last update", pick(rec, "last_update", "updated", "date")],
+    ["Origin", pick(rec, "origin")],
+    ["Destination", pick(rec, "destination")],
+    ["Estimated delivery", pick(rec, "eta", "estimated_delivery")],
+    ["Cargo", pick(rec, "description", "cargo")]
+  ];
+  fields.forEach(([label, value]) => {
+    if (!value) return;
+    const box = el("div", "detail");
+    box.appendChild(el("dt", "", label));
+    box.appendChild(el("dd", "", value));
+    dl.appendChild(box);
+  });
+  const notes = pick(rec, "notes", "remarks");
+  if (notes) {
+    const box = el("div", "detail full note");
+    box.appendChild(el("dt", "", "Notes"));
+    box.appendChild(el("dd", "", notes));
+    dl.appendChild(box);
+  }
+
+  $("result").classList.add("show");
+}
+
+/* ---------- search ---------- */
+async function search(raw) {
+  const tn = normTn(raw);
+  clearMsg();
+  hideResult();
+  if (!tn) { showMsg("error", "Please enter your tracking number."); return; }
+
+  const btn = $("goBtn");
+  btn.disabled = true; btn.textContent = "Searching...";
+  try {
+    const data = await loadData();
+    const rec = data.find(r => normTn(pick(r, "tracking_number", "tracking_no", "tracking")) === tn);
+    if (!rec) {
+      const wrap = document.createElement("span");
+      wrap.appendChild(document.createTextNode("We couldn't find that tracking number. Please check it and try again, or "));
+      const a = document.createElement("a");
+      a.href = CONFIG.CONTACT_URL; a.textContent = "contact me";
+      wrap.appendChild(a);
+      wrap.appendChild(document.createTextNode("."));
+      showMsg("error", wrap);
+    } else {
+      render(rec);
+      history.replaceState(null, "", "?tn=" + encodeURIComponent(tn));
+    }
+  } catch (e) {
+    cache = null;
+    showMsg("error", "We couldn't load tracking data right now. Please try again in a moment.");
+  } finally {
+    btn.disabled = false; btn.textContent = "Track";
+  }
+}
+
+/* ---------- init ---------- */
+$("yr").textContent = new Date().getFullYear();
+$("logoImg").src = CONFIG.LOGO_URL;
+if (!CONFIG.SHEET_CSV_URL) $("demoNote").style.display = "block";
+
+$("trackForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  search($("tn").value);
+});
+
+const preset = new URLSearchParams(location.search).get("tn");
+if (preset) { $("tn").value = preset; search(preset); }
+</script>
+</body>
+</html>
