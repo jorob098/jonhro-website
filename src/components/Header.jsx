@@ -50,6 +50,7 @@ export default function Header() {
             <li><Link to="/contact">{t("nav-links.Contact")}</Link></li>
             <li><Link to="/blog">{t("nav-links.Blog")}</Link></li>
             <li><Link to="/rfq">{t("nav-links.RFQ")}</Link></li>
+            <li><a href="/track.html">Track Shipment</a></li>
           </ul>
         </nav>
 
@@ -70,6 +71,7 @@ export default function Header() {
             <li><Link to="/contact" onClick={closeMenu}>{t("Contact")}</Link></li>
             <li><Link to="/blog" onClick={closeMenu}>{t("Blog")}</Link></li>
             <li><Link to="/rfq" onClick={closeMenu}>{t("RFQ")}</Link></li>
+            <li><a href="/track.html" onClick={closeMenu}>Track Shipment</a></li>
           </ul>
         </div>
       </header>
