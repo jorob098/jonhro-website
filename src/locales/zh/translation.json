@@ -222,7 +222,15 @@
     "Location": "地点",
     "Phone": "电话",
     "Follow Me": "关注我",
-    "All rights reserved.": "版权所有。"
+    "All rights reserved.": "版权所有。",
+    "about": "宿务港的持证报关服务，为全菲律宾的进出口商提供支持。",
+    "license": "PRC持证报关员 · 编号 006038",
+    "Explore": "浏览",
+    "Contact us": "联系方式",
+    "rfq": "询价（RFQ）",
+    "phoneNote": "电话、Viber、WhatsApp",
+    "area": "菲律宾宿务市",
+    "areaNote": "宿务港 + 全国主要港口"
   },
   "chat": {
     "Chat with us": "在线咨询",

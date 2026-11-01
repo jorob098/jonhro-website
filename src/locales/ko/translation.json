@@ -222,7 +222,15 @@
     "Location": "위치",
     "Phone": "전화",
     "Follow Me": "팔로우",
-    "All rights reserved.": "모든 권리 보유."
+    "All rights reserved.": "모든 권리 보유.",
+    "about": "세부항 공인 관세 중개 — 필리핀 전역의 수입·수출업체를 지원합니다.",
+    "license": "PRC 공인 관세사 · No. 006038",
+    "Explore": "둘러보기",
+    "Contact us": "연락처",
+    "rfq": "견적 요청 (RFQ)",
+    "phoneNote": "전화, Viber, WhatsApp",
+    "area": "필리핀 세부시",
+    "areaNote": "세부항 + 전국 주요 항구"
   },
   "chat": {
     "Chat with us": "채팅 문의",
