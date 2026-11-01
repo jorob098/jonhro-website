@@ -72,10 +72,7 @@ const Services = () => {
 
   return (
     <>
-      <Seo
-        title="Customs Brokerage Services | Jonhro Robles Cebu"
-        description="Import clearance, export documentation, tariff classification, and freight forwarding services in Cebu, Philippines."
-      />
+      <Seo path="/services" />
     <section className="services-page">
       <div className="services-container">
         <motion.div
@@ -84,7 +81,7 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2>{t("servicesPage.End to End Customs Services from Cebu to Key Ports Nationwide")}</h2>
+          <h1>{t("servicesPage.End to End Customs Services from Cebu to Key Ports Nationwide")}</h1>
           <p>{t("servicesPage.I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.")}</p>
         </motion.div>
 

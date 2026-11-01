@@ -1,12 +1,41 @@
-# React + Vite
+# jonhrorobles.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website of Jonhro Robles, licensed customs broker in Cebu, Philippines.
+Built with React + Vite and hosted on GitHub Pages at **https://www.jonhrorobles.com**.
 
-Currently, two official plugins are available:
+## Run it locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Create a `.env.local` file (never committed) with the same values as the GitHub Secrets:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+VITE_SUPABASE_URL=...
+VITE_SUPABASE_ANON_KEY=...
+VITE_RECAPTCHA_SITE_KEY=...
+VITE_REACT_APP_GAS_URL=...
+```
+
+## Deploying
+
+Every push to `main` builds and publishes the site automatically
+(`.github/workflows/deploy.yml`). Work on a branch and merge a pull request
+when you're happy with the change.
+
+## Where things live
+
+| What | Where |
+| --- | --- |
+| Pages and sections | `src/components/` |
+| Page titles, descriptions, share image | `src/seo/pages.js` |
+| Translations (en, tl, es, ja, zh, ko) | `src/locales/<lang>/translation.json` |
+| Site-wide styles | `src/Style.css` |
+| Shipment tracker page | `public/track.html` |
+| Tracker lookup script (Google Apps Script) | `scripts/track-lookup.gs` |
+| Chat database rules (Supabase) | `supabase/chat-policies.sql` |
+
+The build also writes one HTML file per page (`about.html`, `services.html`, …),
+`404.html` and `sitemap.xml` — see `vite.config.js`.

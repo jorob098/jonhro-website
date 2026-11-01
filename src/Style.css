@@ -263,6 +263,7 @@ header {
   text-align: center;
 }
 
+#about h1,
 #about h2 {
   font-size: 36px;
   margin-bottom: 20px;
@@ -324,6 +325,7 @@ header {
   text-align: center;
 }
 
+.services-header h1,
 .services-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -518,6 +520,7 @@ header {
   min-width: 300px;
 }
 
+.contact-header h1,
 .contact-header h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -1647,6 +1650,7 @@ header {
   text-align: center;
 }
 
+.rfq-header h1,
 .rfq-header h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -1737,6 +1741,7 @@ header {
     padding: 2rem 1.5rem;
   }
 
+  .rfq-header h1,
   .rfq-header h2 {
     font-size: 1.5rem;
   }

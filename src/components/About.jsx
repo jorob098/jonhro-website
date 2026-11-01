@@ -10,19 +10,16 @@ export default function About() {
 
   return (
     <>
-      <Seo
-        title="About Jonhro Robles | Licensed Customs Broker in Cebu"
-        description="Learn about Jonhro Robles, a licensed customs broker in Cebu, Philippines, with expertise in import/export compliance and clearance."
-      />
+      <Seo path="/about" />
     <section id="about">
       <div className="container">
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           {t("aboutPage.aboutPageHeader")}
-        </motion.h2>
+        </motion.h1>
 
         {[1, 2, 3].map((i, index) => (
           <motion.p

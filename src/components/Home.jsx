@@ -13,10 +13,7 @@ import Seo from './Seo';
 export default function Home() {
   return (
     <>
-    <Seo
-        title="Customs Broker Cebu | Jonhro Robles - Import & Export Specialist"
-        description="Licensed customs broker in Cebu, Philippines. Jonhro Robles offers import/export clearance, customs documentation, and freight consulting services."
-      />
+    <Seo path="/" />
       <Hero />
       <Affiliations />
       <GetToKnow />

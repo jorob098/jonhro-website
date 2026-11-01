@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from "react-helmet";
 import { useTranslation } from 'react-i18next';
 import Seo from './Seo';
+import { PAGES, SITE_URL, SHARE_IMAGE } from '../seo/pages';
 
 export default function Blog() {
   const { t } = useTranslation();
@@ -9,55 +9,21 @@ export default function Blog() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Cebu’s Evolving Trade Landscape: Why Customs Expertise Matters Now More Than Ever",
-    "description": "Explore how customs modernization and stricter regulations are reshaping Cebu’s trade environment in 2025. Written by Jonhro Robles, Licensed Customs Broker.",
-    "author": {
-      "@type": "Person",
-      "name": "Jonhro Robles"
-    },
+    "description": PAGES["/blog"].description,
+    "author": { "@type": "Person", "name": "Jonhro Robles", "url": SITE_URL },
     "datePublished": "2025-07-26",
     "publisher": {
-      "@type": "Organization",
+      "@type": "Person",
       "name": "Jonhro Robles",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://jonhrorobles.com/logo.png"
-      }
+      "url": SITE_URL,
     },
-    "image": "https://jonhrorobles.com/images/cebu-trade-blog.jpg",
-    "mainEntityOfPage": "https://jonhrorobles.com/blog"
+    "image": SHARE_IMAGE,
+    "mainEntityOfPage": `${SITE_URL}/blog`,
   };
 
   return (
     <>
-      <Seo
-        title="Customs & Trade Insights | Jonhro Robles Blog"
-        description="Articles and updates on Philippine customs regulations, import/export procedures, and trade compliance."
-      />
-    <>
-      <Helmet>
-        <title>Cebu’s Evolving Trade Landscape | Jonhro Robles, Licensed Customs Broker</title>
-        <meta name="description" content="Explore how customs modernization and stricter regulations are reshaping Cebu’s trade environment in 2025. Written by Jonhro Robles, Licensed Customs Broker." />
-        <meta name="keywords" content="customs broker Cebu, import export Cebu, BOC modernization 2025, trade compliance Philippines, Jonhro Robles, Cebu freight clearance" />
-        <meta name="author" content="Jonhro Robles" />
-        <meta name="robots" content="index, follow" />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Cebu’s Evolving Trade Landscape | Jonhro Robles" />
-        <meta property="og:description" content="How customs modernization is changing Cebu's trade environment in 2025." />
-        <meta property="og:image" content="https://jonhrorobles.com/images/cebu-trade-blog.jpg" />
-        <meta property="og:url" content="https://jonhrorobles.com/blog" />
-        <meta property="og:type" content="article" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cebu’s Evolving Trade Landscape | Jonhro Robles" />
-        <meta name="twitter:description" content="Explore why customs expertise is more vital than ever for Cebu's importers and exporters." />
-        <meta name="twitter:image" content="https://jonhrorobles.com/images/cebu-trade-blog.jpg" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>    
-      
+      <Seo path="/blog" jsonLd={jsonLd} />
         <main className="blog-page">
       <h1>{t("blog.Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever")}</h1>
 
@@ -119,7 +85,6 @@ export default function Blog() {
         </div>
       </section>
     </main>
-    </>
     </>
   );
 }

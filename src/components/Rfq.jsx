@@ -61,10 +61,7 @@ export default function Rfq() {
 
   return (
     <>
-      <Seo
-        title="Request a Quote | Jonhro Robles Customs Broker"
-        description="Request a customs brokerage quote from Jonhro Robles, licensed customs broker in Cebu, Philippines."
-      />
+      <Seo path="/rfq" />
   <main className="rfq-page">
     <section className="rfq-container">
       <div className="rfq-header">

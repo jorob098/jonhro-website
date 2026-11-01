@@ -44,10 +44,7 @@ export default function Contact() {
 
   return (
     <>
-      <Seo
-        title="Contact Jonhro Robles | Customs Broker Cebu"
-        description="Get in touch with Jonhro Robles for customs brokerage inquiries in Cebu, Philippines."
-      />
+      <Seo path="/contact" />
     <main className="contact-page">
       <motion.section
         className="contact-container"
