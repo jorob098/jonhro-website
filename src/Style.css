@@ -2362,3 +2362,51 @@ button[disabled] {
 .mobile-nav.show {
   visibility: visible;
 }
+
+/* Homepage contact: call box */
+.contact-call {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.contact-call-label {
+  font-weight: 700;
+  color: #1d1d1d;
+}
+.contact-call-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #fff;
+  border: 1px solid #e6e1dc;
+  border-radius: 12px;
+  color: #1d1d1d;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.contact-call-link:hover {
+  border-color: #ff6b00;
+  transform: translateY(-1px);
+}
+.contact-call-link svg {
+  color: #ff6b00;
+}
+.contact-call-link span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.contact-call-link small {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #5c5c5c;
+}
+.contact-call-note {
+  font-size: 0.9rem;
+  color: #5c5c5c;
+}

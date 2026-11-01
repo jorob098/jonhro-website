@@ -178,3 +178,7 @@
         order: -1;
     }
 }
+/* Global .cta-button adds a top margin; keep hero buttons on one line */
+.hero-buttons .cta-button {
+    margin-top: 0;
+}

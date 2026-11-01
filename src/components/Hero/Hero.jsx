@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
-  Ship,
-  Globe,
-  ShieldCheck,
+  BadgeCheck,
+  CalendarCheck,
+  Anchor,
 } from "lucide-react";
 
 import HeroScene from "./HeroScene";
@@ -72,9 +72,11 @@ export default function Hero() {
               to="/rfq"
               className="cta-button"
             >
-              {t("hero.Get Started")}
+              {t("aboutPage.ctaQuote")}
             </Link>
-            
+            <a href="/track.html" className="text-button">
+              {t("servicesPage.trackCta")} →
+            </a>
           </motion.div>
 
           <motion.div
@@ -82,7 +84,7 @@ export default function Hero() {
             variants={wordVariant}
           >
             <div className="feature-pill">
-              <Ship size={18} aria-hidden="true" />
+              <BadgeCheck size={18} aria-hidden="true" />
 
               <div>
                 <strong>{t("hero.pillFreightTop")}</strong>
@@ -91,7 +93,7 @@ export default function Hero() {
             </div>
 
             <div className="feature-pill">
-              <Globe size={18} aria-hidden="true" />
+              <CalendarCheck size={18} aria-hidden="true" />
 
               <div>
                 <strong>{t("hero.pillGlobalTop")}</strong>
@@ -100,7 +102,7 @@ export default function Hero() {
             </div>
 
             <div className="feature-pill">
-              <ShieldCheck size={18} aria-hidden="true" />
+              <Anchor size={18} aria-hidden="true" />
 
               <div>
                 <strong>{t("hero.pillLicensedTop")}</strong>

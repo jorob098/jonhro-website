@@ -3,12 +3,12 @@
     "Clear Customs, Clear Mind": "Clear Customs, Clear Mind",
     "YoureTrustedHero": "Your trusted Customs Solution Partner in Cebu for hassle-free importing & exporting.",
     "Get Started": "Get Started",
-    "pillFreightTop": "Air • Sea • Land",
-    "pillFreight": "Freight",
-    "pillGlobalTop": "Global",
-    "pillGlobal": "Logistics",
-    "pillLicensedTop": "Licensed",
-    "pillLicensed": "Broker"
+    "pillFreightTop": "PRC Licensed",
+    "pillFreight": "No. 006038",
+    "pillGlobalTop": "Since 2011",
+    "pillGlobal": "15+ years",
+    "pillLicensedTop": "Port of Cebu",
+    "pillLicensed": "+ major PH ports"
   },
   "nav-links": {
     "Home": "Home",
@@ -27,8 +27,11 @@
     "Message": "Message",
     "Send Inquiry": "Send Inquiry",
     "Contact Me": "Contact Me",
-    "Let’s Bring Your Vision to Life": "Let’s Bring Your Vision to Life",
-    "Support Message Full": "Whether you're building from scratch or improving what you already have, I'm here to help you succeed. Let's talk about how I can support your next shipment."
+    "Let’s Bring Your Vision to Life": "Let’s Get Your Cargo Moving",
+    "Support Message Full": "Tell me what you’re importing or exporting and when it arrives. I’ll reply with the requirements, the steps and a quote.",
+    "Prefer to talk?": "Prefer to talk?",
+    "Call or text": "Call or text",
+    "Chat on this page": "Or use the chat button at the bottom right."
   },
   "contact-page": {
     "Let’s Talk": "Let’s Talk",
