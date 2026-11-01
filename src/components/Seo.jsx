@@ -10,7 +10,7 @@ export default function Seo({ path, title, description, type, jsonLd, noindex = 
   const pageTitle = title || page.title;
   const pageDescription = description || page.description;
   const pageType = type || page.type || 'website';
-  const url = `${SITE_URL}${path && path !== '/' ? path : '/'}`;
+  const url = `${SITE_URL}${page.canonical || (path && path !== '/' ? path : '/')}`;
 
   return (
     <Helmet>

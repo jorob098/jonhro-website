@@ -5,6 +5,8 @@
 export const SITE_URL = "https://www.jonhrorobles.com";
 export const SHARE_IMAGE = `${SITE_URL}/images/share-card.png`;
 
+import { POSTS } from "../content/posts.js";
+
 export const PAGES = {
   "/": {
     title: "Customs Broker Cebu | Jonhro Robles - Import & Export Specialist",
@@ -27,10 +29,10 @@ export const PAGES = {
       "Get in touch with Jonhro Robles for customs brokerage inquiries in Cebu, Philippines. Call, message or send an inquiry online.",
   },
   "/blog": {
-    title: "Cebu's Evolving Trade Landscape | Jonhro Robles Blog",
+    title: "Customs & Trade Insights | Jonhro Robles Blog",
     description:
-      "How customs modernization and stricter regulations are reshaping Cebu's trade environment, and why customs expertise matters more than ever.",
-    type: "article",
+      "Practical guides on Philippine customs, permits and duties from a licensed customs broker at the Port of Cebu.",
+    canonical: "/blog/",
   },
   "/rfq": {
     title: "Request a Quote | Jonhro Robles Customs Broker",
@@ -48,3 +50,12 @@ export const PAGES = {
       "Terms for using www.jonhrorobles.com, including quotations, shipment tracking and website content.",
   },
 };
+
+// One page per blog post
+for (const post of POSTS) {
+  PAGES[`/blog/${post.slug}`] = {
+    title: `${post.title} | Jonhro Robles`,
+    description: post.description,
+    type: "article",
+  };
+}

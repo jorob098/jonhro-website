@@ -10,7 +10,8 @@ import ErrorBoundary from './components/ErrorBoundary';
 const About = lazy(() => import('./components/About'));
 const Services = lazy(() => import('./components/Services'));
 const Contact = lazy(() => import('./components/Contact'));
-const Blog = lazy(() => import('./components/Blog'));
+const BlogList = lazy(() => import('./components/blog/BlogList'));
+const BlogPost = lazy(() => import('./components/blog/BlogPost'));
 const Rfq = lazy(() => import('./components/Rfq'));
 const Privacy = lazy(() => import('./components/Privacy'));
 const Terms = lazy(() => import('./components/Terms'));
@@ -28,7 +29,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/rfq" element={<Rfq />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
