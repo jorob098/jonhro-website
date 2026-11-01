@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import "./HeroScene.css";
 import globeDomeImage from "../../assets/globe-dome.webp";
 
@@ -10,19 +9,13 @@ export default function HeroScene() {
       <div className="glass-panel">
         <div className="scene">
           <div className="globe">
-            <motion.img
+            <img
               src={globeDomeImage}
               alt=""
               className="globe-img"
-              animate={{
-                y: [0, -14, 0],
-                scale: [1, 1.04, 1],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              width="1054"
+              height="1024"
+              fetchPriority="high"
             />
           </div>
         </div>
