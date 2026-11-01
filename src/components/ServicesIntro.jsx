@@ -1,4 +1,7 @@
-import { FaRegFileAlt, FaBalanceScale, FaShippingFast, FaUserTie } from 'react-icons/fa';
+import invoiceIcon from '../assets/icons3d/invoice.webp';
+import stampIcon from '../assets/icons3d/customs-stamp.webp';
+import truckIcon from '../assets/icons3d/semi-truck.webp';
+import handshakeIcon from '../assets/icons3d/hand-shake.webp';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -89,7 +92,7 @@ export default function ServicesIntro() {
     <h3>{t("servicesIntro.Import Documentation")}</h3>
     <p>{t("servicesIntro.Ensure every shipment meets all regulatory requirements, right from the start.")}</p>
     <div className="service-intro-icon-wrap">
-      <FaRegFileAlt className="service-intro-icon" />
+      <img src={invoiceIcon} alt="" className="service-intro-icon3d" width="80" height="80" loading="lazy" />
     </div>
   </motion.div>
 
@@ -97,7 +100,7 @@ export default function ServicesIntro() {
     <h3>{t("servicesIntro.Customs Compliance")}</h3>
     <p>{t("servicesIntro.Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.")}</p>
     <div className="service-intro-icon-wrap">
-      <FaBalanceScale className="service-intro-icon" />
+      <img src={stampIcon} alt="" className="service-intro-icon3d" width="80" height="80" loading="lazy" />
     </div>
   </motion.div>
 
@@ -105,7 +108,7 @@ export default function ServicesIntro() {
     <h3>{t("servicesIntro.Freight Coordination")}</h3>
     <p>{t("servicesIntro.Simplify your logistics by letting me manage freight timelines and port communication.")}</p>
     <div className="service-intro-icon-wrap">
-      <FaShippingFast className="service-intro-icon" />
+      <img src={truckIcon} alt="" className="service-intro-icon3d" width="80" height="80" loading="lazy" />
     </div>
   </motion.div>
 
@@ -113,7 +116,7 @@ export default function ServicesIntro() {
     <h3>{t("servicesIntro.Brokerage Consultancy")}</h3>
     <p>{t("servicesIntro.Get expert advice on tariff classifications, duties, and optimizing your import process.")}</p>
     <div className="service-intro-icon-wrap">
-      <FaUserTie className="service-intro-icon" />
+      <img src={handshakeIcon} alt="" className="service-intro-icon3d" width="80" height="80" loading="lazy" />
     </div>
   </motion.div>
 </motion.div>
