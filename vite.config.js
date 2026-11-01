@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { writeFileSync, readFileSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { writeFileSync, readFileSync, mkdirSync } from 'node:fs'
+import { resolve, dirname } from 'node:path'
 import { PAGES, SITE_URL } from './src/seo/pages.js'
 
 const escapeHtml = (s) =>
@@ -25,8 +25,9 @@ function perPageHtml() {
     closeBundle() {
       const template = readFileSync(resolve(outDir, 'index.html'), 'utf8')
 
+      const canonicalPath = (path, page) => page.canonical || path
       const render = (path, page) => {
-        const url = `${SITE_URL}${path === '/' ? '/' : path}`
+        const url = `${SITE_URL}${canonicalPath(path, page)}`
         const title = escapeHtml(page.title)
         const desc = escapeHtml(page.description)
         return template
@@ -41,9 +42,16 @@ function perPageHtml() {
           .replace(/(<meta name="twitter:description" content=")[^"]*/, `$1${desc}`)
       }
 
+      const paths = Object.keys(PAGES)
       for (const [path, page] of Object.entries(PAGES)) {
-        const file = path === '/' ? 'index.html' : `${path.slice(1)}.html`
-        writeFileSync(resolve(outDir, file), render(path, page))
+        // A page with sub-pages (e.g. /blog with /blog/<post>) becomes blog/index.html,
+        // because GitHub Pages serves the folder for /blog when one exists.
+        const hasChildren = paths.some((p) => p !== path && p.startsWith(`${path}/`))
+        const file =
+          path === '/' ? 'index.html' : hasChildren ? `${path.slice(1)}/index.html` : `${path.slice(1)}.html`
+        const target = resolve(outDir, file)
+        mkdirSync(dirname(target), { recursive: true })
+        writeFileSync(target, render(path, page))
       }
 
       // Unknown URLs: GitHub Pages serves this with a 404 status; the app shows its "not found" page.
@@ -53,8 +61,8 @@ function perPageHtml() {
       writeFileSync(resolve(outDir, '404.html'), notFound)
 
       const today = new Date().toISOString().slice(0, 10)
-      const urls = Object.keys(PAGES)
-        .map((p) => `  <url>\n    <loc>${SITE_URL}${p === '/' ? '/' : p}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`)
+      const urls = Object.entries(PAGES)
+        .map(([p, page]) => `  <url>\n    <loc>${SITE_URL}${canonicalPath(p, page)}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`)
         .join('\n')
       writeFileSync(
         resolve(outDir, 'sitemap.xml'),

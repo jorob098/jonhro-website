@@ -1,32 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Seo from './Seo';
-import { PAGES, SITE_URL, SHARE_IMAGE } from '../seo/pages';
 
-export default function Blog() {
+// Original July 2025 article (translated into all 6 languages via the "blog" keys).
+export default function CebuTradeLandscape() {
   const { t } = useTranslation();
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Cebu’s Evolving Trade Landscape: Why Customs Expertise Matters Now More Than Ever",
-    "description": PAGES["/blog"].description,
-    "author": { "@type": "Person", "name": "Jonhro Robles", "url": SITE_URL },
-    "datePublished": "2025-07-26",
-    "publisher": {
-      "@type": "Person",
-      "name": "Jonhro Robles",
-      "url": SITE_URL,
-    },
-    "image": SHARE_IMAGE,
-    "mainEntityOfPage": `${SITE_URL}/blog`,
-  };
-
   return (
     <>
-      <Seo path="/blog" jsonLd={jsonLd} />
-        <main className="blog-page">
-      <h1>{t("blog.Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever")}</h1>
-
       <p>{t(
         "blog.The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.")}
       </p>
@@ -69,22 +48,13 @@ export default function Blog() {
         "blog.Customs shouldn’t be a bottleneck. It should be your edge.")}
       </p>
 
-      <Link className="cta-button" to="/contact">{t("blog.Let’s Talk")}</Link>
-      
-        <section className="blog-signoff">
-        <div className="signoff-content">
-          <div className="signoff-image-wrapper">
-            <img src="/images/me-laptop.webp" alt="Jonhro coding" className="signoff-image" />
-            <div className="signoff-overlay" />
-          </div>
-          <div className="signoff-text">
-            <h3>{t("blog.When I'm not clearing shipments...")}</h3>
-            <p>{t("blog.I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.")}</p>
-            <Link to="/contact" className="cta-button">{t("blog.Let’s Build Something")}</Link>
-          </div>
+      <div className="post-cta">
+        <h2>{t("blog.Let’s Talk")}</h2>
+        <div className="post-cta-buttons">
+          <Link to="/rfq" className="post-btn-primary">Request a Quote</Link>
+          <Link to="/contact" className="post-btn-secondary">Contact Me</Link>
         </div>
-      </section>
-    </main>
+      </div>
     </>
   );
 }
