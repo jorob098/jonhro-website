@@ -2,7 +2,13 @@
   "hero": {
     "Clear Customs, Clear Mind": "Clear Customs, Clear Mind",
     "YoureTrustedHero": "Your trusted Customs Solution Partner in Cebu for hassle-free importing & exporting.",
-    "Get Started": "Get Started"
+    "Get Started": "Get Started",
+    "pillFreightTop": "Air • Sea • Land",
+    "pillFreight": "Freight",
+    "pillGlobalTop": "Global",
+    "pillGlobal": "Logistics",
+    "pillLicensedTop": "Licensed",
+    "pillLicensed": "Broker"
   },
   "nav-links": {
     "Home": "Home",
@@ -13,66 +19,52 @@
     "RFQ": "RFQ"
   },
   "contactIntro": {
-  "Send an Inquiry": "Send an Inquiry",
-  "First Name": "First Name",
-  "Last Name": "Last Name",
-  "Contact No.": "Contact No.",
-  "Email": "Email",
-  "Message": "Message",
-  "Send Inquiry": "Send Inquiry",
-  "Contact Me": "Contact Me",
-  "Let’s Bring Your Vision to Life": "Let’s Bring Your Vision to Life",
-  "Support Message Full": "Whether you're building from scratch or improving what you already have, I'm here to help you succeed. Let's talk about how I can support your next shipment."
-},
+    "Send an Inquiry": "Send an Inquiry",
+    "First Name": "First Name",
+    "Last Name": "Last Name",
+    "Contact No.": "Contact No.",
+    "Email": "Email",
+    "Message": "Message",
+    "Send Inquiry": "Send Inquiry",
+    "Contact Me": "Contact Me",
+    "Let’s Bring Your Vision to Life": "Let’s Bring Your Vision to Life",
+    "Support Message Full": "Whether you're building from scratch or improving what you already have, I'm here to help you succeed. Let's talk about how I can support your next shipment."
+  },
   "contact-page": {
-      "Let’s Talk": "Let’s Talk",
-      "Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.": "Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.",
-      "First Name": "First Name",
-      "Last Name": "Last Name",
-      "Contact No.": "Contact No.",
-      "Email": "Email",
-      "Message": "Message",
-      "Send Inquiry": "Send Inquiry"
-    },
-
-  
+    "Let’s Talk": "Let’s Talk",
+    "Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.": "Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.",
+    "First Name": "First Name",
+    "Last Name": "Last Name",
+    "Contact No.": "Contact No.",
+    "Email": "Email",
+    "Message": "Message",
+    "Send Inquiry": "Send Inquiry"
+  },
   "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "End to End Customs Services from Cebu to Key Ports Nationwide",
     "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.",
-
     "Customs Clearance - Import & Export": "Customs Clearance - Import & Export",
     "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.",
-
     "Customs Brokerage & Tariff Consultation": "Customs Brokerage & Tariff Consultation",
     "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "Professional customs brokerage services with guidance on tariff classification and duty calculations.",
-
     "Freight Consultation": "Freight Consultation",
     "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.",
-
     "Real-Time Shipment Monitoring": "Real-Time Shipment Monitoring",
     "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.",
-
     "Customs Entry Filing & Records": "Customs Entry Filing & Records",
     "Accurate filing of customs entries for future reference and audits to ensure compliance.": "Accurate filing of customs entries for future reference and audits to ensure compliance.",
-
     "Cross Docking Arrangements": "Cross Docking Arrangements",
     "Seamless coordination for cross docking services to support efficient cargo distribution.": "Seamless coordination for cross docking services to support efficient cargo distribution."
   },
-
-
   "why-choose": {
     "Why Choose Me": "Why Choose Me",
-    "10+Years": "10+ Years of Experience in Customs Brokerage & Import Solutions",
-
+    "10+Years": "15+ Years of Experience in Customs Brokerage & Import Solutions",
     "Proven Expertise": "Proven Expertise",
     "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.",
-
     "Responsive & Reliable": "Responsive & Reliable",
     "Quick turnarounds, clear updates — always available when you need answers.": "Quick turnarounds, clear updates — always available when you need answers.",
-
     "Tailored Approach": "Tailored Approach",
     "Solutions matched to your business goals, not a one-size-fits-all service.": "Solutions matched to your business goals, not a one-size-fits-all service.",
-
     "Client-First Focus": "Client-First Focus",
     "I value your time, compliance, and business success as if it were my own.": "I value your time, compliance, and business success as if it were my own."
   },
@@ -84,91 +76,108 @@
     "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,",
     "proactive coordination, and full compliance to help you avoid costly delays.": "proactive coordination, and full compliance to help you avoid costly delays."
   },
-
   "rfq": {
     "Request for Quotation": "Request for Quotation",
     "Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.": "Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.",
     "From customs clearance to logistics — let’s make your cargo move.": "From customs clearance to logistics — let’s make your cargo move.",
-    
     "Full Name": "Full Name",
     "Email Address": "Email Address",
     "Company Name": "Company Name",
     "Cargo & Shipment Details": "Cargo & Shipment Details",
     "Request Quote": "Request Quote",
-
     "Please verify you're human 🤖": "Please verify you're human 🤖",
     "📨 RFQ submitted successfully!": "📨 RFQ submitted successfully!",
     "❌ Something went wrong.": "❌ Something went wrong.",
     "⚠️ Network error. Please try again.": "⚠️ Network error. Please try again."
   },
-
   "blog": {
     "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever": "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever",
-
     "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.": "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.",
-
     "Cebu remains a strategic gateway for international trade, but it’s no longer enough to simply move goods. Importers must now navigate tighter timelines, more complex classifications, and evolving tariff policies — all while maintaining profitability and legal compliance. Many small and mid-sized businesses in Mandaue, Talisay, and even Lapu-Lapu are feeling the pinch, especially with rising freight costs and inconsistent documentation requirements.": "Cebu remains a strategic gateway for international trade, but it’s no longer enough to simply move goods. Importers must now navigate tighter timelines, more complex classifications, and evolving tariff policies — all while maintaining profitability and legal compliance. Many small and mid-sized businesses in Mandaue, Talisay, and even Lapu-Lapu are feeling the pinch, especially with rising freight costs and inconsistent documentation requirements.",
-
     "These challenges aren’t just bureaucratic hurdles — they directly impact your ability to fulfill orders, retain customers, and avoid penalties. A single misclassified item or missing import entry can now delay an entire shipment by days — even weeks — leading to demurrage charges, seized goods, or worse, audit flags from the BOC.": "These challenges aren’t just bureaucratic hurdles — they directly impact your ability to fulfill orders, retain customers, and avoid penalties. A single misclassified item or missing import entry can now delay an entire shipment by days — even weeks — leading to demurrage charges, seized goods, or worse, audit flags from the BOC.",
-
     "Where a Licensed Customs Broker Comes In": "Where a Licensed Customs Broker Comes In",
-
     "As a Licensed Customs Broker based in Cebu, I’ve seen firsthand how companies suffer from oversight or misinformation. An LCB’s role is not just transactional — it’s strategic. From accurate tariff classification and documentation to coordinating with port authorities and monitoring your goods' journey from origin to destination, we operate as your compliance firewall and logistics advocate.": "As a Licensed Customs Broker based in Cebu, I’ve seen firsthand how companies suffer from oversight or misinformation. An LCB’s role is not just transactional — it’s strategic. From accurate tariff classification and documentation to coordinating with port authorities and monitoring your goods' journey from origin to destination, we operate as your compliance firewall and logistics advocate.",
-
     "In 2025, customs is more than paperwork. It’s a moving target — with e-customs transitions, post-entry audits, and the BOC’s digital modernization project all changing how trade operates in real time. Businesses that work with brokers who understand both the letter and the spirit of the law gain a real advantage.": "In 2025, customs is more than paperwork. It’s a moving target — with e-customs transitions, post-entry audits, and the BOC’s digital modernization project all changing how trade operates in real time. Businesses that work with brokers who understand both the letter and the spirit of the law gain a real advantage.",
-
     "Observations From the Ground": "Observations From the Ground",
-
     "So far this year, I’ve observed a surge in the use of consolidated shipments, especially for SMEs. While it cuts costs, it also complicates documentation and classification. The rise in direct-to-port shipments from smaller logistics startups has also raised red flags for many customs examiners, leading to an uptick in physical inspections.": "So far this year, I’ve observed a surge in the use of consolidated shipments, especially for SMEs. While it cuts costs, it also complicates documentation and classification. The rise in direct-to-port shipments from smaller logistics startups has also raised red flags for many customs examiners, leading to an uptick in physical inspections.",
-
     "I’ve also seen exporters — especially those in furniture and dried goods — struggle with HS code mismatches, costing them thousands in unexpected duties. These aren’t flukes. They’re patterns. And they speak to a need for tailored, consistent customs strategy.": "I’ve also seen exporters — especially those in furniture and dried goods — struggle with HS code mismatches, costing them thousands in unexpected duties. These aren’t flukes. They’re patterns. And they speak to a need for tailored, consistent customs strategy.",
-
     "A Partnership That Moves With You": "A Partnership That Moves With You",
-
     "I’m Jonhro Robles, a Licensed Customs Broker committed to helping Cebuanos succeed in international trade. My role is to take the pressure off your operations and ensure you’re not only compliant — but competitive. Whether you’re new to importing or scaling your exports, I provide clear advice, up-to-date insights, and seamless execution across ports and borders.": "I’m Jonhro Robles, a Licensed Customs Broker committed to helping Cebuanos succeed in international trade. My role is to take the pressure off your operations and ensure you’re not only compliant — but competitive. Whether you’re new to importing or scaling your exports, I provide clear advice, up-to-date insights, and seamless execution across ports and borders.",
-
     "Customs shouldn’t be a bottleneck. It should be your edge.": "Customs shouldn’t be a bottleneck. It should be your edge.",
-
     "Let’s Talk": "Let’s Talk",
-
     "When I'm not clearing shipments...": "When I'm not clearing shipments...",
-
     "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.": "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.",
-
     "Let’s Build Something": "Let’s Build Something"
   },
-
   "servicesIntro": {
-  "Services": "Services",
-  "Freight, Clearance & Compliance": "Freight, Clearance & Compliance",
-  "Seamlessly Delivered": "Seamlessly Delivered",
-  "View Services": "View Services",
-  "GetReliableMessage": "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.",
-  "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "Whether it's one-time shipment or long-term assistance, you're covered with expert service.",
-  "Import Documentation": "Import Documentation",
-  "Ensure every shipment meets all regulatory requirements, right from the start.": "Ensure every shipment meets all regulatory requirements, right from the start.",
-  "Customs Compliance": "Customs Compliance",
-  "Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.": "Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.",
-  "Freight Coordination": "Freight Coordination",
-  "Simplify your logistics by letting me manage freight timelines and port communication.": "Simplify your logistics by letting me manage freight timelines and port communication.",
-  "Brokerage Consultancy": "Brokerage Consultancy",
-  "Get expert advice on tariff classifications, duties, and optimizing your import process.": "Get expert advice on tariff classifications, duties, and optimizing your import process."
-},
-
-"aboutPage": {
-  "aboutPageHeader": "Customs Solutions Partner in Cebu — Your Trusted Trade Ally",
-  "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.",
-  "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.",
-  "ifYoureLooking": "If youre looking for a reliable customs solutions partner who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.",
-  "Work With Me": "Work With Me"
-},
-
-"Affil":{
-  "I am affiliated with": "I am affiliated with"
+    "Services": "Services",
+    "Freight, Clearance & Compliance": "Freight, Clearance & Compliance",
+    "Seamlessly Delivered": "Seamlessly Delivered",
+    "View Services": "View Services",
+    "GetReliableMessage": "Get reliable and timely customs brokerage and logistics support that adapts to your business needs.",
+    "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "Whether it's one-time shipment or long-term assistance, you're covered with expert service.",
+    "Import Documentation": "Import Documentation",
+    "Ensure every shipment meets all regulatory requirements, right from the start.": "Ensure every shipment meets all regulatory requirements, right from the start.",
+    "Customs Compliance": "Customs Compliance",
+    "Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.": "Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.",
+    "Freight Coordination": "Freight Coordination",
+    "Simplify your logistics by letting me manage freight timelines and port communication.": "Simplify your logistics by letting me manage freight timelines and port communication.",
+    "Brokerage Consultancy": "Brokerage Consultancy",
+    "Get expert advice on tariff classifications, duties, and optimizing your import process.": "Get expert advice on tariff classifications, duties, and optimizing your import process."
+  },
+  "aboutPage": {
+    "aboutPageHeader": "Customs Solutions Partner in Cebu — Your Trusted Trade Ally",
+    "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated more than 15 years to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.",
+    "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.",
+    "ifYoureLooking": "If youre looking for a reliable customs solutions partner who understands the pulse of Philippine trade and the demands of global logistics, let’s work together to move your goods smarter and faster.",
+    "Work With Me": "Work With Me"
+  },
+  "Affil": {
+    "I am affiliated with": "I am affiliated with"
+  },
+  "nav": {
+    "Track Shipment": "Track Shipment",
+    "Menu": "Menu",
+    "Close Menu": "Close menu",
+    "Language": "Language"
+  },
+  "footer": {
+    "Quick Links": "Quick Links",
+    "Home": "Home",
+    "Services": "Services",
+    "About": "About",
+    "Contact": "Contact",
+    "Blog": "Blog",
+    "Location": "Location",
+    "Phone": "Phone",
+    "Follow Me": "Follow Me",
+    "All rights reserved.": "All rights reserved."
+  },
+  "chat": {
+    "Chat with us": "Chat with me",
+    "Open chat": "Open chat",
+    "Close chat": "Close chat",
+    "status": "Leave a message — I'll reply as soon as I can",
+    "What's your name?": "What's your name?",
+    "Your name": "Your name",
+    "Continue": "Continue",
+    "empty": "Send me a message about your shipment.",
+    "Type a message...": "Type a message...",
+    "Send": "Send",
+    "Connecting...": "Connecting..."
+  },
+  "form": {
+    "Sending...": "Sending...",
+    "sent": "Message sent! I'll get back to you soon.",
+    "rfqSent": "Quote request sent! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again.",
+    "networkError": "Network error. Please try again.",
+    "verifyHuman": "Please confirm you're not a robot.",
+    "First Name": "First name",
+    "Last Name": "Last name",
+    "messagePlaceholder": "How can I help?",
+    "Your Name": "Your name",
+    "Optional": "(Optional)",
+    "detailsPlaceholder": "Describe your shipment: commodity, volume, origin, port of entry, etc."
+  }
 }
-}
-
-
-
-
-

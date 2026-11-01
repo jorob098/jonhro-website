@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Toast from "../components/Toast"; // Ensure Toast.jsx exists
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from 'react-i18next';
 import Seo from './Seo';
+import Honeypot from './Honeypot';
+import { submitForm } from '../services/submitForm';
 
 export default function Rfq() {
   const [fullName, setFullName] = useState('');
@@ -13,46 +15,47 @@ export default function Rfq() {
   const [toast, setToast] = useState(null);
   const { t } = useTranslation();
 
+  const [website, setWebsite] = useState('');
+  const [sending, setSending] = useState(false);
+  const recaptchaRef = useRef(null);
+
+  const resetRecaptcha = () => {
+    recaptchaRef.current?.reset();
+    setRecaptchaToken('');
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (sending) return;
 
     if (!recaptchaToken) {
-      setToast({ message: "Please verify you're human 🤖", type: "error" });
+      setToast({ message: t("form.verifyHuman"), type: "error" });
       return;
     }
 
-    const formData = new URLSearchParams();
-    formData.append('fullName', fullName);
-    formData.append('email', email);
-    formData.append('company', company);
-    formData.append('details', details);
-    formData.append('recaptchaToken', recaptchaToken);
-    formData.append('formType', 'rfq');
-
+    setSending(true);
     try {
-      const response = await fetch(import.meta.env.VITE_REACT_APP_GAS_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: formData.toString(),
+      const result = await submitForm({
+        fullName, email, company, details, recaptchaToken, website,
+        formType: 'rfq',
       });
 
-      const result = await response.json();
-
       if (result.success) {
-        setToast({ message: "📨 RFQ submitted successfully!", type: "success" });
+        setToast({ message: t("form.rfqSent"), type: "success" });
         setFullName('');
         setEmail('');
         setCompany('');
         setDetails('');
-        setRecaptchaToken('');
       } else {
-        setToast({ message: result.error || "❌ Something went wrong.", type: "error" });
+        setToast({ message: result.error || t("form.error"), type: "error" });
       }
     } catch (err) {
       console.error("RFQ Error:", err);
-      setToast({ message: "⚠️ Network error. Please try again.", type: "error" });
+      setToast({ message: t("form.networkError"), type: "error" });
+    } finally {
+      // A reCAPTCHA token can only be used once, so always reset it.
+      resetRecaptcha();
+      setSending(false);
     }
   };
 
@@ -65,7 +68,7 @@ export default function Rfq() {
   <main className="rfq-page">
     <section className="rfq-container">
       <div className="rfq-header">
-        <h2>{t("rfq.Request for Quotation")}</h2>
+        <h1>{t("rfq.Request for Quotation")}</h1>
         <p>
           {t("rfq.Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.")}
         </p>
@@ -80,7 +83,8 @@ export default function Rfq() {
           <input
             id="fullName"
             name="fullName"
-            placeholder="Your Name"
+            placeholder={t("form.Your Name")}
+            autoComplete="name"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             required
@@ -105,7 +109,8 @@ export default function Rfq() {
           <input
             id="company"
             name="company"
-            placeholder="(Optional)"
+            placeholder={t("form.Optional")}
+            autoComplete="organization"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
           />
@@ -116,7 +121,7 @@ export default function Rfq() {
           <textarea
             id="details"
             name="details"
-            placeholder="Describe your shipment, commodity, volume, etc."
+            placeholder={t("form.detailsPlaceholder")}
             rows="6"
             value={details}
             onChange={(e) => setDetails(e.target.value)}
@@ -124,14 +129,18 @@ export default function Rfq() {
           ></textarea>
         </div>
 
+        <Honeypot value={website} onChange={(e) => setWebsite(e.target.value)} />
+
         <ReCAPTCHA
+          ref={recaptchaRef}
           sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-          onChange={token => setRecaptchaToken(token)}
+          onChange={(token) => setRecaptchaToken(token || '')}
+          onExpired={() => setRecaptchaToken('')}
           theme="dark"
         />
 
-        <button type="submit" className="send-inquiry-btn">
-          📩 {t("rfq.Request Quote")}
+        <button type="submit" className="send-inquiry-btn" disabled={sending}>
+          📩 {sending ? t("form.Sending...") : t("rfq.Request Quote")}
         </button>
       </form>
     </section>

@@ -23,7 +23,11 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^([A-Z_]|motion$)' }],
+      'no-unused-vars': ['error', {
+        // JSX usage isn't seen by the core rule: allow components and framer-motion
+        varsIgnorePattern: '^([A-Z_]|motion$)',
+        argsIgnorePattern: '^[A-Z_]',
+      }],
     },
   },
 ])

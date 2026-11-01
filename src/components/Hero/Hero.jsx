@@ -42,6 +42,7 @@ export default function Hero() {
 
   return (
     <motion.section
+      id="hero"
       className="hero"
       initial="hidden"
       animate="visible"
@@ -86,29 +87,29 @@ export default function Hero() {
             variants={wordVariant}
           >
             <div className="feature-pill">
-              <Ship size={18} />
+              <Ship size={18} aria-hidden="true" />
 
               <div>
-                <strong>Air • Sea • Land</strong>
-                <span>Freight</span>
+                <strong>{t("hero.pillFreightTop")}</strong>
+                <span>{t("hero.pillFreight")}</span>
               </div>
             </div>
 
             <div className="feature-pill">
-              <Globe size={18} />
+              <Globe size={18} aria-hidden="true" />
 
               <div>
-                <strong>Global</strong>
-                <span>Logistics</span>
+                <strong>{t("hero.pillGlobalTop")}</strong>
+                <span>{t("hero.pillGlobal")}</span>
               </div>
             </div>
 
             <div className="feature-pill">
-              <ShieldCheck size={18} />
+              <ShieldCheck size={18} aria-hidden="true" />
 
               <div>
-                <strong>Licensed</strong>
-                <span>Broker</span>
+                <strong>{t("hero.pillLicensedTop")}</strong>
+                <span>{t("hero.pillLicensed")}</span>
               </div>
             </div>
           </motion.div>

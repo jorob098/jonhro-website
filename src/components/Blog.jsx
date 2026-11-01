@@ -114,7 +114,7 @@ export default function Blog() {
           <div className="signoff-text">
             <h3>{t("blog.When I'm not clearing shipments...")}</h3>
             <p>{t("blog.I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.")}</p>
-            <a href="/#contact" className="cta-button">{t("blog.Let’s Build Something")}</a>
+            <Link to="/contact" className="cta-button">{t("blog.Let’s Build Something")}</Link>
           </div>
         </div>
       </section>

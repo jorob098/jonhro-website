@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Seo from './Seo';
+
+const MotionLink = motion.create(Link);
 
 export default function About() {
   const { t } = useTranslation();
@@ -36,15 +39,15 @@ export default function About() {
           </motion.p>
         ))}
 
-        <motion.a
-          href="#contact"
+        <MotionLink
+          to="/contact"
           className="cta-button"
           initial={{ opacity: 0, x: 50, scale: 0.95 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ delay: 0.7, duration: 0.5 }}
         >
           {t("aboutPage.Work With Me")}
-        </motion.a>
+        </MotionLink>
       </div>
     </section>
     </>

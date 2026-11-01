@@ -9,11 +9,11 @@ const { t } = useTranslation();
       <p>{t('Affil.I am affiliated with')}</p>
       <div className="affiliation-logos">
         <div className="affiliation-item">
-          <img src={prcLogo} alt="PRC Logo" />
+          <img src={prcLogo} alt="Professional Regulation Commission (PRC) logo" width="80" height="80" />
           <div className="abbr">PRC</div>
         </div>
         <div className="affiliation-item">
-          <img src={ccbiLogo} alt="CCBI Logo" />
+          <img src={ccbiLogo} alt="Chamber of Customs Brokers, Inc. (CCBI) logo" width="80" height="80" />
           <div className="abbr">CCBI</div>
         </div>
       </div>

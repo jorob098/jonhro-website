@@ -1,26 +1,21 @@
 import { useTranslation } from "react-i18next";
+import { LANGUAGES } from "../i18n";
 
 export default function LanguageSwitcher() {
-  const { i18n } = useTranslation();
-
-  const handleChange = (e) => {
-    const lang = e.target.value;
-    i18n.changeLanguage(lang);
-    console.log("Language changed to", lang);
-  };
+  const { i18n, t } = useTranslation();
 
   return (
     <select
-      onChange={handleChange}
-      value={i18n.language}
+      onChange={(e) => i18n.changeLanguage(e.target.value)}
+      value={i18n.resolvedLanguage || "en"}
       className="language-dropdown"
+      aria-label={t("nav.Language")}
     >
-      <option value="en">🇺🇸 English</option>
-      <option value="tl">🇵🇭 Filipino</option>
-      <option value="es">🇪🇸 Español</option>
-      <option value="ja">🇯🇵 日本語</option>
-      <option value="zh">🇨🇳 中文</option>
-      <option value="ko">🇰🇷 한국어</option>
+      {LANGUAGES.map(({ code, label }) => (
+        <option key={code} value={code}>
+          {label}
+        </option>
+      ))}
     </select>
   );
 }

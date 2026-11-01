@@ -1,115 +1,114 @@
- {
-    "hero": {
-        "Clear Customs, Clear Mind": "통관은 깔끔하게, 마음은 편안하게",
-        "YoureTrustedHero": "번거롭지 않은 수입·수출을 위한 세부의 신뢰할 수 있는 통관 솔루션 파트너",
-        "Get Started": "시작하기"
-    },
-    "nav-links": {
-        "Home": "홈",
-        "About": "소개",
-        "Services": "서비스",
-        "Contact": "문의하기",
-        "Blog": "블로그",
-        "RFQ": "견적 요청"
-    },
-    "contactIntro": {
-        "Send an Inquiry": "문의 보내기",
-        "First Name": "이름",
-        "Last Name": "성",
-        "Contact No.": "연락처",
-        "Email": "이메일",
-        "Message": "메시지",
-        "Send Inquiry": "문의 보내기",
-        "Contact Me": "문의하기",
-        "Let’s Bring Your Vision to Life": "당신의 아이디어를 실현해봅시다",
-        "Support Message Full": "처음부터 시작하든 기존을 개선하든, 성공을 위해 도와드리겠습니다. 다음 선적을 어떻게 지원해 드릴 수 있을지 이야기해 보겠습니다."
-    },
-    "contact-page": {
-        "Let’s Talk": "이야기해요",
-        "Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.": "문의사항이 있으면 알려주세요. 단순한 질문부터 복잡한 물류 문제까지 도와드릴 준비가 되어 있습니다.",
-        "First Name": "이름",
-        "Last Name": "성",
-        "Contact No.": "연락처",
-        "Email": "이메일",
-        "Message": "메시지",
-        "Send Inquiry": "문의 보내기"
-    },
-    "servicesPage": {
+{
+  "hero": {
+    "Clear Customs, Clear Mind": "통관은 깔끔하게, 마음은 편안하게",
+    "YoureTrustedHero": "번거롭지 않은 수입·수출을 위한 세부의 신뢰할 수 있는 통관 솔루션 파트너",
+    "Get Started": "시작하기",
+    "pillFreightTop": "항공・해상・육상",
+    "pillFreight": "화물",
+    "pillGlobalTop": "글로벌",
+    "pillGlobal": "물류",
+    "pillLicensedTop": "공인",
+    "pillLicensed": "관세사"
+  },
+  "nav-links": {
+    "Home": "홈",
+    "About": "소개",
+    "Services": "서비스",
+    "Contact": "문의하기",
+    "Blog": "블로그",
+    "RFQ": "견적 요청"
+  },
+  "contactIntro": {
+    "Send an Inquiry": "문의 보내기",
+    "First Name": "이름",
+    "Last Name": "성",
+    "Contact No.": "연락처",
+    "Email": "이메일",
+    "Message": "메시지",
+    "Send Inquiry": "문의 보내기",
+    "Contact Me": "문의하기",
+    "Let’s Bring Your Vision to Life": "당신의 아이디어를 실현해봅시다",
+    "Support Message Full": "처음부터 시작하든 기존을 개선하든, 성공을 위해 도와드리겠습니다. 다음 선적을 어떻게 지원해 드릴 수 있을지 이야기해 보겠습니다."
+  },
+  "contact-page": {
+    "Let’s Talk": "이야기해요",
+    "Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.": "문의사항이 있으면 알려주세요. 단순한 질문부터 복잡한 물류 문제까지 도와드릴 준비가 되어 있습니다.",
+    "First Name": "이름",
+    "Last Name": "성",
+    "Contact No.": "연락처",
+    "Email": "이메일",
+    "Message": "메시지",
+    "Send Inquiry": "문의 보내기"
+  },
+  "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "세부에서 전국 주요 항구까지 원스톱 통관 서비스",
     "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "저는 세부를 기반으로, 마닐라, 카가얀, 다바오, 일로일로, 수빅 등 주요 항구에서도 서비스를 확장하여 원스톱 통관 서비스를 제공합니다. 이를 통해 원활한 통관과 전국적인 안정적인 무역 지원을 보장합니다.",
-
     "Customs Clearance - Import & Export": "수입 및 수출 통관",
     "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "항공 및 해상 화물의 통관 절차를 효율적으로 처리하여 원활하고 신속한 화물 반출을 보장합니다.",
-
     "Customs Brokerage & Tariff Consultation": "통관 대행 및 관세 자문",
     "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "전문적인 통관 대행 서비스와 함께 관세 분류 및 세액 계산에 대한 자문을 제공합니다.",
-
     "Freight Consultation": "화물 운송 상담",
     "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "신뢰할 수 있는 포워더와 협력하여 귀하의 화물 운송 요구를 원활하게 지원합니다.",
-
     "Real-Time Shipment Monitoring": "실시간 화물 모니터링",
     "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "실시간 모니터링과 적극적인 업데이트를 통해 화물 진행 상황을 항상 확인할 수 있습니다.",
-
     "Customs Entry Filing & Records": "통관 신고 및 기록 관리",
     "Accurate filing of customs entries for future reference and audits to ensure compliance.": "향후 참조와 감사에 대비해 정확하게 통관 신고를 작성하고 규정 준수를 보장합니다.",
-
     "Cross Docking Arrangements": "크로스 도킹 조율",
     "Seamless coordination for cross docking services to support efficient cargo distribution.": "효율적인 화물 분배를 지원하기 위해 크로스 도킹 서비스를 원활하게 조율합니다."
   },
-  
-    "why-choose": {
-        "Why Choose Me": "왜 저를 선택해야 하나요",
-        "10+Years" : "통관 중개 및 수입 솔루션 분야에서 10년 이상의 경험",
-        "Proven Expertise": "검증된 전문성",
-        "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "다년간의 통관 절차 경험을 통해 귀하의 수입품이 원활하고 제때 통관되도록 보장합니다.",
-        "Responsive & Reliable": "신속하고 신뢰할 수 있는 응답",
-        "Quick turnarounds, clear updates — always available when you need answers.": "신속한 처리와 명확한 업데이트 — 필요할 때 언제든지 대응합니다.",
-        "Tailored Approach": "맞춤형 접근",
-        "Solutions matched to your business goals, not a one-size-fits-all service.": "귀사의 비즈니스 목표에 맞춘 맞춤 솔루션을 제공합니다.",
-        "Client-First Focus": "고객 우선",
-        "I value your time, compliance, and business success as if it were my own.": "귀하의 시간과 성공을 제 일처럼 소중히 여깁니다."
-    },
-    "get-to-know": {
-        "Get to Know Me": "저를 소개합니다",
-        "Your Trusted Customs Solutions Specialist": "신뢰할 수 있는 통관 솔루션 전문가",
-        "About Me": "저에 대해",
-        "When you choose me as your freelance customs broker, you get more than clearance —": "저를 프리랜서 통관사로 선택하시면 단순한 통관을 넘어서 —",
-        "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "빠르고 신뢰할 수 있으며 안심할 수 있는 서비스를 제공합니다. 복잡한 문서를 간편하게 처리해 드립니다.",
-        "proactive coordination, and full compliance to help you avoid costly delays.": "사전 조율과 철저한 규정 준수로 불필요한 지연을 방지합니다."
-    },
-    "rfq": {
-        "Request for Quotation": "견적 요청",
-        "Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.": "수입/수출 관련 견적이 필요하신가요? 양식을 제출하시면 귀하의 화물에 맞춘 맞춤형 솔루션을 제공해 드립니다.",
-        "From customs clearance to logistics — let’s make your cargo move.": "통관에서 물류까지 — 화물이 원활히 이동하도록 함께합니다.",
-        "Full Name": "이름 전체",
-        "Email Address": "이메일 주소",
-        "Company Name": "회사명",
-        "Cargo & Shipment Details": "화물 및 배송 정보",
-        "Request Quote": "견적 요청",
-        "Please verify you're human 🤖": "로봇이 아님을 확인해주세요 🤖",
-        "📨 RFQ submitted successfully!": "📨 견적 요청이 성공적으로 제출되었습니다!",
-        "❌ Something went wrong.": "❌ 문제가 발생했습니다.",
-        "⚠️ Network error. Please try again.": "⚠️ 네트워크 오류입니다. 다시 시도해주세요."
-    },
-        "blog": {
-  "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever": "세부의 진화하는 무역 환경: 지금 통관 전문 지식이 더 중요한 이유",
-  "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.": "2025년은 세부의 수입 및 수출 환경에 중대한 변화를 가져왔습니다. 디지털 통관 시스템의 고도화, 필리핀 세관청(BOC)의 엄격한 규제, 그리고 글로벌 무역 관행에 대한 감시가 강화되면서, 세부에서 운영되는 수출입업체들은 중요한 기로에 서 있습니다.",
-  "Cebu remains a strategic gateway for international trade, but it’s no longer enough to simply move goods. Importers must now navigate tighter timelines, more complex classifications, and evolving tariff policies — all while maintaining profitability and legal compliance. Many small and mid-sized businesses in Mandaue, Talisay, and even Lapu-Lapu are feeling the pinch, especially with rising freight costs and inconsistent documentation requirements.": "세부는 여전히 국제 무역의 전략적 관문이지만, 단순히 물품을 이동시키는 것만으로는 부족합니다. 수입업체들은 이제 더 촉박한 일정, 복잡한 품목 분류, 변화하는 관세 정책을 따라가야 하며, 이 모든 과정을 수익성과 법적 준수를 유지하면서 처리해야 합니다. 만다웨, 탈리사이, 라푸라푸의 중소기업들은 특히 운송비 상승과 문서 요건의 불일치로 인해 큰 압박을 느끼고 있습니다.",
-  "These challenges aren’t just bureaucratic hurdles — they directly impact your ability to fulfill orders, retain customers, and avoid penalties. A single misclassified item or missing import entry can now delay an entire shipment by days — even weeks — leading to demurrage charges, seized goods, or worse, audit flags from the BOC.": "이러한 문제들은 단순한 행정 절차가 아니라, 실제로 주문 이행, 고객 유지, 벌금 회피 능력에 직접적인 영향을 줍니다. 단 하나의 품목 분류 오류나 누락된 수입 신고만으로도 선적 전체가 며칠, 심지어 몇 주나 지연될 수 있으며, 이로 인해 체선료, 압수, 또는 세관청의 감사 대상으로 지정될 수 있습니다.",
-  "Where a Licensed Customs Broker Comes In": "공인 통관사의 역할",
-  "As a Licensed Customs Broker based in Cebu, I’ve seen firsthand how companies suffer from oversight or misinformation. An LCB’s role is not just transactional — it’s strategic. From accurate tariff classification and documentation to coordinating with port authorities and monitoring your goods' journey from origin to destination, we operate as your compliance firewall and logistics advocate.": "세부를 기반으로 활동하는 공인 통관사로서, 저는 기업들이 정보 부족이나 실수로 인해 얼마나 큰 어려움을 겪는지 직접 목격해 왔습니다. 통관사는 단순한 행정 업무자가 아니라 전략적 파트너입니다. 정확한 품목 분류와 문서 작성, 항만 당국과의 협조, 화물의 출발지부터 도착지까지의 전 과정 모니터링에 이르기까지, 우리는 귀사의 규제 준수 방어선이자 물류 대변인 역할을 합니다.",
-  "In 2025, customs is more than paperwork. It’s a moving target — with e-customs transitions, post-entry audits, and the BOC’s digital modernization project all changing how trade operates in real time. Businesses that work with brokers who understand both the letter and the spirit of the law gain a real advantage.": "2025년 현재 통관은 단순한 서류 작업이 아닙니다. 전자 통관 전환, 사후 감사, 세관청의 디지털 현대화 프로젝트 등으로 인해 무역은 실시간으로 변화하고 있습니다. 법의 조항과 취지를 모두 이해하는 통관사와 협업하는 기업들은 진정한 경쟁 우위를 가질 수 있습니다.",
-  "Observations From the Ground": "현장의 통찰",
-  "So far this year, I’ve observed a surge in the use of consolidated shipments, especially for SMEs. While it cuts costs, it also complicates documentation and classification. The rise in direct-to-port shipments from smaller logistics startups has also raised red flags for many customs examiners, leading to an uptick in physical inspections.": "올해 들어 중소기업들을 중심으로 혼합 선적(consolidated shipments)의 사용이 급증했습니다. 비용은 절감되지만, 문서 작성과 품목 분류는 훨씬 복잡해집니다. 또한, 소형 물류 스타트업의 항만 직송 방식이 증가하면서, 많은 세관 심사관들이 주의 깊게 살펴보고 있으며, 실제 검사 비율도 증가하고 있습니다.",
-  "I’ve also seen exporters — especially those in furniture and dried goods — struggle with HS code mismatches, costing them thousands in unexpected duties. These aren’t flukes. They’re patterns. And they speak to a need for tailored, consistent customs strategy.": "수출업체들, 특히 가구나 건조식품을 다루는 업자들이 HS 코드 오류로 인해 수천 페소의 추가 관세를 부담하는 사례를 자주 접하고 있습니다. 이것은 단순한 실수가 아니라 반복되는 패턴이며, 체계적이고 맞춤형 통관 전략의 필요성을 보여줍니다.",
-  "A Partnership That Moves With You": "함께 성장하는 파트너십",
-  "I’m Jonhro Robles, a Licensed Customs Broker committed to helping Cebuanos succeed in international trade. My role is to take the pressure off your operations and ensure you’re not only compliant — but competitive. Whether you’re new to importing or scaling your exports, I provide clear advice, up-to-date insights, and seamless execution across ports and borders.": "저는 세부 기반의 공인 통관사 존로 롭레스입니다. 세부 기업들이 국제 무역에서 성공할 수 있도록 돕는 것이 제 사명입니다. 귀사의 운영 부담을 덜어주고, 법규 준수뿐만 아니라 경쟁력까지 확보할 수 있도록 돕겠습니다. 처음 수입을 시작하시든, 수출을 확장 중이시든, 저는 명확한 조언, 최신 인사이트, 그리고 원활한 실행을 제공합니다.",
-  "Customs shouldn’t be a bottleneck. It should be your edge.": "통관은 장애물이 아니라, 경쟁력이 되어야 합니다.",
-  "Let’s Talk": "문의하기",
-  "When I'm not clearing shipments...": "제가 통관을 하지 않을 때는...",
-  "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.": "이런 깔끔하고 빠른 웹사이트를 직접 개발합니다. 기술적 감각을 유지하고, 창의력과 집중력을 키우는 데 도움이 됩니다.",
-  "Let’s Build Something": "무언가 함께 만들어 봅시다"
-},
+  "why-choose": {
+    "Why Choose Me": "왜 저를 선택해야 하나요",
+    "10+Years": "통관 중개 및 수입 솔루션 분야에서 15년 이상의 경험",
+    "Proven Expertise": "검증된 전문성",
+    "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "다년간의 통관 절차 경험을 통해 귀하의 수입품이 원활하고 제때 통관되도록 보장합니다.",
+    "Responsive & Reliable": "신속하고 신뢰할 수 있는 응답",
+    "Quick turnarounds, clear updates — always available when you need answers.": "신속한 처리와 명확한 업데이트 — 필요할 때 언제든지 대응합니다.",
+    "Tailored Approach": "맞춤형 접근",
+    "Solutions matched to your business goals, not a one-size-fits-all service.": "귀사의 비즈니스 목표에 맞춘 맞춤 솔루션을 제공합니다.",
+    "Client-First Focus": "고객 우선",
+    "I value your time, compliance, and business success as if it were my own.": "귀하의 시간과 성공을 제 일처럼 소중히 여깁니다."
+  },
+  "get-to-know": {
+    "Get to Know Me": "저를 소개합니다",
+    "Your Trusted Customs Solutions Specialist": "신뢰할 수 있는 통관 솔루션 전문가",
+    "About Me": "저에 대해",
+    "When you choose me as your freelance customs broker, you get more than clearance —": "저를 프리랜서 통관사로 선택하시면 단순한 통관을 넘어서 —",
+    "you gain speed, reliability, and peace of mind. I specialize in hassle-free documentation,": "빠르고 신뢰할 수 있으며 안심할 수 있는 서비스를 제공합니다. 복잡한 문서를 간편하게 처리해 드립니다.",
+    "proactive coordination, and full compliance to help you avoid costly delays.": "사전 조율과 철저한 규정 준수로 불필요한 지연을 방지합니다."
+  },
+  "rfq": {
+    "Request for Quotation": "견적 요청",
+    "Need a quote for your import/export needs? Submit the form and I’ll get back to you with a custom brokerage solution tailored for your shipment.": "수입/수출 관련 견적이 필요하신가요? 양식을 제출하시면 귀하의 화물에 맞춘 맞춤형 솔루션을 제공해 드립니다.",
+    "From customs clearance to logistics — let’s make your cargo move.": "통관에서 물류까지 — 화물이 원활히 이동하도록 함께합니다.",
+    "Full Name": "이름 전체",
+    "Email Address": "이메일 주소",
+    "Company Name": "회사명",
+    "Cargo & Shipment Details": "화물 및 배송 정보",
+    "Request Quote": "견적 요청",
+    "Please verify you're human 🤖": "로봇이 아님을 확인해주세요 🤖",
+    "📨 RFQ submitted successfully!": "📨 견적 요청이 성공적으로 제출되었습니다!",
+    "❌ Something went wrong.": "❌ 문제가 발생했습니다.",
+    "⚠️ Network error. Please try again.": "⚠️ 네트워크 오류입니다. 다시 시도해주세요."
+  },
+  "blog": {
+    "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever": "세부의 진화하는 무역 환경: 지금 통관 전문 지식이 더 중요한 이유",
+    "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.": "2025년은 세부의 수입 및 수출 환경에 중대한 변화를 가져왔습니다. 디지털 통관 시스템의 고도화, 필리핀 세관청(BOC)의 엄격한 규제, 그리고 글로벌 무역 관행에 대한 감시가 강화되면서, 세부에서 운영되는 수출입업체들은 중요한 기로에 서 있습니다.",
+    "Cebu remains a strategic gateway for international trade, but it’s no longer enough to simply move goods. Importers must now navigate tighter timelines, more complex classifications, and evolving tariff policies — all while maintaining profitability and legal compliance. Many small and mid-sized businesses in Mandaue, Talisay, and even Lapu-Lapu are feeling the pinch, especially with rising freight costs and inconsistent documentation requirements.": "세부는 여전히 국제 무역의 전략적 관문이지만, 단순히 물품을 이동시키는 것만으로는 부족합니다. 수입업체들은 이제 더 촉박한 일정, 복잡한 품목 분류, 변화하는 관세 정책을 따라가야 하며, 이 모든 과정을 수익성과 법적 준수를 유지하면서 처리해야 합니다. 만다웨, 탈리사이, 라푸라푸의 중소기업들은 특히 운송비 상승과 문서 요건의 불일치로 인해 큰 압박을 느끼고 있습니다.",
+    "These challenges aren’t just bureaucratic hurdles — they directly impact your ability to fulfill orders, retain customers, and avoid penalties. A single misclassified item or missing import entry can now delay an entire shipment by days — even weeks — leading to demurrage charges, seized goods, or worse, audit flags from the BOC.": "이러한 문제들은 단순한 행정 절차가 아니라, 실제로 주문 이행, 고객 유지, 벌금 회피 능력에 직접적인 영향을 줍니다. 단 하나의 품목 분류 오류나 누락된 수입 신고만으로도 선적 전체가 며칠, 심지어 몇 주나 지연될 수 있으며, 이로 인해 체선료, 압수, 또는 세관청의 감사 대상으로 지정될 수 있습니다.",
+    "Where a Licensed Customs Broker Comes In": "공인 통관사의 역할",
+    "As a Licensed Customs Broker based in Cebu, I’ve seen firsthand how companies suffer from oversight or misinformation. An LCB’s role is not just transactional — it’s strategic. From accurate tariff classification and documentation to coordinating with port authorities and monitoring your goods' journey from origin to destination, we operate as your compliance firewall and logistics advocate.": "세부를 기반으로 활동하는 공인 통관사로서, 저는 기업들이 정보 부족이나 실수로 인해 얼마나 큰 어려움을 겪는지 직접 목격해 왔습니다. 통관사는 단순한 행정 업무자가 아니라 전략적 파트너입니다. 정확한 품목 분류와 문서 작성, 항만 당국과의 협조, 화물의 출발지부터 도착지까지의 전 과정 모니터링에 이르기까지, 우리는 귀사의 규제 준수 방어선이자 물류 대변인 역할을 합니다.",
+    "In 2025, customs is more than paperwork. It’s a moving target — with e-customs transitions, post-entry audits, and the BOC’s digital modernization project all changing how trade operates in real time. Businesses that work with brokers who understand both the letter and the spirit of the law gain a real advantage.": "2025년 현재 통관은 단순한 서류 작업이 아닙니다. 전자 통관 전환, 사후 감사, 세관청의 디지털 현대화 프로젝트 등으로 인해 무역은 실시간으로 변화하고 있습니다. 법의 조항과 취지를 모두 이해하는 통관사와 협업하는 기업들은 진정한 경쟁 우위를 가질 수 있습니다.",
+    "Observations From the Ground": "현장의 통찰",
+    "So far this year, I’ve observed a surge in the use of consolidated shipments, especially for SMEs. While it cuts costs, it also complicates documentation and classification. The rise in direct-to-port shipments from smaller logistics startups has also raised red flags for many customs examiners, leading to an uptick in physical inspections.": "올해 들어 중소기업들을 중심으로 혼합 선적(consolidated shipments)의 사용이 급증했습니다. 비용은 절감되지만, 문서 작성과 품목 분류는 훨씬 복잡해집니다. 또한, 소형 물류 스타트업의 항만 직송 방식이 증가하면서, 많은 세관 심사관들이 주의 깊게 살펴보고 있으며, 실제 검사 비율도 증가하고 있습니다.",
+    "I’ve also seen exporters — especially those in furniture and dried goods — struggle with HS code mismatches, costing them thousands in unexpected duties. These aren’t flukes. They’re patterns. And they speak to a need for tailored, consistent customs strategy.": "수출업체들, 특히 가구나 건조식품을 다루는 업자들이 HS 코드 오류로 인해 수천 페소의 추가 관세를 부담하는 사례를 자주 접하고 있습니다. 이것은 단순한 실수가 아니라 반복되는 패턴이며, 체계적이고 맞춤형 통관 전략의 필요성을 보여줍니다.",
+    "A Partnership That Moves With You": "함께 성장하는 파트너십",
+    "I’m Jonhro Robles, a Licensed Customs Broker committed to helping Cebuanos succeed in international trade. My role is to take the pressure off your operations and ensure you’re not only compliant — but competitive. Whether you’re new to importing or scaling your exports, I provide clear advice, up-to-date insights, and seamless execution across ports and borders.": "저는 세부 기반의 공인 통관사 존로 롭레스입니다. 세부 기업들이 국제 무역에서 성공할 수 있도록 돕는 것이 제 사명입니다. 귀사의 운영 부담을 덜어주고, 법규 준수뿐만 아니라 경쟁력까지 확보할 수 있도록 돕겠습니다. 처음 수입을 시작하시든, 수출을 확장 중이시든, 저는 명확한 조언, 최신 인사이트, 그리고 원활한 실행을 제공합니다.",
+    "Customs shouldn’t be a bottleneck. It should be your edge.": "통관은 장애물이 아니라, 경쟁력이 되어야 합니다.",
+    "Let’s Talk": "문의하기",
+    "When I'm not clearing shipments...": "제가 통관을 하지 않을 때는...",
+    "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.": "이런 깔끔하고 빠른 웹사이트를 직접 개발합니다. 기술적 감각을 유지하고, 창의력과 집중력을 키우는 데 도움이 됩니다.",
+    "Let’s Build Something": "무언가 함께 만들어 봅시다"
+  },
   "servicesIntro": {
     "Services": "서비스",
     "Freight, Clearance & Compliance": "운송, 통관 및 규정 준수",
@@ -126,20 +125,59 @@
     "Brokerage Consultancy": "통관 컨설팅",
     "Get expert advice on tariff classifications, duties, and optimizing your import process.": "관세 분류, 관세 및 수입 절차 최적화에 대한 전문가 조언을 받아보세요."
   },
-
   "aboutPage": {
     "aboutPageHeader": "세부의 통관 솔루션 파트너 — 신뢰할 수 있는 무역 동반자",
-    "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "2011년 필리핀 공인 통관사 시험에 합격한 이후 10년 넘게 세부 및 그 외 지역의 기업들이 수출입 절차를 원활하게 수행할 수 있도록 돕고 있습니다. 프리랜서 통관사로서 저는 단순한 규정 준수를 넘어서 명확성, 속도 및 전략적 가치를 제공합니다.",
+    "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "2011년 필리핀 공인 통관사 시험에 합격한 이후 15년 넘게 세부 및 그 외 지역의 기업들이 수출입 절차를 원활하게 수행할 수 있도록 돕고 있습니다. 프리랜서 통관사로서 저는 단순한 규정 준수를 넘어서 명확성, 속도 및 전략적 가치를 제공합니다.",
     "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "국제 시장에 진출하려는 소기업이든 복잡한 화물을 처리하는 성장 기업이든 관계없이, 효율성과 투명성, 결과 중심의 맞춤형 솔루션을 제공합니다. 단순히 서류를 처리하는 것을 넘어 원활하고 비용 효율적인 통관을 위한 파트너가 되어드립니다.",
     "ifYoureLooking": "필리핀 무역의 흐름과 글로벌 물류 수요를 이해하는 신뢰할 수 있는 통관 솔루션 파트너를 찾고 계시다면, 함께 더 스마트하고 빠르게 화물을 이동시켜 봅시다.",
     "Work With Me": "함께 일하기"
   },
-
   "Affil": {
     "I am affiliated with": "다음 기관과 제휴하고 있습니다"
+  },
+  "nav": {
+    "Track Shipment": "화물 추적",
+    "Menu": "메뉴",
+    "Close Menu": "메뉴 닫기",
+    "Language": "언어"
+  },
+  "footer": {
+    "Quick Links": "바로가기",
+    "Home": "홈",
+    "Services": "서비스",
+    "About": "소개",
+    "Contact": "연락처",
+    "Blog": "블로그",
+    "Location": "위치",
+    "Phone": "전화",
+    "Follow Me": "팔로우",
+    "All rights reserved.": "모든 권리 보유."
+  },
+  "chat": {
+    "Chat with us": "채팅 문의",
+    "Open chat": "채팅 열기",
+    "Close chat": "채팅 닫기",
+    "status": "메시지를 남겨주시면 최대한 빨리 답변드릴게요",
+    "What's your name?": "성함을 알려주세요",
+    "Your name": "이름",
+    "Continue": "계속",
+    "empty": "화물에 대해 메시지를 보내주세요.",
+    "Type a message...": "메시지를 입력하세요...",
+    "Send": "전송",
+    "Connecting...": "연결 중..."
+  },
+  "form": {
+    "Sending...": "전송 중...",
+    "sent": "전송되었습니다! 곧 연락드리겠습니다.",
+    "rfqSent": "견적 요청이 전송되었습니다! 곧 연락드리겠습니다.",
+    "error": "문제가 발생했습니다. 다시 시도해 주세요.",
+    "networkError": "네트워크 오류입니다. 다시 시도해 주세요.",
+    "verifyHuman": "로봇이 아님을 확인해 주세요.",
+    "First Name": "이름",
+    "Last Name": "성",
+    "messagePlaceholder": "무엇을 도와드릴까요?",
+    "Your Name": "이름",
+    "Optional": "(선택)",
+    "detailsPlaceholder": "화물 정보: 품목, 수량, 출발지, 입항지 등"
   }
 }
-
-
-
-

@@ -2,7 +2,13 @@
   "hero": {
     "Clear Customs, Clear Mind": "Aduanas Despejadas, Mente Clara",
     "YoureTrustedHero": "Su socio de confianza en soluciones aduaneras en Cebú para importación y exportación sin complicaciones.",
-    "Get Started": "Comenzar"
+    "Get Started": "Comenzar",
+    "pillFreightTop": "Aire • Mar • Tierra",
+    "pillFreight": "Carga",
+    "pillGlobalTop": "Global",
+    "pillGlobal": "Logística",
+    "pillLicensedTop": "Licenciado",
+    "pillLicensed": "Agente"
   },
   "nav-links": {
     "Home": "Inicio",
@@ -34,33 +40,25 @@
     "Message": "Mensaje",
     "Send Inquiry": "Enviar Consulta"
   },
-
   "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "Servicios de Aduanas de Principio a Fin desde Cebú hacia Puertos Clave a Nivel Nacional",
     "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "Brindo servicios de aduanas de principio a fin desde Cebú, con apoyo extendido en puertos clave como Manila, Cagayán, Dávao, Iloílo y Subic, garantizando un despacho aduanero ágil y una facilitación comercial confiable en todo el país.",
-
     "Customs Clearance - Import & Export": "Despacho de Aduanas - Importación y Exportación",
     "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "Procesamiento eficiente de envíos aéreos y marítimos para asegurar la liberación de carga de manera rápida y puntual.",
-
     "Customs Brokerage & Tariff Consultation": "Agenciamiento de Aduanas y Consultoría Arancelaria",
     "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "Servicios profesionales de agenciamiento aduanero con asesoría en clasificación arancelaria y cálculo de impuestos.",
-
     "Freight Consultation": "Consultoría de Fletes",
     "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "Con socios confiables de transporte de carga, puedo ayudar a coordinar sus necesidades de envío con facilidad.",
-
     "Real-Time Shipment Monitoring": "Monitoreo de Envíos en Tiempo Real",
     "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "Manténgase informado sobre el progreso de su envío con monitoreo en tiempo real y actualizaciones proactivas.",
-
     "Customs Entry Filing & Records": "Registro y Presentación de Declaraciones Aduaneras",
     "Accurate filing of customs entries for future reference and audits to ensure compliance.": "Presentación precisa de declaraciones aduaneras para referencia futura y auditorías, asegurando el cumplimiento normativo.",
-
     "Cross Docking Arrangements": "Coordinación de Cross Docking",
     "Seamless coordination for cross docking services to support efficient cargo distribution.": "Coordinación fluida de servicios de cross docking para apoyar una distribución de carga eficiente."
   },
-  
   "why-choose": {
     "Why Choose Me": "¿Por Qué Elegirme?",
-    "10+Years": "Más de 10 años de experiencia en corretaje aduanero y soluciones de importación",
+    "10+Years": "Más de 15 años de experiencia en corretaje aduanero y soluciones de importación",
     "Proven Expertise": "Experiencia Comprobada",
     "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "Con años de experiencia en procedimientos aduaneros, me aseguro de que sus importaciones se liberen sin problemas y a tiempo.",
     "Responsive & Reliable": "Ágil y Confiable",
@@ -92,7 +90,6 @@
     "❌ Something went wrong.": "❌ Algo salió mal.",
     "⚠️ Network error. Please try again.": "⚠️ Error de red. Por favor, intenta de nuevo."
   },
-  
   "blog": {
     "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever": "El panorama comercial de Cebú está cambiando — Por qué la experiencia en aduanas importa más que nunca",
     "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.": "El año 2025 ha traído cambios significativos en el entorno de importación y exportación en Cebú. Con sistemas aduaneros digitales más avanzados, mandatos de cumplimiento más estrictos por parte de la Oficina de Aduanas (BOC) y un mayor escrutinio global sobre las prácticas comerciales, los importadores y exportadores en la Reina del Sur se enfrentan a un momento decisivo.",
@@ -111,7 +108,6 @@
     "When I'm not clearing shipments...": "Cuando no estoy gestionando envíos...",
     "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.": "Dedico tiempo a construir sitios web rápidos y limpios como este. Me ayuda a mantenerme creativo, ágil y actualizado en tecnología.",
     "Let’s Build Something": "Construyamos Algo Juntos"
-
   },
   "servicesIntro": {
     "Services": "Servicios",
@@ -131,12 +127,57 @@
   },
   "aboutPage": {
     "aboutPageHeader": "Socio de Soluciones Aduaneras en Cebú — Su Aliado Comercial de Confianza",
-    "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Desde que aprobé el examen de licencias de la PRC en 2011, he dedicado más de una década a ayudar a empresas en Cebú y más allá a navegar por las complejidades de la importación y exportación. Como agente de aduanas freelance, no solo ofrezco cumplimiento, sino también claridad, rapidez y valor estratégico en cada transacción.",
+    "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Desde que aprobé el examen de licencias de la PRC en 2011, he dedicado más de 15 años a ayudar a empresas en Cebú y más allá a navegar por las complejidades de la importación y exportación. Como agente de aduanas freelance, no solo ofrezco cumplimiento, sino también claridad, rapidez y valor estratégico en cada transacción.",
     "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "Ya sea que seas una pequeña empresa explorando mercados internacionales o una empresa en crecimiento gestionando envíos complejos, adapto soluciones que priorizan la eficiencia, la transparencia y los resultados. Mis servicios van más allá del procesamiento de documentos: me convierto en tu socio para lograr un despacho aduanero fluido y rentable.",
     "ifYoureLooking": "Si buscas un socio confiable en soluciones aduaneras que entienda el pulso del comercio filipino y las demandas de la logística global, trabajemos juntos para mover tus mercancías de manera más inteligente y rápida.",
     "Work With Me": "Trabaja Conmigo"
   },
   "Affil": {
     "I am affiliated with": "Estoy afiliado a"
+  },
+  "nav": {
+    "Track Shipment": "Rastrear envío",
+    "Menu": "Menú",
+    "Close Menu": "Cerrar menú",
+    "Language": "Idioma"
+  },
+  "footer": {
+    "Quick Links": "Enlaces rápidos",
+    "Home": "Inicio",
+    "Services": "Servicios",
+    "About": "Acerca de",
+    "Contact": "Contacto",
+    "Blog": "Blog",
+    "Location": "Ubicación",
+    "Phone": "Teléfono",
+    "Follow Me": "Sígueme",
+    "All rights reserved.": "Todos los derechos reservados."
+  },
+  "chat": {
+    "Chat with us": "Chatea conmigo",
+    "Open chat": "Abrir chat",
+    "Close chat": "Cerrar chat",
+    "status": "Deja un mensaje y te responderé pronto",
+    "What's your name?": "¿Cómo te llamas?",
+    "Your name": "Tu nombre",
+    "Continue": "Continuar",
+    "empty": "Envíame un mensaje sobre tu envío.",
+    "Type a message...": "Escribe un mensaje...",
+    "Send": "Enviar",
+    "Connecting...": "Conectando..."
+  },
+  "form": {
+    "Sending...": "Enviando...",
+    "sent": "¡Mensaje enviado! Te responderé pronto.",
+    "rfqSent": "¡Solicitud enviada! Te responderé pronto.",
+    "error": "Algo salió mal. Inténtalo de nuevo.",
+    "networkError": "Error de red. Inténtalo de nuevo.",
+    "verifyHuman": "Confirma que no eres un robot.",
+    "First Name": "Nombre",
+    "Last Name": "Apellido",
+    "messagePlaceholder": "¿En qué puedo ayudarte?",
+    "Your Name": "Tu nombre",
+    "Optional": "(Opcional)",
+    "detailsPlaceholder": "Describe tu envío: mercancía, volumen, origen, puerto de entrada, etc."
   }
 }

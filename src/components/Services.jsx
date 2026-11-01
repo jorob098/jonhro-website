@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
@@ -35,10 +34,6 @@ const cardVariants = {
 
 const Services = () => {
   const { t, ready } = useTranslation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
 
   if (!ready) return null;
 

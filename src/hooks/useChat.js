@@ -72,7 +72,7 @@ export default function useChat({ userId, isAdmin }) {
   if (error) console.error("Send message error:", error.message);
 };
 
-  const markAsRead = async () => {
+  const markAsRead = useCallback(async () => {
     if (!userId) return;
     const otherSender = isAdmin ? "visitor" : "admin";
 
@@ -84,7 +84,7 @@ export default function useChat({ userId, isAdmin }) {
       .eq("read", false);
 
     if (error) console.error("Mark as read error:", error.message);
-  };
+  }, [userId, isAdmin]);
 
   return { messages, loading, send, markAsRead };
 }

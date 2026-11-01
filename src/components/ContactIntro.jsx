@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next"
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Honeypot from "./Honeypot";
+import { submitForm } from "../services/submitForm";
 
 export default function ContactIntro() {
   // State for form inputs
@@ -12,53 +14,38 @@ export default function ContactIntro() {
   const { t } = useTranslation();
   
 
-  // State for feedback messages
+  const [website, setWebsite] = useState('');
+  const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const formData = new URLSearchParams();
-    formData.append('firstName', firstName);
-    formData.append('lastName', lastName);
-    formData.append('contact', contact);
-    formData.append('email', email);
-    formData.append('message', message);
-    formData.append('formType', 'contactIntro');
-
+    if (sending) return;
+    setSending(true);
+    setError(null);
+    setSuccess(false);
     try {
-      const response = await fetch(import.meta.env.VITE_REACT_APP_GAS_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: formData.toString(),
+      const result = await submitForm({
+        firstName, lastName, contact, email, message, website,
+        formType: 'contactIntro',
       });
-
-      const result = await response.json();
-
       if (result.success) {
         setSuccess(true);
-        setError('');
-        setFirstName('');
-        setLastName('');
-        setContact('');
-        setEmail('');
-        setMessage('');
+        setFirstName(''); setLastName(''); setContact(''); setEmail(''); setMessage('');
       } else {
-        setSuccess(false);
-        setError(result.error || 'Something went wrong.');
+        setError(result.error || t("form.error"));
       }
     } catch (err) {
-      console.error('Fetch error:', err);
-      setSuccess(false);
-      setError('Network error. Please try again.');
+      console.error('Inquiry form error:', err);
+      setError(t("form.networkError"));
+    } finally {
+      setSending(false);
     }
   };
 
   return (
-    <section className="contact-intro-section">
+    <section id="contact" className="contact-intro-section">
       <div className="contact-grid">
         <div className="contact-form">
           <h2>{t("contactIntro.Send an Inquiry")}</h2>
@@ -71,7 +58,7 @@ export default function ContactIntro() {
                 <input
                   id="firstName"
                   name="firstName"
-                  placeholder="First Name"
+                  placeholder={t("form.First Name")}
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                   required
@@ -84,7 +71,7 @@ export default function ContactIntro() {
                 <input
                   id="lastName"
                   name="lastName"
-                  placeholder="Last Name"
+                  placeholder={t("form.Last Name")}
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                   required
@@ -94,12 +81,14 @@ export default function ContactIntro() {
 
             <div className="form-row">
               <div>
-                <label htmlFor="contact">
+                <label htmlFor="contact-phone">
                   {t("contactIntro.Contact No.")} <span className="error">*</span>
                 </label>
                 <input
-                  id="contact"
+                  id="contact-phone"
                   name="contact"
+                  type="tel"
+                  autoComplete="tel"
                   placeholder="e.g. 09123456789"
                   value={contact}
                   onChange={(e) => setContact(e.target.value)}
@@ -129,7 +118,7 @@ export default function ContactIntro() {
               <textarea
                 id="message"
                 name="message"
-                placeholder="Type your message..."
+                placeholder={t("form.messagePlaceholder")}
                 rows="6"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -137,10 +126,16 @@ export default function ContactIntro() {
               ></textarea>
             </div>
 
-            <button type="submit" className="send-inquiry-btn">{t("contactIntro.Send Inquiry")}</button>
+            <Honeypot value={website} onChange={(e) => setWebsite(e.target.value)} />
 
-            {success && <p className="success-message">✅ Message sent successfully!</p>}
-            {error && <p className="error">{error}</p>}
+            <button type="submit" className="send-inquiry-btn" disabled={sending}>
+              {sending ? t("form.Sending...") : t("contactIntro.Send Inquiry")}
+            </button>
+
+            <div aria-live="polite">
+              {success && <p className="success-message">✅ {t("form.sent")}</p>}
+              {error && <p className="error">{error}</p>}
+            </div>
           </form>
         </div>
 

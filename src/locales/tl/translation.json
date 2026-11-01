@@ -1,8 +1,14 @@
 {
   "hero": {
     "Clear Customs, Clear Mind": "Malinis na Customs, Malinis na Isipan",
-    "YoureTrustedHero" : "Ang iyong maaasahang Customs Solutions Partner sa Cebu para sa walang abalang pag-import at pag-export.",
-    "Get Started": "Magsimula"
+    "YoureTrustedHero": "Ang iyong maaasahang Customs Solutions Partner sa Cebu para sa walang abalang pag-import at pag-export.",
+    "Get Started": "Magsimula",
+    "pillFreightTop": "Himpapawid • Dagat • Lupa",
+    "pillFreight": "Kargamento",
+    "pillGlobalTop": "Pandaigdig",
+    "pillGlobal": "Logistics",
+    "pillLicensedTop": "Lisensyado",
+    "pillLicensed": "Broker"
   },
   "nav-links": {
     "Home": "Home",
@@ -37,31 +43,24 @@
   "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "End-to-End Customs Services mula Cebu hanggang sa mga Pangunahing Pantalan sa Buong Bansa",
     "I provide end-to-end customs services based in Cebu, with extended support in key ports including Manila, Cagayan, Davao, Iloilo, and Subic—ensuring smooth customs clearance and reliable trade facilitation nationwide.": "Ako ay nagbibigay ng end-to-end customs services na nakabase sa Cebu, at maaari ring magserbisyo sa mga pangunahing pantalan tulad ng Maynila, Cagayan, Davao, Iloilo, at Subic—upang matiyak ang maayos na customs clearance at maaasahang kalakalan sa buong bansa.",
-
     "Customs Clearance - Import & Export": "Customs Clearance - Import at Export",
     "Efficient processing of both air and sea shipments to ensure smooth and timely cargo release.": "Mabilis at maayos na pagproseso ng parehong air at sea shipments upang masigurong maagap at maayos ang paglabas ng kargamento.",
-
     "Customs Brokerage & Tariff Consultation": "Customs Brokerage at Tariff Consultation",
     "Professional customs brokerage services with guidance on tariff classification and duty calculations.": "Propesyonal na customs brokerage services na may kasamang gabay sa tariff classification at duty calculations.",
-
     "Freight Consultation": "Freight Consultation",
     "With trusted freight forwarder partners, I can help arrange your freight requirements with ease.": "Sa tulong ng mga mapagkakatiwalaang freight forwarder partners, makakatulong ako na ayusin ang iyong freight requirements nang madali.",
-
     "Real-Time Shipment Monitoring": "Real-Time Shipment Monitoring",
     "Stay updated on your shipment’s progress with real-time monitoring and proactive updates.": "Laging updated sa progreso ng iyong kargamento gamit ang real-time monitoring at maagap na updates.",
-
     "Customs Entry Filing & Records": "Customs Entry Filing at Records",
     "Accurate filing of customs entries for future reference and audits to ensure compliance.": "Tamang pagsumite ng customs entries para sa hinaharap na reference at audit upang masigurong sumusunod sa regulasyon.",
-
     "Cross Docking Arrangements": "Cross Docking Arrangements",
     "Seamless coordination for cross docking services to support efficient cargo distribution.": "Maayos na koordinasyon para sa cross docking services upang masuportahan ang episyenteng distribusyon ng kargamento."
   },
-  
   "why-choose": {
     "Why Choose Me": "Bakit Ako ang Piliin",
-    "10+Years": "10+ Taon ng Karanasan sa Customs Brokerage at Import Solutions",
+    "10+Years": "15+ Taon ng Karanasan sa Customs Brokerage at Import Solutions",
     "Proven Expertise": "Subok na Kasanayan",
-    "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.":  "Sa maraming taong karanasan sa customs procedures, tinitiyak kong maayos at nasa oras ang pag-release ng iyong imports.",
+    "With years of experience in customs procedures, I ensure your imports are cleared smoothly and on time.": "Sa maraming taong karanasan sa customs procedures, tinitiyak kong maayos at nasa oras ang pag-release ng iyong imports.",
     "Responsive & Reliable": "Mabilis Tumugon at Maaasahan",
     "Quick turnarounds, clear updates — always available when you need answers.": "Mabilis na serbisyo, malinaw na update — palaging handang sumagot.",
     "Tailored Approach": "Angkop na Paraan",
@@ -92,66 +91,93 @@
     "⚠️ Network error. Please try again.": "⚠️ Error sa network. Pakiulit."
   },
   "blog": {
-  "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever": "Nagbabagong Kalakaran ng Kalakalan sa Cebu — Bakit Mas Mahalaga ang Customs Expertise Ngayon",
-  
-  "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.": "Ang taong 2025 ay nagdala ng malalaking pagbabago sa kalakaran ng import at export sa Cebu. Sa paglaganap ng digital customs systems, mas mahigpit na alituntunin mula sa Bureau of Customs (BOC), at masusing pagsusuri ng mga pandaigdigang ahensya sa kalakalan, nahaharap sa mahirap na desisyon ang mga importer at exporter sa Queen City of the South.",
-  
-  "Cebu remains a strategic gateway for international trade, but it’s no longer enough to simply move goods. Importers must now navigate tighter timelines, more complex classifications, and evolving tariff policies — all while maintaining profitability and legal compliance. Many small and mid-sized businesses in Mandaue, Talisay, and even Lapu-Lapu are feeling the pinch, especially with rising freight costs and inconsistent documentation requirements.": "Nananatiling mahalagang daanan ng pandaigdigang kalakalan ang Cebu, pero hindi na sapat ang simpleng pagpapagalaw ng mga produkto. Kailangan ngayon ng mga importer na mag-navigate sa mas masikip na iskedyul, mas komplikadong klasipikasyon, at pabago-bagong polisiya sa taripa — habang pinananatiling kumikita at sumusunod sa batas ang kanilang operasyon. Maraming maliliit at katamtamang negosyo sa Mandaue, Talisay, at maging sa Lapu-Lapu ang nahihirapan, lalo na dahil sa tumataas na gastos sa pagpapadala at hindi pantay-pantay na dokumentasyon.",
-  
-  "These challenges aren’t just bureaucratic hurdles — they directly impact your ability to fulfill orders, retain customers, and avoid penalties. A single misclassified item or missing import entry can now delay an entire shipment by days — even weeks — leading to demurrage charges, seized goods, or worse, audit flags from the BOC.": "Ang mga hamong ito ay hindi lamang simpleng pormalidad — may direktang epekto ito sa kakayahan mong makapaghatid ng order, mapanatili ang mga kliyente, at makaiwas sa parusa. Isang maling klasipikasyon o nawawalang import entry lang ay maaaring makapagpaliban ng buong shipment ng ilang araw — o kahit ilang linggo — na maaaring magdulot ng bayarin sa demurrage, pagkaka-kumpiska ng mga kalakal, o mas malala pa, audit mula sa BOC.",
-  
-  "Where a Licensed Customs Broker Comes In": "Kung Saan Kailangan ang Isang Lisensyadong Customs Broker",
-  
-  "As a Licensed Customs Broker based in Cebu, I’ve seen firsthand how companies suffer from oversight or misinformation. An LCB’s role is not just transactional — it’s strategic. From accurate tariff classification and documentation to coordinating with port authorities and monitoring your goods' journey from origin to destination, we operate as your compliance firewall and logistics advocate.": "Bilang isang Licensed Customs Broker na nakabase sa Cebu, nasaksihan ko mismo kung paano naghihirap ang mga kumpanya dahil sa kakulangan ng kaalaman o maling impormasyon. Ang papel ng isang LCB ay hindi lamang transaksyonal — ito’y estratehiko. Mula sa tamang klasipikasyon ng taripa at dokumentasyon, hanggang sa koordinasyon sa mga awtoridad sa pantalan at pagsubaybay sa paglalakbay ng iyong produkto mula pinanggalingan hanggang destinasyon — kami ang iyong tagapangalaga ng pagsunod sa batas at tagapagtanggol sa lohistika.",
-  
-  "In 2025, customs is more than paperwork. It’s a moving target — with e-customs transitions, post-entry audits, and the BOC’s digital modernization project all changing how trade operates in real time. Businesses that work with brokers who understand both the letter and the spirit of the law gain a real advantage.": "Ngayong 2025, ang customs ay higit pa sa dokumentasyon. Isa itong pabago-bagong proseso — may e-customs transitions, post-entry audits, at digital modernization ng BOC na lahat ay bumabago sa paraan ng takbo ng kalakalan sa aktwal na oras. Ang mga negosyo na nakikipagtulungan sa mga broker na may malalim na pang-unawa sa letra at diwa ng batas ay may tunay na kalamangan.",
-  
-  "Observations From the Ground": "Mga Obserbasyon mula sa Aktwal na Kalakaran",
-  
-  "So far this year, I’ve observed a surge in the use of consolidated shipments, especially for SMEs. While it cuts costs, it also complicates documentation and classification. The rise in direct-to-port shipments from smaller logistics startups has also raised red flags for many customs examiners, leading to an uptick in physical inspections.": "Sa ngayon ngayong taon, napansin ko ang pagtaas sa paggamit ng consolidated shipments, lalo na para sa mga SME. Bagaman nakababawas ito ng gastos, nagpapahirap naman ito sa dokumentasyon at klasipikasyon. Ang pagdami ng direct-to-port shipments mula sa maliliit na logistics startup ay naging sanhi rin ng mas maraming pisikal na inspeksyon mula sa customs.",
-  
-  "I’ve also seen exporters — especially those in furniture and dried goods — struggle with HS code mismatches, costing them thousands in unexpected duties. These aren’t flukes. They’re patterns. And they speak to a need for tailored, consistent customs strategy.": "Napansin ko rin na ang mga exporter — lalo na yaong nasa industriya ng muwebles at tuyong produkto — ay nahihirapan sa maling pagtutugma ng HS code, na nagdudulot sa kanila ng libu-libong piso sa di-inaasahang buwis. Hindi ito mga bihirang pangyayari. Isa itong pattern. At nagpapakita ito ng pangangailangan para sa mas angkop at tuloy-tuloy na customs strategy.",
-  
-  "A Partnership That Moves With You": "Isang Pakikipagtulungan na Sumasabay sa Iyo",
-  
-  "I’m Jonhro Robles, a Licensed Customs Broker committed to helping Cebuanos succeed in international trade. My role is to take the pressure off your operations and ensure you’re not only compliant — but competitive. Whether you’re new to importing or scaling your exports, I provide clear advice, up-to-date insights, and seamless execution across ports and borders.": "Ako si Jonhro Robles, isang Licensed Customs Broker na nakatuon sa pagtulong sa mga Cebuano na magtagumpay sa pandaigdigang kalakalan. Ang papel ko ay alisin ang bigat sa iyong operasyon at tiyaking hindi ka lang sumusunod sa batas — kundi nakikipagkumpetensya rin. Baguhan ka man sa pag-aangkat o lumalawak ang iyong export, nagbibigay ako ng malinaw na gabay, napapanahong kaalaman, at maayos na pagsasagawa sa lahat ng pantalan at hangganan.",
-  
-  "Customs shouldn’t be a bottleneck. It should be your edge.": "Ang customs ay hindi dapat maging balakid. Dapat ito ang iyong kalamangan.",
-  
-  "Let’s Talk": "Mag-usap Tayo",
-  
-  "When I'm not clearing shipments...": "Kapag hindi ako abala sa pagproseso ng shipments...",
-  
-  "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.": "Ginugugol ko ang oras sa paggawa ng malilinis at mabilis na website tulad nito. Nakakatulong ito upang manatili akong malikhain, matalas, at aktibo sa teknolohiya.",
-  
-  "Let’s Build Something": "Tara’t Lumikha ng Isang Bagay"
-
-},
+    "Cebu's Evolving Trade Landscape Why Customs Expertise Matters Now More Than Ever": "Nagbabagong Kalakaran ng Kalakalan sa Cebu — Bakit Mas Mahalaga ang Customs Expertise Ngayon",
+    "The year 2025 has brought significant shifts in Cebu’s import and export environment. With heightened digital customs systems, stricter compliance mandates from the Bureau of Customs (BOC), and increased global scrutiny on trade practices, importers and exporters operating in the Queen City of the South are finding themselves at a crossroads.": "Ang taong 2025 ay nagdala ng malalaking pagbabago sa kalakaran ng import at export sa Cebu. Sa paglaganap ng digital customs systems, mas mahigpit na alituntunin mula sa Bureau of Customs (BOC), at masusing pagsusuri ng mga pandaigdigang ahensya sa kalakalan, nahaharap sa mahirap na desisyon ang mga importer at exporter sa Queen City of the South.",
+    "Cebu remains a strategic gateway for international trade, but it’s no longer enough to simply move goods. Importers must now navigate tighter timelines, more complex classifications, and evolving tariff policies — all while maintaining profitability and legal compliance. Many small and mid-sized businesses in Mandaue, Talisay, and even Lapu-Lapu are feeling the pinch, especially with rising freight costs and inconsistent documentation requirements.": "Nananatiling mahalagang daanan ng pandaigdigang kalakalan ang Cebu, pero hindi na sapat ang simpleng pagpapagalaw ng mga produkto. Kailangan ngayon ng mga importer na mag-navigate sa mas masikip na iskedyul, mas komplikadong klasipikasyon, at pabago-bagong polisiya sa taripa — habang pinananatiling kumikita at sumusunod sa batas ang kanilang operasyon. Maraming maliliit at katamtamang negosyo sa Mandaue, Talisay, at maging sa Lapu-Lapu ang nahihirapan, lalo na dahil sa tumataas na gastos sa pagpapadala at hindi pantay-pantay na dokumentasyon.",
+    "These challenges aren’t just bureaucratic hurdles — they directly impact your ability to fulfill orders, retain customers, and avoid penalties. A single misclassified item or missing import entry can now delay an entire shipment by days — even weeks — leading to demurrage charges, seized goods, or worse, audit flags from the BOC.": "Ang mga hamong ito ay hindi lamang simpleng pormalidad — may direktang epekto ito sa kakayahan mong makapaghatid ng order, mapanatili ang mga kliyente, at makaiwas sa parusa. Isang maling klasipikasyon o nawawalang import entry lang ay maaaring makapagpaliban ng buong shipment ng ilang araw — o kahit ilang linggo — na maaaring magdulot ng bayarin sa demurrage, pagkaka-kumpiska ng mga kalakal, o mas malala pa, audit mula sa BOC.",
+    "Where a Licensed Customs Broker Comes In": "Kung Saan Kailangan ang Isang Lisensyadong Customs Broker",
+    "As a Licensed Customs Broker based in Cebu, I’ve seen firsthand how companies suffer from oversight or misinformation. An LCB’s role is not just transactional — it’s strategic. From accurate tariff classification and documentation to coordinating with port authorities and monitoring your goods' journey from origin to destination, we operate as your compliance firewall and logistics advocate.": "Bilang isang Licensed Customs Broker na nakabase sa Cebu, nasaksihan ko mismo kung paano naghihirap ang mga kumpanya dahil sa kakulangan ng kaalaman o maling impormasyon. Ang papel ng isang LCB ay hindi lamang transaksyonal — ito’y estratehiko. Mula sa tamang klasipikasyon ng taripa at dokumentasyon, hanggang sa koordinasyon sa mga awtoridad sa pantalan at pagsubaybay sa paglalakbay ng iyong produkto mula pinanggalingan hanggang destinasyon — kami ang iyong tagapangalaga ng pagsunod sa batas at tagapagtanggol sa lohistika.",
+    "In 2025, customs is more than paperwork. It’s a moving target — with e-customs transitions, post-entry audits, and the BOC’s digital modernization project all changing how trade operates in real time. Businesses that work with brokers who understand both the letter and the spirit of the law gain a real advantage.": "Ngayong 2025, ang customs ay higit pa sa dokumentasyon. Isa itong pabago-bagong proseso — may e-customs transitions, post-entry audits, at digital modernization ng BOC na lahat ay bumabago sa paraan ng takbo ng kalakalan sa aktwal na oras. Ang mga negosyo na nakikipagtulungan sa mga broker na may malalim na pang-unawa sa letra at diwa ng batas ay may tunay na kalamangan.",
+    "Observations From the Ground": "Mga Obserbasyon mula sa Aktwal na Kalakaran",
+    "So far this year, I’ve observed a surge in the use of consolidated shipments, especially for SMEs. While it cuts costs, it also complicates documentation and classification. The rise in direct-to-port shipments from smaller logistics startups has also raised red flags for many customs examiners, leading to an uptick in physical inspections.": "Sa ngayon ngayong taon, napansin ko ang pagtaas sa paggamit ng consolidated shipments, lalo na para sa mga SME. Bagaman nakababawas ito ng gastos, nagpapahirap naman ito sa dokumentasyon at klasipikasyon. Ang pagdami ng direct-to-port shipments mula sa maliliit na logistics startup ay naging sanhi rin ng mas maraming pisikal na inspeksyon mula sa customs.",
+    "I’ve also seen exporters — especially those in furniture and dried goods — struggle with HS code mismatches, costing them thousands in unexpected duties. These aren’t flukes. They’re patterns. And they speak to a need for tailored, consistent customs strategy.": "Napansin ko rin na ang mga exporter — lalo na yaong nasa industriya ng muwebles at tuyong produkto — ay nahihirapan sa maling pagtutugma ng HS code, na nagdudulot sa kanila ng libu-libong piso sa di-inaasahang buwis. Hindi ito mga bihirang pangyayari. Isa itong pattern. At nagpapakita ito ng pangangailangan para sa mas angkop at tuloy-tuloy na customs strategy.",
+    "A Partnership That Moves With You": "Isang Pakikipagtulungan na Sumasabay sa Iyo",
+    "I’m Jonhro Robles, a Licensed Customs Broker committed to helping Cebuanos succeed in international trade. My role is to take the pressure off your operations and ensure you’re not only compliant — but competitive. Whether you’re new to importing or scaling your exports, I provide clear advice, up-to-date insights, and seamless execution across ports and borders.": "Ako si Jonhro Robles, isang Licensed Customs Broker na nakatuon sa pagtulong sa mga Cebuano na magtagumpay sa pandaigdigang kalakalan. Ang papel ko ay alisin ang bigat sa iyong operasyon at tiyaking hindi ka lang sumusunod sa batas — kundi nakikipagkumpetensya rin. Baguhan ka man sa pag-aangkat o lumalawak ang iyong export, nagbibigay ako ng malinaw na gabay, napapanahong kaalaman, at maayos na pagsasagawa sa lahat ng pantalan at hangganan.",
+    "Customs shouldn’t be a bottleneck. It should be your edge.": "Ang customs ay hindi dapat maging balakid. Dapat ito ang iyong kalamangan.",
+    "Let’s Talk": "Mag-usap Tayo",
+    "When I'm not clearing shipments...": "Kapag hindi ako abala sa pagproseso ng shipments...",
+    "I spend time building clean, fast websites like this one. It helps me stay creative, sharp, and hands-on in tech.": "Ginugugol ko ang oras sa paggawa ng malilinis at mabilis na website tulad nito. Nakakatulong ito upang manatili akong malikhain, matalas, at aktibo sa teknolohiya.",
+    "Let’s Build Something": "Tara’t Lumikha ng Isang Bagay"
+  },
   "servicesIntro": {
-  "Services": "Serbisyo",
-  "Freight, Clearance & Compliance": "Padala, Clearance at Pagsunod",
-  "Seamlessly Delivered": "Walang Abalang Pagkakaloob",
-  "View Services": "Tingnan ang mga Serbisyo",
-  "GetReliableMessage": "Maaasahan at napapanahong customs brokerage at logistics support na akma sa pangangailangan ng iyong negosyo.",
-  "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "Kung ito man ay isang beses na padala o pangmatagalang tulong, siguradong may eksperto kang katuwang.",
-  "Import Documentation": "Dokumentasyon ng Import",
-  "Ensure every shipment meets all regulatory requirements, right from the start.": "Tiyakin na ang bawat padala ay sumusunod sa lahat ng kinakailangang regulasyon simula pa lamang.",
-  "Customs Compliance": "Pagsunod sa Customs",
-  "Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.": "Maging handa sa audit at iwasan ang multa gamit ang malalim kong kaalaman sa mga regulasyon ng BOC.",
-  "Freight Coordination": "Koordinasyon ng Padala",
-  "Simplify your logistics by letting me manage freight timelines and port communication.": "Padaliin ang iyong lohistika sa pamamagitan ng pamamahala ko sa iskedyul ng padala at komunikasyon sa pantalan.",
-  "Brokerage Consultancy": "Konsultasyon sa Brokerage",
-  "Get expert advice on tariff classifications, duties, and optimizing your import process.": "Kumuha ng payo mula sa eksperto tungkol sa klasipikasyon ng taripa, buwis, at kung paano pahuhusayin ang iyong import process."
-},
-
+    "Services": "Serbisyo",
+    "Freight, Clearance & Compliance": "Padala, Clearance at Pagsunod",
+    "Seamlessly Delivered": "Walang Abalang Pagkakaloob",
+    "View Services": "Tingnan ang mga Serbisyo",
+    "GetReliableMessage": "Maaasahan at napapanahong customs brokerage at logistics support na akma sa pangangailangan ng iyong negosyo.",
+    "Whether it's one-time shipment or long-term assistance, you're covered with expert service.": "Kung ito man ay isang beses na padala o pangmatagalang tulong, siguradong may eksperto kang katuwang.",
+    "Import Documentation": "Dokumentasyon ng Import",
+    "Ensure every shipment meets all regulatory requirements, right from the start.": "Tiyakin na ang bawat padala ay sumusunod sa lahat ng kinakailangang regulasyon simula pa lamang.",
+    "Customs Compliance": "Pagsunod sa Customs",
+    "Stay audit-ready and penalty-free with my in-depth knowledge of BOC regulations.": "Maging handa sa audit at iwasan ang multa gamit ang malalim kong kaalaman sa mga regulasyon ng BOC.",
+    "Freight Coordination": "Koordinasyon ng Padala",
+    "Simplify your logistics by letting me manage freight timelines and port communication.": "Padaliin ang iyong lohistika sa pamamagitan ng pamamahala ko sa iskedyul ng padala at komunikasyon sa pantalan.",
+    "Brokerage Consultancy": "Konsultasyon sa Brokerage",
+    "Get expert advice on tariff classifications, duties, and optimizing your import process.": "Kumuha ng payo mula sa eksperto tungkol sa klasipikasyon ng taripa, buwis, at kung paano pahuhusayin ang iyong import process."
+  },
   "aboutPage": {
-  "aboutPageHeader": "Customs Solutions Partner sa Cebu — Ang Iyong Maaasahang Trade Ally",
-  "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Mula nang pumasa ako sa PRC Customs Broker Licensure Examination noong 2011, higit isang dekada na akong tumutulong sa mga negosyo sa Cebu at sa iba pang lugar na maayos na mapangasiwaan ang komplikasyon ng import at export. Bilang isang freelance customs broker, hindi lang pagsunod ang aking iniaalok—kundi linaw, bilis, at estratehikong halaga sa bawat transaksyon.",
-  "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "Kung isa kang maliit na negosyo na sumusubok sa pandaigdigang merkado o isang lumalaking kumpanya na humahawak ng masalimuot na padala, inaangkop ko ang mga solusyon ayon sa iyong pangangailangan—na inuuna ang pagiging episyente, malinaw, at may resulta. Higit pa sa simpleng pagproseso ng dokumento ang aking serbisyo—ako ang magiging katuwang mo sa maayos at matipid na customs clearance.",
-  "ifYoureLooking": "Kung naghahanap ka ng maaasahang customs solutions partner na nakakaunawa sa takbo ng kalakalan sa Pilipinas at sa pangangailangan ng pandaigdigang lohistika, magtulungan tayo upang mas mabilis at mas matalinong makagalaw ang iyong mga kargamento.",
-  "Work With Me": "Makipagtulungan sa Akin"
-},
+    "aboutPageHeader": "Customs Solutions Partner sa Cebu — Ang Iyong Maaasahang Trade Ally",
+    "Since passing the PRC Customs Broker Licensure Examination in 2011, I’ve dedicated over a decade to helping businesses in Cebu and beyond navigate the complexities of import and export. As a freelance customs broker, I provide not just compliance—but clarity, speed, and strategic value in every transaction.": "Mula nang pumasa ako sa PRC Customs Broker Licensure Examination noong 2011, mahigit 15 taon na akong tumutulong sa mga negosyo sa Cebu at sa iba pang lugar na maayos na mapangasiwaan ang komplikasyon ng import at export. Bilang isang freelance customs broker, hindi lang pagsunod ang aking iniaalok—kundi linaw, bilis, at estratehikong halaga sa bawat transaksyon.",
+    "Whether you’re a small business exploring international markets or a growing enterprise managing complex shipments, I tailor solutions that prioritize efficiency, transparency, and results. My services go beyond processing documents—I become your partner in achieving smooth and cost-effective customs clearance.": "Kung isa kang maliit na negosyo na sumusubok sa pandaigdigang merkado o isang lumalaking kumpanya na humahawak ng masalimuot na padala, inaangkop ko ang mga solusyon ayon sa iyong pangangailangan—na inuuna ang pagiging episyente, malinaw, at may resulta. Higit pa sa simpleng pagproseso ng dokumento ang aking serbisyo—ako ang magiging katuwang mo sa maayos at matipid na customs clearance.",
+    "ifYoureLooking": "Kung naghahanap ka ng maaasahang customs solutions partner na nakakaunawa sa takbo ng kalakalan sa Pilipinas at sa pangangailangan ng pandaigdigang lohistika, magtulungan tayo upang mas mabilis at mas matalinong makagalaw ang iyong mga kargamento.",
+    "Work With Me": "Makipagtulungan sa Akin"
+  },
   "Affil": {
     "I am affiliated with": "Ako ay kaanib ng"
+  },
+  "nav": {
+    "Track Shipment": "I-track ang Kargamento",
+    "Menu": "Menu",
+    "Close Menu": "Isara ang menu",
+    "Language": "Wika"
+  },
+  "footer": {
+    "Quick Links": "Mabilis na Link",
+    "Home": "Home",
+    "Services": "Serbisyo",
+    "About": "Tungkol",
+    "Contact": "Makipag-ugnayan",
+    "Blog": "Blog",
+    "Location": "Lokasyon",
+    "Phone": "Telepono",
+    "Follow Me": "Sundan Ako",
+    "All rights reserved.": "Nakalaan ang lahat ng karapatan."
+  },
+  "chat": {
+    "Chat with us": "Mag-chat tayo",
+    "Open chat": "Buksan ang chat",
+    "Close chat": "Isara ang chat",
+    "status": "Mag-iwan ng mensahe — sasagot ako agad",
+    "What's your name?": "Ano ang pangalan mo?",
+    "Your name": "Iyong pangalan",
+    "Continue": "Magpatuloy",
+    "empty": "Magpadala ng mensahe tungkol sa iyong kargamento.",
+    "Type a message...": "Mag-type ng mensahe...",
+    "Send": "Ipadala",
+    "Connecting...": "Kumokonekta..."
+  },
+  "form": {
+    "Sending...": "Ipinapadala...",
+    "sent": "Naipadala na! Babalikan kita agad.",
+    "rfqSent": "Naipadala ang RFQ! Babalikan kita agad.",
+    "error": "May nangyaring mali. Pakisubukang muli.",
+    "networkError": "May problema sa koneksyon. Pakisubukang muli.",
+    "verifyHuman": "Pakikumpirma na hindi ka robot.",
+    "First Name": "Pangalan",
+    "Last Name": "Apelyido",
+    "messagePlaceholder": "Paano kita matutulungan?",
+    "Your Name": "Iyong pangalan",
+    "Optional": "(Opsyonal)",
+    "detailsPlaceholder": "Ilarawan ang kargamento: produkto, dami, pinagmulan, pantalan, atbp."
   }
 }
