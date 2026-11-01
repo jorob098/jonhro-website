@@ -271,3 +271,27 @@
   font-weight: 600;
   cursor: pointer;
 }
+.chat-widget-icon {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 4px rgba(110, 35, 0, 0.35));
+  transition: transform 0.3s ease;
+}
+.chat-widget-wrapper:hover .chat-widget-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* Label stays readable over light pages and the dark footer */
+.chat-widget-label {
+  background: #fff;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: #1d1d1d;
+  color: #1d1d1d;
+  animation: none;
+  padding: 4px 10px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+}
