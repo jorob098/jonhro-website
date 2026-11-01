@@ -9,7 +9,7 @@ export const POSTS = [
       "What importers need to know about BPS certification, documents, duties and common delays when bringing steel products through the Port of Cebu.",
     date: "2026-11-01",
     tag: "Steel",
-    readMinutes: 7,
+    readMinutes: 8,
   },
   {
     slug: "cebu-trade-landscape",

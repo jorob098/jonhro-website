@@ -72,6 +72,36 @@ export default function ImportingSteelCebu() {
         <li>Confirmation that every bar, bundle or sheet will carry the PS mark and the mill&rsquo;s markings</li>
         <li>Mill test certificates with heat numbers that match the bundle tags</li>
       </ul>
+      <h3>You can apply online</h3>
+      <p>
+        BPS applications no longer need a trip to a DTI office. They are filed and tracked
+        online through the BPS <strong>Product Certification Information Management System
+        (PCIMS)</strong> at{' '}
+        <a href="https://qualityproducts.dti.gov.ph/MainPage/Home" target="_blank" rel="noopener noreferrer">qualityproducts.dti.gov.ph</a>.
+      </p>
+      <ol>
+        <li>
+          <strong>Register once.</strong> Fill in the PCIMS account registration form for
+          ICC/SOC applicants, have it notarized, and send it with the listed attachments to
+          BPS (bps@dti.gov.ph).
+        </li>
+        <li>
+          <strong>Get your login.</strong> After checking your documents, BPS emails your
+          PCIMS link, username and temporary password.
+        </li>
+        <li>
+          <strong>File each shipment online.</strong> Upload the shipping documents and your
+          supplier&rsquo;s PS licence details, then follow the status of your application in
+          the system.
+        </li>
+      </ol>
+      <p>
+        Register early. The account setup takes a few days, and you don&rsquo;t want to be doing
+        it while your steel is already at the port. If you&rsquo;d rather not deal with the
+        system yourself, I can prepare and file the application for you as part of the
+        clearance.
+      </p>
+
       <p>
         Steel without a valid licence or SOC can be held at the port, refused release or
         seized. DTI also runs regular market checks; in October 2025 it confiscated
@@ -124,6 +154,7 @@ export default function ImportingSteelCebu() {
       <ol>
         <li>Confirm whether your product is on the BPS mandatory list.</li>
         <li>Get your supplier&rsquo;s PS licence and check that it covers your sizes and grades.</li>
+        <li>Register your PCIMS account with BPS if you don&rsquo;t have one yet.</li>
         <li>Agree on the HS code and get a duty and tax estimate.</li>
         <li>Ask for a certificate of origin if an FTA rate applies.</li>
         <li>For prefab buildings, ship as a complete unit with a full bill of materials.</li>
@@ -146,6 +177,7 @@ export default function ImportingSteelCebu() {
         <h2>Sources</h2>
         <ul>
           <li><a href="https://bps.dti.gov.ph/product-certification/list-of-products-under-mandatory-certification" target="_blank" rel="noopener noreferrer">DTI-BPS: List of products under mandatory certification</a></li>
+          <li><a href="https://bps.dti.gov.ph/product-certification/product-certification-information-management-system-pcims" target="_blank" rel="noopener noreferrer">DTI-BPS: Product Certification Information Management System (PCIMS)</a></li>
           <li><a href="https://lic-public.wto.org/en/product-categories/678/procedure" target="_blank" rel="noopener noreferrer">WTO Import Licensing: Philippines ICC procedure (steel under the PS scheme and Statement of Confirmation), March 2026</a></li>
           <li><a href="https://bps.dti.gov.ph/press-releases/28-2021/272-dti-regulates-galvanized-steel-coils-and-sheets-for-consumer-protection-and-level-playing-field-for-the-steel-industry" target="_blank" rel="noopener noreferrer">DTI-BPS: Mandatory certification of galvanized steel coils and sheets (DAO 20-10)</a></li>
           <li><a href="https://thephilbiznews.com/2025/10/08/dti-cracks-down-on-substandard-construction-materials-worth-%E2%82%B12m/" target="_blank" rel="noopener noreferrer">The Philippine Business and News: DTI cracks down on substandard construction materials (October 2025)</a></li>
