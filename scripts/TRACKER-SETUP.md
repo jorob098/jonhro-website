@@ -28,10 +28,10 @@ one shipment, never the sheet.
 
 ## 3. Connect it to the website
 
-In `public/track.html`, find this line near the bottom and paste your URL:
+In `src/components/Track.jsx`, find this line near the top and paste your URL:
 
 ```js
-LOOKUP_URL: "",
+const LOOKUP_URL = '...';
 ```
 
 Commit, push and merge. Test with a real tracking number on the live site.

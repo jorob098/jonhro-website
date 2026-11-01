@@ -90,7 +90,7 @@ export default function Services() {
           </motion.p>
           <motion.div className="svc-buttons" variants={fadeUp}>
             <Link to="/rfq" className="svc-btn-primary">{t("aboutPage.ctaQuote")}</Link>
-            <a href="/track.html" className="svc-btn-secondary">{s("trackCta")}</a>
+            <Link to="/track" className="svc-btn-secondary">{s("trackCta")}</Link>
           </motion.div>
         </motion.section>
 

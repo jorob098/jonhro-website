@@ -38,7 +38,7 @@ export default function Header() {
       {NAV_ITEMS.map(({ to, key }) => (
         <li key={to}><Link to={to} onClick={onClick}>{t(key)}</Link></li>
       ))}
-      <li><a href="/track.html" onClick={onClick}>{t("nav.Track Shipment")}</a></li>
+      <li><Link to="/track" onClick={onClick}>{t("nav.Track Shipment")}</Link></li>
     </>
   );
 

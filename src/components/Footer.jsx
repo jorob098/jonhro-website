@@ -60,7 +60,7 @@ export default function Footer() {
               {links.map(({ to, label }) => (
                 <li key={to}><Link to={to}>{label}</Link></li>
               ))}
-              <li><a href="/track.html">{t('nav.Track Shipment')}</a></li>
+              <li><Link to="/track">{t('nav.Track Shipment')}</Link></li>
             </ul>
           </nav>
 
