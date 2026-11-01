@@ -41,7 +41,18 @@
     "Contact No.": "電話番号",
     "Email": "メールアドレス",
     "Message": "メッセージ",
-    "Send Inquiry": "お問い合わせを送信"
+    "Send Inquiry": "お問い合わせを送信",
+    "eyebrow": "お問い合わせ",
+    "directTitle": "直接のご連絡",
+    "call": "電話・SMS",
+    "callHint": "タップして発信",
+    "viberHint": "Viberでチャット",
+    "whatsappHint": "WhatsAppでチャット",
+    "email": "メール",
+    "emailHint": "メールを送る",
+    "formTitle": "またはメッセージを送信",
+    "locationTitle": "所在地",
+    "locationText": "セブを拠点に、セブ港および全国の主要港に対応しています。"
   },
   "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "セブから全国主要港までのエンドツーエンド通関サービス",

@@ -41,7 +41,18 @@
     "Contact No.": "联系电话",
     "Email": "电子邮箱",
     "Message": "留言",
-    "Send Inquiry": "提交咨询"
+    "Send Inquiry": "提交咨询",
+    "eyebrow": "联系方式",
+    "directTitle": "直接联系我",
+    "call": "电话或短信",
+    "callHint": "点击拨打",
+    "viberHint": "通过Viber聊天",
+    "whatsappHint": "通过WhatsApp聊天",
+    "email": "电子邮件",
+    "emailHint": "发送邮件",
+    "formTitle": "或发送留言",
+    "locationTitle": "地点",
+    "locationText": "常驻宿务，服务宿务港及全国主要港口。"
   },
   "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "从宿务到全国主要港口的一站式报关服务",

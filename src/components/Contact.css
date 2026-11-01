@@ -1,0 +1,217 @@
+/* ============ CONTACT PAGE ============ */
+.ct-page {
+  --ct-accent: #ff6b00;
+  --ct-ink: #1d1d1d;
+  --ct-muted: #5c5c5c;
+  --ct-line: #e6e1dc;
+  color: var(--ct-ink);
+  background:
+    radial-gradient(circle at 85% 0%, rgba(255, 107, 0, 0.10), transparent 35%),
+    #f5f4f2;
+  padding: 56px 24px 88px;
+}
+
+.ct-page > section {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.ct-head {
+  text-align: center;
+  margin-bottom: 44px !important;
+}
+
+.ct-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ct-accent);
+  margin-bottom: 12px;
+}
+
+.ct-head h1 {
+  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 12px;
+  color: var(--ct-ink);
+}
+
+.ct-head p {
+  color: var(--ct-muted);
+  font-size: 1.05rem;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.ct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.ct-left h2,
+.ct-form h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: var(--ct-ink);
+}
+
+/* ---------- Direct contact buttons ---------- */
+.ct-methods {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ct-method {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--ct-line);
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--ct-ink);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ct-method:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.ct-method-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.ct-method.call .ct-method-icon { background: var(--ct-accent); }
+.ct-method.viber .ct-method-icon { background: #7360f2; }
+.ct-method.whatsapp .ct-method-icon { background: #1fa855; }
+.ct-method.email .ct-method-icon { background: var(--ct-ink); }
+
+.ct-method.call:hover { border-color: var(--ct-accent); }
+.ct-method.viber:hover { border-color: #7360f2; }
+.ct-method.whatsapp:hover { border-color: #1fa855; }
+.ct-method.email:hover { border-color: var(--ct-ink); }
+
+.ct-method-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.ct-method-text small {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ct-muted);
+}
+
+.ct-method-text strong {
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.ct-method-text em {
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--ct-accent);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* ---------- Location ---------- */
+.ct-location {
+  margin-top: 24px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--ct-line);
+  border-radius: 16px;
+}
+
+.ct-location h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  margin: 0 0 4px;
+  color: var(--ct-ink);
+}
+
+.ct-location h3 svg {
+  color: var(--ct-accent);
+}
+
+.ct-location p {
+  color: var(--ct-muted);
+  font-size: 0.93rem;
+  margin: 0 0 14px;
+}
+
+.ct-location .map-container {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ---------- Form card ---------- */
+.ct-form.contact-form {
+  max-width: none;
+  min-width: 0;
+  align-self: start;
+  background: #fff;
+  border: 1px solid var(--ct-line);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+}
+
+.ct-form .send-inquiry-btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .ct-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ct-page {
+    padding: 32px 16px 64px;
+  }
+  .ct-methods {
+    grid-template-columns: 1fr;
+  }
+  .ct-form.contact-form {
+    padding: 22px 18px;
+  }
+}
+
+/* Email is longer than a phone number: give it the full row */
+.ct-methods li:has(.ct-method.email),
+.ct-methods li:has(.ct-method.call) {
+  grid-column: 1 / -1;
+}
+.ct-method-text strong {
+  overflow-wrap: normal;
+}
