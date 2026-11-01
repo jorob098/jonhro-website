@@ -14,8 +14,12 @@
 // Leave empty if this script was created from the sheet (Extensions → Apps Script).
 const SPREADSHEET_ID = '';
 
-// The tab that holds the shipments. Leave empty to use the first tab.
+// The tab that holds the shipments. Leave empty to find it by SHEET_GID below.
 const SHEET_NAME = '';
+
+// The tab's ID: the number after "gid=" in the sheet's address bar when that tab
+// is open. 398616909 is the tab your old tracker used.
+const SHEET_GID = 398616909;
 
 // Only these columns are ever sent to the website.
 const PUBLIC_FIELDS = [
@@ -43,6 +47,7 @@ function doGet(e) {
   cache.put(allKey, String(all + 1), 600);
 
   const sheet = getSheet_();
+  if (!sheet) return json_({ ok: false, error: 'setup_error' });
   const rows = sheet.getDataRange().getDisplayValues();
   if (rows.length < 2) return json_({ ok: false, error: 'not_found' });
 
@@ -73,7 +78,9 @@ function getSheet_() {
   const ss = SPREADSHEET_ID
     ? SpreadsheetApp.openById(SPREADSHEET_ID)
     : SpreadsheetApp.getActiveSpreadsheet();
-  return SHEET_NAME ? ss.getSheetByName(SHEET_NAME) : ss.getSheets()[0];
+  if (SHEET_NAME) return ss.getSheetByName(SHEET_NAME);
+  const byGid = ss.getSheets().filter((sh) => sh.getSheetId() === SHEET_GID)[0];
+  return byGid || ss.getSheets()[0];
 }
 
 function normKey_(s) {

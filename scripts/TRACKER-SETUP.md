@@ -10,8 +10,9 @@ sheet stays private.
 1. Open the Google Sheet you use for tracking.
 2. Click **Extensions → Apps Script**.
 3. Delete what's in the editor and paste everything from `scripts/track-lookup.gs`.
-4. If your shipments aren't on the first tab, put the tab name in `SHEET_NAME`
-   (for example `const SHEET_NAME = 'Shipments';`).
+4. Leave `SHEET_NAME` empty: the script finds your tracking tab by its ID
+   (`SHEET_GID`). If you ever move the data to another tab, change `SHEET_GID`
+   to the number after `gid=` in the address bar while that tab is open.
 5. Click **Save**.
 
 ## 2. Publish it as a web app
