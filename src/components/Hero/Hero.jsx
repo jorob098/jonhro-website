@@ -52,16 +52,11 @@ export default function Hero() {
         <div className="hero-left">
           <motion.h1 variants={container}>
             {waveWords.map((word, index) => (
-              <motion.span
-                key={index}
-                variants={wordVariant}
-                style={{
-                  display: "inline-block",
-                  marginRight: "0.5ch",
-                }}
-              >
-                {word}
-              </motion.span>
+              <span key={index}>
+                <motion.span variants={wordVariant} style={{ display: "inline-block" }}>
+                  {word}
+                </motion.span>{" "}
+              </span>
             ))}
           </motion.h1>
 

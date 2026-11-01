@@ -69,14 +69,15 @@ export default function Header() {
           <span></span>
           <span></span>
         </button>
-
-        <nav id="mobile-nav" className={`mobile-nav ${isOpen ? 'show' : ''}`} aria-label="Mobile">
-          <button className="close-menu" onClick={closeMenu} aria-label={t("nav.Close Menu")}>
-            &times;
-          </button>
-          <ul>{links(closeMenu)}</ul>
-        </nav>
       </header>
+
+      {/* Outside <header>: the header moves when hiding on scroll, which would drag this panel with it */}
+      <nav id="mobile-nav" className={`mobile-nav ${isOpen ? 'show' : ''}`} aria-label="Mobile">
+        <button className="close-menu" onClick={closeMenu} aria-label={t("nav.Close Menu")}>
+          &times;
+        </button>
+        <ul>{links(closeMenu)}</ul>
+      </nav>
     </>
   );
 }

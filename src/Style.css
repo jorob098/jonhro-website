@@ -2587,3 +2587,19 @@ button[disabled] {
 .page-loading {
   min-height: 70vh;
 }
+
+/* Footer logo is a link: keep the tagline's own colors */
+.footer .site-logo,
+.footer .site-logo:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Closed mobile menu can't be reached with Tab or by screen readers */
+.mobile-nav {
+  visibility: hidden;
+  transition: right 0.3s ease-in-out, visibility 0.3s;
+}
+.mobile-nav.show {
+  visibility: visible;
+}

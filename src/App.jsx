@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Other pages and the chat load on demand so the homepage opens faster.
 const About = lazy(() => import('./components/About'));
@@ -31,9 +32,11 @@ export default function App() {
         </Routes>
       </Suspense>
 
-      <Suspense fallback={null}>
-        <ChatBox />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={null}>
+          <ChatBox />
+        </Suspense>
+      </ErrorBoundary>
       <Footer />
     </div>
   );
