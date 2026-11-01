@@ -7,6 +7,8 @@
 <meta name="description" content="Track the status of your customs clearance and shipment with Jonhro Robles, licensed customs broker in Cebu." />
 <meta name="robots" content="index, follow" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="canonical" href="https://www.jonhrorobles.com/track" />
+<meta property="og:image" content="https://www.jonhrorobles.com/images/share-card.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -203,11 +205,15 @@
           <label for="tn">Tracking number</label>
           <input id="tn" name="tn" type="text" placeholder="e.g. JR-1001" inputmode="text" autocapitalize="characters" spellcheck="false" required />
         </div>
+        <div class="field" id="pinField" hidden>
+          <label for="pin">PIN</label>
+          <input id="pin" name="pin" type="text" inputmode="numeric" autocomplete="off" placeholder="From your broker" />
+        </div>
         <button class="btn" id="goBtn" type="submit">Track</button>
       </form>
 
       <div class="demo-note" id="demoNote">
-        <strong>Demo mode:</strong> no Google Sheet connected yet. Try <strong>JR-1001</strong>, <strong>JR-1002</strong>, <strong>JR-1003</strong>, or <strong>JR-1004</strong>.
+        <strong>Demo mode:</strong> tracking isn't connected yet. Try <strong>JR-1001</strong>, <strong>JR-1002</strong>, <strong>JR-1003</strong>, or <strong>JR-1004</strong>.
       </div>
 
       <div class="msg" id="msg" role="alert" aria-live="polite"></div>
@@ -234,12 +240,13 @@
 <script>
 /* ============ CONFIG: edit these ============ */
 const CONFIG = {
-  // Paste your Google Sheet "Publish to web" CSV link here (see setup steps).
+  // Web app URL of scripts/track-lookup.gs (ends in /exec). See scripts/TRACKER-SETUP.md.
+  // It returns one shipment at a time, so the spreadsheet stays private.
   // Leave empty to run in demo mode with sample data.
-  SHEET_CSV_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSS_wdQ-CilNEq322FP0UHnclsTMFJNqLqkqSC1s-MmWQAs1i60owoQjw-_aRJGUJnNIiPZEpcmzmm3/pub?gid=398616909&single=true&output=csv",
+  LOOKUP_URL: "https://script.google.com/macros/s/AKfycbwu7yKdp_ay3LCzSIvvfbMpVcHg6al8-rrezTDkV9EMluJbBHF1PV371I4JbjqbUQQ/exec",
 
   LOGO_URL: "/myNewLogo.svg",     // path to your logo file (must be in public/)
-  CONTACT_URL: "/rfq",            // where "contact me" links go
+  CONTACT_URL: "/contact",        // where "contact me" links go
   STAGES: ["Booked", "Customs Processing", "Released", "In Transit", "Delivered"]
 };
 /* ============================================ */
@@ -259,7 +266,6 @@ const ICONS = {
 };
 
 const $ = (id) => document.getElementById(id);
-let cache = null;
 
 /* ---------- helpers ---------- */
 function parseCSV(text) {
@@ -301,19 +307,21 @@ const pick = (rec, ...keys) => {
   return "";
 };
 
-async function loadData() {
-  if (cache) return cache;
-  let csv;
-  if (!CONFIG.SHEET_CSV_URL) {
-    csv = DEMO_CSV;
-  } else {
-    const sep = CONFIG.SHEET_CSV_URL.includes("?") ? "&" : "?";
-    const res = await fetch(CONFIG.SHEET_CSV_URL + sep + "t=" + Date.now(), { cache: "no-store" });
-    if (!res.ok) throw new Error("Failed to load data");
-    csv = await res.text();
+let demoCache = null;
+
+// Returns { shipment } or { error: "not_found" | "pin_required" | "wrong_pin" | "too_many_attempts" }
+async function lookup(tn, pin) {
+  if (!CONFIG.LOOKUP_URL) {
+    demoCache = demoCache || toRecords(DEMO_CSV);
+    const rec = demoCache.find(r => normTn(pick(r, "tracking_number")) === tn);
+    return rec ? { shipment: rec } : { error: "not_found" };
   }
-  cache = toRecords(csv);
-  return cache;
+  const params = new URLSearchParams({ tn });
+  if (pin) params.set("pin", pin);
+  const res = await fetch(CONFIG.LOOKUP_URL + "?" + params.toString(), { cache: "no-store" });
+  if (!res.ok) throw new Error("Lookup failed");
+  const data = await res.json();
+  return data.ok ? { shipment: data.shipment } : { error: data.error || "not_found" };
 }
 
 function el(tag, cls, text) {
@@ -402,9 +410,20 @@ async function search(raw) {
   const btn = $("goBtn");
   btn.disabled = true; btn.textContent = "Searching...";
   try {
-    const data = await loadData();
-    const rec = data.find(r => normTn(pick(r, "tracking_number", "tracking_no", "tracking")) === tn);
-    if (!rec) {
+    const pin = $("pin").value.trim();
+    const { shipment, error } = await lookup(tn, pin);
+    if (shipment) {
+      render(shipment);
+      history.replaceState(null, "", "?tn=" + encodeURIComponent(tn));
+    } else if (error === "pin_required" || error === "wrong_pin") {
+      $("pinField").hidden = false;
+      $("pin").focus();
+      showMsg("info", error === "wrong_pin"
+        ? "That PIN doesn't match. Please check it and try again."
+        : "This shipment is protected. Please enter the PIN your broker gave you.");
+    } else if (error === "too_many_attempts") {
+      showMsg("error", "Too many searches right now. Please wait a few minutes and try again.");
+    } else {
       const wrap = document.createElement("span");
       wrap.appendChild(document.createTextNode("We couldn't find that tracking number. Please check it and try again, or "));
       const a = document.createElement("a");
@@ -412,12 +431,8 @@ async function search(raw) {
       wrap.appendChild(a);
       wrap.appendChild(document.createTextNode("."));
       showMsg("error", wrap);
-    } else {
-      render(rec);
-      history.replaceState(null, "", "?tn=" + encodeURIComponent(tn));
     }
   } catch (e) {
-    cache = null;
     showMsg("error", "We couldn't load tracking data right now. Please try again in a moment.");
   } finally {
     btn.disabled = false; btn.textContent = "Track";
@@ -427,7 +442,7 @@ async function search(raw) {
 /* ---------- init ---------- */
 $("yr").textContent = new Date().getFullYear();
 $("logoImg").src = CONFIG.LOGO_URL;
-if (!CONFIG.SHEET_CSV_URL) $("demoNote").style.display = "block";
+if (!CONFIG.LOOKUP_URL) $("demoNote").style.display = "block";
 
 $("trackForm").addEventListener("submit", (e) => {
   e.preventDefault();
