@@ -1,25 +1,25 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Seo from './Seo';
+
+const MotionLink = motion.create(Link);
 
 export default function About() {
   const { t } = useTranslation();
 
   return (
     <>
-      <Seo
-        title="About Jonhro Robles | Licensed Customs Broker in Cebu"
-        description="Learn about Jonhro Robles, a licensed customs broker in Cebu, Philippines, with expertise in import/export compliance and clearance."
-      />
+      <Seo path="/about" />
     <section id="about">
       <div className="container">
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           {t("aboutPage.aboutPageHeader")}
-        </motion.h2>
+        </motion.h1>
 
         {[1, 2, 3].map((i, index) => (
           <motion.p
@@ -36,15 +36,15 @@ export default function About() {
           </motion.p>
         ))}
 
-        <motion.a
-          href="#contact"
+        <MotionLink
+          to="/contact"
           className="cta-button"
           initial={{ opacity: 0, x: 50, scale: 0.95 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ delay: 0.7, duration: 0.5 }}
         >
           {t("aboutPage.Work With Me")}
-        </motion.a>
+        </MotionLink>
       </div>
     </section>
     </>

@@ -1,4 +1,4 @@
-import whyImg from '../assets/services-photo.jpg';
+import whyImg from '../assets/services-photo.webp';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 

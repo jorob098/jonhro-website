@@ -1,37 +1,43 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import About from './components/About';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import Blog from './components/Blog';
-import Rfq from './components/Rfq';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import ChatBox from './components/ChatBox/ChatBox';
+import ErrorBoundary from './components/ErrorBoundary';
 
-
+// Other pages and the chat load on demand so the homepage opens faster.
+const About = lazy(() => import('./components/About'));
+const Services = lazy(() => import('./components/Services'));
+const Contact = lazy(() => import('./components/Contact'));
+const Blog = lazy(() => import('./components/Blog'));
+const Rfq = lazy(() => import('./components/Rfq'));
+const NotFound = lazy(() => import('./components/NotFound'));
+const ChatBox = lazy(() => import('./components/ChatBox/ChatBox'));
 
 export default function App() {
-  const location = useLocation();
-
   return (
     <div className="app-container">
       <ScrollToTop />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/rfq" element={<Rfq />} />
-      </Routes>
+      <Suspense fallback={<div className="page-loading" aria-busy="true" />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/rfq" element={<Rfq />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
 
-        {/* Floating ChatBox */}
-      <ChatBox />
-      {/* 👇 Footer excluded only on /blog */}
-      {location.pathname !== '/blog' && <Footer />}
+      <ErrorBoundary>
+        <Suspense fallback={null}>
+          <ChatBox />
+        </Suspense>
+      </ErrorBoundary>
+      <Footer />
     </div>
   );
 }

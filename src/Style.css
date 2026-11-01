@@ -263,6 +263,7 @@ header {
   text-align: center;
 }
 
+#about h1,
 #about h2 {
   font-size: 36px;
   margin-bottom: 20px;
@@ -324,6 +325,7 @@ header {
   text-align: center;
 }
 
+.services-header h1,
 .services-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -518,6 +520,7 @@ header {
   min-width: 300px;
 }
 
+.contact-header h1,
 .contact-header h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -1354,7 +1357,7 @@ header {
   gap: 0.5rem;
 }
 
-.social-section h6 {
+.social-section h4 {
   font-size: 1rem;
   color: #ff6b00;
   font-weight: bold;
@@ -1647,6 +1650,7 @@ header {
   text-align: center;
 }
 
+.rfq-header h1,
 .rfq-header h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -1737,6 +1741,7 @@ header {
     padding: 2rem 1.5rem;
   }
 
+  .rfq-header h1,
   .rfq-header h2 {
     font-size: 1.5rem;
   }
@@ -2545,3 +2550,56 @@ footer {
 
 
 
+
+.contact-info a {
+  color: inherit;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  color: #ff6b00;
+}
+
+/* Spam trap field: kept off-screen instead of display:none so bots still fill it */
+.hp-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.not-found-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.page-loading {
+  min-height: 70vh;
+}
+
+/* Footer logo is a link: keep the tagline's own colors */
+.footer .site-logo,
+.footer .site-logo:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Closed mobile menu can't be reached with Tab or by screen readers */
+.mobile-nav {
+  visibility: hidden;
+  transition: right 0.3s ease-in-out, visibility 0.3s;
+}
+.mobile-nav.show {
+  visibility: visible;
+}

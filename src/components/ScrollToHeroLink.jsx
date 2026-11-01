@@ -1,42 +1,19 @@
-// components/ScrollToHeroLink.jsx
-import { useNavigate, useLocation } from "react-router-dom";
-import { scroller } from "react-scroll";
-import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-export default function ScrollToHeroLink({ children, className }) {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  // Trigger scroll after navigating to homepage
-  useEffect(() => {
-    if (location.pathname === "/" && location.state?.scrollToHero) {
-      scroller.scrollTo("hero", {
-        duration: 500,
-        smooth: true,
-        offset: -50,
-      });
-    }
-  }, [location]);
+// Goes to the homepage; if already there, smoothly scrolls back to the top.
+export default function ScrollToHeroLink({ children, className, ...rest }) {
+  const { pathname } = useLocation();
 
   const handleClick = (e) => {
-    e.preventDefault();
-
-    if (location.pathname === "/") {
-      // Already on homepage, just scroll
-      scroller.scrollTo("hero", {
-        duration: 500,
-        smooth: true,
-        offset: -50,
-      });
-    } else {
-      // Navigate to homepage and scroll after
-      navigate("/", { state: { scrollToHero: true } });
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   return (
-    <a href="/" onClick={handleClick} className={className} role="link">
+    <Link to="/" onClick={handleClick} className={className} {...rest}>
       {children}
-    </a>
+    </Link>
   );
 }
