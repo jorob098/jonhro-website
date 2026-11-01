@@ -1,5 +1,5 @@
-import prcLogo from '../assets/prc-logo.png';
-import ccbiLogo from '../assets/ccbi-logo.png';
+import prcLogo from '../assets/prc-logo.webp';
+import ccbiLogo from '../assets/ccbi-logo.webp';
 import { useTranslation } from 'react-i18next';
 
 export default function Affiliations() {

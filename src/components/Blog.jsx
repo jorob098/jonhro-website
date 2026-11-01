@@ -108,7 +108,7 @@ export default function Blog() {
         <section className="blog-signoff">
         <div className="signoff-content">
           <div className="signoff-image-wrapper">
-            <img src="/images/me-laptop.png" alt="Jonhro coding" className="signoff-image" />
+            <img src="/images/me-laptop.webp" alt="Jonhro coding" className="signoff-image" />
             <div className="signoff-overlay" />
           </div>
           <div className="signoff-text">

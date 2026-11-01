@@ -14,7 +14,6 @@ export default function Footer() {
     const play = () => {
       el.classList.remove("animate");
       // force reflow so CSS animations can restart
-      // eslint-disable-next-line no-unused-expressions
       el.offsetWidth;
       el.classList.add("animate");
     };

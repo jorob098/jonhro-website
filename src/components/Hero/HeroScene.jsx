@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import "./HeroScene.css";
-import globeDomeImage from "../../assets/globe-dome.png";
+import globeDomeImage from "../../assets/globe-dome.webp";
 
 export default function HeroScene() {
   return (
