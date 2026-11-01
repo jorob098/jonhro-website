@@ -12,6 +12,8 @@ const Services = lazy(() => import('./components/Services'));
 const Contact = lazy(() => import('./components/Contact'));
 const Blog = lazy(() => import('./components/Blog'));
 const Rfq = lazy(() => import('./components/Rfq'));
+const Privacy = lazy(() => import('./components/Privacy'));
+const Terms = lazy(() => import('./components/Terms'));
 const NotFound = lazy(() => import('./components/NotFound'));
 const ChatBox = lazy(() => import('./components/ChatBox/ChatBox'));
 
@@ -28,6 +30,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/rfq" element={<Rfq />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

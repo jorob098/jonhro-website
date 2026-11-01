@@ -91,8 +91,11 @@ export default function Footer() {
         </div>
 
         <div className="ft-bottom">
-          <p>&copy; {year} Jonhro Robles. {t('footer.All rights reserved.')}</p>
-          <p className="ft-tagline">Clear · Move · Deliver — With Confidence.</p>
+          <p>&copy; {year} Jonhro Robles. {t('footer.All rights reserved.')} <span className="ft-tagline">Clear · Move · Deliver.</span></p>
+          <p className="ft-legal">
+            <Link to="/privacy">{t('footer.privacy')}</Link>
+            <Link to="/terms">{t('footer.terms')}</Link>
+          </p>
         </div>
       </div>
     </footer>

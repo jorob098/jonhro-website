@@ -230,7 +230,9 @@
     "rfq": "询价（RFQ）",
     "phoneNote": "电话、Viber、WhatsApp",
     "area": "菲律宾宿务市",
-    "areaNote": "宿务港 + 全国主要港口"
+    "areaNote": "宿务港 + 全国主要港口",
+    "privacy": "隐私政策",
+    "terms": "使用条款"
   },
   "chat": {
     "Chat with us": "在线咨询",
@@ -257,6 +259,7 @@
     "messagePlaceholder": "有什么可以帮您？",
     "Your Name": "您的名字",
     "Optional": "(选填)",
-    "detailsPlaceholder": "请描述您的货物：品名、数量、起运地、入境口岸等"
+    "detailsPlaceholder": "请描述您的货物：品名、数量、起运地、入境口岸等",
+    "privacyNote": "提交即表示您同意按以下政策处理您的信息："
   }
 }

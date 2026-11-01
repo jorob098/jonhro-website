@@ -37,4 +37,14 @@ export const PAGES = {
     description:
       "Request a customs brokerage quote from Jonhro Robles, licensed customs broker in Cebu, Philippines.",
   },
+  "/privacy": {
+    title: "Privacy Policy | Jonhro Robles Customs Broker",
+    description:
+      "How Jonhro Robles, licensed customs broker in Cebu, collects, uses and protects personal information under the Data Privacy Act of 2012.",
+  },
+  "/terms": {
+    title: "Terms of Use | Jonhro Robles Customs Broker",
+    description:
+      "Terms for using www.jonhrorobles.com, including quotations, shipment tracking and website content.",
+  },
 };

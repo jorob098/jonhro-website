@@ -5,6 +5,7 @@ import Toast from "../components/Toast";
 import { useTranslation } from "react-i18next";
 import Seo from './Seo';
 import './Contact.css';
+import PrivacyNote from './PrivacyNote';
 import Honeypot from './Honeypot';
 import { submitForm } from '../services/submitForm';
 
@@ -136,6 +137,8 @@ export default function Contact() {
           </motion.div>
 
           <Honeypot value={website} onChange={(e) => setWebsite(e.target.value)} />
+
+          <PrivacyNote />
 
           <motion.button
             type="submit"

@@ -230,7 +230,9 @@
     "rfq": "견적 요청 (RFQ)",
     "phoneNote": "전화, Viber, WhatsApp",
     "area": "필리핀 세부시",
-    "areaNote": "세부항 + 전국 주요 항구"
+    "areaNote": "세부항 + 전국 주요 항구",
+    "privacy": "개인정보 처리방침",
+    "terms": "이용약관"
   },
   "chat": {
     "Chat with us": "채팅 문의",
@@ -257,6 +259,7 @@
     "messagePlaceholder": "무엇을 도와드릴까요?",
     "Your Name": "이름",
     "Optional": "(선택)",
-    "detailsPlaceholder": "화물 정보: 품목, 수량, 출발지, 입항지 등"
+    "detailsPlaceholder": "화물 정보: 품목, 수량, 출발지, 입항지 등",
+    "privacyNote": "전송 시 다음에 따른 개인정보 처리에 동의하게 됩니다:"
   }
 }

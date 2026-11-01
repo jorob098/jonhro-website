@@ -230,7 +230,9 @@
     "rfq": "Humingi ng Quotation (RFQ)",
     "phoneNote": "tawag, Viber, WhatsApp",
     "area": "Lungsod ng Cebu, Pilipinas",
-    "areaNote": "Pantalan ng Cebu + mga pangunahing pantalan"
+    "areaNote": "Pantalan ng Cebu + mga pangunahing pantalan",
+    "privacy": "Patakaran sa Privacy",
+    "terms": "Mga Tuntunin ng Paggamit"
   },
   "chat": {
     "Chat with us": "Mag-chat tayo",
@@ -257,6 +259,7 @@
     "messagePlaceholder": "Paano kita matutulungan?",
     "Your Name": "Iyong pangalan",
     "Optional": "(Opsyonal)",
-    "detailsPlaceholder": "Ilarawan ang kargamento: produkto, dami, pinagmulan, pantalan, atbp."
+    "detailsPlaceholder": "Ilarawan ang kargamento: produkto, dami, pinagmulan, pantalan, atbp.",
+    "privacyNote": "Sa pagpapadala, sumasang-ayon ka sa paghawak ko ng iyong impormasyon ayon sa"
   }
 }

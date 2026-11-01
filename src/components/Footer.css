@@ -191,3 +191,12 @@
     padding-bottom: 96px;
   }
 }
+
+.ft-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.ft-tagline {
+  margin-left: 6px;
+}

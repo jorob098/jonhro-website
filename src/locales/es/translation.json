@@ -230,7 +230,9 @@
     "rfq": "Solicitud de cotización (RFQ)",
     "phoneNote": "llamada, Viber, WhatsApp",
     "area": "Ciudad de Cebú, Filipinas",
-    "areaNote": "Puerto de Cebú + principales puertos"
+    "areaNote": "Puerto de Cebú + principales puertos",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso"
   },
   "chat": {
     "Chat with us": "Chatea conmigo",
@@ -257,6 +259,7 @@
     "messagePlaceholder": "¿En qué puedo ayudarte?",
     "Your Name": "Tu nombre",
     "Optional": "(Opcional)",
-    "detailsPlaceholder": "Describe tu envío: mercancía, volumen, origen, puerto de entrada, etc."
+    "detailsPlaceholder": "Describe tu envío: mercancía, volumen, origen, puerto de entrada, etc.",
+    "privacyNote": "Al enviar, aceptas el tratamiento de tus datos descrito en la"
   }
 }
