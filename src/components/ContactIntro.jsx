@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 import Honeypot from "./Honeypot";
+import PrivacyNote from "./PrivacyNote";
 import { submitForm } from "../services/submitForm";
 
 export default function ContactIntro() {
@@ -128,6 +129,8 @@ export default function ContactIntro() {
             </div>
 
             <Honeypot value={website} onChange={(e) => setWebsite(e.target.value)} />
+
+            <PrivacyNote />
 
             <button type="submit" className="send-inquiry-btn" disabled={sending}>
               {sending ? t("form.Sending...") : t("contactIntro.Send Inquiry")}

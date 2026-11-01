@@ -3,6 +3,7 @@ import Toast from "../components/Toast"; // Ensure Toast.jsx exists
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from 'react-i18next';
 import Seo from './Seo';
+import PrivacyNote from './PrivacyNote';
 import Honeypot from './Honeypot';
 import { submitForm } from '../services/submitForm';
 
@@ -135,6 +136,8 @@ export default function Rfq() {
           onExpired={() => setRecaptchaToken('')}
           theme="dark"
         />
+
+        <PrivacyNote />
 
         <button type="submit" className="send-inquiry-btn" disabled={sending}>
           📩 {sending ? t("form.Sending...") : t("rfq.Request Quote")}

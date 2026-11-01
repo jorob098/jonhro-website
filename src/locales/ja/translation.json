@@ -222,7 +222,17 @@
     "Location": "所在地",
     "Phone": "電話",
     "Follow Me": "フォローする",
-    "All rights reserved.": "無断転載を禁じます。"
+    "All rights reserved.": "無断転載を禁じます。",
+    "about": "セブ港の公認通関業務。フィリピン全国の輸出入事業者をサポートします。",
+    "license": "PRC公認通関士 · No. 006038",
+    "Explore": "メニュー",
+    "Contact us": "お問い合わせ",
+    "rfq": "見積依頼（RFQ）",
+    "phoneNote": "電話・Viber・WhatsApp",
+    "area": "フィリピン セブ市",
+    "areaNote": "セブ港 + 国内主要港",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
   },
   "chat": {
     "Chat with us": "チャットで相談",
@@ -249,6 +259,7 @@
     "messagePlaceholder": "ご用件をご記入ください",
     "Your Name": "お名前",
     "Optional": "(任意)",
-    "detailsPlaceholder": "貨物の内容：品目、数量、出荷地、入港地など"
+    "detailsPlaceholder": "貨物の内容：品目、数量、出荷地、入港地など",
+    "privacyNote": "送信により、以下に記載の個人情報の取り扱いに同意したものとみなされます："
   }
 }

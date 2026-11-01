@@ -1,104 +1,102 @@
 import { FaFacebookF, FaLinkedinIn, FaTiktok } from 'react-icons/fa';
+import { MapPin, Phone, Mail, BadgeCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 import jrLogo from '../assets/myNewLogo.svg';
-import ScrollToHeroLink from "./ScrollToHeroLink";
+import ScrollToHeroLink from './ScrollToHeroLink';
+import './Footer.css';
 
-const PHONE_DISPLAY = "0956 362 5507";
-const PHONE_LINK = "tel:+639563625507";
+const PHONE_DISPLAY = '0956 362 5507';
+const PHONE_LINK = 'tel:+639563625507';
+const EMAIL = 'joroblescb@gmail.com';
 
 const SOCIALS = [
-  { href: "https://www.facebook.com/profile.php?id=61577884841560", label: "Facebook", Icon: FaFacebookF },
-  { href: "https://www.linkedin.com/in/jonhro-robles-62020417b/", label: "LinkedIn", Icon: FaLinkedinIn },
-  { href: "https://www.tiktok.com/@jorobdatu2025", label: "TikTok", Icon: FaTiktok },
+  { href: 'https://www.facebook.com/profile.php?id=61577884841560', label: 'Facebook', Icon: FaFacebookF },
+  { href: 'https://www.linkedin.com/in/jonhro-robles-62020417b/', label: 'LinkedIn', Icon: FaLinkedinIn },
+  { href: 'https://www.tiktok.com/@jorobdatu2025', label: 'TikTok', Icon: FaTiktok },
 ];
 
 export default function Footer() {
   const { t } = useTranslation();
-  const taglineRef = useRef(null);
+  const year = new Date().getFullYear();
 
-  // Replay the tagline animation each time it scrolls into view.
-  useEffect(() => {
-    const el = taglineRef.current;
-    if (!el) return;
-
-    const play = () => {
-      el.classList.remove("animate");
-      void el.offsetWidth; // force reflow so the CSS animation restarts
-      el.classList.add("animate");
-    };
-
-    const obs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && play()),
-      { threshold: 0.5 }
-    );
-    obs.observe(el);
-    play();
-    return () => obs.disconnect();
-  }, []);
+  const links = [
+    { to: '/about', label: t('nav-links.About') },
+    { to: '/services', label: t('nav-links.Services') },
+    { to: '/contact', label: t('nav-links.Contact') },
+    { to: '/blog', label: t('nav-links.Blog') },
+    { to: '/rfq', label: t('footer.rfq') },
+  ];
 
   return (
-    <footer className="footer">
-      <div className="footer-top">
-        {/* Left: Logo + Site Name */}
-        <div className="footer-column logo-section">
-          <ScrollToHeroLink className="site-logo" aria-label="Jonhro Robles – Home">
-            <div className="logo-name-container">
-              <img src={jrLogo} alt="" className="footer-logo" />
-              <span className="site-name">Jonhro Robles</span>
+    <footer className="ft">
+      <div className="ft-inner">
+        <div className="ft-grid">
+          {/* Brand */}
+          <div className="ft-brand">
+            <ScrollToHeroLink className="ft-wordmark" aria-label="Jonhro Robles – Home">
+              <img src={jrLogo} alt="" width="44" height="44" />
+              <span>Jonhro <em>Robles</em></span>
+            </ScrollToHeroLink>
+            <p className="ft-about">{t('footer.about')}</p>
+            <p className="ft-license">
+              <BadgeCheck size={16} aria-hidden="true" />
+              {t('footer.license')}
+            </p>
+            <div className="ft-social">
+              {SOCIALS.map(({ href, label, Icon: SocialIcon }) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+                  <SocialIcon aria-hidden="true" />
+                </a>
+              ))}
             </div>
+          </div>
 
-            <div className="tagline-container" ref={taglineRef}>
-              <div className="tagline">
-                <span className="word"><span className="first-letter">C</span>lear</span>
-                <span className="word"><span className="first-letter">M</span>ove</span>
-                <span className="word"><span className="first-letter">D</span>eliver</span>
-              </div>
-              <div className="subtext">With Confidence.</div>
-            </div>
-          </ScrollToHeroLink>
-        </div>
-
-        {/* Middle: Quick Links & Location */}
-        <div className="footer-column mid-section">
-          <nav className="quick-links" aria-label={t("footer.Quick Links")}>
-            <h4>{t("footer.Quick Links")}</h4>
+          {/* Links */}
+          <nav className="ft-col" aria-label={t('footer.Explore')}>
+            <h2>{t('footer.Explore')}</h2>
             <ul>
-              <li><ScrollToHeroLink className="footer-link">{t("footer.Home")}</ScrollToHeroLink></li>
-              <li><Link to="/services">{t("footer.Services")}</Link></li>
-              <li><Link to="/about">{t("footer.About")}</Link></li>
-              <li><Link to="/contact">{t("footer.Contact")}</Link></li>
-              <li><Link to="/blog">{t("footer.Blog")}</Link></li>
+              <li><ScrollToHeroLink>{t('nav-links.Home')}</ScrollToHeroLink></li>
+              {links.map(({ to, label }) => (
+                <li key={to}><Link to={to}>{label}</Link></li>
+              ))}
+              <li><a href="/track.html">{t('nav.Track Shipment')}</a></li>
             </ul>
           </nav>
-          <div className="location-info">
-            <h4>{t("footer.Location")}</h4>
-            <p><strong>Cebu, Philippines</strong></p>
-          </div>
-          <div className="contact-info">
-            <h4>{t("footer.Phone")}</h4>
-            <p><a href={PHONE_LINK}><strong>{PHONE_DISPLAY}</strong></a></p>
-            <p><a href="mailto:joroblescb@gmail.com">joroblescb@gmail.com</a></p>
+
+          {/* Contact */}
+          <div className="ft-col ft-contact">
+            <h2>{t('footer.Contact us')}</h2>
+            <address>
+              <p>
+                <MapPin size={20} aria-hidden="true" />
+                <span>
+                  {t('footer.area')}
+                  <small>{t('footer.areaNote')}</small>
+                </span>
+              </p>
+              <p>
+                <Phone size={20} aria-hidden="true" />
+                <span>
+                  <a href={PHONE_LINK}>{PHONE_DISPLAY}</a>
+                  <small>{t('footer.phoneNote')}</small>
+                </span>
+              </p>
+              <p>
+                <Mail size={20} aria-hidden="true" />
+                <a href={`mailto:${EMAIL}`} className="ft-email">{EMAIL}</a>
+              </p>
+            </address>
           </div>
         </div>
 
-        {/* Right: Social Icons */}
-        <div className="footer-column social-section">
-          <h4>{t("footer.Follow Me")}</h4>
-          <div className="social-icons">
-            {SOCIALS.map(({ href, label, Icon: SocialIcon }) => (
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
-                <SocialIcon aria-hidden="true" />
-              </a>
-            ))}
-          </div>
+        <div className="ft-bottom">
+          <p>&copy; {year} Jonhro Robles. {t('footer.All rights reserved.')} <span className="ft-tagline">Clear · Move · Deliver.</span></p>
+          <p className="ft-legal">
+            <Link to="/privacy">{t('footer.privacy')}</Link>
+            <Link to="/terms">{t('footer.terms')}</Link>
+          </p>
         </div>
-      </div>
-
-      {/* Bottom: Copyright */}
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Jonhro Robles. {t("footer.All rights reserved.")}</p>
       </div>
     </footer>
   );

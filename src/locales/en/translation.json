@@ -222,7 +222,17 @@
     "Location": "Location",
     "Phone": "Phone",
     "Follow Me": "Follow Me",
-    "All rights reserved.": "All rights reserved."
+    "All rights reserved.": "All rights reserved.",
+    "about": "Licensed customs brokerage at the Port of Cebu, serving importers and exporters across the Philippines.",
+    "license": "PRC Licensed Customs Broker · No. 006038",
+    "Explore": "Explore",
+    "Contact us": "Contact",
+    "rfq": "Request for Quotation (RFQ)",
+    "phoneNote": "call, Viber, WhatsApp",
+    "area": "Cebu City, Philippines",
+    "areaNote": "Port of Cebu + major PH ports",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
   },
   "chat": {
     "Chat with us": "Chat with me",
@@ -249,6 +259,7 @@
     "messagePlaceholder": "How can I help?",
     "Your Name": "Your name",
     "Optional": "(Optional)",
-    "detailsPlaceholder": "Describe your shipment: commodity, volume, origin, port of entry, etc."
+    "detailsPlaceholder": "Describe your shipment: commodity, volume, origin, port of entry, etc.",
+    "privacyNote": "By sending, you agree to how I handle your information as described in the"
   }
 }

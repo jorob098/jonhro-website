@@ -1,0 +1,202 @@
+/* ============ FOOTER ============ */
+.ft {
+  position: relative;
+  z-index: 1;
+  background: #111111;
+  color: #c9c9c9;
+}
+
+.ft-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 0;
+}
+
+.ft-grid {
+  display: grid;
+  grid-template-columns: 4fr 3fr 5fr;
+  gap: 48px;
+}
+
+.ft a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ft a:hover {
+  color: #ff8a3d;
+}
+
+/* ---------- Brand ---------- */
+.ft-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff !important;
+}
+
+.ft-wordmark em {
+  font-style: normal;
+  color: #ff6b00;
+}
+
+.ft-about {
+  margin: 20px 0 0;
+  max-width: 36ch;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #a3a3a3;
+}
+
+.ft-license {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  font-size: 0.875rem;
+  color: #e5e5e5;
+}
+
+.ft-license svg {
+  color: #ff6b00;
+  flex-shrink: 0;
+}
+
+.ft-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ft-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #e5e5e5;
+}
+
+.ft-social a:hover {
+  background: #ff6b00;
+  color: #fff;
+}
+
+/* ---------- Columns ---------- */
+.ft-col h2 {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.ft-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+.ft-contact address {
+  margin-top: 20px;
+  font-style: normal;
+  display: grid;
+  gap: 16px;
+  font-size: 0.95rem;
+}
+
+.ft-contact p {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+}
+
+.ft-contact p svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #ff6b00;
+}
+
+.ft-contact span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.ft-contact small {
+  font-size: 0.85rem;
+  color: #8f8f8f;
+}
+
+.ft-email {
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Bottom bar ---------- */
+.ft-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px 24px;
+  flex-wrap: wrap;
+  margin-top: 56px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: #8f8f8f;
+}
+
+.ft-bottom p {
+  margin: 0;
+}
+
+.ft-tagline {
+  color: #ff8a3d;
+  font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .ft-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ft-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .ft-inner {
+    padding: 48px 20px 0;
+  }
+  .ft-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  /* leave room so the chat button doesn't cover the last line */
+  .ft-bottom {
+    flex-direction: column;
+    padding-bottom: 96px;
+  }
+}
+
+.ft-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.ft-tagline {
+  margin-left: 6px;
+}
