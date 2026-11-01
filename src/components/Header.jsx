@@ -16,6 +16,7 @@ const NAV_ITEMS = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const lastScrollY = useRef(0);
   const { t } = useTranslation();
 
@@ -25,6 +26,7 @@ export default function Header() {
     const handleScroll = () => {
       const currentY = window.scrollY;
       setHidden(currentY > lastScrollY.current && currentY > 50);
+      setScrolled(currentY > 10);
       lastScrollY.current = currentY;
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -42,13 +44,9 @@ export default function Header() {
 
   return (
     <>
-      <div className="utility-bar">
-        <LanguageSwitcher />
-      </div>
-
-      <header className={`header ${hidden ? 'hidden-header' : ''}`}>
-        <div className="logo-title" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src={jrLogo} alt="" width="48" height="48" />
+      <header className={`header${hidden ? ' hidden-header' : ''}${scrolled ? ' is-scrolled' : ''}`}>
+        <div className="logo-title">
+          <img src={jrLogo} alt="" width="56" height="56" />
           <Link to="/" className="site-name">
             Jonhro<span> Robles</span>
           </Link>
@@ -58,17 +56,20 @@ export default function Header() {
           <ul className="nav-links">{links()}</ul>
         </nav>
 
-        <button
-          className="hamburger"
-          aria-label={t("nav.Menu")}
-          aria-expanded={isOpen}
-          aria-controls="mobile-nav"
-          onClick={() => setIsOpen((v) => !v)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div className="header-actions">
+          <LanguageSwitcher />
+          <button
+            className="hamburger"
+            aria-label={t("nav.Menu")}
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
+            onClick={() => setIsOpen((v) => !v)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </header>
 
       {/* Outside <header>: the header moves when hiding on scroll, which would drag this panel with it */}

@@ -2004,3 +2004,79 @@ button[disabled] {
 .service-intro-card .service-intro-icon-wrap::before {
   display: none;
 }
+
+/* ============ Header aligned with the page content ============ */
+:root {
+  /* Shared side spacing: content is at most 1200px wide, never closer than 24px to the edge */
+  --page-gutter: max(24px, calc((100vw - 1200px) / 2));
+}
+
+header.header {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 12px var(--page-gutter);
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.97);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+header.header.is-scrolled {
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.logo-title img {
+  width: 56px;
+  height: 56px;
+}
+
+.desktop-nav {
+  margin-left: auto;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+header.header .language-dropdown {
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+/* Hero uses the same side spacing as the header (id selector beats Hero.css media rules) */
+#hero {
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  min-height: calc(100vh - 80px);
+}
+
+/* Switch to the menu button before the nav runs out of room */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-gutter: 20px;
+  }
+  .logo-title img {
+    width: 44px;
+    height: 44px;
+  }
+  header.header .language-dropdown {
+    font-size: 0.8rem;
+    padding: 5px 6px;
+  }
+}
