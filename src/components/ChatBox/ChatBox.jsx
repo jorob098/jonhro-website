@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import useAnonAuth from "../../hooks/useAnonAuth";
 import useChat from "../../hooks/useChat";
-import KiteIcon from "./KiteIcon";
+import chatIcon from "../../assets/icons3d/chat-people.webp";
 import "./Chatbox.css";
 
 function formatTime(isoString) {
@@ -63,7 +63,7 @@ export default function Chatbox() {
         >
           <span className="chat-widget-label">{t("chat.Chat with us")}</span>
           <span className="chat-widget-button">
-            <KiteIcon size={26} color="#fff" strokeWidth={2} />
+            <img src={chatIcon} alt="" className="chat-widget-icon" width="52" height="52" />
             <span className="chat-widget-dot"></span>
             {unreadCount > 0 && <span className="unread-badge widget-badge">{unreadCount}</span>}
           </span>
