@@ -3,12 +3,12 @@
     "Clear Customs, Clear Mind": "Aduanas Despejadas, Mente Clara",
     "YoureTrustedHero": "Su socio de confianza en soluciones aduaneras en Cebú para importación y exportación sin complicaciones.",
     "Get Started": "Comenzar",
-    "pillFreightTop": "Aire • Mar • Tierra",
-    "pillFreight": "Carga",
-    "pillGlobalTop": "Global",
-    "pillGlobal": "Logística",
-    "pillLicensedTop": "Licenciado",
-    "pillLicensed": "Agente"
+    "pillFreightTop": "Licencia PRC",
+    "pillFreight": "N.º 006038",
+    "pillGlobalTop": "Desde 2011",
+    "pillGlobal": "15+ años",
+    "pillLicensedTop": "Puerto de Cebú",
+    "pillLicensed": "+ puertos principales"
   },
   "nav-links": {
     "Home": "Inicio",
@@ -27,8 +27,11 @@
     "Message": "Mensaje",
     "Send Inquiry": "Enviar Consulta",
     "Contact Me": "Contáctame",
-    "Let’s Bring Your Vision to Life": "Hagamos Realidad Tu Visión",
-    "Support Message Full": "Ya sea que estés comenzando desde cero o mejorando lo que ya tienes, estoy aquí para ayudarte a tener éxito. Hablemos sobre cómo puedo apoyar tu próximo carga."
+    "Let’s Bring Your Vision to Life": "Pongamos tu carga en movimiento",
+    "Support Message Full": "Cuéntame qué importas o exportas y cuándo llega. Te responderé con los requisitos, los pasos y una cotización.",
+    "Prefer to talk?": "¿Prefieres hablar?",
+    "Call or text": "Llama o escribe",
+    "Chat on this page": "O usa el botón de chat abajo a la derecha."
   },
   "contact-page": {
     "Let’s Talk": "Hablemos",

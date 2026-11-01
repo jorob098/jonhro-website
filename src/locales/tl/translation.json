@@ -3,12 +3,12 @@
     "Clear Customs, Clear Mind": "Malinis na Customs, Malinis na Isipan",
     "YoureTrustedHero": "Ang iyong maaasahang Customs Solutions Partner sa Cebu para sa walang abalang pag-import at pag-export.",
     "Get Started": "Magsimula",
-    "pillFreightTop": "Himpapawid • Dagat • Lupa",
-    "pillFreight": "Kargamento",
-    "pillGlobalTop": "Pandaigdig",
-    "pillGlobal": "Logistics",
-    "pillLicensedTop": "Lisensyado",
-    "pillLicensed": "Broker"
+    "pillFreightTop": "PRC Lisensyado",
+    "pillFreight": "Blg. 006038",
+    "pillGlobalTop": "Mula 2011",
+    "pillGlobal": "15+ taon",
+    "pillLicensedTop": "Pantalan ng Cebu",
+    "pillLicensed": "+ pangunahing pantalan"
   },
   "nav-links": {
     "Home": "Home",
@@ -27,8 +27,11 @@
     "Message": "Mensahe",
     "Send Inquiry": "Ipadala ang Pagtatanong",
     "Contact Me": "Makipag-ugnayan sa Akin",
-    "Let’s Bring Your Vision to Life": "Ihatid Natin sa Buhay ang Iyong Pananaw",
-    "Support Message Full": "Kung ikaw man ay nagsisimula o nagpapabuti ng kasalukuyang sistema, narito ako upang tumulong. Pag-usapan natin kung paano kita matutulungan sa iyong susunod na kargamento."
+    "Let’s Bring Your Vision to Life": "Paandarin Natin ang Iyong Kargamento",
+    "Support Message Full": "Sabihin mo kung ano ang iyong ini-import o ine-export at kailan ito darating. Sasagot ako ng mga requirements, hakbang at quotation.",
+    "Prefer to talk?": "Mas gusto mong makipag-usap?",
+    "Call or text": "Tumawag o mag-text",
+    "Chat on this page": "O gamitin ang chat button sa kanang ibaba."
   },
   "contact-page": {
     "Let’s Talk": "Mag-usap Tayo",

@@ -3,12 +3,12 @@
     "Clear Customs, Clear Mind": "通关顺畅，心安理得",
     "YoureTrustedHero": "您在宿务值得信赖的报关合作伙伴，助您轻松进出口。",
     "Get Started": "开始使用",
-    "pillFreightTop": "空运・海运・陆运",
-    "pillFreight": "货运",
-    "pillGlobalTop": "全球",
-    "pillGlobal": "物流",
-    "pillLicensedTop": "持证",
-    "pillLicensed": "报关员"
+    "pillFreightTop": "PRC持证",
+    "pillFreight": "编号 006038",
+    "pillGlobalTop": "始于2011年",
+    "pillGlobal": "15年以上",
+    "pillLicensedTop": "宿务港",
+    "pillLicensed": "+ 全国主要港口"
   },
   "nav-links": {
     "Home": "首页",
@@ -27,8 +27,11 @@
     "Message": "留言内容",
     "Send Inquiry": "提交咨询",
     "Contact Me": "联系我",
-    "Let’s Bring Your Vision to Life": "让您的愿景变为现实",
-    "Support Message Full": "无论您是从零开始还是优化现有项目，我都致力于帮助您取得成功。让我们谈谈我如何能支持您的下一批货物。"
+    "Let’s Bring Your Vision to Life": "让您的货物顺利通关",
+    "Support Message Full": "告诉我您要进口或出口什么、何时到港。我会回复所需文件、流程和报价。",
+    "Prefer to talk?": "想直接沟通？",
+    "Call or text": "致电或短信",
+    "Chat on this page": "或使用右下角的聊天按钮。"
   },
   "contact-page": {
     "Let’s Talk": "欢迎洽谈",

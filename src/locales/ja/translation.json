@@ -3,12 +3,12 @@
     "Clear Customs, Clear Mind": "クリアカスタム、クリアマインド",
     "YoureTrustedHero": "手間のかからない輸出入のための、セブにおける信頼できる通関ソリューションパートナー",
     "Get Started": "始めましょう",
-    "pillFreightTop": "空・海・陸",
-    "pillFreight": "貨物輸送",
-    "pillGlobalTop": "グローバル",
-    "pillGlobal": "物流",
-    "pillLicensedTop": "公認",
-    "pillLicensed": "通関士"
+    "pillFreightTop": "PRC公認",
+    "pillFreight": "No. 006038",
+    "pillGlobalTop": "2011年から",
+    "pillGlobal": "15年以上",
+    "pillLicensedTop": "セブ港",
+    "pillLicensed": "+ 国内主要港"
   },
   "nav-links": {
     "Home": "ホーム",
@@ -27,8 +27,11 @@
     "Message": "メッセージ",
     "Send Inquiry": "お問い合わせを送信",
     "Contact Me": "ご連絡ください",
-    "Let’s Bring Your Vision to Life": "あなたのビジョンを実現しましょう",
-    "Support Message Full": "最初から構築する場合でも、既存のものを改善する場合でも、私はあなたの成功を支援するためにここにいます。次の出荷をどのようにサポートできるか、ご相談しましょう。"
+    "Let’s Bring Your Vision to Life": "貨物をスムーズに動かしましょう",
+    "Support Message Full": "輸出入する品目と到着予定をお知らせください。必要書類、手順、お見積りをご案内します。",
+    "Prefer to talk?": "お電話でもどうぞ",
+    "Call or text": "電話・SMS",
+    "Chat on this page": "または右下のチャットボタンをご利用ください。"
   },
   "contact-page": {
     "Let’s Talk": "お話ししましょう",

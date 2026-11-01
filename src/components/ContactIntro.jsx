@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 import Honeypot from "./Honeypot";
 import { submitForm } from "../services/submitForm";
 
@@ -182,6 +183,24 @@ export default function ContactIntro() {
   >
     {t("contactIntro.Support Message Full")}
   </motion.p>
+
+  <motion.div
+    className="contact-call"
+    variants={{
+      hidden: { opacity: 0, y: 30 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    }}
+  >
+    <span className="contact-call-label">{t("contactIntro.Prefer to talk?")}</span>
+    <a href="tel:+639563625507" className="contact-call-link">
+      <Phone size={18} aria-hidden="true" />
+      <span>
+        <small>{t("contactIntro.Call or text")}</small>
+        0956 362 5507
+      </span>
+    </a>
+    <span className="contact-call-note">{t("contactIntro.Chat on this page")}</span>
+  </motion.div>
 </motion.div>
         </div>
     </section>
