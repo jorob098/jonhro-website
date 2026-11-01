@@ -41,7 +41,18 @@
     "Contact No.": "Numero ng Kontak",
     "Email": "Email",
     "Message": "Mensahe",
-    "Send Inquiry": "Ipadala ang Pagtatanong"
+    "Send Inquiry": "Ipadala ang Pagtatanong",
+    "eyebrow": "Makipag-ugnayan",
+    "directTitle": "Direktang makipag-ugnayan",
+    "call": "Tumawag o mag-text",
+    "callHint": "I-tap para tumawag",
+    "viberHint": "Mag-chat sa Viber",
+    "whatsappHint": "Mag-chat sa WhatsApp",
+    "email": "Email",
+    "emailHint": "Magpadala ng email",
+    "formTitle": "O magpadala ng mensahe",
+    "locationTitle": "Lokasyon",
+    "locationText": "Nakabase sa Cebu, nagsisilbi sa Pantalan ng Cebu at mga pangunahing pantalan sa buong bansa."
   },
   "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "End-to-End Customs Services mula Cebu hanggang sa mga Pangunahing Pantalan sa Buong Bansa",

@@ -41,7 +41,18 @@
     "Contact No.": "Número de Contacto",
     "Email": "Correo Electrónico",
     "Message": "Mensaje",
-    "Send Inquiry": "Enviar Consulta"
+    "Send Inquiry": "Enviar Consulta",
+    "eyebrow": "Contacto",
+    "directTitle": "Contáctame directamente",
+    "call": "Llamar o SMS",
+    "callHint": "Toca para llamar",
+    "viberHint": "Chatea por Viber",
+    "whatsappHint": "Chatea por WhatsApp",
+    "email": "Correo",
+    "emailHint": "Enviar un correo",
+    "formTitle": "O envía un mensaje",
+    "locationTitle": "Ubicación",
+    "locationText": "Con base en Cebú, atendiendo el Puerto de Cebú y los principales puertos del país."
   },
   "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "Servicios de Aduanas de Principio a Fin desde Cebú hacia Puertos Clave a Nivel Nacional",

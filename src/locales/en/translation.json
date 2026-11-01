@@ -41,7 +41,18 @@
     "Contact No.": "Contact No.",
     "Email": "Email",
     "Message": "Message",
-    "Send Inquiry": "Send Inquiry"
+    "Send Inquiry": "Send Inquiry",
+    "eyebrow": "Contact",
+    "directTitle": "Reach me directly",
+    "call": "Call or text",
+    "callHint": "Tap to call",
+    "viberHint": "Chat on Viber",
+    "whatsappHint": "Chat on WhatsApp",
+    "email": "Email",
+    "emailHint": "Send an email",
+    "formTitle": "Or send a message",
+    "locationTitle": "Location",
+    "locationText": "Based in Cebu, serving the Port of Cebu and major ports nationwide."
   },
   "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "End to End Customs Services from Cebu to Key Ports Nationwide",

@@ -79,6 +79,7 @@ export default function Footer() {
           <div className="contact-info">
             <h4>{t("footer.Phone")}</h4>
             <p><a href={PHONE_LINK}><strong>{PHONE_DISPLAY}</strong></a></p>
+            <p><a href="mailto:joroblescb@gmail.com">joroblescb@gmail.com</a></p>
           </div>
         </div>
 

@@ -41,7 +41,18 @@
     "Contact No.": "연락처",
     "Email": "이메일",
     "Message": "메시지",
-    "Send Inquiry": "문의 보내기"
+    "Send Inquiry": "문의 보내기",
+    "eyebrow": "문의",
+    "directTitle": "직접 연락하기",
+    "call": "전화·문자",
+    "callHint": "눌러서 전화",
+    "viberHint": "Viber로 채팅",
+    "whatsappHint": "WhatsApp으로 채팅",
+    "email": "이메일",
+    "emailHint": "이메일 보내기",
+    "formTitle": "또는 메시지 보내기",
+    "locationTitle": "위치",
+    "locationText": "세부를 거점으로 세부항과 전국 주요 항구를 지원합니다."
   },
   "servicesPage": {
     "End to End Customs Services from Cebu to Key Ports Nationwide": "세부에서 전국 주요 항구까지 원스톱 통관 서비스",

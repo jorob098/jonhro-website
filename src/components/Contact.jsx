@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Phone, MessageCircle, MessageSquare, Mail, MapPin } from "lucide-react";
 import Toast from "../components/Toast";
 import { useTranslation } from "react-i18next";
 import Seo from './Seo';
+import './Contact.css';
 import Honeypot from './Honeypot';
 import { submitForm } from '../services/submitForm';
 
@@ -18,6 +20,13 @@ export default function Contact() {
 
   const [website, setWebsite] = useState('');
   const [sending, setSending] = useState(false);
+
+  const methods = [
+    { href: "tel:+639563625507", label: t("contact-page.call"), value: "0956 362 5507", hint: t("contact-page.callHint"), Icon: Phone, tone: "call" },
+    { href: "viber://chat?number=%2B639563625507", label: "Viber", value: "0956 362 5507", hint: t("contact-page.viberHint"), Icon: MessageCircle, tone: "viber" },
+    { href: "https://wa.me/639563625507", label: "WhatsApp", value: "0956 362 5507", hint: t("contact-page.whatsappHint"), Icon: MessageSquare, tone: "whatsapp", external: true },
+    { href: "mailto:joroblescb@gmail.com", label: t("contact-page.email"), value: "joroblescb@gmail.com", hint: t("contact-page.emailHint"), Icon: Mail, tone: "email" },
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,58 +54,55 @@ export default function Contact() {
   return (
     <>
       <Seo path="/contact" />
-    <main className="contact-page">
-      <motion.section
-        className="contact-container"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ staggerChildren: 0.15 }}
-      >
-        {/* LEFT SIDE */}
-        <motion.div
-          className="contact-left"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <motion.div
-            className="contact-header"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1>{t("contact-page.Let’s Talk")}</h1>
-            <p>{t("contact-page.Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.")}</p>
-          </motion.div>
+    <main className="ct-page">
+      <section className="ct-head">
+        <span className="ct-eyebrow">{t("contact-page.eyebrow")}</span>
+        <h1>{t("contact-page.Let’s Talk")}</h1>
+        <p>{t("contact-page.Reach out with your inquiry. Whether it's a simple question or a complex logistics challenge — I’m here to help.")}</p>
+      </section>
 
-          <motion.div
-            className="map-container"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d502437.36563812924!2d123.49549902788435!3d10.31850663329054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f2f6935cf3cf485%3A0xac27fa54d3feefbd!2sJonhro%20Robles%2C%20Lcb!5e0!3m2!1sen!2sph!4v1753007268830!5m2!1sen!2sph"
-              width="100%"
-              height="250"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Jonhro Robles Location"
-            ></iframe>
-          </motion.div>
-        </motion.div>
+      <section className="ct-grid">
+        <div className="ct-left">
+          <h2>{t("contact-page.directTitle")}</h2>
+          <ul className="ct-methods">
+            {methods.map(({ href, label, value, hint, Icon, external, tone }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  className={`ct-method ${tone}`}
+                  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                >
+                  <span className="ct-method-icon"><Icon size={22} aria-hidden="true" /></span>
+                  <span className="ct-method-text">
+                    <small>{label}</small>
+                    <strong>{value}</strong>
+                    <em>{hint}</em>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* RIGHT SIDE */}
-        <motion.form
-          className="contact-form"
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+          <div className="ct-location">
+            <h3><MapPin size={18} aria-hidden="true" /> {t("contact-page.locationTitle")}</h3>
+            <p>{t("contact-page.locationText")}</p>
+            <div className="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d502437.36563812924!2d123.49549902788435!3d10.31850663329054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f2f6935cf3cf485%3A0xac27fa54d3feefbd!2sJonhro%20Robles%2C%20Lcb!5e0!3m2!1sen!2sph!4v1753007268830!5m2!1sen!2sph"
+                width="100%"
+                height="220"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Jonhro Robles Location"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <form className="contact-form ct-form" onSubmit={handleSubmit}>
+          <h2>{t("contact-page.formTitle")}</h2>
           <div className="form-row">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <label htmlFor="firstName">{t("contact-page.First Name")} <span className="error">*</span></label>
@@ -141,8 +147,8 @@ export default function Contact() {
           >
             {sending ? t("form.Sending...") : t("contact-page.Send Inquiry")}
           </motion.button>
-        </motion.form>
-      </motion.section>
+        </form>
+      </section>
 
       {toast && (
         <Toast
