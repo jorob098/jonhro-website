@@ -254,54 +254,6 @@ header {
   color: #333;
 }
 
-/* ------------------------
-   ABOUT SECTION
-------------------------- */
-#about {
-  padding: 80px 20px;
-  background-color: #f8f8f8;
-  text-align: center;
-}
-
-#about h1,
-#about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #2E2E2E;
-}
-
-#about p {
-  font-size: 18px;
-  color: #594E4E;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  line-height: 1.6;
-}
-
-#about .cta-button {
-  background: transparent;
-  border: 2px solid #ff6b00;
-  color: #ff6b00;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  font-size: 1rem;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-#about .cta-button:hover {
-  background: #ff6b00;
-  color: #fff;
-  box-shadow: 
-    0 0 10px rgba(255, 107, 0, 0.7),
-    0 0 20px rgba(255, 107, 0, 0.6),
-    0 0 30px rgba(255, 107, 0, 0.5);
-}
-
 /* -------- SERVICES PAGE -------- */
 .services-page {
   padding: 5rem 1.5rem;
