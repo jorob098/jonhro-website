@@ -33,7 +33,7 @@ when you're happy with the change.
 | Page titles, descriptions, share image | `src/seo/pages.js` |
 | Translations (en, tl, es, ja, zh, ko) | `src/locales/<lang>/translation.json` |
 | Site-wide styles | `src/Style.css` |
-| Shipment tracker page | `public/track.html` |
+| Shipment tracker page | `src/components/Track.jsx` (www.jonhrorobles.com/track) |
 | Tracker lookup script (Google Apps Script) | `scripts/track-lookup.gs` |
 | Chat database rules (Supabase) | `supabase/chat-policies.sql` |
 

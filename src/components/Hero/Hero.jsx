@@ -74,9 +74,9 @@ export default function Hero() {
             >
               {t("aboutPage.ctaQuote")}
             </Link>
-            <a href="/track.html" className="text-button">
+            <Link to="/track" className="text-button">
               {t("servicesPage.trackCta")} →
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div

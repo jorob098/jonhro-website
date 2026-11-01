@@ -39,6 +39,11 @@ export const PAGES = {
     description:
       "Request a customs brokerage quote from Jonhro Robles, licensed customs broker in Cebu, Philippines.",
   },
+  "/track": {
+    title: "Track Your Shipment | Jonhro Robles Customs Broker",
+    description:
+      "Check the status of your customs clearance and delivery with your tracking number from Jonhro Robles, licensed customs broker in Cebu.",
+  },
   "/privacy": {
     title: "Privacy Policy | Jonhro Robles Customs Broker",
     description:
