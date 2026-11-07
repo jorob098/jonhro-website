@@ -10,6 +10,7 @@ import './Blog.css';
 
 // slug -> article body
 const BODIES = {
+  'de-minimis-10000-review': lazy(() => import('./posts/DeMinimisReview')),
   'importing-steel-into-cebu': lazy(() => import('./posts/ImportingSteelCebu')),
   'cebu-trade-landscape': lazy(() => import('./posts/CebuTradeLandscape')),
 };
