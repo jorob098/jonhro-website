@@ -3,6 +3,15 @@
 
 export const POSTS = [
   {
+    slug: "de-minimis-10000-review",
+    title: "Will Imports Under ₱10,000 Soon Be Taxed? What the De Minimis Review Means for You",
+    description:
+      "The DOF is studying the removal of the ₱10,000 de minimis exemption. What the rule covers today, what could change, and what importers and online sellers should do now.",
+    date: "2026-11-07",
+    tag: "Policy",
+    readMinutes: 5,
+  },
+  {
     slug: "importing-steel-into-cebu",
     title: "Importing Steel into Cebu: Rebar, H-Beams and Prefab Buildings",
     description:
