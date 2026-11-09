@@ -15,6 +15,7 @@ const BlogPost = lazy(() => import('./components/blog/BlogPost'));
 const Rfq = lazy(() => import('./components/Rfq'));
 const Track = lazy(() => import('./components/Track'));
 const Privacy = lazy(() => import('./components/Privacy'));
+const MessengerPrivacy = lazy(() => import('./components/MessengerPrivacy'));
 const Terms = lazy(() => import('./components/Terms'));
 const NotFound = lazy(() => import('./components/NotFound'));
 const ChatBox = lazy(() => import('./components/ChatBox/ChatBox'));
@@ -42,6 +43,7 @@ export default function App() {
           <Route path="/track" element={<Track />} />
           <Route path="/track.html" element={<OldTrackRedirect />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/messenger-privacy" element={<MessengerPrivacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

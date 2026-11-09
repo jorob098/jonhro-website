@@ -49,6 +49,11 @@ export const PAGES = {
     description:
       "How Jonhro Robles, licensed customs broker in Cebu, collects, uses and protects personal information under the Data Privacy Act of 2012.",
   },
+  "/messenger-privacy": {
+    title: "Messenger Bot Privacy Policy | Jonh Ro",
+    description:
+      "How the AI Messenger assistant run by Jonh Ro collects, uses, keeps and deletes information when you message a business's Facebook Page.",
+  },
   "/terms": {
     title: "Terms of Use | Jonhro Robles Customs Broker",
     description:

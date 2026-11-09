@@ -175,3 +175,118 @@ export const TERMS = {
     },
   ],
 };
+
+// ---------------------------------------------------------------------------
+// Messenger bot privacy policy (www.jonhrorobles.com/messenger-privacy).
+// Covers the AI chatbot that answers customers on businesses' Facebook Pages.
+// Keep this in line with how the bot actually works (repo: jorob098/meta-bot).
+// ---------------------------------------------------------------------------
+
+export const BOT_PRIVACY_UPDATED = 'November 9, 2026';
+export const BOT_CONTACT_NAME = 'Jonh Ro';
+export const BOT_CONTACT_EMAIL = 'jonhrabino@gmail.com';
+
+export const MESSENGER_BOT_PRIVACY = {
+  title: 'Messenger Bot Privacy Policy',
+  updated: BOT_PRIVACY_UPDATED,
+  intro: [
+    `This policy explains how the AI Messenger assistant built and operated by ${BOT_CONTACT_NAME} ("I", "me") handles your information when you message a business's Facebook Page that uses it. The assistant answers questions, takes orders, and passes conversations to the business's staff when needed.`,
+    'Each business decides how it uses the orders and inquiries you send it. I run the assistant on the business\'s behalf and handle your information in line with the Data Privacy Act of 2012 (Republic Act No. 10173) and issuances of the National Privacy Commission.',
+    'Mubo nga summary: among gitipigan ang imong Messenger name, mga message, ug order details aron matubag ka ug ma-process ang imong order. Dili namo ibaligya ang imong data. I-type ang "delete my data" sa Messenger kung gusto nimo nga i-delete namo kini.',
+  ],
+  sections: [
+    {
+      heading: '1. Information the assistant collects',
+      list: [
+        'Your Messenger ID for that Page (a number Facebook assigns, not your phone number or email) and your Facebook first and last name.',
+        'The messages you send to the Page and the replies sent to you, with their dates and times.',
+        'Details you type in when ordering or asking for help: for example your name, contact number, delivery address, the items you want, and the date and time.',
+        'Whether a staff member has taken over your conversation.',
+      ],
+      paragraphs2: ['The assistant does not ask for passwords, card numbers or bank details. Please don\'t send them, or other sensitive information such as health details, through Messenger.'],
+    },
+    {
+      heading: '2. How it is used',
+      list: [
+        'To answer your questions using the business\'s own information (products, prices, hours, delivery).',
+        'To collect and pass your order or request to the business\'s staff, who confirm it with you.',
+        'To alert staff when you ask to talk to a person, when you have a concern, or when the assistant can\'t answer.',
+        'To remember your recent messages so the conversation makes sense.',
+      ],
+      paragraphs2: ['Your information is not sold, rented or used for advertising.'],
+    },
+    {
+      heading: '3. Legal basis',
+      paragraphs: [
+        'Your information is processed because you chose to message the business and asked for information or to place an order, so processing is needed to respond and to carry out your request. Where consent is required, you may withdraw it at any time.',
+      ],
+    },
+    {
+      heading: '4. Who receives your information',
+      list: [
+        'The business you messaged, and its staff, who receive your orders and requests and may reply to you directly.',
+        'Meta (Facebook Messenger), which delivers the messages. Meta\'s own privacy policy applies to your use of Messenger.',
+        'The AI service that writes the assistant\'s replies (currently the Google Gemini API, used as a paid service). It receives your recent messages and the business\'s information to write each reply. Under Google\'s terms for paid use, your messages are not used to improve Google\'s products; Google logs them for a limited time only to detect abuse.',
+        'The cloud hosting provider that runs the assistant (currently Render, on servers in Singapore).',
+        'Telegram, which delivers alerts to the business owner. An alert can include your name, contact number, order details and recent messages.',
+      ],
+      paragraphs2: ['These providers may store data on servers outside the Philippines. Only what each service needs to work is shared.'],
+    },
+    {
+      heading: '5. How long information is kept',
+      list: [
+        'Chat messages: deleted automatically 90 days after they were sent.',
+        'Orders and requests for staff: deleted automatically after 1 year.',
+        'Alerts already delivered to the business owner\'s Telegram stay there until the owner deletes them.',
+        'Your conversation also stays in Messenger itself, under Meta\'s policies. You can delete it from your Messenger app.',
+      ],
+    },
+    {
+      heading: '6. Deleting your data',
+      paragraphs: ['You can have your data deleted at any time, in either of these ways:'],
+      list: [
+        'Type "delete my data" in the conversation with the Page ("i-delete akong data" or "burahin ang data ko" also work). The assistant immediately deletes the messages, orders and contact details it stored about you, confirms it to you, and notifies the business so it can remove other copies.',
+        `Or email ${BOT_CONTACT_EMAIL} with the name of the Page you messaged and your Facebook name. Requests are handled within 30 days.`,
+      ],
+      paragraphs2: ['Some details may need to be kept longer if the law requires it, for example sales records the business must keep for tax purposes.'],
+    },
+    {
+      heading: '7. Automated replies',
+      paragraphs: [
+        'Replies come from an AI assistant, which can make mistakes. Orders are only final once the business\'s staff confirm them. To talk to a person, type "tawo", "staff" or "agent", and the assistant will step aside and alert the staff.',
+      ],
+    },
+    {
+      heading: '8. Security',
+      paragraphs: [
+        'Information is sent over encrypted connections (HTTPS), every message from Meta is checked to confirm it really came from Meta, and access to stored data is limited to the people who run the assistant and the business. No method of storage or transmission is completely secure.',
+      ],
+    },
+    {
+      heading: '9. Your rights',
+      paragraphs: ['Under the Data Privacy Act, you have the right to:'],
+      list: [
+        'Be informed about how your personal information is processed.',
+        'Access the personal information held about you.',
+        'Correct inaccurate or incomplete information.',
+        'Object to processing, or withdraw consent where processing is based on consent.',
+        'Ask for erasure or blocking of your information.',
+        'Receive a copy of your information in a commonly used format.',
+        'File a complaint with the National Privacy Commission (www.privacy.gov.ph).',
+      ],
+      paragraphs2: [`To use any of these rights, email ${BOT_CONTACT_EMAIL}. You may be asked to confirm your identity first.`],
+    },
+    {
+      heading: '10. Children',
+      paragraphs: ['The assistant is meant for adult customers. If you are under 18, please ask a parent or guardian to contact the business for you.'],
+    },
+    {
+      heading: '11. Changes to this policy',
+      paragraphs: ['This policy may be updated from time to time. The latest version is always on this page, with the date it was last updated.'],
+    },
+    {
+      heading: '12. Contact',
+      paragraphs: [`${BOT_CONTACT_NAME}, ${BOT_CONTACT_EMAIL}`],
+    },
+  ],
+};
