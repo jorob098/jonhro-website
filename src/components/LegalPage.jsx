@@ -12,7 +12,7 @@ export default function LegalPage({ path, doc, otherLink }) {
           <div className="legal-head">
             <span className="legal-eyebrow">Legal</span>
             <h1>{doc.title}</h1>
-            <p className="legal-updated">Last updated: {LEGAL_UPDATED}</p>
+            <p className="legal-updated">Last updated: {doc.updated || LEGAL_UPDATED}</p>
           </div>
 
           {doc.intro.map((p) => <p key={p}>{p}</p>)}
