@@ -1,14 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Loader2, Search, Phone, MessageCircle } from 'lucide-react';
+import { supabase } from '../lib/supabaseClient';
 import Seo from './Seo';
 import './Track.css';
-
-// Web app URL of scripts/track-lookup.gs. It returns one shipment at a time,
-// so the Google Sheet stays private. See scripts/TRACKER-SETUP.md.
-const LOOKUP_URL =
-  'https://script.google.com/macros/s/AKfycbwu7yKdp_ay3LCzSIvvfbMpVcHg6al8-rrezTDkV9EMluJbBHF1PV371I4JbjqbUQQ/exec';
 
 const STAGES = ['Booked', 'Customs Processing', 'Released', 'In Transit', 'Delivered'];
 
@@ -20,60 +16,68 @@ const STAGE_ICONS = {
   Delivered: <><path d="M21 8l-9-5-9 5v8l9 5 9-5z" /><path d="M3 8l9 5 9-5M12 13v8" /></>,
 };
 
+const DATE_FIELDS = new Set(['last_update', 'eta']);
 const DETAIL_FIELDS = ['current_location', 'last_update', 'origin', 'destination', 'eta', 'description'];
 
-const normTn = (s) => s.trim().toUpperCase().replace(/\s+/g, '');
+const normTn = (s) => String(s || '').trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
 
-// Returns { shipment } or { error: "not_found" | "pin_required" | "wrong_pin" | "too_many_attempts" }
-async function lookup(tn, pin) {
-  const params = new URLSearchParams({ tn });
-  if (pin) params.set('pin', pin);
-  const res = await fetch(`${LOOKUP_URL}?${params}`, { cache: 'no-store' });
-  if (!res.ok) throw new Error('Lookup failed');
-  const data = await res.json();
-  return data.ok ? { shipment: data.shipment } : { error: data.error || 'not_found' };
+function formatDate(value, withTime) {
+  if (!value) return '';
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return String(value);
+  const opts = withTime
+    ? { timeZone: 'Asia/Manila', day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true }
+    : { timeZone: 'Asia/Manila', day: 'numeric', month: 'short', year: 'numeric' };
+  return d.toLocaleString('en-PH', opts);
+}
+
+function withTimeout(promise, ms) {
+  let id;
+  const timeout = new Promise((_, reject) => { id = setTimeout(() => reject(new Error('timeout')), ms); });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(id));
 }
 
 export default function Track() {
   const { t } = useTranslation();
   const k = (key) => t(`track.${key}`);
   const [searchParams, setSearchParams] = useSearchParams();
+  const req = useRef(0);
 
   const [tn, setTn] = useState(searchParams.get('tn') || '');
-  const [pin, setPin] = useState('');
-  const [needPin, setNeedPin] = useState(false);
   const [state, setState] = useState({ status: 'idle' });
 
-  async function search(rawTn = tn, rawPin = pin) {
+  async function search(rawTn = tn) {
     const number = normTn(rawTn);
     if (!number) {
       setState({ status: 'message', tone: 'error', key: 'enterNumber' });
       return;
     }
+    const id = ++req.current;
     setState({ status: 'searching' });
     try {
-      const { shipment, error } = await lookup(number, rawPin.trim());
-      if (shipment) {
-        setState({ status: 'found', shipment });
+      const { data, error } = await withTimeout(
+        supabase.rpc('track_shipment', { p_tn: number }),
+        15000,
+      );
+      if (id !== req.current) return;
+      if (error) throw error;
+
+      if (data?.ok && data.shipment) {
+        setState({ status: 'found', shipment: data.shipment });
         setSearchParams({ tn: number }, { replace: true });
-      } else if (error === 'pin_required' || error === 'wrong_pin') {
-        setNeedPin(true);
-        setState({ status: 'message', tone: 'info', key: error === 'wrong_pin' ? 'wrongPin' : 'pinRequired' });
-        setTimeout(() => document.getElementById('track-pin')?.focus(), 0);
-      } else if (error === 'too_many_attempts') {
-        setState({ status: 'message', tone: 'error', key: 'tooMany' });
       } else {
         setState({ status: 'message', tone: 'error', key: 'notFound', contact: true });
       }
     } catch {
+      if (id !== req.current) return;
       setState({ status: 'message', tone: 'error', key: 'loadError' });
     }
   }
 
-  // Open a shared link like /track?tn=JR101-ABCD and search right away
+  // Open a shared link like /track?tn=JR101-UPPY and search right away
   useEffect(() => {
     const preset = searchParams.get('tn');
-    if (preset) search(preset, '');
+    if (preset) search(preset);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -84,9 +88,14 @@ export default function Track() {
 
   const shipment = state.status === 'found' ? state.shipment : null;
   const status = shipment?.status || '';
-  const stageIndex = STAGES.findIndex((s) => s.toLowerCase() === status.toLowerCase());
+  const stageIndex = STAGES.findIndex((s) => s.toLowerCase() === String(status).toLowerCase());
   const isFinal = stageIndex === STAGES.length - 1;
   const stageLabel = (s) => (STAGES.includes(s) ? k(s) : s);
+
+  const displayValue = (field, value) => {
+    if (DATE_FIELDS.has(field)) return formatDate(value, field === 'last_update');
+    return value;
+  };
 
   return (
     <>
@@ -115,21 +124,6 @@ export default function Track() {
                   maxLength={40}
                 />
               </div>
-              {needPin && (
-                <div className="trk-field trk-pin">
-                  <label htmlFor="track-pin">{k('pin')}</label>
-                  <input
-                    id="track-pin"
-                    type="text"
-                    inputMode="numeric"
-                    autoComplete="off"
-                    value={pin}
-                    onChange={(e) => setPin(e.target.value)}
-                    placeholder={k('pinPlaceholder')}
-                    maxLength={20}
-                  />
-                </div>
-              )}
               <button type="submit" className="trk-btn" disabled={state.status === 'searching'}>
                 {state.status === 'searching'
                   ? <Loader2 size={18} className="trk-spin" aria-hidden="true" />
@@ -179,7 +173,7 @@ export default function Track() {
                     {DETAIL_FIELDS.filter((f) => shipment[f]).map((f) => (
                       <div key={f} className="trk-detail">
                         <dt>{k(f)}</dt>
-                        <dd>{shipment[f]}</dd>
+                        <dd>{displayValue(f, shipment[f])}</dd>
                       </div>
                     ))}
                     {shipment.notes && (
