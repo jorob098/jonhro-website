@@ -326,7 +326,7 @@
     "last_update": "最近更新",
     "origin": "起运地",
     "destination": "目的地",
-    "eta": "预计送达",
+    "eta": "预计到达 (ETA)",
     "description": "货物",
     "notes": "备注",
     "help": "对货物有疑问？"
