@@ -326,7 +326,7 @@
     "last_update": "최근 업데이트",
     "origin": "출발지",
     "destination": "도착지",
-    "eta": "예상 배송일",
+    "eta": "도착 예정일 (ETA)",
     "description": "화물",
     "notes": "비고",
     "help": "화물 관련 문의가 있으신가요?"

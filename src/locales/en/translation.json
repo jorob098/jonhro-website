@@ -326,7 +326,7 @@
     "last_update": "Last update",
     "origin": "Origin",
     "destination": "Destination",
-    "eta": "Estimated delivery",
+    "eta": "Estimated arrival (ETA)",
     "description": "Cargo",
     "notes": "Notes",
     "help": "Questions about your shipment?"

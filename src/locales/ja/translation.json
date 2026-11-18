@@ -326,7 +326,7 @@
     "last_update": "最終更新",
     "origin": "出荷地",
     "destination": "仕向地",
-    "eta": "配達予定",
+    "eta": "到着予定 (ETA)",
     "description": "貨物",
     "notes": "備考",
     "help": "貨物についてご質問がありますか？"
