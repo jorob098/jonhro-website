@@ -10,6 +10,7 @@ export default function Seo({ path, title, description, type, jsonLd, noindex = 
   const pageTitle = title || page.title;
   const pageDescription = description || page.description;
   const pageType = type || page.type || 'website';
+  const pageImage = page.image || SHARE_IMAGE;
   const url = `${SITE_URL}${page.canonical || (path && path !== '/' ? path : '/')}`;
 
   return (
@@ -27,13 +28,13 @@ export default function Seo({ path, title, description, type, jsonLd, noindex = 
       <meta property="og:description" content={pageDescription} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={pageType} />
-      <meta property="og:image" content={SHARE_IMAGE} />
+      <meta property="og:image" content={pageImage} />
 
       {/* Twitter/X card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
-      <meta name="twitter:image" content={SHARE_IMAGE} />
+      <meta name="twitter:image" content={pageImage} />
 
       {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
     </Helmet>

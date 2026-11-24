@@ -67,5 +67,42 @@ for (const post of POSTS) {
     title: `${post.title} | Jonhro Robles`,
     description: post.description,
     type: "article",
+    image: post.image ? `${SITE_URL}${post.image}` : undefined,
+    lastmod: post.updated || post.date,
   };
+}
+// The blog index changes whenever a post is added or updated
+PAGES["/blog"].lastmod = POSTS.map((p) => p.updated || p.date).sort().pop();
+
+// Structured data for a blog post: the article itself, plus its FAQ when it has one.
+// Written into each post's built HTML by vite.config.js, so crawlers that
+// don't run JavaScript (most AI answer engines) still see it.
+export function postJsonLd(post) {
+  const url = `${SITE_URL}/blog/${post.slug}`;
+  const author = { "@type": "Person", name: "Jonhro Robles", url: SITE_URL, jobTitle: "Licensed Customs Broker" };
+  const graph = [
+    {
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description,
+      datePublished: post.date,
+      dateModified: post.updated || post.date,
+      author,
+      publisher: { "@type": "Person", name: "Jonhro Robles", url: SITE_URL },
+      image: post.image ? `${SITE_URL}${post.image}` : SHARE_IMAGE,
+      mainEntityOfPage: url,
+      inLanguage: "en-PH",
+    },
+  ];
+  if (post.faq?.length) {
+    graph.push({
+      "@type": "FAQPage",
+      mainEntity: post.faq.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
+    });
+  }
+  return { "@context": "https://schema.org", "@graph": graph };
 }

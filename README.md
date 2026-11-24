@@ -31,6 +31,7 @@ when you're happy with the change.
 | --- | --- |
 | Pages and sections | `src/components/` |
 | Page titles, descriptions, share image | `src/seo/pages.js` |
+| Blog posts (list, dates, FAQ) | `src/content/posts.js` + `src/components/blog/posts/<component>.jsx` |
 | Translations (en, tl, es, ja, zh, ko) | `src/locales/<lang>/translation.json` |
 | Site-wide styles | `src/Style.css` |
 | Shipment tracker page | `src/components/Track.jsx` (www.jonhrorobles.com/track) |
@@ -39,3 +40,5 @@ when you're happy with the change.
 
 The build also writes one HTML file per page (`about.html`, `services.html`, …),
 `404.html` and `sitemap.xml` — see `vite.config.js`.
+Blog post files also get the article text and structured data written in
+(`src/prerender.jsx`), so crawlers that don't run JavaScript can read them.
