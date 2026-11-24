@@ -4,16 +4,17 @@ import { ArrowLeft } from 'lucide-react';
 import Seo from '../Seo';
 import NotFound from '../NotFound';
 import { POSTS, formatPostDate } from '../../content/posts';
-import { SITE_URL, SHARE_IMAGE } from '../../seo/pages';
 import portrait from '../../assets/jonhro-port.webp';
 import './Blog.css';
 
-// slug -> article body
-const BODIES = {
-  'de-minimis-10000-review': lazy(() => import('./posts/DeMinimisReview')),
-  'importing-steel-into-cebu': lazy(() => import('./posts/ImportingSteelCebu')),
-  'cebu-trade-landscape': lazy(() => import('./posts/CebuTradeLandscape')),
-};
+// slug -> article body, from each post's `component` in posts.js
+const files = import.meta.glob('./posts/*.jsx');
+const BODIES = Object.fromEntries(
+  POSTS.filter((p) => files[`./posts/${p.component}.jsx`]).map((p) => [
+    p.slug,
+    lazy(files[`./posts/${p.component}.jsx`]),
+  ])
+);
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -21,22 +22,10 @@ export default function BlogPost() {
   const Body = BODIES[slug];
   if (!post || !Body) return <NotFound />;
 
-  const url = `${SITE_URL}/blog/${post.slug}`;
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    author: { '@type': 'Person', name: 'Jonhro Robles', url: SITE_URL },
-    publisher: { '@type': 'Person', name: 'Jonhro Robles', url: SITE_URL },
-    image: SHARE_IMAGE,
-    mainEntityOfPage: url,
-  };
-
   return (
     <>
-      <Seo path={`/blog/${post.slug}`} jsonLd={jsonLd} />
+      {/* Structured data is written into the built HTML by vite.config.js (postJsonLd) */}
+      <Seo path={`/blog/${post.slug}`} />
       <main className="blog-wrap">
         <article className="post">
           <Link to="/blog" className="post-back">
@@ -48,7 +37,9 @@ export default function BlogPost() {
             <img src={portrait} alt="" width="44" height="44" />
             <div>
               <strong>Jonhro Robles</strong>
-              <span>PRC Licensed Customs Broker · {formatPostDate(post.date)} · {post.readMinutes} min read</span>
+              <span>PRC Licensed Customs Broker · {formatPostDate(post.date)}
+                {post.updated && post.updated !== post.date && <> · Updated {formatPostDate(post.updated)}</>}
+                {' '}· {post.readMinutes} min read</span>
             </div>
           </div>
           <div className="post-body">
